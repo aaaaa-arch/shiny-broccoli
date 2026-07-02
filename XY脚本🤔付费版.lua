@@ -6,7 +6,7 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/WuMing
 -- ================================================================
 
 -- ==================== 配置区 ====================
-local VALID_KEY = "e7e49c0a-0609-459f-acd5-9e0318d17592"  -- 唯一有效卡密
+local VALID_KEY = "XY-内部成员专属"  -- 唯一有效卡密
 
 -- ==================== 验证 UI ====================
 local Players = game:GetService("Players")
