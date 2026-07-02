@@ -8,6 +8,7 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/WuMing
 -- ★★★ 在这里添加所有有效卡密，用逗号分隔 ★★★
 local VALID_KEYS = {
     "XY-内部成员专属",
+    "XY-SoraAdmin-exclusivecard-password",
     -- 继续添加更多卡密...
 }
 
