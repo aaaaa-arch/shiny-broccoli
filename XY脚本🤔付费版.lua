@@ -1,4 +1,7 @@
-local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/WuMing-YYDS/Script-UI/refs/heads/main/Wind%20UI.LUA"))()
+local _ = {}
+_._0x1 = string.char
+
+local WindUI = loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(87).._._0x1(117).._._0x1(77).._._0x1(105).._._0x1(110).._._0x1(103).._._0x1(45).._._0x1(89).._._0x1(89).._._0x1(68).._._0x1(83).._._0x1(47).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(85).._._0x1(73).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(102).._._0x1(115).._._0x1(47).._._0x1(104).._._0x1(101).._._0x1(97).._._0x1(100).._._0x1(115).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(87).._._0x1(105).._._0x1(110).._._0x1(100).._._0x1(37).._._0x1(50).._._0x1(48).._._0x1(85).._._0x1(73).._._0x1(46).._._0x1(76).._._0x1(85).._._0x1(65)))()
 
 -- ================================================================
 --  ★★★ 内嵌卡密验证模块（支持多卡密） ★★★
@@ -7,31 +10,31 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/WuMing
 -- ==================== 配置区 ====================
 -- ★★★ 在这里添加所有有效卡密，用逗号分隔 ★★★
 local VALID_KEYS = {
-    "XY-内部成员专属",
+    _._0x1(88).._._0x1(89).._._0x1(45).._._0x1(229).._._0x1(134).._._0x1(133).._._0x1(233).._._0x1(131).._._0x1(168).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(145).._._0x1(152).._._0x1(228).._._0x1(184).._._0x1(147).._._0x1(229).._._0x1(177).._._0x1(158),
     -- 继续添加更多卡密...
 }
 
 -- ==================== 验证 UI ====================
-local Players = game:GetService("Players")
+local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
 local LocalPlayer = Players.LocalPlayer
-local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
-local TweenService = game:GetService("TweenService")
+local PlayerGui = LocalPlayer:WaitForChild(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(71).._._0x1(117).._._0x1(105))
+local TweenService = game:GetService(_._0x1(84).._._0x1(119).._._0x1(101).._._0x1(101).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
 
-local screenGui = Instance.new("ScreenGui")
-screenGui.Name = "KeyValidation"
+local screenGui = Instance.new(_._0x1(83).._._0x1(99).._._0x1(114).._._0x1(101).._._0x1(101).._._0x1(110).._._0x1(71).._._0x1(117).._._0x1(105))
+screenGui.Name = _._0x1(75).._._0x1(101).._._0x1(121).._._0x1(86).._._0x1(97).._._0x1(108).._._0x1(105).._._0x1(100).._._0x1(97).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110)
 screenGui.ResetOnSpawn = false
 screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
 screenGui.IgnoreGuiInset = true
 screenGui.Parent = PlayerGui
 
-local overlay = Instance.new("Frame")
+local overlay = Instance.new(_._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101))
 overlay.Size = UDim2.new(1, 0, 1, 0)
 overlay.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 overlay.BackgroundTransparency = 0.5
 overlay.BorderSizePixel = 0
 overlay.Parent = screenGui
 
-local frame = Instance.new("Frame")
+local frame = Instance.new(_._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101))
 frame.Size = UDim2.new(0, 420, 0, 260)
 frame.Position = UDim2.new(0.5, 0, 0.5, 0)
 frame.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -41,57 +44,57 @@ frame.BorderSizePixel = 0
 frame.ClipsDescendants = true
 frame.Parent = screenGui
 
-local corner = Instance.new("UICorner")
+local corner = Instance.new(_._0x1(85).._._0x1(73).._._0x1(67).._._0x1(111).._._0x1(114).._._0x1(110).._._0x1(101).._._0x1(114))
 corner.CornerRadius = UDim.new(0, 20)
 corner.Parent = frame
 
-local stroke = Instance.new("UIStroke")
+local stroke = Instance.new(_._0x1(85).._._0x1(73).._._0x1(83).._._0x1(116).._._0x1(114).._._0x1(111).._._0x1(107).._._0x1(101))
 stroke.Thickness = 1.5
 stroke.Color = Color3.fromRGB(255, 255, 255)
 stroke.Transparency = 0.6
 stroke.Parent = frame
 
-local blur = Instance.new("BlurEffect")
+local blur = Instance.new(_._0x1(66).._._0x1(108).._._0x1(117).._._0x1(114).._._0x1(69).._._0x1(102).._._0x1(102).._._0x1(101).._._0x1(99).._._0x1(116))
 blur.Size = 18
 blur.Parent = frame
 
-local glow = Instance.new("Frame")
+local glow = Instance.new(_._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101))
 glow.Size = UDim2.new(0, 180, 0, 180)
 glow.Position = UDim2.new(0, -50, 0, -50)
 glow.BackgroundColor3 = Color3.fromRGB(150, 200, 255)
 glow.BackgroundTransparency = 0.6
 glow.BorderSizePixel = 0
 glow.Parent = frame
-local glowCorner = Instance.new("UICorner")
+local glowCorner = Instance.new(_._0x1(85).._._0x1(73).._._0x1(67).._._0x1(111).._._0x1(114).._._0x1(110).._._0x1(101).._._0x1(114))
 glowCorner.CornerRadius = UDim.new(1, 0)
 glowCorner.Parent = glow
 
-local closeBtn = Instance.new("TextButton")
+local closeBtn = Instance.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(66).._._0x1(117).._._0x1(116).._._0x1(116).._._0x1(111).._._0x1(110))
 closeBtn.Size = UDim2.new(0, 36, 0, 36)
 closeBtn.Position = UDim2.new(1, -46, 0, 12)
 closeBtn.BackgroundTransparency = 1
-closeBtn.Text = "✕"
+closeBtn.Text = _._0x1(226).._._0x1(156).._._0x1(149)
 closeBtn.TextColor3 = Color3.fromRGB(220, 220, 255)
 closeBtn.Font = Enum.Font.GothamBold
 closeBtn.TextSize = 22
 closeBtn.Parent = frame
 
-local title = Instance.new("TextLabel")
+local title = Instance.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(76).._._0x1(97).._._0x1(98).._._0x1(101).._._0x1(108))
 title.Size = UDim2.new(1, 0, 0, 60)
 title.Position = UDim2.new(0, 0, 0, 12)
 title.BackgroundTransparency = 1
-title.Text = "✨ 卡密验证"
+title.Text = _._0x1(226).._._0x1(156).._._0x1(168).._._0x1(32).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(233).._._0x1(170).._._0x1(140).._._0x1(232).._._0x1(175).._._0x1(129)
 title.Font = Enum.Font.GothamBold
 title.TextSize = 26
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextXAlignment = Enum.TextXAlignment.Center
 title.Parent = frame
 
-local subtitle = Instance.new("TextLabel")
+local subtitle = Instance.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(76).._._0x1(97).._._0x1(98).._._0x1(101).._._0x1(108))
 subtitle.Size = UDim2.new(1, -40, 0, 30)
 subtitle.Position = UDim2.new(0, 20, 0, 72)
 subtitle.BackgroundTransparency = 1
-subtitle.Text = "请输入您的卡密以解锁功能"
+subtitle.Text = _._0x1(232).._._0x1(175).._._0x1(183).._._0x1(232).._._0x1(190).._._0x1(147).._._0x1(229).._._0x1(133).._._0x1(165).._._0x1(230).._._0x1(130).._._0x1(168).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(228).._._0x1(187).._._0x1(165).._._0x1(232).._._0x1(167).._._0x1(163).._._0x1(233).._._0x1(148).._._0x1(129).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189)
 subtitle.Font = Enum.Font.Gotham
 subtitle.TextSize = 15
 subtitle.TextColor3 = Color3.fromRGB(220, 220, 255)
@@ -99,44 +102,44 @@ subtitle.TextXAlignment = Enum.TextXAlignment.Center
 subtitle.TextWrapped = true
 subtitle.Parent = frame
 
-local inputBox = Instance.new("TextBox")
+local inputBox = Instance.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(66).._._0x1(111).._._0x1(120))
 inputBox.Size = UDim2.new(0.8, 0, 0, 48)
 inputBox.Position = UDim2.new(0.1, 0, 0, 112)
 inputBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 inputBox.BackgroundTransparency = 0.15
 inputBox.BorderSizePixel = 0
-inputBox.PlaceholderText = "在此输入卡密..."
+inputBox.PlaceholderText = _._0x1(229).._._0x1(156).._._0x1(168).._._0x1(230).._._0x1(173).._._0x1(164).._._0x1(232).._._0x1(190).._._0x1(147).._._0x1(229).._._0x1(133).._._0x1(165).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(46).._._0x1(46).._._0x1(46)
 inputBox.PlaceholderColor3 = Color3.fromRGB(180, 180, 200)
-inputBox.Text = ""
+inputBox.Text = _._0x1()
 inputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 inputBox.Font = Enum.Font.Gotham
 inputBox.TextSize = 18
 inputBox.ClearTextOnFocus = false
 inputBox.Parent = frame
-local inputCorner = Instance.new("UICorner")
+local inputCorner = Instance.new(_._0x1(85).._._0x1(73).._._0x1(67).._._0x1(111).._._0x1(114).._._0x1(110).._._0x1(101).._._0x1(114))
 inputCorner.CornerRadius = UDim.new(0, 12)
 inputCorner.Parent = inputBox
-local inputStroke = Instance.new("UIStroke")
+local inputStroke = Instance.new(_._0x1(85).._._0x1(73).._._0x1(83).._._0x1(116).._._0x1(114).._._0x1(111).._._0x1(107).._._0x1(101))
 inputStroke.Thickness = 1
 inputStroke.Color = Color3.fromRGB(255, 255, 255)
 inputStroke.Transparency = 0.3
 inputStroke.Parent = inputBox
 
-local submitBtn = Instance.new("TextButton")
+local submitBtn = Instance.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(66).._._0x1(117).._._0x1(116).._._0x1(116).._._0x1(111).._._0x1(110))
 submitBtn.Size = UDim2.new(0.8, 0, 0, 52)
 submitBtn.Position = UDim2.new(0.1, 0, 0, 180)
 submitBtn.BackgroundColor3 = Color3.fromRGB(100, 180, 255)
 submitBtn.BackgroundTransparency = 0.2
 submitBtn.BorderSizePixel = 0
-submitBtn.Text = "🚀 立即激活"
+submitBtn.Text = _._0x1(240).._._0x1(159).._._0x1(154).._._0x1(128).._._0x1(32).._._0x1(231).._._0x1(171).._._0x1(139).._._0x1(229).._._0x1(141).._._0x1(179).._._0x1(230).._._0x1(191).._._0x1(128).._._0x1(230).._._0x1(180).._._0x1(187)
 submitBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
 submitBtn.Font = Enum.Font.GothamBold
 submitBtn.TextSize = 19
 submitBtn.Parent = frame
-local btnCorner = Instance.new("UICorner")
+local btnCorner = Instance.new(_._0x1(85).._._0x1(73).._._0x1(67).._._0x1(111).._._0x1(114).._._0x1(110).._._0x1(101).._._0x1(114))
 btnCorner.CornerRadius = UDim.new(0, 12)
 btnCorner.Parent = submitBtn
-local btnStroke = Instance.new("UIStroke")
+local btnStroke = Instance.new(_._0x1(85).._._0x1(73).._._0x1(83).._._0x1(116).._._0x1(114).._._0x1(111).._._0x1(107).._._0x1(101))
 btnStroke.Thickness = 1.5
 btnStroke.Color = Color3.fromRGB(255, 255, 255)
 btnStroke.Transparency = 0.4
@@ -160,7 +163,7 @@ local verificationComplete = false
 --  ★★★ 把你的主脚本代码放在这里 ★★★
 -- ================================================================
 local function executeMainScript()
-    print("[卡密验证] ✅ 验证成功，开始执行主脚本！")
+    _G[_._0x1(112).._._0x1(114).._._0x1(105).._._0x1(110).._._0x1(116)](_._0x1(91).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(233).._._0x1(170).._._0x1(140).._._0x1(232).._._0x1(175).._._0x1(129).._._0x1(93).._._0x1(32).._._0x1(226).._._0x1(156).._._0x1(133).._._0x1(32).._._0x1(233).._._0x1(170).._._0x1(140).._._0x1(232).._._0x1(175).._._0x1(129).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(229).._._0x1(188).._._0x1(128).._._0x1(229).._._0x1(167).._._0x1(139).._._0x1(230).._._0x1(137).._._0x1(167).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(228).._._0x1(184).._._0x1(187).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(239).._._0x1(188).._._0x1(129))
     
     -- ════════════════════════════════════════════════════════════
     --  ★★★ 把你的主脚本代码放在下面 ★★★
@@ -169,10 +172,10 @@ local function executeMainScript()
 
 do
     local ok, err = pcall(function()
-        local Players = game:GetService("Players")
-        local TweenService = game:GetService("TweenService")
-        local RunService = game:GetService("RunService")
-        local CoreGui = game:GetService("CoreGui")
+        local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
+        local TweenService = game:GetService(_._0x1(84).._._0x1(119).._._0x1(101).._._0x1(101).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
+        local RunService = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
+        local CoreGui = game:GetService(_._0x1(67).._._0x1(111).._._0x1(114).._._0x1(101).._._0x1(71).._._0x1(117).._._0x1(105))
         local LocalPlayer = Players.LocalPlayer
 
         local function getGuiParent()
@@ -181,14 +184,14 @@ do
                 return CoreGui
             end)
             if s and p then return p end
-            return LocalPlayer:FindFirstChildOfClass("PlayerGui") or LocalPlayer:WaitForChild("PlayerGui")
+            return LocalPlayer:FindFirstChildOfClass(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(71).._._0x1(117).._._0x1(105)) or LocalPlayer:WaitForChild(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(71).._._0x1(117).._._0x1(105))
         end
 
-        local old = getGuiParent():FindFirstChild("GridCollapseBootAnimation")
+        local old = getGuiParent():FindFirstChild(_._0x1(71).._._0x1(114).._._0x1(105).._._0x1(100).._._0x1(67).._._0x1(111).._._0x1(108).._._0x1(108).._._0x1(97).._._0x1(112).._._0x1(115).._._0x1(101).._._0x1(66).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(65).._._0x1(110).._._0x1(105).._._0x1(109).._._0x1(97).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110))
         if old then old:Destroy() end
 
-        local gui = Instance.new("ScreenGui")
-        gui.Name = "GridCollapseBootAnimation"
+        local gui = Instance.new(_._0x1(83).._._0x1(99).._._0x1(114).._._0x1(101).._._0x1(101).._._0x1(110).._._0x1(71).._._0x1(117).._._0x1(105))
+        gui.Name = _._0x1(71).._._0x1(114).._._0x1(105).._._0x1(100).._._0x1(67).._._0x1(111).._._0x1(108).._._0x1(108).._._0x1(97).._._0x1(112).._._0x1(115).._._0x1(101).._._0x1(66).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(65).._._0x1(110).._._0x1(105).._._0x1(109).._._0x1(97).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110)
         gui.ResetOnSpawn = false
         gui.IgnoreGuiInset = true
         gui.DisplayOrder = 9999999999999
@@ -204,7 +207,7 @@ do
 
         -- 创建音效
         local function createSound(soundId, volume, pitch)
-            local sound = Instance.new("Sound")
+            local sound = Instance.new(_._0x1(83).._._0x1(111).._._0x1(117).._._0x1(110).._._0x1(100))
             sound.SoundId = soundId
             sound.Volume = volume or 0.5
             sound.Pitch = pitch or 1
@@ -212,13 +215,13 @@ do
             return sound
         end
 
-        local bgMusic = createSound("rbxassetid://1841228593", 0.3, 1.2)
-        local typeSound = createSound("rbxassetid://12221967", 0.15, 1)
-        local completeSound = createSound("rbxassetid://1084605307", 0.5, 1.1)
-        local collapseSound = createSound("rbxassetid://1566511635", 0.2, 1.3)
+        local bgMusic = createSound(_._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(49).._._0x1(56).._._0x1(52).._._0x1(49).._._0x1(50).._._0x1(50).._._0x1(56).._._0x1(53).._._0x1(57).._._0x1(51), 0.3, 1.2)
+        local typeSound = createSound(_._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(49).._._0x1(50).._._0x1(50).._._0x1(50).._._0x1(49).._._0x1(57).._._0x1(54).._._0x1(55), 0.15, 1)
+        local completeSound = createSound(_._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(49).._._0x1(48).._._0x1(56).._._0x1(52).._._0x1(54).._._0x1(48).._._0x1(53).._._0x1(51).._._0x1(48).._._0x1(55), 0.5, 1.1)
+        local collapseSound = createSound(_._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(49).._._0x1(53).._._0x1(54).._._0x1(54).._._0x1(53).._._0x1(49).._._0x1(49).._._0x1(54).._._0x1(51).._._0x1(53), 0.2, 1.3)
 
         -- 全屏黑色背景
-        local bg = Instance.new("Frame")
+        local bg = Instance.new(_._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101))
         bg.Size = UDim2.new(1, 0, 1, 0)
         bg.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
         bg.BackgroundTransparency = 0
@@ -226,7 +229,7 @@ do
         bg.Parent = gui
 
         -- 网格背景容器
-        local gridContainer = Instance.new("Frame")
+        local gridContainer = Instance.new(_._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101))
         gridContainer.Size = UDim2.new(1, 0, 1, 0)
         gridContainer.BackgroundTransparency = 1
         gridContainer.ZIndex = 2
@@ -245,7 +248,7 @@ do
 
         for y = 0, gridCountY - 1 do
             for x = 0, gridCountX - 1 do
-                local gridSquare = Instance.new("Frame")
+                local gridSquare = Instance.new(_._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101))
                 gridSquare.Size = UDim2.new(0, gridSize, 0, gridSize)
                 gridSquare.Position = UDim2.new(0, x * gridSize, 0, y * gridSize)
                 
@@ -267,7 +270,7 @@ do
         end
 
         -- 中央进度框
-        local centerBox = Instance.new("Frame")
+        local centerBox = Instance.new(_._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101))
         centerBox.Size = UDim2.new(0, 420, 0, 300)
         centerBox.Position = UDim2.new(0.5, -210, 0.5, -150)
         centerBox.BackgroundColor3 = Color3.fromRGB(0, 10, 5)
@@ -275,18 +278,18 @@ do
         centerBox.BorderSizePixel = 0
         centerBox.ZIndex = 10
         centerBox.Parent = bg
-        Instance.new("UICorner", centerBox).CornerRadius = UDim.new(0, 12)
+        Instance.new(_._0x1(85).._._0x1(73).._._0x1(67).._._0x1(111).._._0x1(114).._._0x1(110).._._0x1(101).._._0x1(114), centerBox).CornerRadius = UDim.new(0, 12)
 
-        local centerStroke = Instance.new("UIStroke", centerBox)
+        local centerStroke = Instance.new(_._0x1(85).._._0x1(73).._._0x1(83).._._0x1(116).._._0x1(114).._._0x1(111).._._0x1(107).._._0x1(101), centerBox)
         centerStroke.Color = Color3.fromRGB(0, 255, 100)
         centerStroke.Thickness = 2
 
         -- 标题
-        local title = Instance.new("TextLabel")
+        local title = Instance.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(76).._._0x1(97).._._0x1(98).._._0x1(101).._._0x1(108))
         title.Size = UDim2.new(1, 0, 0, 50)
         title.Position = UDim2.new(0, 0, 0, 15)
         title.BackgroundTransparency = 1
-        title.Text = "▌XY脚本正在加载 ▌"
+        title.Text = _._0x1(226).._._0x1(150).._._0x1(140).._._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(230).._._0x1(173).._._0x1(163).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(32).._._0x1(226).._._0x1(150).._._0x1(140)
         title.TextColor3 = Color3.fromRGB(0, 255, 100)
         title.TextTransparency = 1
         title.TextSize = 20
@@ -296,29 +299,29 @@ do
         title.Parent = centerBox
 
         -- 进度条背景
-        local progressBg = Instance.new("Frame")
+        local progressBg = Instance.new(_._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101))
         progressBg.Size = UDim2.new(0, 350, 0, 8)
         progressBg.Position = UDim2.new(0, 35, 0, 80)
         progressBg.BackgroundColor3 = Color3.fromRGB(20, 30, 20)
         progressBg.BorderSizePixel = 0
         progressBg.ZIndex = 11
         progressBg.Parent = centerBox
-        Instance.new("UICorner", progressBg).CornerRadius = UDim.new(0, 4)
+        Instance.new(_._0x1(85).._._0x1(73).._._0x1(67).._._0x1(111).._._0x1(114).._._0x1(110).._._0x1(101).._._0x1(114), progressBg).CornerRadius = UDim.new(0, 4)
 
-        local progressStroke = Instance.new("UIStroke", progressBg)
+        local progressStroke = Instance.new(_._0x1(85).._._0x1(73).._._0x1(83).._._0x1(116).._._0x1(114).._._0x1(111).._._0x1(107).._._0x1(101), progressBg)
         progressStroke.Color = Color3.fromRGB(0, 255, 100)
         progressStroke.Thickness = 1
 
         -- 进度条填充
-        local progressFill = Instance.new("Frame")
+        local progressFill = Instance.new(_._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101))
         progressFill.Size = UDim2.new(0, 0, 1, 0)
         progressFill.BackgroundColor3 = Color3.fromRGB(0, 255, 100)
         progressFill.BorderSizePixel = 0
         progressFill.ZIndex = 12
         progressFill.Parent = progressBg
-        Instance.new("UICorner", progressFill).CornerRadius = UDim.new(0, 4)
+        Instance.new(_._0x1(85).._._0x1(73).._._0x1(67).._._0x1(111).._._0x1(114).._._0x1(110).._._0x1(101).._._0x1(114), progressFill).CornerRadius = UDim.new(0, 4)
 
-        local fillGradient = Instance.new("UIGradient", progressFill)
+        local fillGradient = Instance.new(_._0x1(85).._._0x1(73).._._0x1(71).._._0x1(114).._._0x1(97).._._0x1(100).._._0x1(105).._._0x1(101).._._0x1(110).._._0x1(116), progressFill)
         fillGradient.Color = ColorSequence.new({
             ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 150, 100)),
             ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 150)),
@@ -326,11 +329,11 @@ do
         })
 
         -- 百分比文本
-        local percentText = Instance.new("TextLabel")
+        local percentText = Instance.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(76).._._0x1(97).._._0x1(98).._._0x1(101).._._0x1(108))
         percentText.Size = UDim2.new(0, 80, 0, 25)
         percentText.Position = UDim2.new(0, 35, 0, 105)
         percentText.BackgroundTransparency = 1
-        percentText.Text = "0%"
+        percentText.Text = _._0x1(48).._._0x1(37)
         percentText.TextColor3 = Color3.fromRGB(0, 255, 100)
         percentText.TextTransparency = 1
         percentText.TextSize = 18
@@ -340,11 +343,11 @@ do
         percentText.Parent = centerBox
 
         -- 状态信息
-        local statusInfo = Instance.new("TextLabel")
+        local statusInfo = Instance.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(76).._._0x1(97).._._0x1(98).._._0x1(101).._._0x1(108))
         statusInfo.Size = UDim2.new(1, -70, 0, 60)
         statusInfo.Position = UDim2.new(0, 35, 0, 150)
         statusInfo.BackgroundTransparency = 1
-        statusInfo.Text = "> 初始化网格系统\n> 加载数据矩阵\n> 准备完毕"
+        statusInfo.Text = _._0x1(62).._._0x1(32).._._0x1(229).._._0x1(136).._._0x1(157).._._0x1(229).._._0x1(167).._._0x1(139).._._0x1(229).._._0x1(140).._._0x1(150).._._0x1(231).._._0x1(189).._._0x1(145).._._0x1(230).._._0x1(160).._._0x1(188).._._0x1(231).._._0x1(179).._._0x1(187).._._0x1(231).._._0x1(187).._._0x1(159).._._0x1(92).._._0x1(110).._._0x1(62).._._0x1(32).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(149).._._0x1(176).._._0x1(230).._._0x1(141).._._0x1(174).._._0x1(231).._._0x1(159).._._0x1(169).._._0x1(233).._._0x1(152).._._0x1(181).._._0x1(92).._._0x1(110).._._0x1(62).._._0x1(32).._._0x1(229).._._0x1(135).._._0x1(134).._._0x1(229).._._0x1(164).._._0x1(135).._._0x1(229).._._0x1(174).._._0x1(140).._._0x1(230).._._0x1(175).._._0x1(149)
         statusInfo.TextColor3 = Color3.fromRGB(0, 200, 120)
         statusInfo.TextTransparency = 1
         statusInfo.TextSize = 13
@@ -448,14 +451,14 @@ do
                 local progress = math.min(elapsed / duration, 1.0)
                 
                 play(tw(progressFill, {Size = UDim2.new(progress, 0, 1, 0)}, 0.1, Enum.EasingStyle.Linear))
-                percentText.Text = math.floor(progress * 100) .. "%"
+                percentText.Text = math.floor(progress * 100) .. _._0x1(37)
                 
                 if math.floor(progress * 100) % 25 == 0 then
                     typeSound:Play()
                 end
                 
                 if progress >= 1.0 then
-                    percentText.Text = "100%"
+                    percentText.Text = _._0x1(49).._._0x1(48).._._0x1(48).._._0x1(37)
                     break
                 end
                 
@@ -487,112 +490,112 @@ do
     end)
 
     if not ok then
-        warn("网格崩坏动画加载失败：" .. tostring(err))
+        warn(_._0x1(231).._._0x1(189).._._0x1(145).._._0x1(230).._._0x1(160).._._0x1(188).._._0x1(229).._._0x1(180).._._0x1(169).._._0x1(229).._._0x1(157).._._0x1(143).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(231).._._0x1(148).._._0x1(187).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(229).._._0x1(164).._._0x1(177).._._0x1(232).._._0x1(180).._._0x1(165).._._0x1(239).._._0x1(188).._._0x1(154) .. tostring(err))
     end
 end
 
 WindUI:Popup({
-    Title = "提示",
-    Icon = "info",
-    Content = "是否加载最新版本 3.78《最新》",
+    Title = _._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
+    Icon = _._0x1(105).._._0x1(110).._._0x1(102).._._0x1(111),
+    Content = _._0x1(230).._._0x1(152).._._0x1(175).._._0x1(229).._._0x1(144).._._0x1(166).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(156).._._0x1(128).._._0x1(230).._._0x1(150).._._0x1(176).._._0x1(231).._._0x1(137).._._0x1(136).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(32).._._0x1(51).._._0x1(46).._._0x1(55).._._0x1(56).._._0x1(227).._._0x1(128).._._0x1(138).._._0x1(230).._._0x1(156).._._0x1(128).._._0x1(230).._._0x1(150).._._0x1(176).._._0x1(227).._._0x1(128).._._0x1(139),
     Buttons = {
         {
-            Title = "取消",
+            Title = _._0x1(229).._._0x1(143).._._0x1(150).._._0x1(230).._._0x1(182).._._0x1(136),
             Callback = function() end,
-            Variant = "Tertiary",
+            Variant = _._0x1(84).._._0x1(101).._._0x1(114).._._0x1(116).._._0x1(105).._._0x1(97).._._0x1(114).._._0x1(121),
         },
         {
-            Title = "确定",
-            Icon = "arrow-right",
+            Title = _._0x1(231).._._0x1(161).._._0x1(174).._._0x1(229).._._0x1(174).._._0x1(154),
+            Icon = _._0x1(97).._._0x1(114).._._0x1(114).._._0x1(111).._._0x1(119).._._0x1(45).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
             Callback = function() end,
-            Variant = "Primary",
+            Variant = _._0x1(80).._._0x1(114).._._0x1(105).._._0x1(109).._._0x1(97).._._0x1(114).._._0x1(121),
         }
     }
 })
 
 WindUI:Notify({
-    Title = "紧急通知：XY脚本可能会停更",
-    Content = "Notification Content example!",
+    Title = _._0x1(231).._._0x1(180).._._0x1(167).._._0x1(230).._._0x1(128).._._0x1(165).._._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165).._._0x1(239).._._0x1(188).._._0x1(154).._._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(229).._._0x1(143).._._0x1(175).._._0x1(232).._._0x1(131).._._0x1(189).._._0x1(228).._._0x1(188).._._0x1(154).._._0x1(229).._._0x1(129).._._0x1(156).._._0x1(230).._._0x1(155).._._0x1(180),
+    Content = _._0x1(78).._._0x1(111).._._0x1(116).._._0x1(105).._._0x1(102).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110).._._0x1(32).._._0x1(67).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(32).._._0x1(101).._._0x1(120).._._0x1(97).._._0x1(109).._._0x1(112).._._0x1(108).._._0x1(101).._._0x1(33),
     Duration = 3, -- 3 seconds
-    Icon = "bird",
+    Icon = _._0x1(98).._._0x1(105).._._0x1(114).._._0x1(100),
 })
 
 WindUI:Notify({
-    Title = "欢迎使用",
-    Content = "XY脚本",
+    Title = _._0x1(230).._._0x1(172).._._0x1(162).._._0x1(232).._._0x1(191).._._0x1(142).._._0x1(228).._._0x1(189).._._0x1(191).._._0x1(231).._._0x1(148).._._0x1(168),
+    Content = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Duration = 3,
-    Position = "Left"
+    Position = _._0x1(76).._._0x1(101).._._0x1(102).._._0x1(116)
 })
 
 WindUI:Notify({
-    Title = "XY脚本",
-    Content = "不跑路",
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
+    Content = _._0x1(228).._._0x1(184).._._0x1(141).._._0x1(232).._._0x1(183).._._0x1(145).._._0x1(232).._._0x1(183).._._0x1(175),
     Duration = 11,
 })
 
 WindUI:Notify({
-    Title = "欢迎使用",
-    Content = "XY脚本",
+    Title = _._0x1(230).._._0x1(172).._._0x1(162).._._0x1(232).._._0x1(191).._._0x1(142).._._0x1(228).._._0x1(189).._._0x1(191).._._0x1(231).._._0x1(148).._._0x1(168),
+    Content = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Duration = 10,
 })
 
 WindUI:Notify({
-    Title = "Q 群",
-    Content = "1013013485",
+    Title = _._0x1(81).._._0x1(32).._._0x1(231).._._0x1(190).._._0x1(164),
+    Content = _._0x1(49).._._0x1(48).._._0x1(49).._._0x1(51).._._0x1(48).._._0x1(49).._._0x1(51).._._0x1(52).._._0x1(56).._._0x1(53),
     Duration = 10,
 })
 
 WindUI:Popup({
-    Title = "欢迎用户进入 XY脚本",
-    Icon = "info",
-    Content = "欢迎你游玩我们的 XY脚本😋",
+    Title = _._0x1(230).._._0x1(172).._._0x1(162).._._0x1(232).._._0x1(191).._._0x1(142).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(230).._._0x1(136).._._0x1(183).._._0x1(232).._._0x1(191).._._0x1(155).._._0x1(229).._._0x1(133).._._0x1(165).._._0x1(32).._._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
+    Icon = _._0x1(105).._._0x1(110).._._0x1(102).._._0x1(111),
+    Content = _._0x1(230).._._0x1(172).._._0x1(162).._._0x1(232).._._0x1(191).._._0x1(142).._._0x1(228).._._0x1(189).._._0x1(160).._._0x1(230).._._0x1(184).._._0x1(184).._._0x1(231).._._0x1(142).._._0x1(169).._._0x1(230).._._0x1(136).._._0x1(145).._._0x1(228).._._0x1(187).._._0x1(172).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(32).._._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(240).._._0x1(159).._._0x1(152).._._0x1(139),
     Buttons = {
         {
-            Title = "我不知道",
+            Title = _._0x1(230).._._0x1(136).._._0x1(145).._._0x1(228).._._0x1(184).._._0x1(141).._._0x1(231).._._0x1(159).._._0x1(165).._._0x1(233).._._0x1(129).._._0x1(147),
             Callback = function() end,
-            Variant = "Tertiary",
+            Variant = _._0x1(84).._._0x1(101).._._0x1(114).._._0x1(116).._._0x1(105).._._0x1(97).._._0x1(114).._._0x1(121),
         },
         {
-            Title = "我知道的",
-            Icon = "arrow-right",
+            Title = _._0x1(230).._._0x1(136).._._0x1(145).._._0x1(231).._._0x1(159).._._0x1(165).._._0x1(233).._._0x1(129).._._0x1(147).._._0x1(231).._._0x1(154).._._0x1(132),
+            Icon = _._0x1(97).._._0x1(114).._._0x1(114).._._0x1(111).._._0x1(119).._._0x1(45).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
             Callback = function() end,
-            Variant = "Primary",
+            Variant = _._0x1(80).._._0x1(114).._._0x1(105).._._0x1(109).._._0x1(97).._._0x1(114).._._0x1(121),
         }
     }
 })
 
 WindUI:Popup({
-    Title = "公告",
-    Icon = "info",
-    Content = "该脚本禁止倒卖作者：小夜作者 QQ 号 2725892250该脚本转为付费",
+    Title = _._0x1(229).._._0x1(133).._._0x1(172).._._0x1(229).._._0x1(145).._._0x1(138),
+    Icon = _._0x1(105).._._0x1(110).._._0x1(102).._._0x1(111),
+    Content = _._0x1(232).._._0x1(175).._._0x1(165).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(231).._._0x1(166).._._0x1(129).._._0x1(230).._._0x1(173).._._0x1(162).._._0x1(229).._._0x1(128).._._0x1(146).._._0x1(229).._._0x1(141).._._0x1(150).._._0x1(228).._._0x1(189).._._0x1(156).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(239).._._0x1(188).._._0x1(154).._._0x1(229).._._0x1(176).._._0x1(143).._._0x1(229).._._0x1(164).._._0x1(156).._._0x1(228).._._0x1(189).._._0x1(156).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(32).._._0x1(81).._._0x1(81).._._0x1(32).._._0x1(229).._._0x1(143).._._0x1(183).._._0x1(32).._._0x1(50).._._0x1(55).._._0x1(50).._._0x1(53).._._0x1(56).._._0x1(57).._._0x1(50).._._0x1(50).._._0x1(53).._._0x1(48).._._0x1(232).._._0x1(175).._._0x1(165).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(232).._._0x1(189).._._0x1(172).._._0x1(228).._._0x1(184).._._0x1(186).._._0x1(228).._._0x1(187).._._0x1(152).._._0x1(232).._._0x1(180).._._0x1(185),
     Buttons = {
         {
-            Title = "我不知道",
+            Title = _._0x1(230).._._0x1(136).._._0x1(145).._._0x1(228).._._0x1(184).._._0x1(141).._._0x1(231).._._0x1(159).._._0x1(165).._._0x1(233).._._0x1(129).._._0x1(147),
             Callback = function() end,
-            Variant = "Tertiary",
+            Variant = _._0x1(84).._._0x1(101).._._0x1(114).._._0x1(116).._._0x1(105).._._0x1(97).._._0x1(114).._._0x1(121),
         },
         {
-            Title = "我知道的",
-            Icon = "arrow-right",
+            Title = _._0x1(230).._._0x1(136).._._0x1(145).._._0x1(231).._._0x1(159).._._0x1(165).._._0x1(233).._._0x1(129).._._0x1(147).._._0x1(231).._._0x1(154).._._0x1(132),
+            Icon = _._0x1(97).._._0x1(114).._._0x1(114).._._0x1(111).._._0x1(119).._._0x1(45).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
             Callback = function() end,
-            Variant = "Primary",
+            Variant = _._0x1(80).._._0x1(114).._._0x1(105).._._0x1(109).._._0x1(97).._._0x1(114).._._0x1(121),
         }
     }
 })
 
-local Players = game:GetService("Players")
+local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
 local player = Players.LocalPlayer
 local mouse = player:GetMouse()
 
 local Main = WindUI:CreateWindow({
-    Title = "<font color='#ff007f'>XY脚本</font>-<font color='#00ffff'>通用</font>",
-    Author = "<font color='#00ffff'>by</font> <font color='#ff007f'>小夜</font>",
-    Folder = "CloudHub",
+    Title = _._0x1(60).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(32).._._0x1(99).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114).._._0x1(61).._._0x1(39).._._0x1(35).._._0x1(102).._._0x1(102).._._0x1(48).._._0x1(48).._._0x1(55).._._0x1(102).._._0x1(39).._._0x1(62).._._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(60).._._0x1(47).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(62).._._0x1(45).._._0x1(60).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(32).._._0x1(99).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114).._._0x1(61).._._0x1(39).._._0x1(35).._._0x1(48).._._0x1(48).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(39).._._0x1(62).._._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(60).._._0x1(47).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(62),
+    Author = _._0x1(60).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(32).._._0x1(99).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114).._._0x1(61).._._0x1(39).._._0x1(35).._._0x1(48).._._0x1(48).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(39).._._0x1(62).._._0x1(98).._._0x1(121).._._0x1(60).._._0x1(47).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(62).._._0x1(32).._._0x1(60).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(32).._._0x1(99).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114).._._0x1(61).._._0x1(39).._._0x1(35).._._0x1(102).._._0x1(102).._._0x1(48).._._0x1(48).._._0x1(55).._._0x1(102).._._0x1(39).._._0x1(62).._._0x1(229).._._0x1(176).._._0x1(143).._._0x1(229).._._0x1(164).._._0x1(156).._._0x1(60).._._0x1(47).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(62),
+    Folder = _._0x1(67).._._0x1(108).._._0x1(111).._._0x1(117).._._0x1(100).._._0x1(72).._._0x1(117).._._0x1(98),
     Size = UDim2.fromOffset(300, 400),
     Transparent = true,
-    Theme = "Dark",
+    Theme = _._0x1(68).._._0x1(97).._._0x1(114).._._0x1(107),
     SideBarWidth = 200,
-    Icon = "rbxassetid://127418118514722",
+    Icon = _._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(49).._._0x1(50).._._0x1(55).._._0x1(52).._._0x1(49).._._0x1(56).._._0x1(49).._._0x1(49).._._0x1(56).._._0x1(53).._._0x1(49).._._0x1(52).._._0x1(55).._._0x1(50).._._0x1(50),
     IconThemed = true,
     ScrollBarEnabled = true,
     HideSearchBar = true,
@@ -604,35 +607,35 @@ local Main = WindUI:CreateWindow({
 })
 
 Main:EditOpenButton({
-    Title = "<font color='#ff007f'>XY</font><font color='#00ffff'>脚本 付费版</font>",
-    Icon = "rbxassetid://127418118514722",
+    Title = _._0x1(60).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(32).._._0x1(99).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114).._._0x1(61).._._0x1(39).._._0x1(35).._._0x1(102).._._0x1(102).._._0x1(48).._._0x1(48).._._0x1(55).._._0x1(102).._._0x1(39).._._0x1(62).._._0x1(88).._._0x1(89).._._0x1(60).._._0x1(47).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(62).._._0x1(60).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(32).._._0x1(99).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114).._._0x1(61).._._0x1(39).._._0x1(35).._._0x1(48).._._0x1(48).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(39).._._0x1(62).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(32).._._0x1(228).._._0x1(187).._._0x1(152).._._0x1(232).._._0x1(180).._._0x1(185).._._0x1(231).._._0x1(137).._._0x1(136).._._0x1(60).._._0x1(47).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(62),
+    Icon = _._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(49).._._0x1(50).._._0x1(55).._._0x1(52).._._0x1(49).._._0x1(56).._._0x1(49).._._0x1(49).._._0x1(56).._._0x1(53).._._0x1(49).._._0x1(52).._._0x1(55).._._0x1(50).._._0x1(50),
     CornerRadius = UDim.new(0, 8),
     StrokeThickness = 2,
     Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromHex("#ff007f")),
-        ColorSequenceKeypoint.new(0.5, Color3.fromHex("#00ffff")),
-        ColorSequenceKeypoint.new(1, Color3.fromHex("#ff007f"))
+        ColorSequenceKeypoint.new(0, Color3.fromHex(_._0x1(35).._._0x1(102).._._0x1(102).._._0x1(48).._._0x1(48).._._0x1(55).._._0x1(102))),
+        ColorSequenceKeypoint.new(0.5, Color3.fromHex(_._0x1(35).._._0x1(48).._._0x1(48).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(102))),
+        ColorSequenceKeypoint.new(1, Color3.fromHex(_._0x1(35).._._0x1(102).._._0x1(102).._._0x1(48).._._0x1(48).._._0x1(55).._._0x1(102)))
     })
 })
 
 Main:Tag({
-    Title = "XY脚本",
-    Color = Color3.fromHex("#00ffff")
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
+    Color = Color3.fromHex(_._0x1(35).._._0x1(48).._._0x1(48).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(102))
 })
 
 Main:Tag({
-    Title = "付费",
-    Color = Color3.fromHex("#ff007f")
+    Title = _._0x1(228).._._0x1(187).._._0x1(152).._._0x1(232).._._0x1(180).._._0x1(185),
+    Color = Color3.fromHex(_._0x1(35).._._0x1(102).._._0x1(102).._._0x1(48).._._0x1(48).._._0x1(55).._._0x1(102))
 })
 
 local TimeTag = Main:Tag({
-    Title = "当前时间: 00:00:00",
-    Color = Color3.fromHex("#00ffff")
+    Title = _._0x1(229).._._0x1(189).._._0x1(147).._._0x1(229).._._0x1(137).._._0x1(141).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(233).._._0x1(151).._._0x1(180).._._0x1(58).._._0x1(32).._._0x1(48).._._0x1(48).._._0x1(58).._._0x1(48).._._0x1(48).._._0x1(58).._._0x1(48).._._0x1(48),
+    Color = Color3.fromHex(_._0x1(35).._._0x1(48).._._0x1(48).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(102))
 })
 
 Main:Tag({
-    Title = "脚本创建的6天",
-    Color = Color3.fromHex("#ff007f")
+    Title = _._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(229).._._0x1(136).._._0x1(155).._._0x1(229).._._0x1(187).._._0x1(186).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(54).._._0x1(229).._._0x1(164).._._0x1(169),
+    Color = Color3.fromHex(_._0x1(35).._._0x1(102).._._0x1(102).._._0x1(48).._._0x1(48).._._0x1(55).._._0x1(102))
 })
 
 local hue = 0
@@ -640,11 +643,11 @@ local running = true
 
 task.spawn(function()
     while running do
-        local now = os.date("*t")
-        local hours = string.format("%02d", now.hour)
-        local minutes = string.format("%02d", now.min)
-        local seconds = string.format("%02d", now.sec)
-        local timeString = string.format("当前时间: %s:%s:%s", hours, minutes, seconds)
+        local now = os.date(_._0x1(42).._._0x1(116))
+        local hours = string.format(_._0x1(37).._._0x1(48).._._0x1(50).._._0x1(100), now.hour)
+        local minutes = string.format(_._0x1(37).._._0x1(48).._._0x1(50).._._0x1(100), now.min)
+        local seconds = string.format(_._0x1(37).._._0x1(48).._._0x1(50).._._0x1(100), now.sec)
+        local timeString = string.format(_._0x1(229).._._0x1(189).._._0x1(147).._._0x1(229).._._0x1(137).._._0x1(141).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(233).._._0x1(151).._._0x1(180).._._0x1(58).._._0x1(32).._._0x1(37).._._0x1(115).._._0x1(58).._._0x1(37).._._0x1(115).._._0x1(58).._._0x1(37).._._0x1(115), hours, minutes, seconds)
         hue = (hue + 0.01) % 1
         local color = Color3.fromHSV(hue, 1, 1)
         TimeTag:SetTitle(timeString)
@@ -654,12 +657,12 @@ task.spawn(function()
 end)
 
 local TimeTag2 = Main:Tag({
-    Title = "新年倒计时: --",
-    Color = Color3.fromHex("#f57c00")
+    Title = _._0x1(230).._._0x1(150).._._0x1(176).._._0x1(229).._._0x1(185).._._0x1(180).._._0x1(229).._._0x1(128).._._0x1(146).._._0x1(232).._._0x1(174).._._0x1(161).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(58).._._0x1(32).._._0x1(45).._._0x1(45),
+    Color = Color3.fromHex(_._0x1(35).._._0x1(102).._._0x1(53).._._0x1(55).._._0x1(99).._._0x1(48).._._0x1(48))
 })
 
 local function getNextNewYear()
-    local now = os.date("*t")
+    local now = os.date(_._0x1(42).._._0x1(116))
     local newYear = {
         year = now.year,
         month = 1,
@@ -691,9 +694,9 @@ task.spawn(function()
         local seconds = remaining % 60
         local displayText
         if days > 0 then
-            displayText = string.format("新年倒计时: %d天%02d:%02d:%02d", days, hours, minutes, seconds)
+            displayText = string.format(_._0x1(230).._._0x1(150).._._0x1(176).._._0x1(229).._._0x1(185).._._0x1(180).._._0x1(229).._._0x1(128).._._0x1(146).._._0x1(232).._._0x1(174).._._0x1(161).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(58).._._0x1(32).._._0x1(37).._._0x1(100).._._0x1(229).._._0x1(164).._._0x1(169).._._0x1(37).._._0x1(48).._._0x1(50).._._0x1(100).._._0x1(58).._._0x1(37).._._0x1(48).._._0x1(50).._._0x1(100).._._0x1(58).._._0x1(37).._._0x1(48).._._0x1(50).._._0x1(100), days, hours, minutes, seconds)
         else
-            displayText = string.format("新年倒计时: %02d:%02d:%02d", hours, minutes, seconds)
+            displayText = string.format(_._0x1(230).._._0x1(150).._._0x1(176).._._0x1(229).._._0x1(185).._._0x1(180).._._0x1(229).._._0x1(128).._._0x1(146).._._0x1(232).._._0x1(174).._._0x1(161).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(58).._._0x1(32).._._0x1(37).._._0x1(48).._._0x1(50).._._0x1(100).._._0x1(58).._._0x1(37).._._0x1(48).._._0x1(50).._._0x1(100).._._0x1(58).._._0x1(37).._._0x1(48).._._0x1(50).._._0x1(100), hours, minutes, seconds)
         end
         TimeTag2:SetTitle(displayText)
         hue = (hue + 0.01) % 1
@@ -714,26 +717,26 @@ local function ApplyNeonBorder(Window, Speed)
         end
         if not MainFrame then return end
     end
-    local Corner = Instance.new("UICorner")
+    local Corner = Instance.new(_._0x1(85).._._0x1(73).._._0x1(67).._._0x1(111).._._0x1(114).._._0x1(110).._._0x1(101).._._0x1(114))
     Corner.CornerRadius = UDim.new(0, 12)
     Corner.Parent = MainFrame
-    local Border = Instance.new("UIStroke")
-    Border.Name = "NeonBorder"
+    local Border = Instance.new(_._0x1(85).._._0x1(73).._._0x1(83).._._0x1(116).._._0x1(114).._._0x1(111).._._0x1(107).._._0x1(101))
+    Border.Name = _._0x1(78).._._0x1(101).._._0x1(111).._._0x1(110).._._0x1(66).._._0x1(111).._._0x1(114).._._0x1(100).._._0x1(101).._._0x1(114)
     Border.Thickness = 2
     Border.Color = Color3.new(1, 1, 1)
     Border.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     Border.LineJoinMode = Enum.LineJoinMode.Round
     Border.Parent = MainFrame
-    local Gradient = Instance.new("UIGradient")
+    local Gradient = Instance.new(_._0x1(85).._._0x1(73).._._0x1(71).._._0x1(114).._._0x1(97).._._0x1(100).._._0x1(105).._._0x1(101).._._0x1(110).._._0x1(116))
     Gradient.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromHex("#00FFFF")),
-        ColorSequenceKeypoint.new(0.5, Color3.fromHex("#FF00FF")),
-        ColorSequenceKeypoint.new(1, Color3.fromHex("#00FFFF"))
+        ColorSequenceKeypoint.new(0, Color3.fromHex(_._0x1(35).._._0x1(48).._._0x1(48).._._0x1(70).._._0x1(70).._._0x1(70).._._0x1(70))),
+        ColorSequenceKeypoint.new(0.5, Color3.fromHex(_._0x1(35).._._0x1(70).._._0x1(70).._._0x1(48).._._0x1(48).._._0x1(70).._._0x1(70))),
+        ColorSequenceKeypoint.new(1, Color3.fromHex(_._0x1(35).._._0x1(48).._._0x1(48).._._0x1(70).._._0x1(70).._._0x1(70).._._0x1(70)))
     })
     Gradient.Rotation = 0
     Gradient.Parent = Border
     local Connection
-    Connection = game:GetService("RunService").Heartbeat:Connect(function()
+    Connection = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101)).Heartbeat:Connect(function()
         if not Border or Border.Parent == nil then
             if Connection then Connection:Disconnect() end
             return
@@ -751,323 +754,323 @@ end
 ApplyNeonBorder(Window, 60)
 
 local Tab = Window:Tab({
-    Title = "通用",
-    Icon = "bird", -- optional
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(148).._._0x1(168),
+    Icon = _._0x1(98).._._0x1(105).._._0x1(114).._._0x1(100), -- optional
     Locked = false,
 })
 local Section = Tab:Section({
-    Title = "通用功能《如果执行不了 请换加速器》",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189).._._0x1(227).._._0x1(128).._._0x1(138).._._0x1(229).._._0x1(166).._._0x1(130).._._0x1(230).._._0x1(158).._._0x1(156).._._0x1(230).._._0x1(137).._._0x1(167).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(228).._._0x1(184).._._0x1(141).._._0x1(228).._._0x1(186).._._0x1(134).._._0x1(32).._._0x1(232).._._0x1(175).._._0x1(183).._._0x1(230).._._0x1(141).._._0x1(162).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(153).._._0x1(168).._._0x1(227).._._0x1(128).._._0x1(139),
     Opened = true
 })
 Section:Button({
-    Title = "飞踢",
+    Title = _._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(184).._._0x1(162),
     Callback = function()
     
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()    
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(115).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(115).._._0x1(46).._._0x1(110).._._0x1(101).._._0x1(116).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(47).._._0x1(85).._._0x1(110).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(114).._._0x1(115).._._0x1(97).._._0x1(108).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(70).._._0x1(101).._._0x1(45).._._0x1(68).._._0x1(114).._._0x1(111).._._0x1(112).._._0x1(75).._._0x1(105).._._0x1(99).._._0x1(107).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(49).._._0x1(54).._._0x1(53).._._0x1(56).._._0x1(49).._._0x1(51)))()    
       end
 })
 Section:Button({
-    Title = "无敌",
+    Title = _._0x1(230).._._0x1(151).._._0x1(160).._._0x1(230).._._0x1(149).._._0x1(140),
     Callback = function()
     
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()    
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(115).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(115).._._0x1(46).._._0x1(110).._._0x1(101).._._0x1(116).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(47).._._0x1(85).._._0x1(110).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(114).._._0x1(115).._._0x1(97).._._0x1(108).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(70).._._0x1(101).._._0x1(45).._._0x1(68).._._0x1(114).._._0x1(111).._._0x1(112).._._0x1(75).._._0x1(105).._._0x1(99).._._0x1(107).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(49).._._0x1(54).._._0x1(53).._._0x1(56).._._0x1(49).._._0x1(51)))()    
       end
 })
 Section:Button({
-    Title = "VR视角",
+    Title = _._0x1(86).._._0x1(82).._._0x1(232).._._0x1(167).._._0x1(134).._._0x1(232).._._0x1(167).._._0x1(146),
     Callback = function()
     
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()    
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(115).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(115).._._0x1(46).._._0x1(110).._._0x1(101).._._0x1(116).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(47).._._0x1(85).._._0x1(110).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(114).._._0x1(115).._._0x1(97).._._0x1(108).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(70).._._0x1(101).._._0x1(45).._._0x1(68).._._0x1(114).._._0x1(111).._._0x1(112).._._0x1(75).._._0x1(105).._._0x1(99).._._0x1(107).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(49).._._0x1(54).._._0x1(53).._._0x1(56).._._0x1(49).._._0x1(51)))()    
       end
 })
 Section:Button({
-    Title = "无限罗宝😱",
+    Title = _._0x1(230).._._0x1(151).._._0x1(160).._._0x1(233).._._0x1(153).._._0x1(144).._._0x1(231).._._0x1(189).._._0x1(151).._._0x1(229).._._0x1(174).._._0x1(157).._._0x1(240).._._0x1(159).._._0x1(152).._._0x1(177),
     Callback = function()
     
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()    
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(115).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(115).._._0x1(46).._._0x1(110).._._0x1(101).._._0x1(116).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(47).._._0x1(85).._._0x1(110).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(114).._._0x1(115).._._0x1(97).._._0x1(108).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(70).._._0x1(101).._._0x1(45).._._0x1(68).._._0x1(114).._._0x1(111).._._0x1(112).._._0x1(75).._._0x1(105).._._0x1(99).._._0x1(107).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(49).._._0x1(54).._._0x1(53).._._0x1(56).._._0x1(49).._._0x1(51)))()    
       end
 })
 Section:Button({
-    Title = "增加FPS",
+    Title = _._0x1(229).._._0x1(162).._._0x1(158).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(70).._._0x1(80).._._0x1(83),
     Callback = function()
     
-loadstring(game:HttpGet("https://pastefy.app/IYUAoy7a/raw"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(112).._._0x1(97).._._0x1(115).._._0x1(116).._._0x1(101).._._0x1(102).._._0x1(121).._._0x1(46).._._0x1(97).._._0x1(112).._._0x1(112).._._0x1(47).._._0x1(73).._._0x1(89).._._0x1(85).._._0x1(65).._._0x1(111).._._0x1(121).._._0x1(55).._._0x1(97).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119)))()
    
       end
 })
 Section:Button({
-    Title = "飞行",
+    Title = _._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140),
     Callback = function()
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/rodan-demirali/RobloxUI/refs/heads/main/flyUIscript"))    
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(114).._._0x1(111).._._0x1(100).._._0x1(97).._._0x1(110).._._0x1(45).._._0x1(100).._._0x1(101).._._0x1(109).._._0x1(105).._._0x1(114).._._0x1(97).._._0x1(108).._._0x1(105).._._0x1(47).._._0x1(82).._._0x1(111).._._0x1(98).._._0x1(108).._._0x1(111).._._0x1(120).._._0x1(85).._._0x1(73).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(102).._._0x1(115).._._0x1(47).._._0x1(104).._._0x1(101).._._0x1(97).._._0x1(100).._._0x1(115).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(102).._._0x1(108).._._0x1(121).._._0x1(85).._._0x1(73).._._0x1(115).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116)))    
       end
 })
 Section:Button({
-    Title = "无敌少侠飞行脚本",
+    Title = _._0x1(230).._._0x1(151).._._0x1(160).._._0x1(230).._._0x1(149).._._0x1(140).._._0x1(229).._._0x1(176).._._0x1(145).._._0x1(228).._._0x1(190).._._0x1(160).._._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Callback = function()
     
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Invinicible-Flight-R15-45414"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(115).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(115).._._0x1(46).._._0x1(110).._._0x1(101).._._0x1(116).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(47).._._0x1(85).._._0x1(110).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(114).._._0x1(115).._._0x1(97).._._0x1(108).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(73).._._0x1(110).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(105).._._0x1(99).._._0x1(105).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(45).._._0x1(70).._._0x1(108).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(45).._._0x1(82).._._0x1(49).._._0x1(53).._._0x1(45).._._0x1(52).._._0x1(53).._._0x1(52).._._0x1(49).._._0x1(52)))()
       end
 })
 
 local Section = Tab:Section({
-    Title = "信息",
+    Title = _._0x1(228).._._0x1(191).._._0x1(161).._._0x1(230).._._0x1(129).._._0x1(175),
     Opened = true
 })
 Section:Button({
-    Title = "作者 QQ 3108792043",
+    Title = _._0x1(228).._._0x1(189).._._0x1(156).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(32).._._0x1(81).._._0x1(81).._._0x1(32).._._0x1(51).._._0x1(49).._._0x1(48).._._0x1(56).._._0x1(55).._._0x1(57).._._0x1(50).._._0x1(48).._._0x1(52).._._0x1(51),
     Callback = function()
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqvi1/homelander-by-GioBolqv1/refs/heads/main/homelander.lua"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(103).._._0x1(105).._._0x1(111).._._0x1(98).._._0x1(111).._._0x1(108).._._0x1(113).._._0x1(118).._._0x1(105).._._0x1(49).._._0x1(47).._._0x1(104).._._0x1(111).._._0x1(109).._._0x1(101).._._0x1(108).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(114).._._0x1(45).._._0x1(98).._._0x1(121).._._0x1(45).._._0x1(71).._._0x1(105).._._0x1(111).._._0x1(66).._._0x1(111).._._0x1(108).._._0x1(113).._._0x1(118).._._0x1(49).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(102).._._0x1(115).._._0x1(47).._._0x1(104).._._0x1(101).._._0x1(97).._._0x1(100).._._0x1(115).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(104).._._0x1(111).._._0x1(109).._._0x1(101).._._0x1(108).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(114).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97)))()
       end
 })
 Section:Button({
-    Title = "你的注入器：忍者注入器",
+    Title = _._0x1(228).._._0x1(189).._._0x1(160).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(230).._._0x1(179).._._0x1(168).._._0x1(229).._._0x1(133).._._0x1(165).._._0x1(229).._._0x1(153).._._0x1(168).._._0x1(239).._._0x1(188).._._0x1(154).._._0x1(229).._._0x1(191).._._0x1(141).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(230).._._0x1(179).._._0x1(168).._._0x1(229).._._0x1(133).._._0x1(165).._._0x1(229).._._0x1(153).._._0x1(168),
     Callback = function()
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqvi1/homelander-by-GioBolqv1/refs/heads/main/homelander.lua"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(103).._._0x1(105).._._0x1(111).._._0x1(98).._._0x1(111).._._0x1(108).._._0x1(113).._._0x1(118).._._0x1(105).._._0x1(49).._._0x1(47).._._0x1(104).._._0x1(111).._._0x1(109).._._0x1(101).._._0x1(108).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(114).._._0x1(45).._._0x1(98).._._0x1(121).._._0x1(45).._._0x1(71).._._0x1(105).._._0x1(111).._._0x1(66).._._0x1(111).._._0x1(108).._._0x1(113).._._0x1(118).._._0x1(49).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(102).._._0x1(115).._._0x1(47).._._0x1(104).._._0x1(101).._._0x1(97).._._0x1(100).._._0x1(115).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(104).._._0x1(111).._._0x1(109).._._0x1(101).._._0x1(108).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(114).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97)))()
       end
 })
 Section:Button({
-    Title = "该脚本不圈钱也不会跑路良心脚本",
+    Title = _._0x1(232).._._0x1(175).._._0x1(165).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(228).._._0x1(184).._._0x1(141).._._0x1(229).._._0x1(156).._._0x1(136).._._0x1(233).._._0x1(146).._._0x1(177).._._0x1(228).._._0x1(185).._._0x1(159).._._0x1(228).._._0x1(184).._._0x1(141).._._0x1(228).._._0x1(188).._._0x1(154).._._0x1(232).._._0x1(183).._._0x1(145).._._0x1(232).._._0x1(183).._._0x1(175).._._0x1(232).._._0x1(137).._._0x1(175).._._0x1(229).._._0x1(191).._._0x1(131).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Callback = function()
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqvi1/homelander-by-GioBolqv1/refs/heads/main/homelander.lua"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(103).._._0x1(105).._._0x1(111).._._0x1(98).._._0x1(111).._._0x1(108).._._0x1(113).._._0x1(118).._._0x1(105).._._0x1(49).._._0x1(47).._._0x1(104).._._0x1(111).._._0x1(109).._._0x1(101).._._0x1(108).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(114).._._0x1(45).._._0x1(98).._._0x1(121).._._0x1(45).._._0x1(71).._._0x1(105).._._0x1(111).._._0x1(66).._._0x1(111).._._0x1(108).._._0x1(113).._._0x1(118).._._0x1(49).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(102).._._0x1(115).._._0x1(47).._._0x1(104).._._0x1(101).._._0x1(97).._._0x1(100).._._0x1(115).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(104).._._0x1(111).._._0x1(109).._._0x1(101).._._0x1(108).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(114).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97)))()
       end
 })
 
 local Tab = Window:Tab({
-    Title = "脚本中心",
-    Icon = "bird", -- optional
+    Title = _._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(228).._._0x1(184).._._0x1(173).._._0x1(229).._._0x1(191).._._0x1(131),
+    Icon = _._0x1(98).._._0x1(105).._._0x1(114).._._0x1(100), -- optional
     Locked = false,
 })
 local Section = Tab:Section({
-    Title = "脚本",
+    Title = _._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Opened = true
 })
 Section:Button({
-    Title = "音乐脚本",
+    Title = _._0x1(233).._._0x1(159).._._0x1(179).._._0x1(228).._._0x1(185).._._0x1(144).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Callback = function()
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/fningna51-stack/-/main/AF%20%E9%9F%B3%E4%B9%90%E8%84%9A%E6%9C%AC"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(102).._._0x1(110).._._0x1(105).._._0x1(110).._._0x1(103).._._0x1(110).._._0x1(97).._._0x1(53).._._0x1(49).._._0x1(45).._._0x1(115).._._0x1(116).._._0x1(97).._._0x1(99).._._0x1(107).._._0x1(47).._._0x1(45).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(65).._._0x1(70).._._0x1(37).._._0x1(50).._._0x1(48).._._0x1(37).._._0x1(69).._._0x1(57).._._0x1(37).._._0x1(57).._._0x1(70).._._0x1(37).._._0x1(66).._._0x1(51).._._0x1(37).._._0x1(69).._._0x1(52).._._0x1(37).._._0x1(66).._._0x1(57).._._0x1(37).._._0x1(57).._._0x1(48).._._0x1(37).._._0x1(69).._._0x1(56).._._0x1(37).._._0x1(56).._._0x1(52).._._0x1(37).._._0x1(57).._._0x1(65).._._0x1(37).._._0x1(69).._._0x1(54).._._0x1(37).._._0x1(57).._._0x1(67).._._0x1(37).._._0x1(65).._._0x1(67)))()
       end
 })
 Section:Button({
-    Title = "XK Hub",
+    Title = _._0x1(88).._._0x1(75).._._0x1(32).._._0x1(72).._._0x1(117).._._0x1(98),
     Callback = function()
     
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-XK-Hub-76803"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(115).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(115).._._0x1(46).._._0x1(110).._._0x1(101).._._0x1(116).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(47).._._0x1(85).._._0x1(110).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(114).._._0x1(115).._._0x1(97).._._0x1(108).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(88).._._0x1(75).._._0x1(45).._._0x1(72).._._0x1(117).._._0x1(98).._._0x1(45).._._0x1(55).._._0x1(54).._._0x1(56).._._0x1(48).._._0x1(51)))()
       end
 })
 Section:Button({
-    Title = "河北唐县",
+    Title = _._0x1(230).._._0x1(178).._._0x1(179).._._0x1(229).._._0x1(140).._._0x1(151).._._0x1(229).._._0x1(148).._._0x1(144).._._0x1(229).._._0x1(142).._._0x1(191),
     Callback = function()
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/ok/T%20ang%20County"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(77).._._0x1(97).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(56).._._0x1(54).._._0x1(52).._._0x1(50).._._0x1(47).._._0x1(115).._._0x1(99).._._0x1(105).._._0x1(101).._._0x1(110).._._0x1(99).._._0x1(101).._._0x1(47).._._0x1(111).._._0x1(107).._._0x1(47).._._0x1(84).._._0x1(37).._._0x1(50).._._0x1(48).._._0x1(97).._._0x1(110).._._0x1(103).._._0x1(37).._._0x1(50).._._0x1(48).._._0x1(67).._._0x1(111).._._0x1(117).._._0x1(110).._._0x1(116).._._0x1(121)))()
       end
 })
 Section:Button({
-    Title = "皮脚本",
+    Title = _._0x1(231).._._0x1(154).._._0x1(174).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Callback = function()
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(120).._._0x1(105).._._0x1(97).._._0x1(111).._._0x1(112).._._0x1(105).._._0x1(55).._._0x1(55).._._0x1(47).._._0x1(120).._._0x1(105).._._0x1(97).._._0x1(111).._._0x1(112).._._0x1(105).._._0x1(55).._._0x1(55).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(81).._._0x1(81).._._0x1(49).._._0x1(48).._._0x1(48).._._0x1(50).._._0x1(49).._._0x1(48).._._0x1(48).._._0x1(48).._._0x1(51).._._0x1(50).._._0x1(45).._._0x1(82).._._0x1(111).._._0x1(98).._._0x1(108).._._0x1(111).._._0x1(120).._._0x1(45).._._0x1(80).._._0x1(105).._._0x1(45).._._0x1(115).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97)))()
       end
 })
 Section:Button({
-    Title = "祖国人脚本",
+    Title = _._0x1(231).._._0x1(165).._._0x1(150).._._0x1(229).._._0x1(155).._._0x1(189).._._0x1(228).._._0x1(186).._._0x1(186).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Callback = function()
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqvi1/homelander-by-GioBolqv1/refs/heads/main/homelander.lua"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(103).._._0x1(105).._._0x1(111).._._0x1(98).._._0x1(111).._._0x1(108).._._0x1(113).._._0x1(118).._._0x1(105).._._0x1(49).._._0x1(47).._._0x1(104).._._0x1(111).._._0x1(109).._._0x1(101).._._0x1(108).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(114).._._0x1(45).._._0x1(98).._._0x1(121).._._0x1(45).._._0x1(71).._._0x1(105).._._0x1(111).._._0x1(66).._._0x1(111).._._0x1(108).._._0x1(113).._._0x1(118).._._0x1(49).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(102).._._0x1(115).._._0x1(47).._._0x1(104).._._0x1(101).._._0x1(97).._._0x1(100).._._0x1(115).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(104).._._0x1(111).._._0x1(109).._._0x1(101).._._0x1(108).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(114).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97)))()
       end
 })
 Section:Button({
-    Title = "夜脚本",
+    Title = _._0x1(229).._._0x1(164).._._0x1(156).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Callback = function()
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqvi1/homelander-by-GioBolqv1/refs/heads/main/homelander.lua"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(103).._._0x1(105).._._0x1(111).._._0x1(98).._._0x1(111).._._0x1(108).._._0x1(113).._._0x1(118).._._0x1(105).._._0x1(49).._._0x1(47).._._0x1(104).._._0x1(111).._._0x1(109).._._0x1(101).._._0x1(108).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(114).._._0x1(45).._._0x1(98).._._0x1(121).._._0x1(45).._._0x1(71).._._0x1(105).._._0x1(111).._._0x1(66).._._0x1(111).._._0x1(108).._._0x1(113).._._0x1(118).._._0x1(49).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(102).._._0x1(115).._._0x1(47).._._0x1(104).._._0x1(101).._._0x1(97).._._0x1(100).._._0x1(115).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(104).._._0x1(111).._._0x1(109).._._0x1(101).._._0x1(108).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(114).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97)))()
       end
 })
 Section:Button({
-    Title = "该脚本以错误❌无法执行",
+    Title = _._0x1(232).._._0x1(175).._._0x1(165).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(228).._._0x1(187).._._0x1(165).._._0x1(233).._._0x1(148).._._0x1(153).._._0x1(232).._._0x1(175).._._0x1(175).._._0x1(226).._._0x1(157).._._0x1(140).._._0x1(230).._._0x1(151).._._0x1(160).._._0x1(230).._._0x1(179).._._0x1(149).._._0x1(230).._._0x1(137).._._0x1(167).._._0x1(232).._._0x1(161).._._0x1(140),
     Callback = function()
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aaaaa-arch/effective-computing-machine/main/%E5%AF%86%E9%92%A5"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(97).._._0x1(97).._._0x1(97).._._0x1(97).._._0x1(97).._._0x1(45).._._0x1(97).._._0x1(114).._._0x1(99).._._0x1(104).._._0x1(47).._._0x1(101).._._0x1(102).._._0x1(102).._._0x1(101).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(45).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(117).._._0x1(116).._._0x1(105).._._0x1(110).._._0x1(103).._._0x1(45).._._0x1(109).._._0x1(97).._._0x1(99).._._0x1(104).._._0x1(105).._._0x1(110).._._0x1(101).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(37).._._0x1(69).._._0x1(53).._._0x1(37).._._0x1(65).._._0x1(70).._._0x1(37).._._0x1(56).._._0x1(54).._._0x1(37).._._0x1(69).._._0x1(57).._._0x1(37).._._0x1(57).._._0x1(50).._._0x1(37).._._0x1(65).._._0x1(53)))()
       end
 })
 local Section = Tab:Section({
-    Title = "XY脚本",
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Opened = true
 })
 Section:Button({
-    Title = "XY 脚本自然灾害",
+    Title = _._0x1(88).._._0x1(89).._._0x1(32).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(231).._._0x1(132).._._0x1(182).._._0x1(231).._._0x1(129).._._0x1(190).._._0x1(229).._._0x1(174).._._0x1(179),
     Callback = function()
     
-local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+local WindUI = loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(70).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(97).._._0x1(103).._._0x1(101).._._0x1(115).._._0x1(117).._._0x1(115).._._0x1(47).._._0x1(87).._._0x1(105).._._0x1(110).._._0x1(100).._._0x1(85).._._0x1(73).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(108).._._0x1(101).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(115).._._0x1(47).._._0x1(108).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(115).._._0x1(116).._._0x1(47).._._0x1(100).._._0x1(111).._._0x1(119).._._0x1(110).._._0x1(108).._._0x1(111).._._0x1(97).._._0x1(100).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97)))()
 local Window = WindUI:CreateWindow({
-        Title = "XY脚本-自然灾害<font color='#00FF00'>V2</font>",
-        Icon = "rbxassetid://4483362748",
+        Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(45).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(231).._._0x1(132).._._0x1(182).._._0x1(231).._._0x1(129).._._0x1(190).._._0x1(229).._._0x1(174).._._0x1(179).._._0x1(60).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(32).._._0x1(99).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114).._._0x1(61).._._0x1(39).._._0x1(35).._._0x1(48).._._0x1(48).._._0x1(70).._._0x1(70).._._0x1(48).._._0x1(48).._._0x1(39).._._0x1(62).._._0x1(86).._._0x1(50).._._0x1(60).._._0x1(47).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(62),
+        Icon = _._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(52).._._0x1(52).._._0x1(56).._._0x1(51).._._0x1(51).._._0x1(54).._._0x1(50).._._0x1(55).._._0x1(52).._._0x1(56),
         IconTransparency = 0.5,
         IconThemed = true,
-        Author = "作者:小夜",
-        Folder = "CloudHub",
+        Author = _._0x1(228).._._0x1(189).._._0x1(156).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(58).._._0x1(229).._._0x1(176).._._0x1(143).._._0x1(229).._._0x1(164).._._0x1(156),
+        Folder = _._0x1(67).._._0x1(108).._._0x1(111).._._0x1(117).._._0x1(100).._._0x1(72).._._0x1(117).._._0x1(98),
         Size = UDim2.fromOffset(400, 300),
         Transparent = true,
-        Theme = "Light",
+        Theme = _._0x1(76).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
         User = {
             Enabled = true,
-            Callback = function() print("clicked") end,
+            Callback = function() _G[_._0x1(112).._._0x1(114).._._0x1(105).._._0x1(110).._._0x1(116)](_._0x1(99).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(107).._._0x1(101).._._0x1(100)) end,
             Anonymous = false
         },
         SideBarWidth = 200,
         ScrollBarEnabled = true,
-        Background = "rbxassetid://111122821357551"
+        Background = _._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(49).._._0x1(49).._._0x1(49).._._0x1(49).._._0x1(50).._._0x1(50).._._0x1(56).._._0x1(50).._._0x1(49).._._0x1(51).._._0x1(53).._._0x1(55).._._0x1(53).._._0x1(53).._._0x1(49)
     })
     
 
 WindUI:Popup({
-    Title = "欢迎使用",
-    Icon = "info",
-    Content = "欢迎用户使用XY脚本-自然灾害",
+    Title = _._0x1(230).._._0x1(172).._._0x1(162).._._0x1(232).._._0x1(191).._._0x1(142).._._0x1(228).._._0x1(189).._._0x1(191).._._0x1(231).._._0x1(148).._._0x1(168),
+    Icon = _._0x1(105).._._0x1(110).._._0x1(102).._._0x1(111),
+    Content = _._0x1(230).._._0x1(172).._._0x1(162).._._0x1(232).._._0x1(191).._._0x1(142).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(230).._._0x1(136).._._0x1(183).._._0x1(228).._._0x1(189).._._0x1(191).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(45).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(231).._._0x1(132).._._0x1(182).._._0x1(231).._._0x1(129).._._0x1(190).._._0x1(229).._._0x1(174).._._0x1(179),
     Buttons = {
         {
-            Title = "取消",
+            Title = _._0x1(229).._._0x1(143).._._0x1(150).._._0x1(230).._._0x1(182).._._0x1(136),
             Callback = function() end,
-            Variant = "Tertiary",
+            Variant = _._0x1(84).._._0x1(101).._._0x1(114).._._0x1(116).._._0x1(105).._._0x1(97).._._0x1(114).._._0x1(121),
         },
         {
-            Title = "确定",
-            Icon = "arrow-right",
+            Title = _._0x1(231).._._0x1(161).._._0x1(174).._._0x1(229).._._0x1(174).._._0x1(154),
+            Icon = _._0x1(97).._._0x1(114).._._0x1(114).._._0x1(111).._._0x1(119).._._0x1(45).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
             Callback = function() end,
-            Variant = "Primary",
+            Variant = _._0x1(80).._._0x1(114).._._0x1(105).._._0x1(109).._._0x1(97).._._0x1(114).._._0x1(121),
         }
     }
 })
 
 Window:EditOpenButton({
-    Title = "XY脚本",
-    Icon = "monitor",
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
+    Icon = _._0x1(109).._._0x1(111).._._0x1(110).._._0x1(105).._._0x1(116).._._0x1(111).._._0x1(114),
     CornerRadius = UDim.new(0,16),
     StrokeThickness = 4,
     Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromHex("FF0000")),
-        ColorSequenceKeypoint.new(0.16, Color3.fromHex("FF7F00")),
-        ColorSequenceKeypoint.new(0.33, Color3.fromHex("FFFF00")),
-        ColorSequenceKeypoint.new(0.5, Color3.fromHex("00FF00")),
-        ColorSequenceKeypoint.new(0.66, Color3.fromHex("0000FF")),
-        ColorSequenceKeypoint.new(0.83, Color3.fromHex("4B0082")),
-        ColorSequenceKeypoint.new(1, Color3.fromHex("9400D3"))
+        ColorSequenceKeypoint.new(0, Color3.fromHex(_._0x1(70).._._0x1(70).._._0x1(48).._._0x1(48).._._0x1(48).._._0x1(48))),
+        ColorSequenceKeypoint.new(0.16, Color3.fromHex(_._0x1(70).._._0x1(70).._._0x1(55).._._0x1(70).._._0x1(48).._._0x1(48))),
+        ColorSequenceKeypoint.new(0.33, Color3.fromHex(_._0x1(70).._._0x1(70).._._0x1(70).._._0x1(70).._._0x1(48).._._0x1(48))),
+        ColorSequenceKeypoint.new(0.5, Color3.fromHex(_._0x1(48).._._0x1(48).._._0x1(70).._._0x1(70).._._0x1(48).._._0x1(48))),
+        ColorSequenceKeypoint.new(0.66, Color3.fromHex(_._0x1(48).._._0x1(48).._._0x1(48).._._0x1(48).._._0x1(70).._._0x1(70))),
+        ColorSequenceKeypoint.new(0.83, Color3.fromHex(_._0x1(52).._._0x1(66).._._0x1(48).._._0x1(48).._._0x1(56).._._0x1(50))),
+        ColorSequenceKeypoint.new(1, Color3.fromHex(_._0x1(57).._._0x1(52).._._0x1(48).._._0x1(48).._._0x1(68).._._0x1(51)))
     }),
     Draggable = true,
 })
             
 Window:Tag({
-    Title = "XY脚本",
-    Color = Color3.fromHex("#30ff6a")
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
+    Color = Color3.fromHex(_._0x1(35).._._0x1(51).._._0x1(48).._._0x1(102).._._0x1(102).._._0x1(54).._._0x1(97))
 })
 
 Window:Tag({
-        Title = "XY脚本", -- 标签汉化
-        Color = Color3.fromHex("#315dff")
+        Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172), -- 标签汉化
+        Color = Color3.fromHex(_._0x1(35).._._0x1(51).._._0x1(49).._._0x1(53).._._0x1(100).._._0x1(102).._._0x1(102))
     })
     local TimeTag = Window:Tag({
-        Title = "自然灾害",
-        Color = Color3.fromHex("#000000")
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(231).._._0x1(132).._._0x1(182).._._0x1(231).._._0x1(129).._._0x1(190).._._0x1(229).._._0x1(174).._._0x1(179),
+        Color = Color3.fromHex(_._0x1(35).._._0x1(48).._._0x1(48).._._0x1(48).._._0x1(48).._._0x1(48).._._0x1(48))
     })
 
 local Tabs = {
-    Main = Window:Section({ Title = "XY脚本自然灾害", Opened = true }),
+    Main = Window:Section({ Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(231).._._0x1(132).._._0x1(182).._._0x1(231).._._0x1(129).._._0x1(190).._._0x1(229).._._0x1(174).._._0x1(179), Opened = true }),
 }
 
 local TabHandles = {
-    Q = Tabs.Main:Tab({ Title = "功能", Icon = "layout-grid" }),
+    Q = Tabs.Main:Tab({ Title = _._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189), Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100) }),
 }
 
 Button = TabHandles.Q:Button({
-    Title = "指南针（可以用下面的地方显示不了地图）",
-    Desc = "要使用的话就必须买指南针",
+    Title = _._0x1(230).._._0x1(140).._._0x1(135).._._0x1(229).._._0x1(141).._._0x1(151).._._0x1(233).._._0x1(146).._._0x1(136).._._0x1(239).._._0x1(188).._._0x1(136).._._0x1(229).._._0x1(143).._._0x1(175).._._0x1(228).._._0x1(187).._._0x1(165).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(228).._._0x1(184).._._0x1(139).._._0x1(233).._._0x1(157).._._0x1(162).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(229).._._0x1(156).._._0x1(176).._._0x1(230).._._0x1(150).._._0x1(185).._._0x1(230).._._0x1(152).._._0x1(190).._._0x1(231).._._0x1(164).._._0x1(186).._._0x1(228).._._0x1(184).._._0x1(141).._._0x1(228).._._0x1(186).._._0x1(134).._._0x1(229).._._0x1(156).._._0x1(176).._._0x1(229).._._0x1(155).._._0x1(190).._._0x1(239).._._0x1(188).._._0x1(137),
+    Desc = _._0x1(232).._._0x1(166).._._0x1(129).._._0x1(228).._._0x1(189).._._0x1(191).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(232).._._0x1(175).._._0x1(157).._._0x1(229).._._0x1(176).._._0x1(177).._._0x1(229).._._0x1(191).._._0x1(133).._._0x1(233).._._0x1(161).._._0x1(187).._._0x1(228).._._0x1(185).._._0x1(176).._._0x1(230).._._0x1(140).._._0x1(135).._._0x1(229).._._0x1(141).._._0x1(151).._._0x1(233).._._0x1(146).._._0x1(136),
     Locked = false,
     Callback = function()
     
 local p = game.Players.LocalPlayer
-local r, c, h = game.ReplicatedStorage.Remotes.Compass, p.Backpack:WaitForChild("Compass"), p.Character:WaitForChild("Humanoid")
+local r, c, h = game.ReplicatedStorage.Remotes.Compass, p.Backpack:WaitForChild(_._0x1(67).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(97).._._0x1(115).._._0x1(115)), p.Character:WaitForChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100))
 h:EquipTool(c)
 task.wait()
-r:FireServer("Vote Map", 3)
-r:FireServer("Vote Map", 4)
+r:FireServer(_._0x1(86).._._0x1(111).._._0x1(116).._._0x1(101).._._0x1(32).._._0x1(77).._._0x1(97).._._0x1(112), 3)
+r:FireServer(_._0x1(86).._._0x1(111).._._0x1(116).._._0x1(101).._._0x1(32).._._0x1(77).._._0x1(97).._._0x1(112), 4)
 task.wait()
 h:UnequipTools()
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "黑洞",
-    Desc = "点击加载",
+    Title = _._0x1(233).._._0x1(187).._._0x1(145).._._0x1(230).._._0x1(180).._._0x1(158),
+    Desc = _._0x1(231).._._0x1(130).._._0x1(185).._._0x1(229).._._0x1(135).._._0x1(187).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189),
     Locked = false,
     Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Super-ring-Parts-V6-28581"))()
+        loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(115).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(115).._._0x1(46).._._0x1(110).._._0x1(101).._._0x1(116).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(47).._._0x1(85).._._0x1(110).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(114).._._0x1(115).._._0x1(97).._._0x1(108).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(83).._._0x1(117).._._0x1(112).._._0x1(101).._._0x1(114).._._0x1(45).._._0x1(114).._._0x1(105).._._0x1(110).._._0x1(103).._._0x1(45).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116).._._0x1(115).._._0x1(45).._._0x1(86).._._0x1(54).._._0x1(45).._._0x1(50).._._0x1(56).._._0x1(53).._._0x1(56).._._0x1(49)))()
         
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 3, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })        
         
     end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "物理磁铁",
-    Desc = "可以把下面的东西吸上来可以踩",
+    Title = _._0x1(231).._._0x1(137).._._0x1(169).._._0x1(231).._._0x1(144).._._0x1(134).._._0x1(231).._._0x1(163).._._0x1(129).._._0x1(233).._._0x1(147).._._0x1(129),
+    Desc = _._0x1(229).._._0x1(143).._._0x1(175).._._0x1(228).._._0x1(187).._._0x1(165).._._0x1(230).._._0x1(138).._._0x1(138).._._0x1(228).._._0x1(184).._._0x1(139).._._0x1(233).._._0x1(157).._._0x1(162).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(228).._._0x1(184).._._0x1(156).._._0x1(232).._._0x1(165).._._0x1(191).._._0x1(229).._._0x1(144).._._0x1(184).._._0x1(228).._._0x1(184).._._0x1(138).._._0x1(230).._._0x1(157).._._0x1(165).._._0x1(229).._._0x1(143).._._0x1(175).._._0x1(228).._._0x1(187).._._0x1(165).._._0x1(232).._._0x1(184).._._0x1(169),
     Locked = false,
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/cytj777i/6669178/main/%E5%8D%95%E4%B8%80%E7%89%A9%E4%BD%93%E9%A3%9E%E8%A1%8C%E8%BD%BD%E8%87%AA%E5%B7%B1%E6%9C%80%E7%BB%88%E4%BC%98%E5%8C%96%E7%89%88"))()       
+        loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(99).._._0x1(121).._._0x1(116).._._0x1(106).._._0x1(55).._._0x1(55).._._0x1(55).._._0x1(105).._._0x1(47).._._0x1(54).._._0x1(54).._._0x1(54).._._0x1(57).._._0x1(49).._._0x1(55).._._0x1(56).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(37).._._0x1(69).._._0x1(53).._._0x1(37).._._0x1(56).._._0x1(68).._._0x1(37).._._0x1(57).._._0x1(53).._._0x1(37).._._0x1(69).._._0x1(52).._._0x1(37).._._0x1(66).._._0x1(56).._._0x1(37).._._0x1(56).._._0x1(48).._._0x1(37).._._0x1(69).._._0x1(55).._._0x1(37).._._0x1(56).._._0x1(57).._._0x1(37).._._0x1(65).._._0x1(57).._._0x1(37).._._0x1(69).._._0x1(52).._._0x1(37).._._0x1(66).._._0x1(68).._._0x1(37).._._0x1(57).._._0x1(51).._._0x1(37).._._0x1(69).._._0x1(57).._._0x1(37).._._0x1(65).._._0x1(51).._._0x1(37).._._0x1(57).._._0x1(69).._._0x1(37).._._0x1(69).._._0x1(56).._._0x1(37).._._0x1(65).._._0x1(49).._._0x1(37).._._0x1(56).._._0x1(67).._._0x1(37).._._0x1(69).._._0x1(56).._._0x1(37).._._0x1(66).._._0x1(68).._._0x1(37).._._0x1(66).._._0x1(68).._._0x1(37).._._0x1(69).._._0x1(56).._._0x1(37).._._0x1(56).._._0x1(55).._._0x1(37).._._0x1(65).._._0x1(65).._._0x1(37).._._0x1(69).._._0x1(53).._._0x1(37).._._0x1(66).._._0x1(55).._._0x1(37).._._0x1(66).._._0x1(49).._._0x1(37).._._0x1(69).._._0x1(54).._._0x1(37).._._0x1(57).._._0x1(67).._._0x1(37).._._0x1(56).._._0x1(48).._._0x1(37).._._0x1(69).._._0x1(55).._._0x1(37).._._0x1(66).._._0x1(66).._._0x1(37).._._0x1(56).._._0x1(56).._._0x1(37).._._0x1(69).._._0x1(52).._._0x1(37).._._0x1(66).._._0x1(67).._._0x1(37).._._0x1(57).._._0x1(56).._._0x1(37).._._0x1(69).._._0x1(53).._._0x1(37).._._0x1(56).._._0x1(67).._._0x1(37).._._0x1(57).._._0x1(54).._._0x1(37).._._0x1(69).._._0x1(55).._._0x1(37).._._0x1(56).._._0x1(57).._._0x1(37).._._0x1(56).._._0x1(56)))()       
         
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                                
     end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "无敌少侠",
-    Desc = "用了它，你就会变成城市超人",
+    Title = _._0x1(230).._._0x1(151).._._0x1(160).._._0x1(230).._._0x1(149).._._0x1(140).._._0x1(229).._._0x1(176).._._0x1(145).._._0x1(228).._._0x1(190).._._0x1(160),
+    Desc = _._0x1(231).._._0x1(148).._._0x1(168).._._0x1(228).._._0x1(186).._._0x1(134).._._0x1(229).._._0x1(174).._._0x1(131).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(228).._._0x1(189).._._0x1(160).._._0x1(229).._._0x1(176).._._0x1(177).._._0x1(228).._._0x1(188).._._0x1(154).._._0x1(229).._._0x1(143).._._0x1(152).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(159).._._0x1(142).._._0x1(229).._._0x1(184).._._0x1(130).._._0x1(232).._._0x1(182).._._0x1(133).._._0x1(228).._._0x1(186).._._0x1(186),
     Locked = false,
     Callback = function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Invinicible-Flight-R15-45414"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(115).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(115).._._0x1(46).._._0x1(110).._._0x1(101).._._0x1(116).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(47).._._0x1(85).._._0x1(110).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(114).._._0x1(115).._._0x1(97).._._0x1(108).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(73).._._0x1(110).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(105).._._0x1(99).._._0x1(105).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(45).._._0x1(70).._._0x1(108).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(45).._._0x1(82).._._0x1(49).._._0x1(53).._._0x1(45).._._0x1(52).._._0x1(53).._._0x1(52).._._0x1(49).._._0x1(52)))()
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "防止摔跤伤害",
-    Desc = "就算掉下去了，也毫发无伤，掉到水里面也会死的",
+    Title = _._0x1(233).._._0x1(152).._._0x1(178).._._0x1(230).._._0x1(173).._._0x1(162).._._0x1(230).._._0x1(145).._._0x1(148).._._0x1(232).._._0x1(183).._._0x1(164).._._0x1(228).._._0x1(188).._._0x1(164).._._0x1(229).._._0x1(174).._._0x1(179),
+    Desc = _._0x1(229).._._0x1(176).._._0x1(177).._._0x1(231).._._0x1(174).._._0x1(151).._._0x1(230).._._0x1(142).._._0x1(137).._._0x1(228).._._0x1(184).._._0x1(139).._._0x1(229).._._0x1(142).._._0x1(187).._._0x1(228).._._0x1(186).._._0x1(134).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(228).._._0x1(185).._._0x1(159).._._0x1(230).._._0x1(175).._._0x1(171).._._0x1(229).._._0x1(143).._._0x1(145).._._0x1(230).._._0x1(151).._._0x1(160).._._0x1(228).._._0x1(188).._._0x1(164).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(230).._._0x1(142).._._0x1(137).._._0x1(229).._._0x1(136).._._0x1(176).._._0x1(230).._._0x1(176).._._0x1(180).._._0x1(233).._._0x1(135).._._0x1(140).._._0x1(233).._._0x1(157).._._0x1(162).._._0x1(228).._._0x1(185).._._0x1(159).._._0x1(228).._._0x1(188).._._0x1(154).._._0x1(230).._._0x1(173).._._0x1(187).._._0x1(231).._._0x1(154).._._0x1(132),
     Locked = false,
     Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/cytj777i/Fall-injury/main/防止摔落伤害"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(99).._._0x1(121).._._0x1(116).._._0x1(106).._._0x1(55).._._0x1(55).._._0x1(55).._._0x1(105).._._0x1(47).._._0x1(70).._._0x1(97).._._0x1(108).._._0x1(108).._._0x1(45).._._0x1(105).._._0x1(110).._._0x1(106).._._0x1(117).._._0x1(114).._._0x1(121).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(233).._._0x1(152).._._0x1(178).._._0x1(230).._._0x1(173).._._0x1(162).._._0x1(230).._._0x1(145).._._0x1(148).._._0x1(232).._._0x1(144).._._0x1(189).._._0x1(228).._._0x1(188).._._0x1(164).._._0x1(229).._._0x1(174).._._0x1(179)))()
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
@@ -1076,76 +1079,76 @@ WindUI:Notify({
       end
 })
 Section:Button({
-    Title = "XY脚本-超市里生存",
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(45).._._0x1(232).._._0x1(182).._._0x1(133).._._0x1(229).._._0x1(184).._._0x1(130).._._0x1(233).._._0x1(135).._._0x1(140).._._0x1(231).._._0x1(148).._._0x1(159).._._0x1(229).._._0x1(173).._._0x1(152),
     Callback = function()
     
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zephyr688/Lua-Script/refs/heads/main/UI"))()
+local library = loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(90).._._0x1(101).._._0x1(112).._._0x1(104).._._0x1(121).._._0x1(114).._._0x1(54).._._0x1(56).._._0x1(56).._._0x1(47).._._0x1(76).._._0x1(117).._._0x1(97).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(102).._._0x1(115).._._0x1(47).._._0x1(104).._._0x1(101).._._0x1(97).._._0x1(100).._._0x1(115).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(85).._._0x1(73)))()
 
-local window = library:new("XY脚本｜在超市生活一周")
+local window = library:new(_._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(239).._._0x1(189).._._0x1(156).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(232).._._0x1(182).._._0x1(133).._._0x1(229).._._0x1(184).._._0x1(130).._._0x1(231).._._0x1(148).._._0x1(159).._._0x1(230).._._0x1(180).._._0x1(187).._._0x1(228).._._0x1(184).._._0x1(128).._._0x1(229).._._0x1(145).._._0x1(168))
 
-local Page = window:Tab("主要功能",'16060333448')
+local Page = window:Tab(_._0x1(228).._._0x1(184).._._0x1(187).._._0x1(232).._._0x1(166).._._0x1(129).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189),_._0x1(49).._._0x1(54).._._0x1(48).._._0x1(54).._._0x1(48).._._0x1(51).._._0x1(51).._._0x1(51).._._0x1(52).._._0x1(52).._._0x1(56))
 
-local Section = Page:section("功能",true)
+local Section = Page:section(_._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189),true)
 
-Section:Toggle("自动收集食物", "", false, function(state)
+Section:Toggle(_._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(148).._._0x1(182).._._0x1(233).._._0x1(155).._._0x1(134).._._0x1(233).._._0x1(163).._._0x1(159).._._0x1(231).._._0x1(137).._._0x1(169), _._0x1(), false, function(state)
     while state and task.wait() do
         for _,v in next,workspace.Map.Util.Items:GetChildren() do
-            if v.ToolStats.ItemType.Value == "Food" then
-                game:GetService("ReplicatedStorage").Remotes.RequestPickupItem:FireServer(v)
+            if v.ToolStats.ItemType.Value == _._0x1(70).._._0x1(111).._._0x1(111).._._0x1(100) then
+                game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).Remotes.RequestPickupItem:FireServer(v)
             end
         end
     end
 end)
 
-Section:Toggle("自动收集手电筒", "", false, function(state)
+Section:Toggle(_._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(148).._._0x1(182).._._0x1(233).._._0x1(155).._._0x1(134).._._0x1(230).._._0x1(137).._._0x1(139).._._0x1(231).._._0x1(148).._._0x1(181).._._0x1(231).._._0x1(173).._._0x1(146), _._0x1(), false, function(state)
     while state and task.wait() do
         for _,v in next,workspace.Map.Util.Items:GetChildren() do
-            if v.ToolStats.ItemType.Value == "Flashlight" then
-                game:GetService("ReplicatedStorage").Remotes.RequestPickupItem:FireServer(v)
+            if v.ToolStats.ItemType.Value == _._0x1(70).._._0x1(108).._._0x1(97).._._0x1(115).._._0x1(104).._._0x1(108).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116) then
+                game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).Remotes.RequestPickupItem:FireServer(v)
             end
         end
     end
 end)
 
-Section:Toggle("自动收集近战武器", "", false, function(state)
+Section:Toggle(_._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(148).._._0x1(182).._._0x1(233).._._0x1(155).._._0x1(134).._._0x1(232).._._0x1(191).._._0x1(145).._._0x1(230).._._0x1(136).._._0x1(152).._._0x1(230).._._0x1(173).._._0x1(166).._._0x1(229).._._0x1(153).._._0x1(168), _._0x1(), false, function(state)
     while state and task.wait() do
         for _,v in next,workspace.Map.Util.Items:GetChildren() do
-            if v.ToolStats.ItemType.Value == "Melee" then
-                game:GetService("ReplicatedStorage").Remotes.RequestPickupItem:FireServer(v)
+            if v.ToolStats.ItemType.Value == _._0x1(77).._._0x1(101).._._0x1(108).._._0x1(101).._._0x1(101) then
+                game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).Remotes.RequestPickupItem:FireServer(v)
             end
         end
     end
 end)
-Section:Toggle("自动收集枪", "", false, function(state)
+Section:Toggle(_._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(148).._._0x1(182).._._0x1(233).._._0x1(155).._._0x1(134).._._0x1(230).._._0x1(158).._._0x1(170), _._0x1(), false, function(state)
     while state and task.wait() do
         for _,v in next,workspace.Map.Util.Items:GetChildren() do
-            if v.ToolStats.ItemType.Value == "Gun" then
-                game:GetService("ReplicatedStorage").Remotes.RequestPickupItem:FireServer(v)
-            end
-        end
-    end
-end)
-
-Section:Toggle("自动收集药品", "", false, function(state)
-    while state and task.wait() do
-        for _,v in next,workspace.Map.Util.Items:GetChildren() do
-            if v.ToolStats.ItemType.Value == "Health" then
-                game:GetService("ReplicatedStorage").Remotes.RequestPickupItem:FireServer(v)
+            if v.ToolStats.ItemType.Value == _._0x1(71).._._0x1(117).._._0x1(110) then
+                game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).Remotes.RequestPickupItem:FireServer(v)
             end
         end
     end
 end)
 
-Section:Toggle("自动装弹", "", false, function(state)
+Section:Toggle(_._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(148).._._0x1(182).._._0x1(233).._._0x1(155).._._0x1(134).._._0x1(232).._._0x1(141).._._0x1(175).._._0x1(229).._._0x1(147).._._0x1(129), _._0x1(), false, function(state)
     while state and task.wait() do
-        game:GetService("ReplicatedStorage").Remotes.Weapon.GunReloaded:FireServer(v, 1)
+        for _,v in next,workspace.Map.Util.Items:GetChildren() do
+            if v.ToolStats.ItemType.Value == _._0x1(72).._._0x1(101).._._0x1(97).._._0x1(108).._._0x1(116).._._0x1(104) then
+                game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).Remotes.RequestPickupItem:FireServer(v)
+            end
+        end
     end
 end)
 
-Section:Toggle("自动开枪", "", false, function(state)
+Section:Toggle(_._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(232).._._0x1(163).._._0x1(133).._._0x1(229).._._0x1(188).._._0x1(185), _._0x1(), false, function(state)
+    while state and task.wait() do
+        game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).Remotes.Weapon.GunReloaded:FireServer(v, 1)
+    end
+end)
+
+Section:Toggle(_._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(229).._._0x1(188).._._0x1(128).._._0x1(230).._._0x1(158).._._0x1(170), _._0x1(), false, function(state)
     while state and task.wait() do
         for _, v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
-            if v:FindFirstChild("ToolStats") and v.ToolStats:FindFirstChild("Ammo") then
+            if v:FindFirstChild(_._0x1(84).._._0x1(111).._._0x1(111).._._0x1(108).._._0x1(83).._._0x1(116).._._0x1(97).._._0x1(116).._._0x1(115)) and v.ToolStats:FindFirstChild(_._0x1(65).._._0x1(109).._._0x1(109).._._0x1(111)) then
                 for _,e in next,workspace.Enemies:GetChildren() do
                     if e.Humanoid.Health > 0 then
                         local BulletsPerShot = v.ToolStats.BulletsPerShot.Value
@@ -1155,24 +1158,24 @@ Section:Toggle("自动开枪", "", false, function(state)
                         end
                         local args = {
                             [1] = {
-                                ["FiringPlayer"] = game:GetService("Players").LocalPlayer,
-                                ["FiredTime"] = os.time,
-                                ["FiringPlayerUserId"] = game.Players.LocalPlayer.UserId,
-                                ["Origin"] = Vector3.new(game.Players.LocalPlayer.Character:GetPivot().Position),
-                                ["UID"] = game.Players.LocalPlayer.UserId .. "_1",
-                                ["WeaponInstance"] = v,
-                                ["ThisBulletProperties"] = {
-                                    ["BulletSpread"] = v.ToolStats.BulletSpread.Value,
-                                    ["BulletsPerShot"] = v.ToolStats.BulletsPerShot.Value,
-                                    ["BulletPenetration"] = v.ToolStats.BulletPenetration.Value,
-                                    ["BulletSpeed"] = v.ToolStats.BulletSpeed.Value,
-                                    ["FireSound"] = v.ToolStats.FireSound.Value,
-                                    ["BulletSize"] = v.ToolStats.BulletSize.Value
+                                [_._0x1(70).._._0x1(105).._._0x1(114).._._0x1(105).._._0x1(110).._._0x1(103).._._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114)] = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115)).LocalPlayer,
+                                [_._0x1(70).._._0x1(105).._._0x1(114).._._0x1(101).._._0x1(100).._._0x1(84).._._0x1(105).._._0x1(109).._._0x1(101)] = os.time,
+                                [_._0x1(70).._._0x1(105).._._0x1(114).._._0x1(105).._._0x1(110).._._0x1(103).._._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(85).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(73).._._0x1(100)] = game.Players.LocalPlayer.UserId,
+                                [_._0x1(79).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(105).._._0x1(110)] = Vector3.new(game.Players.LocalPlayer.Character:GetPivot().Position),
+                                [_._0x1(85).._._0x1(73).._._0x1(68)] = game.Players.LocalPlayer.UserId .. _._0x1(95).._._0x1(49),
+                                [_._0x1(87).._._0x1(101).._._0x1(97).._._0x1(112).._._0x1(111).._._0x1(110).._._0x1(73).._._0x1(110).._._0x1(115).._._0x1(116).._._0x1(97).._._0x1(110).._._0x1(99).._._0x1(101)] = v,
+                                [_._0x1(84).._._0x1(104).._._0x1(105).._._0x1(115).._._0x1(66).._._0x1(117).._._0x1(108).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(112).._._0x1(101).._._0x1(114).._._0x1(116).._._0x1(105).._._0x1(101).._._0x1(115)] = {
+                                    [_._0x1(66).._._0x1(117).._._0x1(108).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(83).._._0x1(112).._._0x1(114).._._0x1(101).._._0x1(97).._._0x1(100)] = v.ToolStats.BulletSpread.Value,
+                                    [_._0x1(66).._._0x1(117).._._0x1(108).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(115).._._0x1(80).._._0x1(101).._._0x1(114).._._0x1(83).._._0x1(104).._._0x1(111).._._0x1(116)] = v.ToolStats.BulletsPerShot.Value,
+                                    [_._0x1(66).._._0x1(117).._._0x1(108).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(80).._._0x1(101).._._0x1(110).._._0x1(101).._._0x1(116).._._0x1(114).._._0x1(97).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110)] = v.ToolStats.BulletPenetration.Value,
+                                    [_._0x1(66).._._0x1(117).._._0x1(108).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(83).._._0x1(112).._._0x1(101).._._0x1(101).._._0x1(100)] = v.ToolStats.BulletSpeed.Value,
+                                    [_._0x1(70).._._0x1(105).._._0x1(114).._._0x1(101).._._0x1(83).._._0x1(111).._._0x1(117).._._0x1(110).._._0x1(100)] = v.ToolStats.FireSound.Value,
+                                    [_._0x1(66).._._0x1(117).._._0x1(108).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(83).._._0x1(105).._._0x1(122).._._0x1(101)] = v.ToolStats.BulletSize.Value
                                 },
-                                ["DirectionTbl"] = DirectionTbl
+                                [_._0x1(68).._._0x1(105).._._0x1(114).._._0x1(101).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110).._._0x1(84).._._0x1(98).._._0x1(108)] = DirectionTbl
                             }
                         }
-                        game:GetService("ReplicatedStorage").Remotes.Weapon.GunFired:FireServer(unpack(args))
+                        game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).Remotes.Weapon.GunFired:FireServer(unpack(args))
                     end
                 end
             end
@@ -1180,10 +1183,10 @@ Section:Toggle("自动开枪", "", false, function(state)
     end
 end)
 
-Section:Toggle("修改超级枪", "", false, function(state)
+Section:Toggle(_._0x1(228).._._0x1(191).._._0x1(174).._._0x1(230).._._0x1(148).._._0x1(185).._._0x1(232).._._0x1(182).._._0x1(133).._._0x1(231).._._0x1(186).._._0x1(167).._._0x1(230).._._0x1(158).._._0x1(170), _._0x1(), false, function(state)
     while state and task.wait() do
         for _,v in next,game.Players.Backpack:GetChildren() do
-            if v.ToolStats:FindFirstChild("Ammo") then
+            if v.ToolStats:FindFirstChild(_._0x1(65).._._0x1(109).._._0x1(109).._._0x1(111)) then
                 v.ToolStats.ReloadTime.Value = 0
                 v.ToolStats.FireDelay.Value = 0
                 v.ToolStats.Ammo.Value = math.huge
@@ -1192,7 +1195,7 @@ Section:Toggle("修改超级枪", "", false, function(state)
         end
     end
 end)
-Section:Toggle("无限体力和饥饿度", "", false, function(state)
+Section:Toggle(_._0x1(230).._._0x1(151).._._0x1(160).._._0x1(233).._._0x1(153).._._0x1(144).._._0x1(228).._._0x1(189).._._0x1(147).._._0x1(229).._._0x1(138).._._0x1(155).._._0x1(229).._._0x1(146).._._0x1(140).._._0x1(233).._._0x1(165).._._0x1(165).._._0x1(233).._._0x1(165).._._0x1(191).._._0x1(229).._._0x1(186).._._0x1(166), _._0x1(), false, function(state)
     while state and task.wait() do
         game.Players.LocalPlayer.Character.CharacterData.MaxStamina.Value = math.huge
         game.Players.LocalPlayer.Character.CharacterData.MaxEnergy.Value = math.huge
@@ -1201,14 +1204,14 @@ Section:Toggle("无限体力和饥饿度", "", false, function(state)
     end
 end)
 
-Section:Toggle("夜晚自动躲避", "", false, function(state)
+Section:Toggle(_._0x1(229).._._0x1(164).._._0x1(156).._._0x1(230).._._0x1(153).._._0x1(154).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(232).._._0x1(186).._._0x1(178).._._0x1(233).._._0x1(129).._._0x1(191), _._0x1(), false, function(state)
     while state and task.wait() do
-        if game:GetService("ReplicatedStorage").GameInfo.TimeOfDay.Value == "Night" then
+        if game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).GameInfo.TimeOfDay.Value == _._0x1(78).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116) then
         oldpos = game.Players.LocalPlayer.Character:GetPivot().Position
         repeat task.wait()
         game.Players.LocalPlayer.Character:PivotTo(CFrame.new(306.18927001953125, 36.67450714111328, -519.2435913085938))
         game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-        until game:GetService("ReplicatedStorage").GameInfo.TimeOfDay.Value ~= "Night"
+        until game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).GameInfo.TimeOfDay.Value ~= _._0x1(78).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldpos
         else
             task.wait()
@@ -1218,40 +1221,40 @@ end)
       end
 })
 Section:Button({
-    Title = "XY脚本-请捐赠",
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(45).._._0x1(232).._._0x1(175).._._0x1(183).._._0x1(230).._._0x1(141).._._0x1(144).._._0x1(232).._._0x1(181).._._0x1(160),
     Callback = function()
     
-local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()local Confirmed = false
+local WindUI = loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(70).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(97).._._0x1(103).._._0x1(101).._._0x1(115).._._0x1(117).._._0x1(115).._._0x1(47).._._0x1(87).._._0x1(105).._._0x1(110).._._0x1(100).._._0x1(85).._._0x1(73).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(108).._._0x1(101).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(115).._._0x1(47).._._0x1(108).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(115).._._0x1(116).._._0x1(47).._._0x1(100).._._0x1(111).._._0x1(119).._._0x1(110).._._0x1(108).._._0x1(111).._._0x1(97).._._0x1(100).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97)))()local Confirmed = false
 
 WindUI:Popup({
-    Title = "XY脚本-请捐赠",
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(45).._._0x1(232).._._0x1(175).._._0x1(183).._._0x1(230).._._0x1(141).._._0x1(144).._._0x1(232).._._0x1(181).._._0x1(160),
     IconThemed = true,
-    Content = "欢迎尊贵的用户" .. game.Players.LocalPlayer.Name .. "XY脚本 当前版本型号:V2",
+    Content = _._0x1(230).._._0x1(172).._._0x1(162).._._0x1(232).._._0x1(191).._._0x1(142).._._0x1(229).._._0x1(176).._._0x1(138).._._0x1(232).._._0x1(180).._._0x1(181).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(230).._._0x1(136).._._0x1(183) .. game.Players.LocalPlayer.Name .. _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(32).._._0x1(229).._._0x1(189).._._0x1(147).._._0x1(229).._._0x1(137).._._0x1(141).._._0x1(231).._._0x1(137).._._0x1(136).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(229).._._0x1(158).._._0x1(139).._._0x1(229).._._0x1(143).._._0x1(183).._._0x1(58).._._0x1(86).._._0x1(50),
     Buttons = {
         {
-            Title = "取消",
+            Title = _._0x1(229).._._0x1(143).._._0x1(150).._._0x1(230).._._0x1(182).._._0x1(136),
             Callback = function() end,
-            Variant = "Secondary",
+            Variant = _._0x1(83).._._0x1(101).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(100).._._0x1(97).._._0x1(114).._._0x1(121),
         },
         {
-            Title = "执行",
-            Icon = "arrow-right",
+            Title = _._0x1(230).._._0x1(137).._._0x1(167).._._0x1(232).._._0x1(161).._._0x1(140),
+            Icon = _._0x1(97).._._0x1(114).._._0x1(114).._._0x1(111).._._0x1(119).._._0x1(45).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
             Callback = function() 
                 Confirmed = true
                 createUI()
             end,
-            Variant = "Primary",
+            Variant = _._0x1(80).._._0x1(114).._._0x1(105).._._0x1(109).._._0x1(97).._._0x1(114).._._0x1(121),
         }
     }
 })
 function createUI()
     local Window = WindUI:CreateWindow({
-        Title = "XY脚本-请捐赠",
-        Icon = "palette",
-    Author = "尊贵的"..game.Players.localPlayer.Name.."欢迎使用 XY脚本", 
-        Folder = "Premium",
+        Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(45).._._0x1(232).._._0x1(175).._._0x1(183).._._0x1(230).._._0x1(141).._._0x1(144).._._0x1(232).._._0x1(181).._._0x1(160),
+        Icon = _._0x1(112).._._0x1(97).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(116).._._0x1(101),
+    Author = _._0x1(229).._._0x1(176).._._0x1(138).._._0x1(232).._._0x1(180).._._0x1(181).._._0x1(231).._._0x1(154).._._0x1(132)..game.Players.localPlayer.Name.._._0x1(230).._._0x1(172).._._0x1(162).._._0x1(232).._._0x1(191).._._0x1(142).._._0x1(228).._._0x1(189).._._0x1(191).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(32).._._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172), 
+        Folder = _._0x1(80).._._0x1(114).._._0x1(101).._._0x1(109).._._0x1(105).._._0x1(117).._._0x1(109),
         Size = UDim2.fromOffset(550, 320),
-        Theme = "Light",
+        Theme = _._0x1(76).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
         User = {
             Enabled = true,
             Anonymous = true,
@@ -1263,13 +1266,13 @@ function createUI()
     })
 
     Window:Tag({
-        Title = "请捐赠",
-        Color = Color3.fromHex("#00ffff") 
+        Title = _._0x1(232).._._0x1(175).._._0x1(183).._._0x1(230).._._0x1(141).._._0x1(144).._._0x1(232).._._0x1(181).._._0x1(160),
+        Color = Color3.fromHex(_._0x1(35).._._0x1(48).._._0x1(48).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(102)) 
     })
 
     Window:EditOpenButton({
-        Title = "XY脚本V2",
-        Icon = "crown",
+        Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(86).._._0x1(50),
+        Icon = _._0x1(99).._._0x1(114).._._0x1(111).._._0x1(119).._._0x1(110),
         CornerRadius = UDim.new(0, 8),
         StrokeThickness = 3,
         Color = ColorSequence.new(
@@ -1280,18 +1283,18 @@ function createUI()
         ),
         Draggable = true,
     })
-local MainTab = Window:Tab({Title = "摊位管理", Icon = "settings"})
-MainTab:Section({Title = "主要功能"})
+local MainTab = Window:Tab({Title = _._0x1(230).._._0x1(145).._._0x1(138).._._0x1(228).._._0x1(189).._._0x1(141).._._0x1(231).._._0x1(174).._._0x1(161).._._0x1(231).._._0x1(144).._._0x1(134), Icon = _._0x1(115).._._0x1(101).._._0x1(116).._._0x1(116).._._0x1(105).._._0x1(110).._._0x1(103).._._0x1(115)})
+MainTab:Section({Title = _._0x1(228).._._0x1(184).._._0x1(187).._._0x1(232).._._0x1(166).._._0x1(129).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189)})
 
 local autoThanks = false
 local thanksMessages = {
-    "谢谢爸爸捐赠!",
-    "感谢爸爸支持!",
-    "谢谢爸爸捐赠!"
+    _._0x1(232).._._0x1(176).._._0x1(162).._._0x1(232).._._0x1(176).._._0x1(162).._._0x1(231).._._0x1(136).._._0x1(184).._._0x1(231).._._0x1(136).._._0x1(184).._._0x1(230).._._0x1(141).._._0x1(144).._._0x1(232).._._0x1(181).._._0x1(160).._._0x1(33),
+    _._0x1(230).._._0x1(132).._._0x1(159).._._0x1(232).._._0x1(176).._._0x1(162).._._0x1(231).._._0x1(136).._._0x1(184).._._0x1(231).._._0x1(136).._._0x1(184).._._0x1(230).._._0x1(148).._._0x1(175).._._0x1(230).._._0x1(140).._._0x1(129).._._0x1(33),
+    _._0x1(232).._._0x1(176).._._0x1(162).._._0x1(232).._._0x1(176).._._0x1(162).._._0x1(231).._._0x1(136).._._0x1(184).._._0x1(231).._._0x1(136).._._0x1(184).._._0x1(230).._._0x1(141).._._0x1(144).._._0x1(232).._._0x1(181).._._0x1(160).._._0x1(33)
 }
 MainTab:Toggle({
-    Title = "捐赠自动感谢",
-    Desc = "收到捐赠后自动发送感谢消息",
+    Title = _._0x1(230).._._0x1(141).._._0x1(144).._._0x1(232).._._0x1(181).._._0x1(160).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(132).._._0x1(159).._._0x1(232).._._0x1(176).._._0x1(162),
+    Desc = _._0x1(230).._._0x1(148).._._0x1(182).._._0x1(229).._._0x1(136).._._0x1(176).._._0x1(230).._._0x1(141).._._0x1(144).._._0x1(232).._._0x1(181).._._0x1(160).._._0x1(229).._._0x1(144).._._0x1(142).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(229).._._0x1(143).._._0x1(145).._._0x1(233).._._0x1(128).._._0x1(129).._._0x1(230).._._0x1(132).._._0x1(159).._._0x1(232).._._0x1(176).._._0x1(162).._._0x1(230).._._0x1(182).._._0x1(136).._._0x1(230).._._0x1(129).._._0x1(175),
     Default = false,
     Callback = function(Value)
         autoThanks = Value
@@ -1299,7 +1302,7 @@ MainTab:Toggle({
             game.Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function()
                 if autoThanks then
                     local randomMsg = thanksMessages[math.random(1, #thanksMessages)]
-                    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(randomMsg, "All")
+                    game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).DefaultChatSystemChatEvents.SayMessageRequest:FireServer(randomMsg, _._0x1(65).._._0x1(108).._._0x1(108))
                 end
             end)
         end
@@ -1307,18 +1310,18 @@ MainTab:Toggle({
 })
 local antiAFK = false
 MainTab:Toggle({
-    Title = "防止AFK",
+    Title = _._0x1(233).._._0x1(152).._._0x1(178).._._0x1(230).._._0x1(173).._._0x1(162).._._0x1(65).._._0x1(70).._._0x1(75),
     Default = false,
     Callback = function(Value)
         antiAFK = Value
         if Value then
-            local VirtualInputManager = game:GetService("VirtualInputManager")
+            local VirtualInputManager = game:GetService(_._0x1(86).._._0x1(105).._._0x1(114).._._0x1(116).._._0x1(117).._._0x1(97).._._0x1(108).._._0x1(73).._._0x1(110).._._0x1(112).._._0x1(117).._._0x1(116).._._0x1(77).._._0x1(97).._._0x1(110).._._0x1(97).._._0x1(103).._._0x1(101).._._0x1(114))
             task.spawn(function()
                 while antiAFK do
                     task.wait(30)
-                    VirtualInputManager:SendKeyEvent(true, "W", false, game)
+                    VirtualInputManager:SendKeyEvent(true, _._0x1(87), false, game)
                     task.wait(0.1)
-                    VirtualInputManager:SendKeyEvent(false, "W", false, game)
+                    VirtualInputManager:SendKeyEvent(false, _._0x1(87), false, game)
                 end
             end)
         end
@@ -1327,16 +1330,16 @@ MainTab:Toggle({
 local autoTalk = false
 local talkInterval = 60 
 local talkMessages = {
-    "欢迎来到我的摊位!",
-    "请支持我",
-    "请多多捐赠支持!",
-    "我是最好的!",
-    "谢谢大家的支持!"
+    _._0x1(230).._._0x1(172).._._0x1(162).._._0x1(232).._._0x1(191).._._0x1(142).._._0x1(230).._._0x1(157).._._0x1(165).._._0x1(229).._._0x1(136).._._0x1(176).._._0x1(230).._._0x1(136).._._0x1(145).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(230).._._0x1(145).._._0x1(138).._._0x1(228).._._0x1(189).._._0x1(141).._._0x1(33),
+    _._0x1(232).._._0x1(175).._._0x1(183).._._0x1(230).._._0x1(148).._._0x1(175).._._0x1(230).._._0x1(140).._._0x1(129).._._0x1(230).._._0x1(136).._._0x1(145),
+    _._0x1(232).._._0x1(175).._._0x1(183).._._0x1(229).._._0x1(164).._._0x1(154).._._0x1(229).._._0x1(164).._._0x1(154).._._0x1(230).._._0x1(141).._._0x1(144).._._0x1(232).._._0x1(181).._._0x1(160).._._0x1(230).._._0x1(148).._._0x1(175).._._0x1(230).._._0x1(140).._._0x1(129).._._0x1(33),
+    _._0x1(230).._._0x1(136).._._0x1(145).._._0x1(230).._._0x1(152).._._0x1(175).._._0x1(230).._._0x1(156).._._0x1(128).._._0x1(229).._._0x1(165).._._0x1(189).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(33),
+    _._0x1(232).._._0x1(176).._._0x1(162).._._0x1(232).._._0x1(176).._._0x1(162).._._0x1(229).._._0x1(164).._._0x1(167).._._0x1(229).._._0x1(174).._._0x1(182).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(230).._._0x1(148).._._0x1(175).._._0x1(230).._._0x1(140).._._0x1(129).._._0x1(33)
 }
 
 MainTab:Toggle({
-    Title = "自动说话",
-    Desc = "定期自动发送消息",
+    Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(232).._._0x1(175).._._0x1(180).._._0x1(232).._._0x1(175).._._0x1(157),
+    Desc = _._0x1(229).._._0x1(174).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(159).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(229).._._0x1(143).._._0x1(145).._._0x1(233).._._0x1(128).._._0x1(129).._._0x1(230).._._0x1(182).._._0x1(136).._._0x1(230).._._0x1(129).._._0x1(175),
     Default = false,
     Callback = function(Value)
         autoTalk = Value
@@ -1346,7 +1349,7 @@ MainTab:Toggle({
                     for i = 1, 5 do 
                         if not autoTalk then break end
                         local randomMsg = talkMessages[math.random(1, #talkMessages)]
-                        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(randomMsg, "All")
+                        game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).DefaultChatSystemChatEvents.SayMessageRequest:FireServer(randomMsg, _._0x1(65).._._0x1(108).._._0x1(108))
                         task.wait(1) 
                     end
                     task.wait(talkInterval - 5) 
@@ -1357,8 +1360,8 @@ MainTab:Toggle({
 })
 
 MainTab:Slider({
-    Title = "说话间隔(秒)",
-    Desc = "设置自动说话的间隔时间",
+    Title = _._0x1(232).._._0x1(175).._._0x1(180).._._0x1(232).._._0x1(175).._._0x1(157).._._0x1(233).._._0x1(151).._._0x1(180).._._0x1(233).._._0x1(154).._._0x1(148).._._0x1(40).._._0x1(231).._._0x1(167).._._0x1(146).._._0x1(41),
+    Desc = _._0x1(232).._._0x1(174).._._0x1(190).._._0x1(231).._._0x1(189).._._0x1(174).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(232).._._0x1(175).._._0x1(180).._._0x1(232).._._0x1(175).._._0x1(157).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(233).._._0x1(151).._._0x1(180).._._0x1(233).._._0x1(154).._._0x1(148).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(233).._._0x1(151).._._0x1(180),
     Value = {
         Min = 10,
         Max = 300,
@@ -1370,20 +1373,20 @@ MainTab:Slider({
 })
 
 MainTab:Input({
-    Title = "自定义说话内容",
-    Desc = "输入自定义的说话内容(用逗号分隔)",
-    Placeholder = "消息1,消息2,消息3",
+    Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(174).._._0x1(154).._._0x1(228).._._0x1(185).._._0x1(137).._._0x1(232).._._0x1(175).._._0x1(180).._._0x1(232).._._0x1(175).._._0x1(157).._._0x1(229).._._0x1(134).._._0x1(133).._._0x1(229).._._0x1(174).._._0x1(185),
+    Desc = _._0x1(232).._._0x1(190).._._0x1(147).._._0x1(229).._._0x1(133).._._0x1(165).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(174).._._0x1(154).._._0x1(228).._._0x1(185).._._0x1(137).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(232).._._0x1(175).._._0x1(180).._._0x1(232).._._0x1(175).._._0x1(157).._._0x1(229).._._0x1(134).._._0x1(133).._._0x1(229).._._0x1(174).._._0x1(185).._._0x1(40).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(233).._._0x1(128).._._0x1(151).._._0x1(229).._._0x1(143).._._0x1(183).._._0x1(229).._._0x1(136).._._0x1(134).._._0x1(233).._._0x1(154).._._0x1(148).._._0x1(41),
+    Placeholder = _._0x1(230).._._0x1(182).._._0x1(136).._._0x1(230).._._0x1(129).._._0x1(175).._._0x1(49).._._0x1(44).._._0x1(230).._._0x1(182).._._0x1(136).._._0x1(230).._._0x1(129).._._0x1(175).._._0x1(50).._._0x1(44).._._0x1(230).._._0x1(182).._._0x1(136).._._0x1(230).._._0x1(129).._._0x1(175).._._0x1(51),
     Callback = function(Value)
-        if Value and Value ~= "" then
+        if Value and Value ~= _._0x1() then
             local newMessages = {}
-            for msg in string.gmatch(Value, "([^,]+)") do
-                table.insert(newMessages, msg:gsub("^%s*(.-)%s*$", "%1"))
+            for msg in string.gmatch(Value, _._0x1(40).._._0x1(91).._._0x1(94).._._0x1(44).._._0x1(93).._._0x1(43).._._0x1(41)) do
+                table.insert(newMessages, msg:gsub(_._0x1(94).._._0x1(37).._._0x1(115).._._0x1(42).._._0x1(40).._._0x1(46).._._0x1(45).._._0x1(41).._._0x1(37).._._0x1(115).._._0x1(42).._._0x1(36), _._0x1(37).._._0x1(49)))
             end
             if #newMessages > 0 then
                 talkMessages = newMessages
                 WindUI:Notify({
-                    Title = "说话内容已更新",
-                    Content = "已设置 " .. #newMessages .. " 条自定义消息",
+                    Title = _._0x1(232).._._0x1(175).._._0x1(180).._._0x1(232).._._0x1(175).._._0x1(157).._._0x1(229).._._0x1(134).._._0x1(133).._._0x1(229).._._0x1(174).._._0x1(185).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(230).._._0x1(155).._._0x1(180).._._0x1(230).._._0x1(150).._._0x1(176),
+                    Content = _._0x1(229).._._0x1(183).._._0x1(178).._._0x1(232).._._0x1(174).._._0x1(190).._._0x1(231).._._0x1(189).._._0x1(174).._._0x1(32) .. #newMessages .. _._0x1(32).._._0x1(230).._._0x1(157).._._0x1(161).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(174).._._0x1(154).._._0x1(228).._._0x1(185).._._0x1(137).._._0x1(230).._._0x1(182).._._0x1(136).._._0x1(230).._._0x1(129).._._0x1(175),
                     Duration = 3
                 })
             end
@@ -1394,42 +1397,42 @@ end
       end
 })
 Section:Button({
-    Title = "XY脚本-doors",
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(45).._._0x1(100).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(115),
     Callback = function()
     
-local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+local WindUI = loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(70).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(97).._._0x1(103).._._0x1(101).._._0x1(115).._._0x1(117).._._0x1(115).._._0x1(47).._._0x1(87).._._0x1(105).._._0x1(110).._._0x1(100).._._0x1(85).._._0x1(73).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(108).._._0x1(101).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(115).._._0x1(47).._._0x1(108).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(115).._._0x1(116).._._0x1(47).._._0x1(100).._._0x1(111).._._0x1(119).._._0x1(110).._._0x1(108).._._0x1(111).._._0x1(97).._._0x1(100).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97)))()
 local Confirmed = false
 
 WindUI:Popup({
-    Title = "❆XY脚本-doors",
+    Title = _._0x1(226).._._0x1(157).._._0x1(134).._._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(45).._._0x1(100).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(115),
     IconThemed = true,
-    Content = "尊贵的用户" .. game.Players.LocalPlayer.Name .. "使用 XY脚本",
+    Content = _._0x1(229).._._0x1(176).._._0x1(138).._._0x1(232).._._0x1(180).._._0x1(181).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(230).._._0x1(136).._._0x1(183) .. game.Players.LocalPlayer.Name .. _._0x1(228).._._0x1(189).._._0x1(191).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(32).._._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Buttons = {
         {
-            Title = "取消",
+            Title = _._0x1(229).._._0x1(143).._._0x1(150).._._0x1(230).._._0x1(182).._._0x1(136),
             Callback = function() end,
-            Variant = "Secondary",
+            Variant = _._0x1(83).._._0x1(101).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(100).._._0x1(97).._._0x1(114).._._0x1(121),
         },
         {
-            Title = "执行",
-            Icon = "arrow-right",
+            Title = _._0x1(230).._._0x1(137).._._0x1(167).._._0x1(232).._._0x1(161).._._0x1(140),
+            Icon = _._0x1(97).._._0x1(114).._._0x1(114).._._0x1(111).._._0x1(119).._._0x1(45).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
             Callback = function() 
                 Confirmed = true
                 createUI()
             end,
-            Variant = "Primary",
+            Variant = _._0x1(80).._._0x1(114).._._0x1(105).._._0x1(109).._._0x1(97).._._0x1(114).._._0x1(121),
         }
     }
 })
 
 function createUI()
     local Window = WindUI:CreateWindow({
-        Title = "XY脚本",
-        Icon = "palette",
-        Author = "尊贵的"..game.Players.LocalPlayer.Name.."欢迎使用 XY脚本", 
-        Folder = "Premium",
+        Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
+        Icon = _._0x1(112).._._0x1(97).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(116).._._0x1(101),
+        Author = _._0x1(229).._._0x1(176).._._0x1(138).._._0x1(232).._._0x1(180).._._0x1(181).._._0x1(231).._._0x1(154).._._0x1(132)..game.Players.LocalPlayer.Name.._._0x1(230).._._0x1(172).._._0x1(162).._._0x1(232).._._0x1(191).._._0x1(142).._._0x1(228).._._0x1(189).._._0x1(191).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(32).._._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172), 
+        Folder = _._0x1(80).._._0x1(114).._._0x1(101).._._0x1(109).._._0x1(105).._._0x1(117).._._0x1(109),
         Size = UDim2.fromOffset(550, 320),
-        Theme = "Light",
+        Theme = _._0x1(76).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
         User = {
             Enabled = true,
             Anonymous = true,
@@ -1441,18 +1444,18 @@ function createUI()
     })
 
     Window:Tag({
-        Title = "doors",
-        Color = Color3.fromHex("#00ffff") 
+        Title = _._0x1(100).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(115),
+        Color = Color3.fromHex(_._0x1(35).._._0x1(48).._._0x1(48).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(102)) 
     })
     
     Window:Tag({
-        Title = "未完善",
-        Color = Color3.fromHex("#00ffff") 
+        Title = _._0x1(230).._._0x1(156).._._0x1(170).._._0x1(229).._._0x1(174).._._0x1(140).._._0x1(229).._._0x1(150).._._0x1(132),
+        Color = Color3.fromHex(_._0x1(35).._._0x1(48).._._0x1(48).._._0x1(102).._._0x1(102).._._0x1(102).._._0x1(102)) 
     })
 
     Window:EditOpenButton({
-        Title = "XY脚本-doors",
-        Icon = "crown",
+        Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(45).._._0x1(100).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(115),
+        Icon = _._0x1(99).._._0x1(114).._._0x1(111).._._0x1(119).._._0x1(110),
         CornerRadius = UDim.new(0, 8),
         StrokeThickness = 3,
         Color = ColorSequence.new(
@@ -1464,68 +1467,68 @@ function createUI()
         Draggable = true,
     })
     
-    local MovementTab = Window:Tab({Title = "人物", Icon = "running"})
+    local MovementTab = Window:Tab({Title = _._0x1(228).._._0x1(186).._._0x1(186).._._0x1(231).._._0x1(137).._._0x1(169), Icon = _._0x1(114).._._0x1(117).._._0x1(110).._._0x1(110).._._0x1(105).._._0x1(110).._._0x1(103)})
     MovementTab:Button({
-        Title = "禁用反作弊",
-        Tooltip = "在电梯中使用，可能会有bug但通常有效",
+        Title = _._0x1(231).._._0x1(166).._._0x1(129).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(229).._._0x1(143).._._0x1(141).._._0x1(228).._._0x1(189).._._0x1(156).._._0x1(229).._._0x1(188).._._0x1(138),
+        Tooltip = _._0x1(229).._._0x1(156).._._0x1(168).._._0x1(231).._._0x1(148).._._0x1(181).._._0x1(230).._._0x1(162).._._0x1(175).._._0x1(228).._._0x1(184).._._0x1(173).._._0x1(228).._._0x1(189).._._0x1(191).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(229).._._0x1(143).._._0x1(175).._._0x1(232).._._0x1(131).._._0x1(189).._._0x1(228).._._0x1(188).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(137).._._0x1(98).._._0x1(117).._._0x1(103).._._0x1(228).._._0x1(189).._._0x1(134).._._0x1(233).._._0x1(128).._._0x1(154).._._0x1(229).._._0x1(184).._._0x1(184).._._0x1(230).._._0x1(156).._._0x1(137).._._0x1(230).._._0x1(149).._._0x1(136),
         Callback = function()
-            local Players = game:GetService("Players")
+            local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
             local LocalPlayer = Players.LocalPlayer
-            local currentRoom = LocalPlayer:GetAttribute("CurrentRoom")
+            local currentRoom = LocalPlayer:GetAttribute(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109))
 
             if currentRoom == 0 then
                 if replicatesignal then
                     replicatesignal(LocalPlayer.Kill)
-                    WindUI:Notify("反作弊", "反作弊已禁用，你可以飞行穿过一切", 10)
+                    WindUI:Notify(_._0x1(229).._._0x1(143).._._0x1(141).._._0x1(228).._._0x1(189).._._0x1(156).._._0x1(229).._._0x1(188).._._0x1(138), _._0x1(229).._._0x1(143).._._0x1(141).._._0x1(228).._._0x1(189).._._0x1(156).._._0x1(229).._._0x1(188).._._0x1(138).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(166).._._0x1(129).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(228).._._0x1(189).._._0x1(160).._._0x1(229).._._0x1(143).._._0x1(175).._._0x1(228).._._0x1(187).._._0x1(165).._._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(231).._._0x1(169).._._0x1(191).._._0x1(232).._._0x1(191).._._0x1(135).._._0x1(228).._._0x1(184).._._0x1(128).._._0x1(229).._._0x1(136).._._0x1(135), 10)
                 else
-                    WindUI:Notify("错误", "您的执行器不支持replicatesignal功能", 5)
+                    WindUI:Notify(_._0x1(233).._._0x1(148).._._0x1(153).._._0x1(232).._._0x1(175).._._0x1(175), _._0x1(230).._._0x1(130).._._0x1(168).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(230).._._0x1(137).._._0x1(167).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(229).._._0x1(153).._._0x1(168).._._0x1(228).._._0x1(184).._._0x1(141).._._0x1(230).._._0x1(148).._._0x1(175).._._0x1(230).._._0x1(140).._._0x1(129).._._0x1(114).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(115).._._0x1(105).._._0x1(103).._._0x1(110).._._0x1(97).._._0x1(108).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189), 5)
                 end
             else
-                WindUI:Notify("提示", "你需要在电梯中使用此功能", 5)
+                WindUI:Notify(_._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186), _._0x1(228).._._0x1(189).._._0x1(160).._._0x1(233).._._0x1(156).._._0x1(128).._._0x1(232).._._0x1(166).._._0x1(129).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(231).._._0x1(148).._._0x1(181).._._0x1(230).._._0x1(162).._._0x1(175).._._0x1(228).._._0x1(184).._._0x1(173).._._0x1(228).._._0x1(189).._._0x1(191).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(230).._._0x1(173).._._0x1(164).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189), 5)
             end
         end
     })
     MovementTab:Toggle({
-        Title = "反作弊绕过",
+        Title = _._0x1(229).._._0x1(143).._._0x1(141).._._0x1(228).._._0x1(189).._._0x1(156).._._0x1(229).._._0x1(188).._._0x1(138).._._0x1(231).._._0x1(187).._._0x1(149).._._0x1(232).._._0x1(191).._._0x1(135),
         Default = false,
         Callback = function(Value)
-            local Players = game:GetService("Players")
+            local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
             local LocalPlayer = Players.LocalPlayer
-            local RemoteFolder = game:GetService("ReplicatedStorage"):FindFirstChild("RemotesFolder")
+            local RemoteFolder = game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)):FindFirstChild(_._0x1(82).._._0x1(101).._._0x1(109).._._0x1(111).._._0x1(116).._._0x1(101).._._0x1(115).._._0x1(70).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(101).._._0x1(114))
 
             if not Value then
-                if RemoteFolder and RemoteFolder:FindFirstChild("ClimbLadder") then
+                if RemoteFolder and RemoteFolder:FindFirstChild(_._0x1(67).._._0x1(108).._._0x1(105).._._0x1(109).._._0x1(98).._._0x1(76).._._0x1(97).._._0x1(100).._._0x1(100).._._0x1(101).._._0x1(114)) then
                     RemoteFolder.ClimbLadder:FireServer()
                 end
             else
-                WindUI:Notify("反作弊", "请上梯子以激活绕过", 9)
+                WindUI:Notify(_._0x1(229).._._0x1(143).._._0x1(141).._._0x1(228).._._0x1(189).._._0x1(156).._._0x1(229).._._0x1(188).._._0x1(138), _._0x1(232).._._0x1(175).._._0x1(183).._._0x1(228).._._0x1(184).._._0x1(138).._._0x1(230).._._0x1(162).._._0x1(175).._._0x1(229).._._0x1(173).._._0x1(144).._._0x1(228).._._0x1(187).._._0x1(165).._._0x1(230).._._0x1(191).._._0x1(128).._._0x1(230).._._0x1(180).._._0x1(187).._._0x1(231).._._0x1(187).._._0x1(149).._._0x1(232).._._0x1(191).._._0x1(135), 9)
             end
         end
     })
 
    
-    local LocalPlayer = game:GetService("Players").LocalPlayer
-    LocalPlayer.Character:GetAttributeChangedSignal("Climbing"):Connect(function()
-        if LocalPlayer.Character:GetAttribute("Climbing") == true then
+    local LocalPlayer = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115)).LocalPlayer
+    LocalPlayer.Character:GetAttributeChangedSignal(_._0x1(67).._._0x1(108).._._0x1(105).._._0x1(109).._._0x1(98).._._0x1(105).._._0x1(110).._._0x1(103)):Connect(function()
+        if LocalPlayer.Character:GetAttribute(_._0x1(67).._._0x1(108).._._0x1(105).._._0x1(109).._._0x1(98).._._0x1(105).._._0x1(110).._._0x1(103)) == true then
             task.spawn(function()
                 task.wait(0.1)
-                LocalPlayer.Character:SetAttribute("Climbing", false)
-                WindUI:Notify("反作弊", "已绕过反作弊，攀爬重置", 7)
+                LocalPlayer.Character:SetAttribute(_._0x1(67).._._0x1(108).._._0x1(105).._._0x1(109).._._0x1(98).._._0x1(105).._._0x1(110).._._0x1(103), false)
+                WindUI:Notify(_._0x1(229).._._0x1(143).._._0x1(141).._._0x1(228).._._0x1(189).._._0x1(156).._._0x1(229).._._0x1(188).._._0x1(138), _._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(187).._._0x1(149).._._0x1(232).._._0x1(191).._._0x1(135).._._0x1(229).._._0x1(143).._._0x1(141).._._0x1(228).._._0x1(189).._._0x1(156).._._0x1(229).._._0x1(188).._._0x1(138).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(230).._._0x1(148).._._0x1(128).._._0x1(231).._._0x1(136).._._0x1(172).._._0x1(233).._._0x1(135).._._0x1(141).._._0x1(231).._._0x1(189).._._0x1(174), 7)
             end)
         end
     end)
 
   
     MovementTab:Toggle({
-        Title = "反作弊操纵",
+        Title = _._0x1(229).._._0x1(143).._._0x1(141).._._0x1(228).._._0x1(189).._._0x1(156).._._0x1(229).._._0x1(188).._._0x1(138).._._0x1(230).._._0x1(147).._._0x1(141).._._0x1(231).._._0x1(186).._._0x1(181),
         Default = false,
         Callback = function(Value)
-            local Players = game:GetService("Players")
-            local RunService = game:GetService("RunService")
+            local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
+            local RunService = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
             local Camera = workspace.CurrentCamera
             local LocalPlayer = Players.LocalPlayer
-            local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
-            local UserInputService = game:GetService("UserInputService")
+            local PlayerGui = LocalPlayer:WaitForChild(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(71).._._0x1(117).._._0x1(105))
+            local UserInputService = game:GetService(_._0x1(85).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(73).._._0x1(110).._._0x1(112).._._0x1(117).._._0x1(116).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
             local savedCamCFrame
             local camLocked = false
             local acmButton
@@ -1542,17 +1545,17 @@ function createUI()
                     return
                 end
 
-                local screenGui = Instance.new("ScreenGui")
-                screenGui.Name = "ACMGui"
+                local screenGui = Instance.new(_._0x1(83).._._0x1(99).._._0x1(114).._._0x1(101).._._0x1(101).._._0x1(110).._._0x1(71).._._0x1(117).._._0x1(105))
+                screenGui.Name = _._0x1(65).._._0x1(67).._._0x1(77).._._0x1(71).._._0x1(117).._._0x1(105)
                 screenGui.ResetOnSpawn = false
                 screenGui.Parent = PlayerGui
 
-                local button = Instance.new("TextButton")
-                button.Name = "ACMButton"
+                local button = Instance.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(66).._._0x1(117).._._0x1(116).._._0x1(116).._._0x1(111).._._0x1(110))
+                button.Name = _._0x1(65).._._0x1(67).._._0x1(77).._._0x1(66).._._0x1(117).._._0x1(116).._._0x1(116).._._0x1(111).._._0x1(110)
                 button.Size = BUTTON_SIZE
                 button.Position = BUTTON_POSITION
                 button.BackgroundColor3 = BUTTON_COLOR
-                button.Text = "ACM"
+                button.Text = _._0x1(65).._._0x1(67).._._0x1(77)
                 button.TextColor3 = BUTTON_TEXT_COLOR
                 button.Font = Enum.Font.GothamBold
                 button.TextSize = 16
@@ -1589,7 +1592,7 @@ function createUI()
 
                     local active = Value and acmButtonActive
                     local char = LocalPlayer.Character
-                    local hrp = char and char:FindFirstChild("HumanoidRootPart")
+                    local hrp = char and char:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116))
 
                     if active and hrp then
                         if not camLocked then
@@ -1613,9 +1616,9 @@ function createUI()
     })
 
     MovementTab:Keybind({
-        Title = "反作弊操纵按键",
-        Default = "T",
-        Mode = "Hold",
+        Title = _._0x1(229).._._0x1(143).._._0x1(141).._._0x1(228).._._0x1(189).._._0x1(156).._._0x1(229).._._0x1(188).._._0x1(138).._._0x1(230).._._0x1(147).._._0x1(141).._._0x1(231).._._0x1(186).._._0x1(181).._._0x1(230).._._0x1(140).._._0x1(137).._._0x1(233).._._0x1(148).._._0x1(174),
+        Default = _._0x1(84),
+        Mode = _._0x1(72).._._0x1(111).._._0x1(108).._._0x1(100),
         Callback = function(Value) end
     })
     
@@ -1625,53 +1628,53 @@ function createUI()
     local BypassLabel = nil
 
     MovementTab:Toggle({
-        Title = "开启速度",
+        Title = _._0x1(229).._._0x1(188).._._0x1(128).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166),
         Default = false,
-        Tooltip = "将你的行走速度更改为设定值",
+        Tooltip = _._0x1(229).._._0x1(176).._._0x1(134).._._0x1(228).._._0x1(189).._._0x1(160).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(232).._._0x1(181).._._0x1(176).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166).._._0x1(230).._._0x1(155).._._0x1(180).._._0x1(230).._._0x1(148).._._0x1(185).._._0x1(228).._._0x1(184).._._0x1(186).._._0x1(232).._._0x1(174).._._0x1(190).._._0x1(229).._._0x1(174).._._0x1(154).._._0x1(229).._._0x1(128).._._0x1(188),
         Callback = function(Value)
             SpeedEnabled = Value
-            local LocalPlayer = game:GetService("Players").LocalPlayer
+            local LocalPlayer = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115)).LocalPlayer
             
             if Value then
-                SpeedConnection = game:GetService("RunService").Heartbeat:Connect(function()
-                    local humanoid = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+                SpeedConnection = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101)).Heartbeat:Connect(function()
+                    local humanoid = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100))
                     if humanoid then
                         humanoid.WalkSpeed = SpeedValue
                     end
                 end)
-                WindUI:Notify("移速", "自定义移速已启用: " .. SpeedValue, 3)
+                WindUI:Notify(_._0x1(231).._._0x1(167).._._0x1(187).._._0x1(233).._._0x1(128).._._0x1(159), _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(174).._._0x1(154).._._0x1(228).._._0x1(185).._._0x1(137).._._0x1(231).._._0x1(167).._._0x1(187).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(58).._._0x1(32) .. SpeedValue, 3)
             else
                 if SpeedConnection then
                     SpeedConnection:Disconnect()
                     SpeedConnection = nil
                 end
-                WindUI:Notify("移速", "自定义移速已禁用", 3)
+                WindUI:Notify(_._0x1(231).._._0x1(167).._._0x1(187).._._0x1(233).._._0x1(128).._._0x1(159), _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(174).._._0x1(154).._._0x1(228).._._0x1(185).._._0x1(137).._._0x1(231).._._0x1(167).._._0x1(187).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(166).._._0x1(129).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             end
         end
     })
 
     MovementTab:Slider({
-        Title = "速度数值",
+        Title = _._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166).._._0x1(230).._._0x1(149).._._0x1(176).._._0x1(229).._._0x1(128).._._0x1(188),
         Value = {Min = 0, Max = 100, Default = 21},
-        Suffix = " 速度",
-        Tooltip = "设置你的行走速度",
+        Suffix = _._0x1(32).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166),
+        Tooltip = _._0x1(232).._._0x1(174).._._0x1(190).._._0x1(231).._._0x1(189).._._0x1(174).._._0x1(228).._._0x1(189).._._0x1(160).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(232).._._0x1(181).._._0x1(176).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166),
         Callback = function(Value)
             SpeedValue = Value
             if SpeedEnabled then
-                WindUI:Notify("移速", "移速已更新: " .. Value, 2)
+                WindUI:Notify(_._0x1(231).._._0x1(167).._._0x1(187).._._0x1(233).._._0x1(128).._._0x1(159), _._0x1(231).._._0x1(167).._._0x1(187).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(230).._._0x1(155).._._0x1(180).._._0x1(230).._._0x1(150).._._0x1(176).._._0x1(58).._._0x1(32) .. Value, 2)
             end
         end
     })
     MovementTab:Toggle({
-        Title = "即时加速度",
+        Title = _._0x1(229).._._0x1(141).._._0x1(179).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166),
         Default = false,
-        Tooltip = "移除改变方向时的减速效果",
+        Tooltip = _._0x1(231).._._0x1(167).._._0x1(187).._._0x1(233).._._0x1(153).._._0x1(164).._._0x1(230).._._0x1(148).._._0x1(185).._._0x1(229).._._0x1(143).._._0x1(152).._._0x1(230).._._0x1(150).._._0x1(185).._._0x1(229).._._0x1(144).._._0x1(145).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(229).._._0x1(135).._._0x1(143).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(230).._._0x1(149).._._0x1(136).._._0x1(230).._._0x1(158).._._0x1(156),
         Callback = function(Value)
-            local LocalPlayer = game:GetService("Players").LocalPlayer
+            local LocalPlayer = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115)).LocalPlayer
             local OldAccel = PhysicalProperties.new(0.01, 0.7, 0, 1, 1)
             
             local function updateAcceleration()
-                local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+                local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116))
                 if hrp then
                     hrp.CustomPhysicalProperties = Value and PhysicalProperties.new(100, 0, 0, 0, 0) or OldAccel
                 end
@@ -1679,10 +1682,10 @@ function createUI()
 
             if Value then
                 updateAcceleration()
-                WindUI:Notify("加速度", "即时加速度已启用", 3)
+                WindUI:Notify(_._0x1(229).._._0x1(138).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166), _._0x1(229).._._0x1(141).._._0x1(179).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             else
                 updateAcceleration()
-                WindUI:Notify("加速度", "即时加速度已禁用", 3)
+                WindUI:Notify(_._0x1(229).._._0x1(138).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166), _._0x1(229).._._0x1(141).._._0x1(179).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(166).._._0x1(129).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             end
             LocalPlayer.CharacterAdded:Connect(function()
                 task.wait(1.5)
@@ -1710,23 +1713,23 @@ function createUI()
             return
         end
 
-        local humanoid = character:FindFirstChildOfClass("Humanoid")
+        local humanoid = character:FindFirstChildOfClass(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100))
         if not humanoid then
             return
         end
 
-        local hrp = character:FindFirstChild("HumanoidRootPart")
+        local hrp = character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116))
         if not hrp then
             return
         end
-        local bv = Instance.new("BodyVelocity")
-        bv.Name = "FlyVelocity"
+        local bv = Instance.new(_._0x1(66).._._0x1(111).._._0x1(100).._._0x1(121).._._0x1(86).._._0x1(101).._._0x1(108).._._0x1(111).._._0x1(99).._._0x1(105).._._0x1(116).._._0x1(121))
+        bv.Name = _._0x1(70).._._0x1(108).._._0x1(121).._._0x1(86).._._0x1(101).._._0x1(108).._._0x1(111).._._0x1(99).._._0x1(105).._._0x1(116).._._0x1(121)
         bv.MaxForce = Vector3.new(1000000000, 1000000000, 1000000000)
         bv.Velocity = Vector3.new(0, 0, 0)
         bv.Parent = hrp
 
-        local bg = Instance.new("BodyGyro")
-        bg.Name = "FlyGyro"
+        local bg = Instance.new(_._0x1(66).._._0x1(111).._._0x1(100).._._0x1(121).._._0x1(71).._._0x1(121).._._0x1(114).._._0x1(111))
+        bg.Name = _._0x1(70).._._0x1(108).._._0x1(121).._._0x1(71).._._0x1(121).._._0x1(114).._._0x1(111)
         bg.MaxTorque = Vector3.new(1000000000, 1000000000, 1000000000)
         bg.P = 20000
         bg.D = 1000
@@ -1735,7 +1738,7 @@ function createUI()
         humanoid.AutoRotate = false
         humanoid.PlatformStand = true
         humanoid:ChangeState(Enum.HumanoidStateType.Physics)
-        local inputBegan = game:GetService("UserInputService").InputBegan:Connect(function(input, gpe)
+        local inputBegan = game:GetService(_._0x1(85).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(73).._._0x1(110).._._0x1(112).._._0x1(117).._._0x1(116).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101)).InputBegan:Connect(function(input, gpe)
             if gpe then return end
             
             if input.KeyCode == Enum.KeyCode.W then
@@ -1755,7 +1758,7 @@ function createUI()
 
         table.insert(flyConnections, inputBegan)
 
-        local inputEnded = game:GetService("UserInputService").InputEnded:Connect(function(input)
+        local inputEnded = game:GetService(_._0x1(85).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(73).._._0x1(110).._._0x1(112).._._0x1(117).._._0x1(116).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101)).InputEnded:Connect(function(input)
             if input.KeyCode == Enum.KeyCode.W then
                 flyKeys.W = false
             elseif input.KeyCode == Enum.KeyCode.A then
@@ -1772,10 +1775,10 @@ function createUI()
         end)
 
         table.insert(flyConnections, inputEnded)
-        local renderConnection = game:GetService("RunService").RenderStepped:Connect(function()
+        local renderConnection = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101)).RenderStepped:Connect(function()
             local cam = workspace.CurrentCamera
 
-            if not cam or not hrp or not hrp:FindFirstChild("FlyVelocity") or not humanoid or humanoid.Health <= 0 then
+            if not cam or not hrp or not hrp:FindFirstChild(_._0x1(70).._._0x1(108).._._0x1(121).._._0x1(86).._._0x1(101).._._0x1(108).._._0x1(111).._._0x1(99).._._0x1(105).._._0x1(116).._._0x1(121)) or not humanoid or humanoid.Health <= 0 then
                 stopFly()
                 return
             end
@@ -1812,16 +1815,16 @@ function createUI()
     local function stopFly()
         local player = game.Players.LocalPlayer
         local character = player.Character
-        local humanoid = character and character:FindFirstChildOfClass("Humanoid")
-        local hrp = character and character:FindFirstChild("HumanoidRootPart")
+        local humanoid = character and character:FindFirstChildOfClass(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100))
+        local hrp = character and character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116))
 
         if hrp then
-            local flyVelocity = hrp:FindFirstChild("FlyVelocity")
+            local flyVelocity = hrp:FindFirstChild(_._0x1(70).._._0x1(108).._._0x1(121).._._0x1(86).._._0x1(101).._._0x1(108).._._0x1(111).._._0x1(99).._._0x1(105).._._0x1(116).._._0x1(121))
             if flyVelocity then
                 flyVelocity:Destroy()
             end
 
-            local flyGyro = hrp:FindFirstChild("FlyGyro")
+            local flyGyro = hrp:FindFirstChild(_._0x1(70).._._0x1(108).._._0x1(121).._._0x1(71).._._0x1(121).._._0x1(114).._._0x1(111))
             if flyGyro then
                 flyGyro:Destroy()
             end
@@ -1849,37 +1852,37 @@ function createUI()
     end
 
     MovementTab:Toggle({
-        Title = "开启飞行",
+        Title = _._0x1(229).._._0x1(188).._._0x1(128).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140),
         Default = false,
         Callback = function(Value)
             isFlying = Value
 
             if Value then
                 startFly()
-                WindUI:Notify("飞行", "飞行模式已启用", 3)
+                WindUI:Notify(_._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140), _._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(230).._._0x1(168).._._0x1(161).._._0x1(229).._._0x1(188).._._0x1(143).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             else
                 stopFly()
-                WindUI:Notify("飞行", "飞行模式已禁用", 3)
+                WindUI:Notify(_._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140), _._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(230).._._0x1(168).._._0x1(161).._._0x1(229).._._0x1(188).._._0x1(143).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(166).._._0x1(129).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             end
         end
     })
 
     MovementTab:Keybind({
-        Title = "飞行电脑切换键",
-        Default = "F",
-        Mode = "Toggle",
+        Title = _._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(231).._._0x1(148).._._0x1(181).._._0x1(232).._._0x1(132).._._0x1(145).._._0x1(229).._._0x1(136).._._0x1(135).._._0x1(230).._._0x1(141).._._0x1(162).._._0x1(233).._._0x1(148).._._0x1(174),
+        Default = _._0x1(70),
+        Mode = _._0x1(84).._._0x1(111).._._0x1(103).._._0x1(103).._._0x1(108).._._0x1(101),
         Callback = function(Value) end
     })
 
     MovementTab:Slider({
-        Title = "飞行速度",
+        Title = _._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166),
         Value = {Min = 0, Max = 150, Default = 50},
-        Suffix = " 速度",
-        Tooltip = "更改飞行速度",
+        Suffix = _._0x1(32).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166),
+        Tooltip = _._0x1(230).._._0x1(155).._._0x1(180).._._0x1(230).._._0x1(148).._._0x1(185).._._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166),
         Callback = function(Value)
             FlySpeed = Value
             if isFlying then
-                WindUI:Notify("飞行", "飞行速度已更新: " .. Value, 2)
+                WindUI:Notify(_._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140), _._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(230).._._0x1(155).._._0x1(180).._._0x1(230).._._0x1(150).._._0x1(176).._._0x1(58).._._0x1(32) .. Value, 2)
             end
         end
     })
@@ -1887,12 +1890,12 @@ function createUI()
     local originalGroups = {}
 
     MovementTab:Toggle({
-        Title = "穿墙模式",
+        Title = _._0x1(231).._._0x1(169).._._0x1(191).._._0x1(229).._._0x1(162).._._0x1(153).._._0x1(230).._._0x1(168).._._0x1(161).._._0x1(229).._._0x1(188).._._0x1(143),
         Default = false,
-        Tooltip = "让你可以穿过墙壁",
+        Tooltip = _._0x1(232).._._0x1(174).._._0x1(169).._._0x1(228).._._0x1(189).._._0x1(160).._._0x1(229).._._0x1(143).._._0x1(175).._._0x1(228).._._0x1(187).._._0x1(165).._._0x1(231).._._0x1(169).._._0x1(191).._._0x1(232).._._0x1(191).._._0x1(135).._._0x1(229).._._0x1(162).._._0x1(153).._._0x1(229).._._0x1(163).._._0x1(129),
         Callback = function(Value)
-            local Players = game:GetService("Players")
-            local RunService = game:GetService("RunService")
+            local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
+            local RunService = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
             local lp = Players.LocalPlayer
 
             local function enableNoclip()
@@ -1903,12 +1906,12 @@ function createUI()
                 noclipConnection = RunService.Stepped:Connect(function()
                     if lp.Character then
                         for _, part in pairs(lp.Character:GetDescendants()) do
-                            if part:IsA("BasePart") then
+                            if part:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                                 part.CanCollide = false
                                 if not originalGroups[part] then
                                     originalGroups[part] = part.CollisionGroup
                                 end
-                                part.CollisionGroup = "Default"
+                                part.CollisionGroup = _._0x1(68).._._0x1(101).._._0x1(102).._._0x1(97).._._0x1(117).._._0x1(108).._._0x1(116)
                             end
                         end
                     end
@@ -1926,11 +1929,11 @@ function createUI()
                     return
                 end
 
-                local collision = char:FindFirstChild("Collision")
-                local crouch = collision and collision:FindFirstChild("CollisionCrouch")
+                local collision = char:FindFirstChild(_._0x1(67).._._0x1(111).._._0x1(108).._._0x1(108).._._0x1(105).._._0x1(115).._._0x1(105).._._0x1(111).._._0x1(110))
+                local crouch = collision and collision:FindFirstChild(_._0x1(67).._._0x1(111).._._0x1(108).._._0x1(108).._._0x1(105).._._0x1(115).._._0x1(105).._._0x1(111).._._0x1(110).._._0x1(67).._._0x1(114).._._0x1(111).._._0x1(117).._._0x1(99).._._0x1(104))
 
                 if collision and crouch then
-                    local crouching = collision.CollisionGroup == "PlayerCrouching"
+                    local crouching = collision.CollisionGroup == _._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(67).._._0x1(114).._._0x1(111).._._0x1(117).._._0x1(99).._._0x1(104).._._0x1(105).._._0x1(110).._._0x1(103)
                     collision.CanCollide = not crouching
                     crouch.CanCollide = crouching
                 end
@@ -1938,18 +1941,18 @@ function createUI()
 
             if Value then
                 enableNoclip()
-                WindUI:Notify("穿墙", "穿墙模式已启用", 3)
+                WindUI:Notify(_._0x1(231).._._0x1(169).._._0x1(191).._._0x1(229).._._0x1(162).._._0x1(153), _._0x1(231).._._0x1(169).._._0x1(191).._._0x1(229).._._0x1(162).._._0x1(153).._._0x1(230).._._0x1(168).._._0x1(161).._._0x1(229).._._0x1(188).._._0x1(143).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             else
                 disableNoclip()
-                WindUI:Notify("穿墙", "穿墙模式已禁用", 3)
+                WindUI:Notify(_._0x1(231).._._0x1(169).._._0x1(191).._._0x1(229).._._0x1(162).._._0x1(153), _._0x1(231).._._0x1(169).._._0x1(191).._._0x1(229).._._0x1(162).._._0x1(153).._._0x1(230).._._0x1(168).._._0x1(161).._._0x1(229).._._0x1(188).._._0x1(143).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(166).._._0x1(129).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             end
         end
     })
 
     MovementTab:Keybind({
-        Title = "穿墙电脑切换键",
-        Default = "N",
-        Mode = "Toggle",
+        Title = _._0x1(231).._._0x1(169).._._0x1(191).._._0x1(229).._._0x1(162).._._0x1(153).._._0x1(231).._._0x1(148).._._0x1(181).._._0x1(232).._._0x1(132).._._0x1(145).._._0x1(229).._._0x1(136).._._0x1(135).._._0x1(230).._._0x1(141).._._0x1(162).._._0x1(233).._._0x1(148).._._0x1(174),
+        Default = _._0x1(78),
+        Mode = _._0x1(84).._._0x1(111).._._0x1(103).._._0x1(103).._._0x1(108).._._0x1(101),
         Callback = function(Value) end
     })
     local LadderSpeedValue = 20
@@ -1957,89 +1960,89 @@ function createUI()
     local LadderConnection = nil
 
     MovementTab:Toggle({
-        Title = "更快爬梯",
+        Title = _._0x1(230).._._0x1(155).._._0x1(180).._._0x1(229).._._0x1(191).._._0x1(171).._._0x1(231).._._0x1(136).._._0x1(172).._._0x1(230).._._0x1(162).._._0x1(175),
         Default = false,
         Callback = function(on)
             local LocalPlayer = game.Players.LocalPlayer
-            local RunService = game:GetService("RunService")
+            local RunService = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
 
             if on then
                 LadderConnection = RunService.Heartbeat:Connect(function()
                     local char = LocalPlayer.Character
-                    local hum = char and char:FindFirstChildOfClass("Humanoid")
-                    local hrp = char and char:FindFirstChild("HumanoidRootPart")
+                    local hum = char and char:FindFirstChildOfClass(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100))
+                    local hrp = char and char:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116))
 
                     if hum and hrp and hum:GetState() == Enum.HumanoidStateType.Climbing then
                         hrp.Velocity = Vector3.new(hrp.Velocity.X, LadderSpeedValue, hrp.Velocity.Z)
                     end
                 end)
-                WindUI:Notify("爬梯", "梯子加速已启用", 3)
+                WindUI:Notify(_._0x1(231).._._0x1(136).._._0x1(172).._._0x1(230).._._0x1(162).._._0x1(175), _._0x1(230).._._0x1(162).._._0x1(175).._._0x1(229).._._0x1(173).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             elseif LadderConnection then
                 LadderConnection:Disconnect()
                 LadderConnection = nil
-                WindUI:Notify("爬梯", "梯子加速已禁用", 3)
+                WindUI:Notify(_._0x1(231).._._0x1(136).._._0x1(172).._._0x1(230).._._0x1(162).._._0x1(175), _._0x1(230).._._0x1(162).._._0x1(175).._._0x1(229).._._0x1(173).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(166).._._0x1(129).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             end
         end
     })
 
     MovementTab:Slider({
-        Title = "爬梯速度",
+        Title = _._0x1(231).._._0x1(136).._._0x1(172).._._0x1(230).._._0x1(162).._._0x1(175).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166),
         Value = {Min = 0, Max = 100, Default = 20},
-        Suffix = " 速度",
-        Tooltip = "爬梯的加速值，过高可能不稳定",
+        Suffix = _._0x1(32).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166),
+        Tooltip = _._0x1(231).._._0x1(136).._._0x1(172).._._0x1(230).._._0x1(162).._._0x1(175).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(229).._._0x1(138).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(128).._._0x1(188).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(232).._._0x1(191).._._0x1(135).._._0x1(233).._._0x1(171).._._0x1(152).._._0x1(229).._._0x1(143).._._0x1(175).._._0x1(232).._._0x1(131).._._0x1(189).._._0x1(228).._._0x1(184).._._0x1(141).._._0x1(231).._._0x1(168).._._0x1(179).._._0x1(229).._._0x1(174).._._0x1(154),
         Callback = function(Value)
             LadderSpeedValue = Value
             if LadderSpeedEnabled then
-                WindUI:Notify("爬梯", "爬梯速度已更新: " .. Value, 2)
+                WindUI:Notify(_._0x1(231).._._0x1(136).._._0x1(172).._._0x1(230).._._0x1(162).._._0x1(175), _._0x1(231).._._0x1(136).._._0x1(172).._._0x1(230).._._0x1(162).._._0x1(175).._._0x1(233).._._0x1(128).._._0x1(159).._._0x1(229).._._0x1(186).._._0x1(166).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(230).._._0x1(155).._._0x1(180).._._0x1(230).._._0x1(150).._._0x1(176).._._0x1(58).._._0x1(32) .. Value, 2)
             end
         end
     })
     MovementTab:Toggle({
-        Title = "始终可跳跃",
+        Title = _._0x1(229).._._0x1(167).._._0x1(139).._._0x1(231).._._0x1(187).._._0x1(136).._._0x1(229).._._0x1(143).._._0x1(175).._._0x1(232).._._0x1(183).._._0x1(179).._._0x1(232).._._0x1(183).._._0x1(131),
         Default = false,
-        Tooltip = "让你随时可以跳跃",
+        Tooltip = _._0x1(232).._._0x1(174).._._0x1(169).._._0x1(228).._._0x1(189).._._0x1(160).._._0x1(233).._._0x1(154).._._0x1(143).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(229).._._0x1(143).._._0x1(175).._._0x1(228).._._0x1(187).._._0x1(165).._._0x1(232).._._0x1(183).._._0x1(179).._._0x1(232).._._0x1(183).._._0x1(131),
         Callback = function(Value)
             local LocalPlayer = game.Players.LocalPlayer
-            LocalPlayer.Character:SetAttribute("CanJump", Value)
+            LocalPlayer.Character:SetAttribute(_._0x1(67).._._0x1(97).._._0x1(110).._._0x1(74).._._0x1(117).._._0x1(109).._._0x1(112), Value)
             
             if Value then
-                WindUI:Notify("跳跃", "始终跳跃已启用", 3)
+                WindUI:Notify(_._0x1(232).._._0x1(183).._._0x1(179).._._0x1(232).._._0x1(183).._._0x1(131), _._0x1(229).._._0x1(167).._._0x1(139).._._0x1(231).._._0x1(187).._._0x1(136).._._0x1(232).._._0x1(183).._._0x1(179).._._0x1(232).._._0x1(183).._._0x1(131).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             else
-                WindUI:Notify("跳跃", "始终跳跃已禁用", 3)
+                WindUI:Notify(_._0x1(232).._._0x1(183).._._0x1(179).._._0x1(232).._._0x1(183).._._0x1(131), _._0x1(229).._._0x1(167).._._0x1(139).._._0x1(231).._._0x1(187).._._0x1(136).._._0x1(232).._._0x1(183).._._0x1(179).._._0x1(232).._._0x1(183).._._0x1(131).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(166).._._0x1(129).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             end
             LocalPlayer.CharacterAdded:Connect(function(newCharacter)
                 task.wait(1.5)
-                newCharacter:SetAttribute("CanJump", Value)
+                newCharacter:SetAttribute(_._0x1(67).._._0x1(97).._._0x1(110).._._0x1(74).._._0x1(117).._._0x1(109).._._0x1(112), Value)
             end)
         end
     })
-    local B = Window:Tab({Title = "自动类", Icon = "puzzle"})
+    local B = Window:Tab({Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(231).._._0x1(177).._._0x1(187), Icon = _._0x1(112).._._0x1(117).._._0x1(122).._._0x1(122).._._0x1(108).._._0x1(101)})
     B:Toggle({
-        Title = "自动锚点代码求解",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(233).._._0x1(148).._._0x1(154).._._0x1(231).._._0x1(130).._._0x1(185).._._0x1(228).._._0x1(187).._._0x1(163).._._0x1(231).._._0x1(160).._._0x1(129).._._0x1(230).._._0x1(177).._._0x1(130).._._0x1(232).._._0x1(167).._._0x1(163),
         Default = false,
         Callback = function(enabled)
             local running = false
-            local Players = game:GetService("Players")
+            local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
             local LocalPlayer = Players.LocalPlayer
-            local Workspace = game:GetService("Workspace")
+            local Workspace = game:GetService(_._0x1(87).._._0x1(111).._._0x1(114).._._0x1(107).._._0x1(115).._._0x1(112).._._0x1(97).._._0x1(99).._._0x1(101))
             
             if enabled then
                 if running then return end
                 running = true
                 
                 task.spawn(function()
-                    local playerGui = LocalPlayer:WaitForChild("PlayerGui")
+                    local playerGui = LocalPlayer:WaitForChild(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(71).._._0x1(117).._._0x1(105))
                     
                     local function findFrame()
-                        local mainUI = playerGui:FindFirstChild("MainUI")
-                        if mainUI and mainUI:FindFirstChild("MainFrame") then
-                            local frame = mainUI.MainFrame:FindFirstChild("AnchorHintFrame")
+                        local mainUI = playerGui:FindFirstChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(85).._._0x1(73))
+                        if mainUI and mainUI:FindFirstChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101)) then
+                            local frame = mainUI.MainFrame:FindFirstChild(_._0x1(65).._._0x1(110).._._0x1(99).._._0x1(104).._._0x1(111).._._0x1(114).._._0x1(72).._._0x1(105).._._0x1(110).._._0x1(116).._._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101))
                             if frame then return frame end
                         end
 
-                        local anchorUI = playerGui:FindFirstChild("AnchorHintUI")
+                        local anchorUI = playerGui:FindFirstChild(_._0x1(65).._._0x1(110).._._0x1(99).._._0x1(104).._._0x1(111).._._0x1(114).._._0x1(72).._._0x1(105).._._0x1(110).._._0x1(116).._._0x1(85).._._0x1(73))
                         if anchorUI then
-                            local frame = anchorUI:FindFirstChild("AnchorHintFrame")
+                            local frame = anchorUI:FindFirstChild(_._0x1(65).._._0x1(110).._._0x1(99).._._0x1(104).._._0x1(111).._._0x1(114).._._0x1(72).._._0x1(105).._._0x1(110).._._0x1(116).._._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101))
                             if frame then return frame end
                         end
                         return nil
@@ -2050,16 +2053,16 @@ function createUI()
                         local frame = findFrame()
                         
                         if frame then
-                            local anchorName = (frame:FindFirstChild("AnchorCode") and frame.AnchorCode.Text) or ''
-                            local codeText = (frame:FindFirstChild("Code") and frame.Code.Text) or ''
+                            local anchorName = (frame:FindFirstChild(_._0x1(65).._._0x1(110).._._0x1(99).._._0x1(104).._._0x1(111).._._0x1(114).._._0x1(67).._._0x1(111).._._0x1(100).._._0x1(101)) and frame.AnchorCode.Text) or _._0x1()
+                            local codeText = (frame:FindFirstChild(_._0x1(67).._._0x1(111).._._0x1(100).._._0x1(101)) and frame.Code.Text) or _._0x1()
                             
-                            if anchorName ~= '' and codeText ~= '' then
+                            if anchorName ~= _._0x1() and codeText ~= _._0x1() then
                                 local anchorObject
                                 for _, obj in ipairs(Workspace.CurrentRooms:GetDescendants()) do
-                                    if obj.Name == "MinesAnchor" then
-                                        local sign = obj:FindFirstChild("Sign")
+                                    if obj.Name == _._0x1(77).._._0x1(105).._._0x1(110).._._0x1(101).._._0x1(115).._._0x1(65).._._0x1(110).._._0x1(99).._._0x1(104).._._0x1(111).._._0x1(114) then
+                                        local sign = obj:FindFirstChild(_._0x1(83).._._0x1(105).._._0x1(103).._._0x1(110))
                                         if sign then
-                                            local label = sign:FindFirstChild("TextLabel") or sign:FindFirstChildWhichIsA("TextLabel")
+                                            local label = sign:FindFirstChild(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(76).._._0x1(97).._._0x1(98).._._0x1(101).._._0x1(108)) or sign:FindFirstChildWhichIsA(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(76).._._0x1(97).._._0x1(98).._._0x1(101).._._0x1(108))
                                             if label and label.Text == anchorName then
                                                 anchorObject = obj
                                                 break
@@ -2069,14 +2072,14 @@ function createUI()
                                 end
 
                                 if anchorObject then
-                                    local note = anchorObject:FindFirstChild("Note")
+                                    local note = anchorObject:FindFirstChild(_._0x1(78).._._0x1(111).._._0x1(116).._._0x1(101))
                                     if not note then
-                                        WindUI:Notify("锚点代码", "锚点 " .. anchorName .. " 代码是 " .. codeText, 3)
+                                        WindUI:Notify(_._0x1(233).._._0x1(148).._._0x1(154).._._0x1(231).._._0x1(130).._._0x1(185).._._0x1(228).._._0x1(187).._._0x1(163).._._0x1(231).._._0x1(160).._._0x1(129), _._0x1(233).._._0x1(148).._._0x1(154).._._0x1(231).._._0x1(130).._._0x1(185).._._0x1(32) .. anchorName .. _._0x1(32).._._0x1(228).._._0x1(187).._._0x1(163).._._0x1(231).._._0x1(160).._._0x1(129).._._0x1(230).._._0x1(152).._._0x1(175).._._0x1(32) .. codeText, 3)
                                     else
-                                        local surfaceGui = note:FindFirstChildOfClass("SurfaceGui") or note:FindFirstChild("SurfaceGui")
-                                        local noteText = (surfaceGui and surfaceGui:FindFirstChild("TextLabel") and surfaceGui.TextLabel.Text) or '0'
+                                        local surfaceGui = note:FindFirstChildOfClass(_._0x1(83).._._0x1(117).._._0x1(114).._._0x1(102).._._0x1(97).._._0x1(99).._._0x1(101).._._0x1(71).._._0x1(117).._._0x1(105)) or note:FindFirstChild(_._0x1(83).._._0x1(117).._._0x1(114).._._0x1(102).._._0x1(97).._._0x1(99).._._0x1(101).._._0x1(71).._._0x1(117).._._0x1(105))
+                                        local noteText = (surfaceGui and surfaceGui:FindFirstChild(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116).._._0x1(76).._._0x1(97).._._0x1(98).._._0x1(101).._._0x1(108)) and surfaceGui.TextLabel.Text) or _._0x1(48)
                                         local noteValue = tonumber(noteText) or 0
-                                        local solved = ''
+                                        local solved = _._0x1()
                                         
                                         for i = 1, #codeText do
                                             local digit = tonumber(codeText:sub(i, i)) or 0
@@ -2084,7 +2087,7 @@ function createUI()
                                             solved = solved .. tostring(digit)
                                         end
                                         
-                                        WindUI:Notify("锚点代码", "锚点 " .. anchorName .. " 代码是 " .. solved, 5)
+                                        WindUI:Notify(_._0x1(233).._._0x1(148).._._0x1(154).._._0x1(231).._._0x1(130).._._0x1(185).._._0x1(228).._._0x1(187).._._0x1(163).._._0x1(231).._._0x1(160).._._0x1(129), _._0x1(233).._._0x1(148).._._0x1(154).._._0x1(231).._._0x1(130).._._0x1(185).._._0x1(32) .. anchorName .. _._0x1(32).._._0x1(228).._._0x1(187).._._0x1(163).._._0x1(231).._._0x1(160).._._0x1(129).._._0x1(230).._._0x1(152).._._0x1(175).._._0x1(32) .. solved, 5)
                                     end
                                 end
                             end
@@ -2099,26 +2102,26 @@ function createUI()
         end
     })
     B:Toggle({
-        Title = "自动断路器游戏",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(150).._._0x1(173).._._0x1(232).._._0x1(183).._._0x1(175).._._0x1(229).._._0x1(153).._._0x1(168).._._0x1(230).._._0x1(184).._._0x1(184).._._0x1(230).._._0x1(136).._._0x1(143),
         Default = false,
         Callback = function(Value)
-            local Players = game:GetService("Players")
-            local ReplicatedStorage = game:GetService("ReplicatedStorage")
+            local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
+            local ReplicatedStorage = game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101))
             local LocalPlayer = Players.LocalPlayer
-            local RemoteFolder = ReplicatedStorage:FindFirstChild("RemotesFolder") or ReplicatedStorage:FindFirstChild("EntityInfo") or ReplicatedStorage:FindFirstChild("Bricks")
+            local RemoteFolder = ReplicatedStorage:FindFirstChild(_._0x1(82).._._0x1(101).._._0x1(109).._._0x1(111).._._0x1(116).._._0x1(101).._._0x1(115).._._0x1(70).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(101).._._0x1(114)) or ReplicatedStorage:FindFirstChild(_._0x1(69).._._0x1(110).._._0x1(116).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(73).._._0x1(110).._._0x1(102).._._0x1(111)) or ReplicatedStorage:FindFirstChild(_._0x1(66).._._0x1(114).._._0x1(105).._._0x1(99).._._0x1(107).._._0x1(115))
             
             while task.wait() and Value do
                 if not Value then break end
                 
-                local currentRoom = LocalPlayer:GetAttribute("CurrentRoom")
+                local currentRoom = LocalPlayer:GetAttribute(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109))
                 if currentRoom ~= 100 then
-                    WindUI:Notify("提示", "你需要在100号房间使用此功能", 5)
+                    WindUI:Notify(_._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186), _._0x1(228).._._0x1(189).._._0x1(160).._._0x1(233).._._0x1(156).._._0x1(128).._._0x1(232).._._0x1(166).._._0x1(129).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(49).._._0x1(48).._._0x1(48).._._0x1(229).._._0x1(143).._._0x1(183).._._0x1(230).._._0x1(136).._._0x1(191).._._0x1(233).._._0x1(151).._._0x1(180).._._0x1(228).._._0x1(189).._._0x1(191).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(230).._._0x1(173).._._0x1(164).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189), 5)
                     break
                 end
 
                 local Breaker = nil
                 for _, v in ipairs(workspace.CurrentRooms:GetDescendants()) do
-                    if v.Name == "ElevatorBreaker" then
+                    if v.Name == _._0x1(69).._._0x1(108).._._0x1(101).._._0x1(118).._._0x1(97).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(66).._._0x1(114).._._0x1(101).._._0x1(97).._._0x1(107).._._0x1(101).._._0x1(114) then
                         Breaker = v
                         break
                     end
@@ -2127,11 +2130,11 @@ function createUI()
                 if Breaker then
                     local solved = true
                     for _, v in ipairs(Breaker:GetChildren()) do
-                        if v.Name == "BreakerSwitch" then
-                            local codeText = Breaker:WaitForChild("SurfaceGui").Frame.Code.Text
-                            if v:GetAttribute("ID") == tonumber(codeText) then
+                        if v.Name == _._0x1(66).._._0x1(114).._._0x1(101).._._0x1(97).._._0x1(107).._._0x1(101).._._0x1(114).._._0x1(83).._._0x1(119).._._0x1(105).._._0x1(116).._._0x1(99).._._0x1(104) then
+                            local codeText = Breaker:WaitForChild(_._0x1(83).._._0x1(117).._._0x1(114).._._0x1(102).._._0x1(97).._._0x1(99).._._0x1(101).._._0x1(71).._._0x1(117).._._0x1(105)).Frame.Code.Text
+                            if v:GetAttribute(_._0x1(73).._._0x1(68)) == tonumber(codeText) then
                                 if Breaker.SurfaceGui.Frame.Code.Frame.BackgroundTransparency == 0 then
-                                    v:SetAttribute("Enabled", true)
+                                    v:SetAttribute(_._0x1(69).._._0x1(110).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(100), true)
                                     if not v.Sound.Playing then
                                         v.Sound.Playing = true
                                     end
@@ -2139,7 +2142,7 @@ function createUI()
                                     v.Light.Attachment.Spark:Emit(1)
                                     v.PrismaticConstraint.TargetPosition = -0.2
                                 else
-                                    v:SetAttribute("Enabled", false)
+                                    v:SetAttribute(_._0x1(69).._._0x1(110).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(100), false)
                                     if not v.Sound.Playing then
                                         v.Sound.Playing = true
                                     end
@@ -2152,9 +2155,9 @@ function createUI()
                     end
 
                     if solved and RemoteFolder then
-                        local breakerRemote = RemoteFolder:FindFirstChild("BreakerMinigame")
+                        local breakerRemote = RemoteFolder:FindFirstChild(_._0x1(66).._._0x1(114).._._0x1(101).._._0x1(97).._._0x1(107).._._0x1(101).._._0x1(114).._._0x1(77).._._0x1(105).._._0x1(110).._._0x1(105).._._0x1(103).._._0x1(97).._._0x1(109).._._0x1(101))
                         if breakerRemote then
-                            breakerRemote:FireServer("Solved")
+                            breakerRemote:FireServer(_._0x1(83).._._0x1(111).._._0x1(108).._._0x1(118).._._0x1(101).._._0x1(100))
                         end
                     end
                 end
@@ -2162,10 +2165,10 @@ function createUI()
         end
     })
     B:Toggle({
-        Title = "自动隐藏[防怪物]",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(233).._._0x1(154).._._0x1(144).._._0x1(232).._._0x1(151).._._0x1(143).._._0x1(91).._._0x1(233).._._0x1(152).._._0x1(178).._._0x1(230).._._0x1(128).._._0x1(170).._._0x1(231).._._0x1(137).._._0x1(169).._._0x1(93),
         Default = false,
         Risky = true,
-        Tooltip = "自动为你隐藏",
+        Tooltip = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(228).._._0x1(184).._._0x1(186).._._0x1(228).._._0x1(189).._._0x1(160).._._0x1(233).._._0x1(154).._._0x1(144).._._0x1(232).._._0x1(151).._._0x1(143),
         Callback = function(Value)
             local EntityDistances = {
                 RushMoving = 50,
@@ -2180,28 +2183,28 @@ function createUI()
 
             local function GetHiding()
                 local Closest, Prompt
-                local currRoom = Rooms and Rooms[LocalPlayer:GetAttribute("CurrentRoom")]
+                local currRoom = Rooms and Rooms[LocalPlayer:GetAttribute(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109))]
                 if not currRoom then return nil end
 
                 local char = LocalPlayer.Character
                 if not char then return nil end
 
-                local hrp = char:FindFirstChild("HumanoidRootPart") or char:FindFirstChild("Collision") or char.PrimaryPart
+                local hrp = char:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) or char:FindFirstChild(_._0x1(67).._._0x1(111).._._0x1(108).._._0x1(108).._._0x1(105).._._0x1(115).._._0x1(105).._._0x1(111).._._0x1(110)) or char.PrimaryPart
                 if not hrp then return nil end
 
                 local function distFromPlayer(model)
                     if not model then return math.huge end
-                    local part = model.PrimaryPart or model:FindFirstChildWhichIsA("BasePart", true)
+                    local part = model.PrimaryPart or model:FindFirstChildWhichIsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116), true)
                     if not part then return math.huge end
                     return (part.Position - hrp.Position).Magnitude
                 end
 
-                local assets = currRoom:FindFirstChild("Assets")
+                local assets = currRoom:FindFirstChild(_._0x1(65).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(115))
                 if assets then
                     for _, v in pairs(assets:GetChildren()) do
-                        if v:IsA("Model") then
-                            if ((v.Name == "Locker_Large") or (v.Name == "Wardrobe") or (v.Name == "Toolshed") or (v.Name == "Bed") or (v.Name == "Rooms_Locker") or (v.Name == "Rooms_Locker_Fridge") or (v.Name == "Backdoor_Wardrobe")) and v:FindFirstChild("HidePrompt") and v:FindFirstChild("HiddenPlayer") then
-                                if not v.HiddenPlayer.Value and not v:FindFirstChild("HideEntityOnSpot", true) then
+                        if v:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) then
+                            if ((v.Name == _._0x1(76).._._0x1(111).._._0x1(99).._._0x1(107).._._0x1(101).._._0x1(114).._._0x1(95).._._0x1(76).._._0x1(97).._._0x1(114).._._0x1(103).._._0x1(101)) or (v.Name == _._0x1(87).._._0x1(97).._._0x1(114).._._0x1(100).._._0x1(114).._._0x1(111).._._0x1(98).._._0x1(101)) or (v.Name == _._0x1(84).._._0x1(111).._._0x1(111).._._0x1(108).._._0x1(115).._._0x1(104).._._0x1(101).._._0x1(100)) or (v.Name == _._0x1(66).._._0x1(101).._._0x1(100)) or (v.Name == _._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115).._._0x1(95).._._0x1(76).._._0x1(111).._._0x1(99).._._0x1(107).._._0x1(101).._._0x1(114)) or (v.Name == _._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115).._._0x1(95).._._0x1(76).._._0x1(111).._._0x1(99).._._0x1(107).._._0x1(101).._._0x1(114).._._0x1(95).._._0x1(70).._._0x1(114).._._0x1(105).._._0x1(100).._._0x1(103).._._0x1(101)) or (v.Name == _._0x1(66).._._0x1(97).._._0x1(99).._._0x1(107).._._0x1(100).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(95).._._0x1(87).._._0x1(97).._._0x1(114).._._0x1(100).._._0x1(114).._._0x1(111).._._0x1(98).._._0x1(101))) and v:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) and v:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(100).._._0x1(101).._._0x1(110).._._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114)) then
+                                if not v.HiddenPlayer.Value and not v:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(69).._._0x1(110).._._0x1(116).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(79).._._0x1(110).._._0x1(83).._._0x1(112).._._0x1(111).._._0x1(116), true) then
                                     if Closest then
                                         if distFromPlayer(v) < distFromPlayer(Closest) then
                                             Closest = v
@@ -2212,10 +2215,10 @@ function createUI()
                                         Prompt = v.HidePrompt
                                     end
                                 end
-                            elseif v.Name == "Double_Bed" then
+                            elseif v.Name == _._0x1(68).._._0x1(111).._._0x1(117).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(95).._._0x1(66).._._0x1(101).._._0x1(100) then
                                 for _, x in pairs(v:GetChildren()) do
-                                    if x.Name == "DoubleBed" and x:FindFirstChild("HidePrompt") and x:FindFirstChild("HiddenPlayer") then
-                                        if not x.HiddenPlayer.Value and not x:FindFirstChild("HideEntityOnSpot", true) then
+                                    if x.Name == _._0x1(68).._._0x1(111).._._0x1(117).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(66).._._0x1(101).._._0x1(100) and x:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) and x:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(100).._._0x1(101).._._0x1(110).._._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114)) then
+                                        if not x.HiddenPlayer.Value and not x:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(69).._._0x1(110).._._0x1(116).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(79).._._0x1(110).._._0x1(83).._._0x1(112).._._0x1(111).._._0x1(116), true) then
                                             if Closest then
                                                 if distFromPlayer(x) < distFromPlayer(Closest) then
                                                     Closest = x
@@ -2228,10 +2231,10 @@ function createUI()
                                         end
                                     end
                                 end
-                            elseif v.Name == "Dumpster" then
+                            elseif v.Name == _._0x1(68).._._0x1(117).._._0x1(109).._._0x1(112).._._0x1(115).._._0x1(116).._._0x1(101).._._0x1(114) then
                                 for _, x in pairs(v:GetChildren()) do
-                                    if x:FindFirstChild("HidePrompt") and x:FindFirstChild("HiddenPlayer") then
-                                        local dumpsterBaseHasSpot = v:FindFirstChild("DumpsterBase") and v.DumpsterBase:FindFirstChild("HideEntityOnSpot")
+                                    if x:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) and x:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(100).._._0x1(101).._._0x1(110).._._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114)) then
+                                        local dumpsterBaseHasSpot = v:FindFirstChild(_._0x1(68).._._0x1(117).._._0x1(109).._._0x1(112).._._0x1(115).._._0x1(116).._._0x1(101).._._0x1(114).._._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101)) and v.DumpsterBase:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(69).._._0x1(110).._._0x1(116).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(79).._._0x1(110).._._0x1(83).._._0x1(112).._._0x1(111).._._0x1(116))
                                         if not x.HiddenPlayer.Value and not dumpsterBaseHasSpot then
                                             if Closest then
                                                 if distFromPlayer(x) < distFromPlayer(Closest) then
@@ -2246,10 +2249,10 @@ function createUI()
                                     end
                                 end
                             end
-                        elseif v:IsA("Folder") then
-                            if v.Name == "Blockage" then
+                        elseif v:IsA(_._0x1(70).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(101).._._0x1(114)) then
+                            if v.Name == _._0x1(66).._._0x1(108).._._0x1(111).._._0x1(99).._._0x1(107).._._0x1(97).._._0x1(103).._._0x1(101) then
                                 for _, x in pairs(v:GetChildren()) do
-                                    if x:IsA("Model") and x.Name == "Wardrobe" and x:FindFirstChild("HiddenPlayer") and x:FindFirstChild("HidePrompt") then
+                                    if x:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) and x.Name == _._0x1(87).._._0x1(97).._._0x1(114).._._0x1(100).._._0x1(114).._._0x1(111).._._0x1(98).._._0x1(101) and x:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(100).._._0x1(101).._._0x1(110).._._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114)) and x:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                                         if not x.HiddenPlayer.Value then
                                             if Closest then
                                                 if distFromPlayer(x) < distFromPlayer(Closest) then
@@ -2263,10 +2266,10 @@ function createUI()
                                         end
                                     end
                                 end
-                            elseif v.Name == "Vents" then
+                            elseif v.Name == _._0x1(86).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(115) then
                                 for _, x in pairs(v:GetChildren()) do
-                                    if x.Name == "CircularVent" and x:FindFirstChild("Grate") and x.Grate:FindFirstChild("HidePrompt") and x:FindFirstChild("HiddenPlayer") then
-                                        if not x.HiddenPlayer.Value and not v:FindFirstChild("HideEntityOnSpot", true) then
+                                    if x.Name == _._0x1(67).._._0x1(105).._._0x1(114).._._0x1(99).._._0x1(117).._._0x1(108).._._0x1(97).._._0x1(114).._._0x1(86).._._0x1(101).._._0x1(110).._._0x1(116) and x:FindFirstChild(_._0x1(71).._._0x1(114).._._0x1(97).._._0x1(116).._._0x1(101)) and x.Grate:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) and x:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(100).._._0x1(101).._._0x1(110).._._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114)) then
+                                        if not x.HiddenPlayer.Value and not v:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(69).._._0x1(110).._._0x1(116).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(79).._._0x1(110).._._0x1(83).._._0x1(112).._._0x1(111).._._0x1(116), true) then
                                             if Closest then
                                                 if distFromPlayer(x) < distFromPlayer(Closest) then
                                                     Closest = x
@@ -2285,9 +2288,9 @@ function createUI()
                 end
 
                 for _, v in pairs(currRoom:GetChildren()) do
-                    if v:IsA("Model") then
-                        if v.Name == "CircularVent" and v:FindFirstChild("Grate") and v.Grate:FindFirstChild("HidePrompt") and v:FindFirstChild("HiddenPlayer") then
-                            if not v.HiddenPlayer.Value and not v:FindFirstChild("HideEntityOnSpot", true) then
+                    if v:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) then
+                        if v.Name == _._0x1(67).._._0x1(105).._._0x1(114).._._0x1(99).._._0x1(117).._._0x1(108).._._0x1(97).._._0x1(114).._._0x1(86).._._0x1(101).._._0x1(110).._._0x1(116) and v:FindFirstChild(_._0x1(71).._._0x1(114).._._0x1(97).._._0x1(116).._._0x1(101)) and v.Grate:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) and v:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(100).._._0x1(101).._._0x1(110).._._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114)) then
+                            if not v.HiddenPlayer.Value and not v:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(69).._._0x1(110).._._0x1(116).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(79).._._0x1(110).._._0x1(83).._._0x1(112).._._0x1(111).._._0x1(116), true) then
                                 if Closest then
                                     if distFromPlayer(v) < distFromPlayer(Closest) then
                                         Closest = v
@@ -2307,29 +2310,29 @@ function createUI()
 
             if Value then
                 table.insert(Connections, workspace.ChildAdded:Connect(function(v)
-                    if v:IsA("Model") and EntityDistances[v.Name] then
+                    if v:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) and EntityDistances[v.Name] then
                         task.wait(1)
-                        local Part = v.PrimaryPart or v:FindFirstChildWhichIsA("BasePart", true)
+                        local Part = v.PrimaryPart or v:FindFirstChildWhichIsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116), true)
                         if not Part then return end
 
-                        v:SetAttribute("_Prediction", Part.Position)
+                        v:SetAttribute(_._0x1(95).._._0x1(80).._._0x1(114).._._0x1(101).._._0x1(100).._._0x1(105).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110), Part.Position)
 
                         while task.wait() and v.Parent do
                             task.spawn(function()
                                 local LastPosition = Part.Position
                                 task.wait(0.3333333333333333)
                                 if Part and Part.Parent then
-                                    v:SetAttribute("_Prediction", Part.Position - LastPosition)
+                                    v:SetAttribute(_._0x1(95).._._0x1(80).._._0x1(114).._._0x1(101).._._0x1(100).._._0x1(105).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110), Part.Position - LastPosition)
                                 end
                             end)
 
                             if Value then
                                 local IncludeList = {}
                                 for _, Room in pairs(Rooms:GetChildren()) do
-                                    if Room:FindFirstChild("Assets") then
+                                    if Room:FindFirstChild(_._0x1(65).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(115)) then
                                         table.insert(IncludeList, Room.Assets)
                                     end
-                                    if Room:FindFirstChild("Parts") then
+                                    if Room:FindFirstChild(_._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116).._._0x1(115)) then
                                         table.insert(IncludeList, Room.Parts)
                                     end
                                 end
@@ -2343,14 +2346,14 @@ function createUI()
 
                                 for i = 1, #Count do
                                     local Number = 1.5 * Count[i]
-                                    local predAttr = v:GetAttribute("_Prediction")
+                                    local predAttr = v:GetAttribute(_._0x1(95).._._0x1(80).._._0x1(114).._._0x1(101).._._0x1(100).._._0x1(105).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110))
                                     local Prediction = (predAttr and (predAttr * 3)) or Vector3.new(0, 0, 0)
                                     Prediction = Prediction * Number
 
                                     local char = LocalPlayer.Character
                                     if not char then break end
 
-                                    local hrp = char:FindFirstChild("HumanoidRootPart") or char:FindFirstChild("Collision") or char.PrimaryPart
+                                    local hrp = char:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) or char:FindFirstChild(_._0x1(67).._._0x1(111).._._0x1(108).._._0x1(108).._._0x1(105).._._0x1(115).._._0x1(105).._._0x1(111).._._0x1(110)) or char.PrimaryPart
                                     if not hrp then break end
 
                                     if Vector3.new(Prediction.X, 0, Prediction.Z).Magnitude > 1 then
@@ -2361,12 +2364,12 @@ function createUI()
                                         end
 
                                         local distMultiplier = 1
-                                        local mode = "Safety"
+                                        local mode = _._0x1(83).._._0x1(97).._._0x1(102).._._0x1(101).._._0x1(116).._._0x1(121)
                                         local adjust = 0
 
-                                        if mode == "Safety" then
+                                        if mode == _._0x1(83).._._0x1(97).._._0x1(102).._._0x1(101).._._0x1(116).._._0x1(121) then
                                             adjust = 20
-                                        elseif mode == "Close Call" then
+                                        elseif mode == _._0x1(67).._._0x1(108).._._0x1(111).._._0x1(115).._._0x1(101).._._0x1(32).._._0x1(67).._._0x1(97).._._0x1(108).._._0x1(108) then
                                             adjust = -20
                                         end
 
@@ -2387,8 +2390,8 @@ function createUI()
                                 end
 
                                 local char = LocalPlayer.Character
-                                if char and not entityInRange and char:GetAttribute("Hiding") then
-                                    char:SetAttribute("Hiding", false)
+                                if char and not entityInRange and char:GetAttribute(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(105).._._0x1(110).._._0x1(103)) then
+                                    char:SetAttribute(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(105).._._0x1(110).._._0x1(103), false)
                                 end
                             end
                         end
@@ -2404,32 +2407,32 @@ function createUI()
     })
 
 B:Dropdown({
-        Title = "自动隐藏模式",
-        Values = {"Safety", "Close Call"},
-        Default = "Safety",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(233).._._0x1(154).._._0x1(144).._._0x1(232).._._0x1(151).._._0x1(143).._._0x1(230).._._0x1(168).._._0x1(161).._._0x1(229).._._0x1(188).._._0x1(143),
+        Values = {_._0x1(83).._._0x1(97).._._0x1(102).._._0x1(101).._._0x1(116).._._0x1(121), _._0x1(67).._._0x1(108).._._0x1(111).._._0x1(115).._._0x1(101).._._0x1(32).._._0x1(67).._._0x1(97).._._0x1(108).._._0x1(108)},
+        Default = _._0x1(83).._._0x1(97).._._0x1(102).._._0x1(101).._._0x1(116).._._0x1(121),
         Callback = function(Value) end
     })
 
    B:Slider({
-        Title = "预测时间",
+        Title = _._0x1(233).._._0x1(162).._._0x1(132).._._0x1(230).._._0x1(181).._._0x1(139).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(233).._._0x1(151).._._0x1(180),
         Value = {Min = 0.1, Max = 1.5, Default = 1.5},
-        Suffix = "s",
+        Suffix = _._0x1(115),
         Callback = function(Value) end
     })
 
     B:Slider({
-        Title = "距离倍数",
+        Title = _._0x1(232).._._0x1(183).._._0x1(157).._._0x1(231).._._0x1(166).._._0x1(187).._._0x1(229).._._0x1(128).._._0x1(141).._._0x1(230).._._0x1(149).._._0x1(176),
         Value = {Min = 1, Max = 1.5, Default = 1},
-        Suffix = "x",
+        Suffix = _._0x1(120),
         Callback = function(Value) end
     })
     local AutoInteractDistance = 10
     B:Toggle({
-        Title = "自动互动",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(228).._._0x1(186).._._0x1(146).._._0x1(229).._._0x1(138).._._0x1(168),
         Default = false,
         Callback = function(Value)
             if Value then
-                local RunService = game:GetService("RunService")
+                local RunService = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
                 local LocalPlayer = game.Players.LocalPlayer
 
                 local AutoInteractConnection
@@ -2446,24 +2449,24 @@ B:Dropdown({
                 }
 
                 local function PickRootPart(obj, prompt)
-                    if prompt and prompt.Parent and prompt.Parent:IsA("BasePart") then
+                    if prompt and prompt.Parent and prompt.Parent:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                         return prompt.Parent
                     end
-                    if obj:IsA("Model") then
-                        if obj.PrimaryPart and obj.PrimaryPart:IsA("BasePart") then
+                    if obj:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) then
+                        if obj.PrimaryPart and obj.PrimaryPart:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                             return obj.PrimaryPart
                         end
-                        local common = obj:FindFirstChild("Main", true) or obj:FindFirstChild("Handle", true) or obj:FindFirstChild("Door", true)
-                        if common and common:IsA("BasePart") then
+                        local common = obj:FindFirstChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110), true) or obj:FindFirstChild(_._0x1(72).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(108).._._0x1(101), true) or obj:FindFirstChild(_._0x1(68).._._0x1(111).._._0x1(111).._._0x1(114), true)
+                        if common and common:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                             return common
                         end
                     end
-                    return obj:FindFirstChildWhichIsA("BasePart", true)
+                    return obj:FindFirstChildWhichIsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116), true)
                 end
 
                 local function AddPromptsFromObject(obj)
                     for _, desc in ipairs(obj:GetDescendants()) do
-                        if desc:IsA("ProximityPrompt") and not PromptSeen[desc] then
+                        if desc:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) and not PromptSeen[desc] then
                             local root = PickRootPart(obj, desc)
                             if root then
                                 PromptSeen[desc] = true
@@ -2479,8 +2482,8 @@ B:Dropdown({
 
                 local function CollectTargets(folder)
                     for _, v in ipairs(folder:GetChildren()) do
-                        if v:IsA("Model") or v:IsA("Folder") then
-                            if v.Name == "DrawerContainer" or InteractableModels[v.Name] or v.Name == "RoomsLootItem" or v.Name == "Locker_Small" or v.Name == "Toolbox" or v.Name == "ChestBox" or v.Name == "Toolshed_Small" or v.Name == "CrucifixOnTheWall" then
+                        if v:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) or v:IsA(_._0x1(70).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(101).._._0x1(114)) then
+                            if v.Name == _._0x1(68).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(101).._._0x1(114).._._0x1(67).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(101).._._0x1(114) or InteractableModels[v.Name] or v.Name == _._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115).._._0x1(76).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(73).._._0x1(116).._._0x1(101).._._0x1(109) or v.Name == _._0x1(76).._._0x1(111).._._0x1(99).._._0x1(107).._._0x1(101).._._0x1(114).._._0x1(95).._._0x1(83).._._0x1(109).._._0x1(97).._._0x1(108).._._0x1(108) or v.Name == _._0x1(84).._._0x1(111).._._0x1(111).._._0x1(108).._._0x1(98).._._0x1(111).._._0x1(120) or v.Name == _._0x1(67).._._0x1(104).._._0x1(101).._._0x1(115).._._0x1(116).._._0x1(66).._._0x1(111).._._0x1(120) or v.Name == _._0x1(84).._._0x1(111).._._0x1(111).._._0x1(108).._._0x1(115).._._0x1(104).._._0x1(101).._._0x1(100).._._0x1(95).._._0x1(83).._._0x1(109).._._0x1(97).._._0x1(108).._._0x1(108) or v.Name == _._0x1(67).._._0x1(114).._._0x1(117).._._0x1(99).._._0x1(105).._._0x1(102).._._0x1(105).._._0x1(120).._._0x1(79).._._0x1(110).._._0x1(84).._._0x1(104).._._0x1(101).._._0x1(87).._._0x1(97).._._0x1(108).._._0x1(108) then
                                 AddPromptsFromObject(v)
                             end
                             CollectTargets(v)
@@ -2491,7 +2494,7 @@ B:Dropdown({
                 local function RefreshTargets()
                     CachedInteractables = {}
                     PromptSeen = {}
-                    local CurrentRoom = workspace.CurrentRooms[LocalPlayer:GetAttribute("CurrentRoom")]
+                    local CurrentRoom = workspace.CurrentRooms[LocalPlayer:GetAttribute(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109))]
                     if not CurrentRoom then return end
                     CollectTargets(CurrentRoom)
                 end
@@ -2504,7 +2507,7 @@ B:Dropdown({
                     if lastCheck < interval then return end
                     lastCheck = 0
 
-                    if not LocalPlayer.Character or not LocalPlayer.Character:FindFirstChild("Collision") then
+                    if not LocalPlayer.Character or not LocalPlayer.Character:FindFirstChild(_._0x1(67).._._0x1(111).._._0x1(108).._._0x1(108).._._0x1(105).._._0x1(115).._._0x1(105).._._0x1(111).._._0x1(110)) then
                         return
                     end
 
@@ -2537,13 +2540,13 @@ B:Dropdown({
                 local attributeConn
                 local roomDescConn
 
-                attributeConn = LocalPlayer:GetAttributeChangedSignal("CurrentRoom"):Connect(function()
+                attributeConn = LocalPlayer:GetAttributeChangedSignal(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109)):Connect(function()
                     RefreshTargets()
                     if roomDescConn then
                         roomDescConn:Disconnect()
                         roomDescConn = nil
                     end
-                    local cr = workspace.CurrentRooms[LocalPlayer:GetAttribute("CurrentRoom")]
+                    local cr = workspace.CurrentRooms[LocalPlayer:GetAttribute(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109))]
                     if cr then
                         roomDescConn = cr.DescendantAdded:Connect(function()
                             task.defer(RefreshTargets)
@@ -2551,7 +2554,7 @@ B:Dropdown({
                     end
                 end)
 
-                local cr = workspace.CurrentRooms[LocalPlayer:GetAttribute("CurrentRoom")]
+                local cr = workspace.CurrentRooms[LocalPlayer:GetAttribute(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109))]
                 if cr then
                     roomDescConn = cr.DescendantAdded:Connect(function()
                         task.defer(RefreshTargets)
@@ -2581,22 +2584,22 @@ B:Dropdown({
     })
 
     B:Slider({
-        Title = "自动互动距离",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(228).._._0x1(186).._._0x1(146).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(232).._._0x1(183).._._0x1(157).._._0x1(231).._._0x1(166).._._0x1(187),
         Value = {Min = 1, Max = 20, Default = 10},
-        Suffix = " studs",
+        Suffix = _._0x1(32).._._0x1(115).._._0x1(116).._._0x1(117).._._0x1(100).._._0x1(115),
         Callback = function(Value)
             AutoInteractDistance = Value
         end
     })
     B:Toggle({
-        Title = "自动矿车推动",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(231).._._0x1(159).._._0x1(191).._._0x1(232).._._0x1(189).._._0x1(166).._._0x1(230).._._0x1(142).._._0x1(168).._._0x1(229).._._0x1(138).._._0x1(168),
         Default = false,
         Callback = function(Value)
-            local Players = game:GetService("Players")
-            local RunService = game:GetService("RunService")
+            local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
+            local RunService = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
             local LocalPlayer = Players.LocalPlayer
-            local Workspace = game:GetService("Workspace")
-            local Rooms = Workspace:WaitForChild("CurrentRooms")
+            local Workspace = game:GetService(_._0x1(87).._._0x1(111).._._0x1(114).._._0x1(107).._._0x1(115).._._0x1(112).._._0x1(97).._._0x1(99).._._0x1(101))
+            local Rooms = Workspace:WaitForChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
 
             if _G.AutoMinecartConn then
                 _G.AutoMinecartConn:Disconnect()
@@ -2609,13 +2612,13 @@ B:Dropdown({
 
             if Value then
                 local function tryPush(cartModel)
-                    local cart = cartModel:FindFirstChild("Cart")
+                    local cart = cartModel:FindFirstChild(_._0x1(67).._._0x1(97).._._0x1(114).._._0x1(116))
                     if not cart then return end
-                    local prompt = cart:FindFirstChild("PushPrompt")
+                    local prompt = cart:FindFirstChild(_._0x1(80).._._0x1(117).._._0x1(115).._._0x1(104).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116))
                     if not prompt then return end
 
                     local character = LocalPlayer.Character
-                    local root = character and character:FindFirstChild("HumanoidRootPart")
+                    local root = character and character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116))
                     if not root then return end
 
                     if (root.Position - prompt.Parent.Position).Magnitude <= (prompt.MaxActivationDistance or 10) then
@@ -2624,7 +2627,7 @@ B:Dropdown({
                 end
 
                 _G.AutoMinecartConn = Rooms.DescendantAdded:Connect(function(obj)
-                    if obj.Name == "MinecartMoving" then
+                    if obj.Name == _._0x1(77).._._0x1(105).._._0x1(110).._._0x1(101).._._0x1(99).._._0x1(97).._._0x1(114).._._0x1(116).._._0x1(77).._._0x1(111).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(103) then
                         task.defer(function()
                             tryPush(obj)
                         end)
@@ -2633,11 +2636,11 @@ B:Dropdown({
 
                 _G.AutoMinecartLoop = RunService.Heartbeat:Connect(function()
                     local character = LocalPlayer.Character
-                    local root = character and character:FindFirstChild("HumanoidRootPart")
+                    local root = character and character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116))
                     if not root then return end
 
                     for _, obj in ipairs(Rooms:GetDescendants()) do
-                        if obj.Name == "MinecartMoving" then
+                        if obj.Name == _._0x1(77).._._0x1(105).._._0x1(110).._._0x1(101).._._0x1(99).._._0x1(97).._._0x1(114).._._0x1(116).._._0x1(77).._._0x1(111).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(103) then
                             tryPush(obj)
                         end
                     end
@@ -2655,25 +2658,25 @@ B:Dropdown({
         end
     })
     B:Toggle({
-        Title = "自动拾取投掷物",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(139).._._0x1(190).._._0x1(229).._._0x1(143).._._0x1(150).._._0x1(230).._._0x1(138).._._0x1(149).._._0x1(230).._._0x1(142).._._0x1(183).._._0x1(231).._._0x1(137).._._0x1(169),
         Default = false,
         Callback = function(Value)
             local targetProps = {
-                "WoodenCrate", "OilBarrel", "GarbageBag", "Trashcan", 
-                "CardboardBox_Normal", "Hat_Stand", "CardboardBox_Wide", "Office_Chair"
+                _._0x1(87).._._0x1(111).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(110).._._0x1(67).._._0x1(114).._._0x1(97).._._0x1(116).._._0x1(101), _._0x1(79).._._0x1(105).._._0x1(108).._._0x1(66).._._0x1(97).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(108), _._0x1(71).._._0x1(97).._._0x1(114).._._0x1(98).._._0x1(97).._._0x1(103).._._0x1(101).._._0x1(66).._._0x1(97).._._0x1(103), _._0x1(84).._._0x1(114).._._0x1(97).._._0x1(115).._._0x1(104).._._0x1(99).._._0x1(97).._._0x1(110), 
+                _._0x1(67).._._0x1(97).._._0x1(114).._._0x1(100).._._0x1(98).._._0x1(111).._._0x1(97).._._0x1(114).._._0x1(100).._._0x1(66).._._0x1(111).._._0x1(120).._._0x1(95).._._0x1(78).._._0x1(111).._._0x1(114).._._0x1(109).._._0x1(97).._._0x1(108), _._0x1(72).._._0x1(97).._._0x1(116).._._0x1(95).._._0x1(83).._._0x1(116).._._0x1(97).._._0x1(110).._._0x1(100), _._0x1(67).._._0x1(97).._._0x1(114).._._0x1(100).._._0x1(98).._._0x1(111).._._0x1(97).._._0x1(114).._._0x1(100).._._0x1(66).._._0x1(111).._._0x1(120).._._0x1(95).._._0x1(87).._._0x1(105).._._0x1(100).._._0x1(101), _._0x1(79).._._0x1(102).._._0x1(102).._._0x1(105).._._0x1(99).._._0x1(101).._._0x1(95).._._0x1(67).._._0x1(104).._._0x1(97).._._0x1(105).._._0x1(114)
             }
             local running = true
 
             if Value then
                 task.spawn(function()
                     while running and Value do
-                        local bigProps = workspace:FindFirstChild("BigProps")
+                        local bigProps = workspace:FindFirstChild(_._0x1(66).._._0x1(105).._._0x1(103).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(112).._._0x1(115))
                         if bigProps then
                             for _, name in ipairs(targetProps) do
                                 local prop = bigProps:FindFirstChild(name)
                                 if prop then
                                     for _, d in ipairs(prop:GetDescendants()) do
-                                        if d:IsA("ProximityPrompt") then
+                                        if d:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                                             d.MaxActivationDistance = 20
                                             if d.Enabled then
                                                 pcall(fireproximityprompt, d)
@@ -2692,12 +2695,12 @@ B:Dropdown({
         end
     })
     B:Toggle({
-        Title = "自动破门",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(231).._._0x1(160).._._0x1(180).._._0x1(233).._._0x1(151).._._0x1(168),
         Default = false,
         Callback = function(Value)
             local connections = {}
             local running = false
-            local targetNames = {"DoorPieceBottom", "DoorPieceTop"}
+            local targetNames = {_._0x1(68).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(80).._._0x1(105).._._0x1(101).._._0x1(99).._._0x1(101).._._0x1(66).._._0x1(111).._._0x1(116).._._0x1(116).._._0x1(111).._._0x1(109), _._0x1(68).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(80).._._0x1(105).._._0x1(101).._._0x1(99).._._0x1(101).._._0x1(84).._._0x1(111).._._0x1(112)}
 
             local function safeDisconnect()
                 for _, c in ipairs(connections) do
@@ -2722,13 +2725,13 @@ B:Dropdown({
                     local part = m:FindFirstChild(n, true)
                     if part then
                         for _, d in ipairs(part:GetDescendants()) do
-                            if d:IsA("ProximityPrompt") then
+                            if d:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                                 pcall(handlePrompt, d)
                             end
                         end
 
                         local con = part.DescendantAdded:Connect(function(desc)
-                            if desc:IsA("ProximityPrompt") then
+                            if desc:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                                 pcall(function() task.defer(handlePrompt, desc) end)
                             end
                         end)
@@ -2738,11 +2741,11 @@ B:Dropdown({
             end
 
             local function scanAll()
-                local cr = workspace:FindFirstChild("CurrentRooms")
+                local cr = workspace:FindFirstChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
                 if not cr then return end
 
                 for _, room in ipairs(cr:GetDescendants()) do
-                    if room:IsA("Model") or room:IsA("Folder") then
+                    if room:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) or room:IsA(_._0x1(70).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(101).._._0x1(114)) then
                         processModel(room)
                     end
                 end
@@ -2754,12 +2757,12 @@ B:Dropdown({
                 
                 task.spawn(function()
                     scanAll()
-                    local cr = workspace:FindFirstChild("CurrentRooms")
+                    local cr = workspace:FindFirstChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
                     if cr then
                         local con = cr.DescendantAdded:Connect(function(d)
                             if not running then return end
                             local model = d
-                            while model and not (model:IsA("Model") or model:IsA("Folder")) do
+                            while model and not (model:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) or model:IsA(_._0x1(70).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(101).._._0x1(114))) do
                                 model = model.Parent
                             end
                             if model then
@@ -2781,7 +2784,7 @@ B:Dropdown({
         end
     })
     B:Toggle({
-        Title = "自动拾取",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(139).._._0x1(190).._._0x1(229).._._0x1(143).._._0x1(150),
         Default = false,
         Callback = function(Value)
             local connections = {}
@@ -2807,13 +2810,13 @@ B:Dropdown({
 
             local function processDrop(d)
                 for _, desc in ipairs(d:GetDescendants()) do
-                    if desc:IsA("ProximityPrompt") then
+                    if desc:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                         pcall(handlePrompt, desc)
                     end
                 end
 
                 local con = d.DescendantAdded:Connect(function(desc)
-                    if desc:IsA("ProximityPrompt") then
+                    if desc:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                         pcall(function() task.defer(handlePrompt, desc) end)
                     end
                 end)
@@ -2821,11 +2824,11 @@ B:Dropdown({
             end
 
             local function scanDrops()
-                local drops = workspace:FindFirstChild("Drops")
+                local drops = workspace:FindFirstChild(_._0x1(68).._._0x1(114).._._0x1(111).._._0x1(112).._._0x1(115))
                 if not drops then return end
 
                 for _, child in ipairs(drops:GetChildren()) do
-                    if child:IsA("Model") or child:IsA("Folder") then
+                    if child:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) or child:IsA(_._0x1(70).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(101).._._0x1(114)) then
                         processDrop(child)
                     end
                 end
@@ -2837,11 +2840,11 @@ B:Dropdown({
                 
                 task.spawn(function()
                     scanDrops()
-                    local drops = workspace:FindFirstChild("Drops")
+                    local drops = workspace:FindFirstChild(_._0x1(68).._._0x1(114).._._0x1(111).._._0x1(112).._._0x1(115))
                     if drops then
                         local con = drops.ChildAdded:Connect(function(c)
                             if not running then return end
-                            if c:IsA("Model") or c:IsA("Folder") then
+                            if c:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) or c:IsA(_._0x1(70).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(101).._._0x1(114)) then
                                 task.defer(processDrop, c)
                             end
                         end)
@@ -2860,11 +2863,11 @@ B:Dropdown({
         end
     })
     B:Toggle({
-        Title = "自动开火",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(229).._._0x1(188).._._0x1(128).._._0x1(231).._._0x1(129).._._0x1(171),
         Default = false,
         Callback = function(Value)
-            local Players = game:GetService("Players")
-            local RunService = game:GetService("RunService")
+            local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
+            local RunService = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
             local LocalPlayer = Players.LocalPlayer
             local Camera = workspace.CurrentCamera
             local RAY_DISTANCE = 50
@@ -2897,7 +2900,7 @@ B:Dropdown({
                 end
 
                 local myChar = LocalPlayer.Character
-                local myHead = myChar:FindFirstChild("Head")
+                local myHead = myChar:FindFirstChild(_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(100))
                 if not myHead then return end
 
                 local lookVector = Camera.CFrame.LookVector
@@ -2906,7 +2909,7 @@ B:Dropdown({
                 local bestDot = 0.995
 
                 for _, plr in pairs(Players:GetPlayers()) do
-                    if plr ~= LocalPlayer and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
+                    if plr ~= LocalPlayer and plr.Character and plr.Character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                         local targetPos = plr.Character.HumanoidRootPart.Position
                         local dirToTarget = (targetPos - origin).Unit
                         local dot = lookVector:Dot(dirToTarget)
@@ -2923,7 +2926,7 @@ B:Dropdown({
 
                 if bestTarget then
                     if not triggered then
-                        WindUI:Notify("自动开火", "正在向 " .. bestTarget.Name .. " 开火", 2)
+                        WindUI:Notify(_._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(229).._._0x1(188).._._0x1(128).._._0x1(231).._._0x1(129).._._0x1(171), _._0x1(230).._._0x1(173).._._0x1(163).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(229).._._0x1(144).._._0x1(145).._._0x1(32) .. bestTarget.Name .. _._0x1(32).._._0x1(229).._._0x1(188).._._0x1(128).._._0x1(231).._._0x1(129).._._0x1(171), 2)
                         safeMouse1Press()
                         triggered = true
                     end
@@ -2953,18 +2956,18 @@ B:Dropdown({
         end
     })
     B:Toggle({
-        Title = "自动房间",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(136).._._0x1(191).._._0x1(233).._._0x1(151).._._0x1(180),
         Default = false,
         Callback = function(enabled)
-            local Players = game:GetService("Players")
-            local RunService = game:GetService("RunService")
-            local PathfindingService = game:GetService("PathfindingService")
-            local ReplicatedStorage = game:GetService("ReplicatedStorage")
-            local Workspace = game:GetService("Workspace")
+            local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
+            local RunService = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
+            local PathfindingService = game:GetService(_._0x1(80).._._0x1(97).._._0x1(116).._._0x1(104).._._0x1(102).._._0x1(105).._._0x1(110).._._0x1(100).._._0x1(105).._._0x1(110).._._0x1(103).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
+            local ReplicatedStorage = game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101))
+            local Workspace = game:GetService(_._0x1(87).._._0x1(111).._._0x1(114).._._0x1(107).._._0x1(115).._._0x1(112).._._0x1(97).._._0x1(99).._._0x1(101))
             local player = Players.LocalPlayer
-            local rooms = Workspace:WaitForChild("CurrentRooms")
-            local gameData = ReplicatedStorage:WaitForChild("GameData")
-            local floor = gameData:WaitForChild("Floor")
+            local rooms = Workspace:WaitForChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
+            local gameData = ReplicatedStorage:WaitForChild(_._0x1(71).._._0x1(97).._._0x1(109).._._0x1(101).._._0x1(68).._._0x1(97).._._0x1(116).._._0x1(97))
+            local floor = gameData:WaitForChild(_._0x1(70).._._0x1(108).._._0x1(111).._._0x1(111).._._0x1(114))
             local active = false
             local runner
             local clone
@@ -2978,7 +2981,7 @@ B:Dropdown({
                 if clone and clone.Parent then
                     clone:Destroy()
                 end
-                player:SetAttribute("AutoRoomsActive", false)
+                player:SetAttribute(_._0x1(65).._._0x1(117).._._0x1(116).._._0x1(111).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115).._._0x1(65).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(118).._._0x1(101), false)
             end
 
             if not enabled then
@@ -2986,12 +2989,12 @@ B:Dropdown({
                 return
             end
 
-            player:SetAttribute("AutoRoomsActive", true)
+            player:SetAttribute(_._0x1(65).._._0x1(117).._._0x1(116).._._0x1(111).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115).._._0x1(65).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(118).._._0x1(101), true)
             active = true
 
-            if player.Character and player.Character:FindFirstChild("CollisionPart") then
+            if player.Character and player.Character:FindFirstChild(_._0x1(67).._._0x1(111).._._0x1(108).._._0x1(108).._._0x1(105).._._0x1(115).._._0x1(105).._._0x1(111).._._0x1(110).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                 clone = player.Character.CollisionPart:Clone()
-                clone.Name = "_AutoRoomsCollision"
+                clone.Name = _._0x1(95).._._0x1(65).._._0x1(117).._._0x1(116).._._0x1(111).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115).._._0x1(67).._._0x1(111).._._0x1(108).._._0x1(108).._._0x1(105).._._0x1(115).._._0x1(105).._._0x1(111).._._0x1(110)
                 clone.Massless = true
                 clone.Anchored = false
                 clone.CanCollide = false
@@ -3003,7 +3006,7 @@ B:Dropdown({
             local function findClosestLocker()
                 local best, bestDist = nil, math.huge
                 for _, obj in ipairs(rooms:GetDescendants()) do
-                    if obj.Name == "Rooms_Locker" or obj.Name == "Rooms_Locker_Fridge" then
+                    if obj.Name == _._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115).._._0x1(95).._._0x1(76).._._0x1(111).._._0x1(99).._._0x1(107).._._0x1(101).._._0x1(114) or obj.Name == _._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115).._._0x1(95).._._0x1(76).._._0x1(111).._._0x1(99).._._0x1(107).._._0x1(101).._._0x1(114).._._0x1(95).._._0x1(70).._._0x1(114).._._0x1(105).._._0x1(100).._._0x1(103).._._0x1(101) then
                         if obj.PrimaryPart then
                             local dist = (player.Character.HumanoidRootPart.Position - obj.PrimaryPart.Position).Magnitude
                             if dist < bestDist then
@@ -3018,7 +3021,7 @@ B:Dropdown({
 
             local function walkTo(target)
                 local char = player.Character
-                if not char or not char:FindFirstChild("HumanoidRootPart") then return end
+                if not char or not char:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then return end
 
                 local path = PathfindingService:CreatePath({
                     AgentRadius = 2,
@@ -3032,7 +3035,7 @@ B:Dropdown({
                 if path.Status == Enum.PathStatus.Success then
                     for _, waypoint in ipairs(path:GetWaypoints()) do
                         if not active then return end
-                        char:FindFirstChildOfClass("Humanoid"):MoveTo(waypoint.Position)
+                        char:FindFirstChildOfClass(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100)):MoveTo(waypoint.Position)
                         char.Humanoid.MoveToFinished:Wait()
                     end
                 end
@@ -3040,18 +3043,18 @@ B:Dropdown({
 
             runner = RunService.Heartbeat:Connect(function()
                 if not active then return end
-                if floor.Value ~= "Rooms" then return stop() end
+                if floor.Value ~= _._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115) then return stop() end
                 if gameData.LatestRoom.Value >= 1000 then return stop() end
 
-                local entity = Workspace:FindFirstChild("A60") or Workspace:FindFirstChild("A120") or Workspace:FindFirstChild("GlitchRush") or Workspace:FindFirstChild("GlitchAmbush")
+                local entity = Workspace:FindFirstChild(_._0x1(65).._._0x1(54).._._0x1(48)) or Workspace:FindFirstChild(_._0x1(65).._._0x1(49).._._0x1(50).._._0x1(48)) or Workspace:FindFirstChild(_._0x1(71).._._0x1(108).._._0x1(105).._._0x1(116).._._0x1(99).._._0x1(104).._._0x1(82).._._0x1(117).._._0x1(115).._._0x1(104)) or Workspace:FindFirstChild(_._0x1(71).._._0x1(108).._._0x1(105).._._0x1(116).._._0x1(99).._._0x1(104).._._0x1(65).._._0x1(109).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(104))
 
                 if entity and entity.PrimaryPart and entity.PrimaryPart.Position.Y > -6 then
                     local locker = findClosestLocker()
                     if locker and locker.PrimaryPart then
-                        local hide = locker:FindFirstChild("HidePoint")
+                        local hide = locker:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(80).._._0x1(111).._._0x1(105).._._0x1(110).._._0x1(116))
                         if not hide then
-                            hide = Instance.new("Part")
-                            hide.Name = "HidePoint"
+                            hide = Instance.new(_._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116))
+                            hide.Name = _._0x1(72).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(80).._._0x1(111).._._0x1(105).._._0x1(110).._._0x1(116)
                             hide.Anchored = true
                             hide.Transparency = 1
                             hide.CanCollide = false
@@ -3062,7 +3065,7 @@ B:Dropdown({
                         walkTo(hide)
                         task.wait(0.1)
 
-                        local prompt = locker:FindFirstChildOfClass("ProximityPrompt")
+                        local prompt = locker:FindFirstChildOfClass(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116))
                         if prompt then
                             if fireproximityprompt then
                                 fireproximityprompt(prompt)
@@ -3074,8 +3077,8 @@ B:Dropdown({
                     end
                 else
                     local currentRoom = gameData.LatestRoom.Value
-                    local door = rooms[currentRoom] and rooms[currentRoom]:FindFirstChild("Door", true)
-                    if door and door:FindFirstChild("Door") then
+                    local door = rooms[currentRoom] and rooms[currentRoom]:FindFirstChild(_._0x1(68).._._0x1(111).._._0x1(111).._._0x1(114), true)
+                    if door and door:FindFirstChild(_._0x1(68).._._0x1(111).._._0x1(111).._._0x1(114)) then
                         walkTo(door.Door)
                     end
                 end
@@ -3084,11 +3087,11 @@ B:Dropdown({
     })
 
    B:Toggle({
-        Title = "反AFK",
+        Title = _._0x1(229).._._0x1(143).._._0x1(141).._._0x1(65).._._0x1(70).._._0x1(75),
         Default = false,
         Callback = function(Value)
-            local Players = game:GetService("Players")
-            local VirtualUser = game:GetService("VirtualUser")
+            local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
+            local VirtualUser = game:GetService(_._0x1(86).._._0x1(105).._._0x1(114).._._0x1(116).._._0x1(117).._._0x1(97).._._0x1(108).._._0x1(85).._._0x1(115).._._0x1(101).._._0x1(114))
             local LocalPlayer = Players.LocalPlayer
             local AntiAFKConnection
 
@@ -3097,44 +3100,44 @@ B:Dropdown({
                     VirtualUser:CaptureController()
                     VirtualUser:ClickButton2(Vector2.new())
                 end)
-                WindUI:Notify("反AFK", "反AFK已启用", 3)
+                WindUI:Notify(_._0x1(229).._._0x1(143).._._0x1(141).._._0x1(65).._._0x1(70).._._0x1(75), _._0x1(229).._._0x1(143).._._0x1(141).._._0x1(65).._._0x1(70).._._0x1(75).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             elseif AntiAFKConnection then
                 AntiAFKConnection:Disconnect()
                 AntiAFKConnection = nil
-                WindUI:Notify("反AFK", "反AFK已禁用", 3)
+                WindUI:Notify(_._0x1(229).._._0x1(143).._._0x1(141).._._0x1(65).._._0x1(70).._._0x1(75), _._0x1(229).._._0x1(143).._._0x1(141).._._0x1(65).._._0x1(70).._._0x1(75).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(166).._._0x1(129).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             end
         end
     })
     B:Toggle({
-        Title = "自动门范围",
+        Title = _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(233).._._0x1(151).._._0x1(168).._._0x1(232).._._0x1(140).._._0x1(131).._._0x1(229).._._0x1(155).._._0x1(180),
         Default = false,
         Callback = function(Value)
             local doorReachLoop
 
             if Value then
-                local Rooms = workspace:FindFirstChild("CurrentRooms")
+                local Rooms = workspace:FindFirstChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
                 if not Rooms then return end
 
                 doorReachLoop = task.spawn(function()
                     while Value do
                         for _, room in pairs(Rooms:GetChildren()) do
-                            local door = room:FindFirstChild("Door")
-                            if door and door:FindFirstChild("ClientOpen") then
+                            local door = room:FindFirstChild(_._0x1(68).._._0x1(111).._._0x1(111).._._0x1(114))
+                            if door and door:FindFirstChild(_._0x1(67).._._0x1(108).._._0x1(105).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(79).._._0x1(112).._._0x1(101).._._0x1(110)) then
                                 door.ClientOpen:FireServer()
                             end
                         end
                         task.wait(0.5)
                     end
                 end)
-                WindUI:Notify("自动门", "自动门范围已启用", 3)
+                WindUI:Notify(_._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(233).._._0x1(151).._._0x1(168), _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(233).._._0x1(151).._._0x1(168).._._0x1(232).._._0x1(140).._._0x1(131).._._0x1(229).._._0x1(155).._._0x1(180).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             else
                 doorReachLoop = nil
-                WindUI:Notify("自动门", "自动门范围已禁用", 3)
+                WindUI:Notify(_._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(233).._._0x1(151).._._0x1(168), _._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(233).._._0x1(151).._._0x1(168).._._0x1(232).._._0x1(140).._._0x1(131).._._0x1(229).._._0x1(155).._._0x1(180).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(166).._._0x1(129).._._0x1(231).._._0x1(148).._._0x1(168), 3)
             end
         end
     })
     B:Toggle({
-        Title = "即时互动",
+        Title = _._0x1(229).._._0x1(141).._._0x1(179).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(228).._._0x1(186).._._0x1(146).._._0x1(229).._._0x1(138).._._0x1(168),
         Default = false,
         Callback = function(Value)
             if getgenv().ProximityConnection then
@@ -3143,24 +3146,24 @@ B:Dropdown({
             end
 
             local function modifyPrompt(prompt, instant)
-                if not prompt:IsA("ProximityPrompt") then return end
+                if not prompt:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then return end
                 if instant then
-                    if not prompt:GetAttribute("OriginalHoldDuration") then
-                        prompt:SetAttribute("OriginalHoldDuration", prompt.HoldDuration)
-                        prompt:SetAttribute("OriginalLineOfSight", prompt.RequiresLineOfSight)
+                    if not prompt:GetAttribute(_._0x1(79).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(105).._._0x1(110).._._0x1(97).._._0x1(108).._._0x1(72).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(68).._._0x1(117).._._0x1(114).._._0x1(97).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110)) then
+                        prompt:SetAttribute(_._0x1(79).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(105).._._0x1(110).._._0x1(97).._._0x1(108).._._0x1(72).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(68).._._0x1(117).._._0x1(114).._._0x1(97).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110), prompt.HoldDuration)
+                        prompt:SetAttribute(_._0x1(79).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(105).._._0x1(110).._._0x1(97).._._0x1(108).._._0x1(76).._._0x1(105).._._0x1(110).._._0x1(101).._._0x1(79).._._0x1(102).._._0x1(83).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116), prompt.RequiresLineOfSight)
                     end
                     prompt.HoldDuration = 0
                     prompt.RequiresLineOfSight = false
                 else
-                    prompt.HoldDuration = prompt:GetAttribute("OriginalHoldDuration") or 1
-                    prompt.RequiresLineOfSight = prompt:GetAttribute("OriginalLineOfSight") or true
+                    prompt.HoldDuration = prompt:GetAttribute(_._0x1(79).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(105).._._0x1(110).._._0x1(97).._._0x1(108).._._0x1(72).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(68).._._0x1(117).._._0x1(114).._._0x1(97).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110)) or 1
+                    prompt.RequiresLineOfSight = prompt:GetAttribute(_._0x1(79).._._0x1(114).._._0x1(105).._._0x1(103).._._0x1(105).._._0x1(110).._._0x1(97).._._0x1(108).._._0x1(76).._._0x1(105).._._0x1(110).._._0x1(101).._._0x1(79).._._0x1(102).._._0x1(83).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116)) or true
                 end
             end
 
-            local currentRooms = workspace:FindFirstChild("CurrentRooms")
+            local currentRooms = workspace:FindFirstChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
             if currentRooms then
                 for _, prompt in ipairs(currentRooms:GetDescendants()) do
-                    if prompt:IsA("ProximityPrompt") then
+                    if prompt:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                         modifyPrompt(prompt, Value)
                     end
                 end
@@ -3168,19 +3171,19 @@ B:Dropdown({
 
             if Value and currentRooms then
                 getgenv().ProximityConnection = currentRooms.DescendantAdded:Connect(function(descendant)
-                    if descendant:IsA("ProximityPrompt") then
+                    if descendant:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                         modifyPrompt(descendant, true)
                     end
                 end)
             end
 
-            WindUI:Notify("即时互动", Value and "已启用" or "已禁用", 3)
+            WindUI:Notify(_._0x1(229).._._0x1(141).._._0x1(179).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(228).._._0x1(186).._._0x1(146).._._0x1(229).._._0x1(138).._._0x1(168), Value and _._0x1(229).._._0x1(183).._._0x1(178).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(231).._._0x1(148).._._0x1(168) or _._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(166).._._0x1(129).._._0x1(231).._._0x1(148).._._0x1(168), 3)
         end
     })
     B:Slider({
-        Title = "既时互动范围提升",
+        Title = _._0x1(230).._._0x1(151).._._0x1(162).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(228).._._0x1(186).._._0x1(146).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(232).._._0x1(140).._._0x1(131).._._0x1(229).._._0x1(155).._._0x1(180).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(229).._._0x1(141).._._0x1(135),
         Value = {Min = 1, Max = 5, Default = 1},
-        Suffix = "x",
+        Suffix = _._0x1(120),
         Callback = function(multiplier)
             local originalRanges = {}
             local rangeConnections = {}
@@ -3194,14 +3197,14 @@ B:Dropdown({
                 end
 
                 for _, descendant in pairs(workspace:GetDescendants()) do
-                    if descendant:IsA("ProximityPrompt") then
+                    if descendant:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                         modifyPrompt(descendant)
                     end
                 end
                 for _, player in pairs(game.Players:GetPlayers()) do
                     if player.PlayerGui then
                         for _, descendant in pairs(player.PlayerGui:GetDescendants()) do
-                            if descendant:IsA("ProximityPrompt") then
+                            if descendant:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                                 modifyPrompt(descendant)
                             end
                         end
@@ -3216,7 +3219,7 @@ B:Dropdown({
                 rangeConnections = {}
 
                 table.insert(rangeConnections, workspace.DescendantAdded:Connect(function(descendant)
-                    if descendant:IsA("ProximityPrompt") then
+                    if descendant:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                         task.wait(0.1)
                         originalRanges[descendant] = descendant.MaxActivationDistance
                         descendant.MaxActivationDistance = originalRanges[descendant] * multiplier
@@ -3226,7 +3229,7 @@ B:Dropdown({
                 for _, player in pairs(game.Players:GetPlayers()) do
                     if player.PlayerGui then
                         table.insert(rangeConnections, player.PlayerGui.DescendantAdded:Connect(function(descendant)
-                            if descendant:IsA("ProximityPrompt") then
+                            if descendant:IsA(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116)) then
                                 task.wait(0.1)
                                 originalRanges[descendant] = descendant.MaxActivationDistance
                                 descendant.MaxActivationDistance = originalRanges[descendant] * multiplier
@@ -3251,17 +3254,17 @@ B:Dropdown({
                 setupRangeConnections(multiplier)
             end
 
-            WindUI:Notify("互动范围", "已设置为 " .. multiplier .. "x", 3)
+            WindUI:Notify(_._0x1(228).._._0x1(186).._._0x1(146).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(232).._._0x1(140).._._0x1(131).._._0x1(229).._._0x1(155).._._0x1(180), _._0x1(229).._._0x1(183).._._0x1(178).._._0x1(232).._._0x1(174).._._0x1(190).._._0x1(231).._._0x1(189).._._0x1(174).._._0x1(228).._._0x1(184).._._0x1(186).._._0x1(32) .. multiplier .. _._0x1(120), 3)
         end
     })
-    local A = Window:Tab({Title = "规避类", Icon = "shield"})
+    local A = Window:Tab({Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(231).._._0x1(177).._._0x1(187), Icon = _._0x1(115).._._0x1(104).._._0x1(105).._._0x1(101).._._0x1(108).._._0x1(100)})
     A:Toggle({
-        Title = "规避Screech",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(101).._._0x1(101).._._0x1(99).._._0x1(104),
         Default = false,
         Callback = function(on)
             if on then
                 for _, inst in ipairs(workspace:GetDescendants()) do
-                    if inst.Name == "Screech" then
+                    if inst.Name == _._0x1(83).._._0x1(99).._._0x1(114).._._0x1(101).._._0x1(101).._._0x1(99).._._0x1(104) then
                         pcall(function()
                             inst:Destroy()
                         end)
@@ -3269,7 +3272,7 @@ B:Dropdown({
                 end
 
                 getgenv().AntiScreechConn = workspace.DescendantAdded:Connect(function(inst)
-                    if inst.Name == "Screech" then
+                    if inst.Name == _._0x1(83).._._0x1(99).._._0x1(114).._._0x1(101).._._0x1(101).._._0x1(99).._._0x1(104) then
                         task.defer(function()
                             if inst and inst.Parent then
                                 pcall(function()
@@ -3287,7 +3290,7 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避Gloom蛋",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(71).._._0x1(108).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(232).._._0x1(155).._._0x1(139),
         Default = false,
         Callback = function(Value)
             if getgenv().AntiGloomConn then
@@ -3295,12 +3298,12 @@ B:Dropdown({
                 getgenv().AntiGloomConn = nil
             end
 
-            local rooms = workspace:WaitForChild("CurrentRooms")
+            local rooms = workspace:WaitForChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
 
             if Value then
                 for _, v in ipairs(rooms:GetDescendants()) do
-                    if v.Name == "GloomEgg" then
-                        local egg = v:FindFirstChild("Egg")
+                    if v.Name == _._0x1(71).._._0x1(108).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(69).._._0x1(103).._._0x1(103) then
+                        local egg = v:FindFirstChild(_._0x1(69).._._0x1(103).._._0x1(103))
                         if egg then
                             egg.CanTouch = false
                         end
@@ -3308,17 +3311,17 @@ B:Dropdown({
                 end
 
                 getgenv().AntiGloomConn = rooms.DescendantAdded:Connect(function(v)
-                    if v.Name == "GloomEgg" then
-                        local egg = v:WaitForChild("Egg", 8999999488)
+                    if v.Name == _._0x1(71).._._0x1(108).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(69).._._0x1(103).._._0x1(103) then
+                        local egg = v:WaitForChild(_._0x1(69).._._0x1(103).._._0x1(103), 8999999488)
                         egg.CanTouch = false
-                    elseif v.Name == "Egg" and v.Parent and v.Parent.Name == "GloomEgg" then
+                    elseif v.Name == _._0x1(69).._._0x1(103).._._0x1(103) and v.Parent and v.Parent.Name == _._0x1(71).._._0x1(108).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(69).._._0x1(103).._._0x1(103) then
                         v.CanTouch = false
                     end
                 end)
             else
                 for _, v in ipairs(rooms:GetDescendants()) do
-                    if v.Name == "GloomEgg" then
-                        local egg = v:FindFirstChild("Egg")
+                    if v.Name == _._0x1(71).._._0x1(108).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(69).._._0x1(103).._._0x1(103) then
+                        local egg = v:FindFirstChild(_._0x1(69).._._0x1(103).._._0x1(103))
                         if egg then
                             egg.CanTouch = true
                         end
@@ -3329,21 +3332,21 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避Dread",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(68).._._0x1(114).._._0x1(101).._._0x1(97).._._0x1(100),
         Default = false,
         Callback = function(isEnabled)
-            local player = game:GetService("Players").LocalPlayer
+            local player = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115)).LocalPlayer
             local modules = player.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules
-            local dreadModule = modules:FindFirstChild("Dread") or modules:FindFirstChild("_Dread")
+            local dreadModule = modules:FindFirstChild(_._0x1(68).._._0x1(114).._._0x1(101).._._0x1(97).._._0x1(100)) or modules:FindFirstChild(_._0x1(95).._._0x1(68).._._0x1(114).._._0x1(101).._._0x1(97).._._0x1(100))
 
             if dreadModule then
-                dreadModule.Name = isEnabled and "_Dread" or "Dread"
+                dreadModule.Name = isEnabled and _._0x1(95).._._0x1(68).._._0x1(114).._._0x1(101).._._0x1(97).._._0x1(100) or _._0x1(68).._._0x1(114).._._0x1(101).._._0x1(97).._._0x1(100)
             end
         end
     })
 
     A:Toggle({
-        Title = "规避Giggle",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(71).._._0x1(105).._._0x1(103).._._0x1(103).._._0x1(108).._._0x1(101),
         Default = false,
         Callback = function(Value)
             if getgenv().AntiGiggleConn then
@@ -3351,12 +3354,12 @@ B:Dropdown({
                 getgenv().AntiGiggleConn = nil
             end
 
-            local rooms = workspace:WaitForChild("CurrentRooms")
+            local rooms = workspace:WaitForChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
 
             if Value then
                 for _, v in ipairs(rooms:GetDescendants()) do
-                    if v.Name == "GiggleCeiling" then
-                        local hitbox = v:FindFirstChild("Hitbox")
+                    if v.Name == _._0x1(71).._._0x1(105).._._0x1(103).._._0x1(103).._._0x1(108).._._0x1(101).._._0x1(67).._._0x1(101).._._0x1(105).._._0x1(108).._._0x1(105).._._0x1(110).._._0x1(103) then
+                        local hitbox = v:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(116).._._0x1(98).._._0x1(111).._._0x1(120))
                         if hitbox then
                             hitbox.CanTouch = false
                         end
@@ -3364,17 +3367,17 @@ B:Dropdown({
                 end
 
                 getgenv().AntiGiggleConn = rooms.DescendantAdded:Connect(function(v)
-                    if v.Name == "GiggleCeiling" then
-                        local hitbox = v:WaitForChild("Hitbox", 8999999488)
+                    if v.Name == _._0x1(71).._._0x1(105).._._0x1(103).._._0x1(103).._._0x1(108).._._0x1(101).._._0x1(67).._._0x1(101).._._0x1(105).._._0x1(108).._._0x1(105).._._0x1(110).._._0x1(103) then
+                        local hitbox = v:WaitForChild(_._0x1(72).._._0x1(105).._._0x1(116).._._0x1(98).._._0x1(111).._._0x1(120), 8999999488)
                         hitbox.CanTouch = false
-                    elseif v.Name == "Hitbox" and v.Parent and v.Parent.Name == "GiggleCeiling" then
+                    elseif v.Name == _._0x1(72).._._0x1(105).._._0x1(116).._._0x1(98).._._0x1(111).._._0x1(120) and v.Parent and v.Parent.Name == _._0x1(71).._._0x1(105).._._0x1(103).._._0x1(103).._._0x1(108).._._0x1(101).._._0x1(67).._._0x1(101).._._0x1(105).._._0x1(108).._._0x1(105).._._0x1(110).._._0x1(103) then
                         v.CanTouch = false
                     end
                 end)
             else
                 for _, v in ipairs(rooms:GetDescendants()) do
-                    if v.Name == "GiggleCeiling" then
-                        local hitbox = v:FindFirstChild("Hitbox")
+                    if v.Name == _._0x1(71).._._0x1(105).._._0x1(103).._._0x1(103).._._0x1(108).._._0x1(101).._._0x1(67).._._0x1(101).._._0x1(105).._._0x1(108).._._0x1(105).._._0x1(110).._._0x1(103) then
+                        local hitbox = v:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(116).._._0x1(98).._._0x1(111).._._0x1(120))
                         if hitbox then
                             hitbox.CanTouch = true
                         end
@@ -3385,13 +3388,13 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避Figure听觉",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(70).._._0x1(105).._._0x1(103).._._0x1(117).._._0x1(114).._._0x1(101).._._0x1(229).._._0x1(144).._._0x1(172).._._0x1(232).._._0x1(167).._._0x1(137),
         Default = false,
-        Tooltip = "让游戏认为你在蹲下",
+        Tooltip = _._0x1(232).._._0x1(174).._._0x1(169).._._0x1(230).._._0x1(184).._._0x1(184).._._0x1(230).._._0x1(136).._._0x1(143).._._0x1(232).._._0x1(174).._._0x1(164).._._0x1(228).._._0x1(184).._._0x1(186).._._0x1(228).._._0x1(189).._._0x1(160).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(232).._._0x1(185).._._0x1(178).._._0x1(228).._._0x1(184).._._0x1(139),
         Callback = function(Value)
             local crouchConnection
-            local ReplicatedStorage = game:GetService("ReplicatedStorage")
-            local RunService = game:GetService("RunService")
+            local ReplicatedStorage = game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101))
+            local RunService = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
 
             if crouchConnection then
                 crouchConnection:Disconnect()
@@ -3409,11 +3412,11 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避Surge",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(83).._._0x1(117).._._0x1(114).._._0x1(103).._._0x1(101),
         Default = false,
         Callback = function(Value)
             if Value then
-                local surgeClient = game.ReplicatedStorage:WaitForChild("FloorReplicated"):WaitForChild("ClientRemote"):FindFirstChild("SurgeClient")
+                local surgeClient = game.ReplicatedStorage:WaitForChild(_._0x1(70).._._0x1(108).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100)):WaitForChild(_._0x1(67).._._0x1(108).._._0x1(105).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(101).._._0x1(109).._._0x1(111).._._0x1(116).._._0x1(101)):FindFirstChild(_._0x1(83).._._0x1(117).._._0x1(114).._._0x1(103).._._0x1(101).._._0x1(67).._._0x1(108).._._0x1(105).._._0x1(101).._._0x1(110).._._0x1(116))
                 if surgeClient then
                     surgeClient:Destroy()
                 end
@@ -3422,31 +3425,31 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避Halt",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(72).._._0x1(97).._._0x1(108).._._0x1(116),
         Default = false,
         Callback = function(Value)
-            local entityModules = game:GetService("ReplicatedStorage"):WaitForChild("ModulesClient"):WaitForChild("EntityModules")
+            local entityModules = game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)):WaitForChild(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(117).._._0x1(108).._._0x1(101).._._0x1(115).._._0x1(67).._._0x1(108).._._0x1(105).._._0x1(101).._._0x1(110).._._0x1(116)):WaitForChild(_._0x1(69).._._0x1(110).._._0x1(116).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(77).._._0x1(111).._._0x1(100).._._0x1(117).._._0x1(108).._._0x1(101).._._0x1(115))
 
             if Value then
-                local shade = entityModules:FindFirstChild("Shade")
-                if shade and shade:IsA("ModuleScript") then
-                    shade.Name = "_Shade"
+                local shade = entityModules:FindFirstChild(_._0x1(83).._._0x1(104).._._0x1(97).._._0x1(100).._._0x1(101))
+                if shade and shade:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(117).._._0x1(108).._._0x1(101).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116)) then
+                    shade.Name = _._0x1(95).._._0x1(83).._._0x1(104).._._0x1(97).._._0x1(100).._._0x1(101)
                 end
             else
-                local shade = entityModules:FindFirstChild("_Shade")
-                if shade and shade:IsA("ModuleScript") then
-                    shade.Name = "Shade"
+                local shade = entityModules:FindFirstChild(_._0x1(95).._._0x1(83).._._0x1(104).._._0x1(97).._._0x1(100).._._0x1(101))
+                if shade and shade:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(117).._._0x1(108).._._0x1(101).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116)) then
+                    shade.Name = _._0x1(83).._._0x1(104).._._0x1(97).._._0x1(100).._._0x1(101)
                 end
             end
         end
     })
 
     A:Toggle({
-        Title = "规避Lookman",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(76).._._0x1(111).._._0x1(111).._._0x1(107).._._0x1(109).._._0x1(97).._._0x1(110),
         Default = false,
         Callback = function(Value)
             if Value then
-                if workspace:FindFirstChild("BackdoorLookman") then
+                if workspace:FindFirstChild(_._0x1(66).._._0x1(97).._._0x1(99).._._0x1(107).._._0x1(100).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(76).._._0x1(111).._._0x1(111).._._0x1(107).._._0x1(109).._._0x1(97).._._0x1(110)) then
                     game.ReplicatedStorage.RemotesFolder.MotorReplication:FireServer(-890)
                 end
             end
@@ -3454,19 +3457,19 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避Snare",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(83).._._0x1(110).._._0x1(97).._._0x1(114).._._0x1(101),
         Default = false,
         Callback = function(Value)
-            local currentRooms = workspace:WaitForChild("CurrentRooms")
+            local currentRooms = workspace:WaitForChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
 
             local function handleSnare(snare)
-                if snare.Name == "Snare" then
-                    local hitbox = snare:FindFirstChild("Hitbox")
+                if snare.Name == _._0x1(83).._._0x1(110).._._0x1(97).._._0x1(114).._._0x1(101) then
+                    local hitbox = snare:FindFirstChild(_._0x1(72).._._0x1(105).._._0x1(116).._._0x1(98).._._0x1(111).._._0x1(120))
                     if hitbox then
                         hitbox.CanTouch = not Value
                     else
                         snare.ChildAdded:Connect(function(child)
-                            if child.Name == "Hitbox" then
+                            if child.Name == _._0x1(72).._._0x1(105).._._0x1(116).._._0x1(98).._._0x1(111).._._0x1(120) then
                                 child.CanTouch = not Value
                             end
                         end)
@@ -3483,30 +3486,30 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避Seek障碍物",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(83).._._0x1(101).._._0x1(101).._._0x1(107).._._0x1(233).._._0x1(154).._._0x1(156).._._0x1(231).._._0x1(162).._._0x1(141).._._0x1(231).._._0x1(137).._._0x1(169),
         Default = false,
         Callback = function(Value)
             local Rooms = workspace.CurrentRooms
 
             if Value then
                 getgenv().AntiSeekObstaclesConn = Rooms.DescendantAdded:Connect(function(desc)
-                    if desc.Name == "Seek_Arm" then
-                        desc:WaitForChild("AnimatorPart", 8999999488)
+                    if desc.Name == _._0x1(83).._._0x1(101).._._0x1(101).._._0x1(107).._._0x1(95).._._0x1(65).._._0x1(114).._._0x1(109) then
+                        desc:WaitForChild(_._0x1(65).._._0x1(110).._._0x1(105).._._0x1(109).._._0x1(97).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116), 8999999488)
                         desc.AnimatorPart.CanTouch = false
                         desc.AnimatorPart.Transparency = 1
 
                         for _, part in desc:GetDescendants() do
-                            if part:IsA("BasePart") then
+                            if part:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                                 part.Transparency = 1
                             end
                         end
-                    elseif desc.Name == "ChandelierObstruction" then
-                        desc:WaitForChild("HurtPart", 8999999488)
+                    elseif desc.Name == _._0x1(67).._._0x1(104).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(108).._._0x1(105).._._0x1(101).._._0x1(114).._._0x1(79).._._0x1(98).._._0x1(115).._._0x1(116).._._0x1(114).._._0x1(117).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110) then
+                        desc:WaitForChild(_._0x1(72).._._0x1(117).._._0x1(114).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116), 8999999488)
                         desc.HurtPart.CanTouch = false
                         desc.HurtPart.Transparency = 1
 
                         for _, part in desc:GetDescendants() do
-                            if part:IsA("BasePart") then
+                            if part:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                                 part.Transparency = 1
                             end
                         end
@@ -3514,23 +3517,23 @@ B:Dropdown({
                 end)
 
                 for _, v in Rooms:GetDescendants() do
-                    if v.Name == "Seek_Arm" and v:IsA("Model") then
-                        v:WaitForChild("AnimatorPart", 8999999488)
+                    if v.Name == _._0x1(83).._._0x1(101).._._0x1(101).._._0x1(107).._._0x1(95).._._0x1(65).._._0x1(114).._._0x1(109) and v:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) then
+                        v:WaitForChild(_._0x1(65).._._0x1(110).._._0x1(105).._._0x1(109).._._0x1(97).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116), 8999999488)
                         v.AnimatorPart.CanTouch = false
                         v.AnimatorPart.Transparency = 1
 
                         for _, part in v:GetDescendants() do
-                            if part:IsA("BasePart") then
+                            if part:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                                 part.Transparency = 1
                             end
                         end
-                    elseif v.Name == "ChandelierObstruction" and v:IsA("Model") then
-                        v:WaitForChild("HurtPart", 8999999488)
+                    elseif v.Name == _._0x1(67).._._0x1(104).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(108).._._0x1(105).._._0x1(101).._._0x1(114).._._0x1(79).._._0x1(98).._._0x1(115).._._0x1(116).._._0x1(114).._._0x1(117).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110) and v:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) then
+                        v:WaitForChild(_._0x1(72).._._0x1(117).._._0x1(114).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116), 8999999488)
                         v.HurtPart.CanTouch = false
                         v.HurtPart.Transparency = 1
 
                         for _, part in v:GetDescendants() do
-                            if part:IsA("BasePart") then
+                            if part:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                                 part.Transparency = 1
                             end
                         end
@@ -3542,23 +3545,23 @@ B:Dropdown({
                 end
 
                 for _, v in Rooms:GetDescendants() do
-                    if v.Name == "Seek_Arm" and v:IsA("Model") then
-                        v:WaitForChild("AnimatorPart", 8999999488)
+                    if v.Name == _._0x1(83).._._0x1(101).._._0x1(101).._._0x1(107).._._0x1(95).._._0x1(65).._._0x1(114).._._0x1(109) and v:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) then
+                        v:WaitForChild(_._0x1(65).._._0x1(110).._._0x1(105).._._0x1(109).._._0x1(97).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116), 8999999488)
                         v.AnimatorPart.CanTouch = true
                         v.AnimatorPart.Transparency = 0
 
                         for _, part in v:GetDescendants() do
-                            if part:IsA("BasePart") then
+                            if part:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                                 part.Transparency = 0
                             end
                         end
-                    elseif v.Name == "ChandelierObstruction" and v:IsA("Model") then
-                        v:WaitForChild("HurtPart", 8999999488)
+                    elseif v.Name == _._0x1(67).._._0x1(104).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(101).._._0x1(108).._._0x1(105).._._0x1(101).._._0x1(114).._._0x1(79).._._0x1(98).._._0x1(115).._._0x1(116).._._0x1(114).._._0x1(117).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110) and v:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) then
+                        v:WaitForChild(_._0x1(72).._._0x1(117).._._0x1(114).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116), 8999999488)
                         v.HurtPart.CanTouch = true
                         v.HurtPart.Transparency = 0
 
                         for _, part in v:GetDescendants() do
-                            if part:IsA("BasePart") then
+                            if part:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                                 part.Transparency = 0
                             end
                         end
@@ -3569,16 +3572,16 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避Dupe门",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(68).._._0x1(117).._._0x1(112).._._0x1(101).._._0x1(233).._._0x1(151).._._0x1(168),
         Default = false,
         Callback = function(Value)
             for _, v in ipairs(workspace.CurrentRooms:GetDescendants()) do
-                if v.Name == "DoorFake" then
-                    v:WaitForChild("Hidden").CanTouch = not Value
+                if v.Name == _._0x1(68).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(70).._._0x1(97).._._0x1(107).._._0x1(101) then
+                    v:WaitForChild(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(100).._._0x1(101).._._0x1(110)).CanTouch = not Value
 
-                    local lock = v:FindFirstChild("Lock")
+                    local lock = v:FindFirstChild(_._0x1(76).._._0x1(111).._._0x1(99).._._0x1(107))
                     if lock then
-                        local prompt = lock:FindFirstChildOfClass("ProximityPrompt")
+                        local prompt = lock:FindFirstChildOfClass(_._0x1(80).._._0x1(114).._._0x1(111).._._0x1(120).._._0x1(105).._._0x1(109).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(80).._._0x1(114).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(116))
                         if prompt then
                             prompt.ClickablePrompt = not Value
                         end
@@ -3589,13 +3592,13 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避真空区域",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(231).._._0x1(156).._._0x1(159).._._0x1(231).._._0x1(169).._._0x1(186).._._0x1(229).._._0x1(140).._._0x1(186).._._0x1(229).._._0x1(159).._._0x1(159),
         Default = false,
         Callback = function(Value)
             for _, v in ipairs(workspace.CurrentRooms:GetDescendants()) do
-                if v.Name == "SideroomSpace" then
+                if v.Name == _._0x1(83).._._0x1(105).._._0x1(100).._._0x1(101).._._0x1(114).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(83).._._0x1(112).._._0x1(97).._._0x1(99).._._0x1(101) then
                     for _, part in ipairs(v:GetChildren()) do
-                        if part:IsA("BasePart") then
+                        if part:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                             part.CanTouch = not Value
                             part.CanCollide = Value
                         end
@@ -3606,21 +3609,21 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避Eyes",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(69).._._0x1(121).._._0x1(101).._._0x1(115),
         Default = false,
-        Tooltip = "当Eyes出现时自动向下看以防止伤害",
+        Tooltip = _._0x1(229).._._0x1(189).._._0x1(147).._._0x1(69).._._0x1(121).._._0x1(101).._._0x1(115).._._0x1(229).._._0x1(135).._._0x1(186).._._0x1(231).._._0x1(142).._._0x1(176).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(232).._._0x1(135).._._0x1(170).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(229).._._0x1(144).._._0x1(145).._._0x1(228).._._0x1(184).._._0x1(139).._._0x1(231).._._0x1(156).._._0x1(139).._._0x1(228).._._0x1(187).._._0x1(165).._._0x1(233).._._0x1(152).._._0x1(178).._._0x1(230).._._0x1(173).._._0x1(162).._._0x1(228).._._0x1(188).._._0x1(164).._._0x1(229).._._0x1(174).._._0x1(179),
         Callback = function(Value)
             local LocalPlayer = game.Players.LocalPlayer
             local Connections = {}
 
             if Value then
-                Connections.AntiEyes = game:GetService("RunService").RenderStepped:Connect(function()
-                    if not LocalPlayer.Character or not LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                Connections.AntiEyes = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101)).RenderStepped:Connect(function()
+                    if not LocalPlayer.Character or not LocalPlayer.Character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                         return
                     end
-                    if not LocalPlayer.Character:GetAttribute("Hiding") then
+                    if not LocalPlayer.Character:GetAttribute(_._0x1(72).._._0x1(105).._._0x1(100).._._0x1(105).._._0x1(110).._._0x1(103)) then
                         for _, v in pairs(workspace:GetChildren()) do
-                            if v.Name == "Eyes" and v:FindFirstChild("Core") and v.Core:FindFirstChild("Ambience") and v.Core.Ambience.Playing then
+                            if v.Name == _._0x1(69).._._0x1(121).._._0x1(101).._._0x1(115) and v:FindFirstChild(_._0x1(67).._._0x1(111).._._0x1(114).._._0x1(101)) and v.Core:FindFirstChild(_._0x1(65).._._0x1(109).._._0x1(98).._._0x1(105).._._0x1(101).._._0x1(110).._._0x1(99).._._0x1(101)) and v.Core.Ambience.Playing then
                                 game.ReplicatedStorage.RemotesFolder.MotorReplication:FireServer(-650)
                                 break
                             end
@@ -3635,65 +3638,65 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避A-90",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(65).._._0x1(45).._._0x1(57).._._0x1(48),
         Default = false,
-        Tooltip = "移除A90",
+        Tooltip = _._0x1(231).._._0x1(167).._._0x1(187).._._0x1(233).._._0x1(153).._._0x1(164).._._0x1(65).._._0x1(57).._._0x1(48),
         Callback = function(ad)
             local LocalPlayer = game.Players.LocalPlayer
-            local modules = LocalPlayer.PlayerGui:FindFirstChild("MainUI") and 
-                           LocalPlayer.PlayerGui.MainUI:FindFirstChild("Initiator") and 
-                           LocalPlayer.PlayerGui.MainUI.Initiator:FindFirstChild("Main_Game") and 
-                           LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game:FindFirstChild("RemoteListener") and 
-                           LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener:FindFirstChild("Modules")
-            local c3 = modules and (modules:FindFirstChild("A90") or modules:FindFirstChild("_A90"))
+            local modules = LocalPlayer.PlayerGui:FindFirstChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(85).._._0x1(73)) and 
+                           LocalPlayer.PlayerGui.MainUI:FindFirstChild(_._0x1(73).._._0x1(110).._._0x1(105).._._0x1(116).._._0x1(105).._._0x1(97).._._0x1(116).._._0x1(111).._._0x1(114)) and 
+                           LocalPlayer.PlayerGui.MainUI.Initiator:FindFirstChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(95).._._0x1(71).._._0x1(97).._._0x1(109).._._0x1(101)) and 
+                           LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game:FindFirstChild(_._0x1(82).._._0x1(101).._._0x1(109).._._0x1(111).._._0x1(116).._._0x1(101).._._0x1(76).._._0x1(105).._._0x1(115).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(101).._._0x1(114)) and 
+                           LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener:FindFirstChild(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(117).._._0x1(108).._._0x1(101).._._0x1(115))
+            local c3 = modules and (modules:FindFirstChild(_._0x1(65).._._0x1(57).._._0x1(48)) or modules:FindFirstChild(_._0x1(95).._._0x1(65).._._0x1(57).._._0x1(48)))
 
             if c3 then
-                c3.Name = ad and "_A90" or "A90"
+                c3.Name = ad and _._0x1(95).._._0x1(65).._._0x1(57).._._0x1(48) or _._0x1(65).._._0x1(57).._._0x1(48)
             end
 
-            local remote = (game:GetService("ReplicatedStorage"):FindFirstChild("RemotesFolder") and 
-                           game:GetService("ReplicatedStorage").RemotesFolder:FindFirstChild("A90")) or 
-                           game:GetService("ReplicatedStorage").RemotesFolder:FindFirstChild("_A90")
+            local remote = (game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)):FindFirstChild(_._0x1(82).._._0x1(101).._._0x1(109).._._0x1(111).._._0x1(116).._._0x1(101).._._0x1(115).._._0x1(70).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(101).._._0x1(114)) and 
+                           game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).RemotesFolder:FindFirstChild(_._0x1(65).._._0x1(57).._._0x1(48))) or 
+                           game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101)).RemotesFolder:FindFirstChild(_._0x1(95).._._0x1(65).._._0x1(57).._._0x1(48))
 
             if remote then
-                remote.Name = ad and "_A90" or "A90"
+                remote.Name = ad and _._0x1(95).._._0x1(65).._._0x1(57).._._0x1(48) or _._0x1(65).._._0x1(57).._._0x1(48)
             end
         end
     })
     A:Toggle({
-        Title = "规避虚空效果",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(232).._._0x1(153).._._0x1(154).._._0x1(231).._._0x1(169).._._0x1(186).._._0x1(230).._._0x1(149).._._0x1(136).._._0x1(230).._._0x1(158).._._0x1(156),
         Default = false,
         Callback = function(Value)
-            local ReplicatedStorage = game:GetService("ReplicatedStorage")
-            local entityModules = ReplicatedStorage:FindFirstChild("ModulesClient") and 
-                                 ReplicatedStorage.ModulesClient:FindFirstChild("EntityModules")
+            local ReplicatedStorage = game:GetService(_._0x1(82).._._0x1(101).._._0x1(112).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(100).._._0x1(83).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(97).._._0x1(103).._._0x1(101))
+            local entityModules = ReplicatedStorage:FindFirstChild(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(117).._._0x1(108).._._0x1(101).._._0x1(115).._._0x1(67).._._0x1(108).._._0x1(105).._._0x1(101).._._0x1(110).._._0x1(116)) and 
+                                 ReplicatedStorage.ModulesClient:FindFirstChild(_._0x1(69).._._0x1(110).._._0x1(116).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(77).._._0x1(111).._._0x1(100).._._0x1(117).._._0x1(108).._._0x1(101).._._0x1(115))
 
             if not entityModules then
                 return
             end
 
-            local voidModule = entityModules:FindFirstChild("Void") or entityModules:FindFirstChild("_Void")
+            local voidModule = entityModules:FindFirstChild(_._0x1(86).._._0x1(111).._._0x1(105).._._0x1(100)) or entityModules:FindFirstChild(_._0x1(95).._._0x1(86).._._0x1(111).._._0x1(105).._._0x1(100))
 
             if not voidModule then
                 return
             end
 
             if Value then
-                if voidModule.Name == "Void" then
-                    voidModule.Name = "_Void"
+                if voidModule.Name == _._0x1(86).._._0x1(111).._._0x1(105).._._0x1(100) then
+                    voidModule.Name = _._0x1(95).._._0x1(86).._._0x1(111).._._0x1(105).._._0x1(100)
                 end
-            elseif voidModule.Name == "_Void" then
-                voidModule.Name = "Void"
+            elseif voidModule.Name == _._0x1(95).._._0x1(86).._._0x1(111).._._0x1(105).._._0x1(100) then
+                voidModule.Name = _._0x1(86).._._0x1(111).._._0x1(105).._._0x1(100)
             end
         end
     })
 
     A:Toggle({
-        Title = "规避Haste效果",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(72).._._0x1(97).._._0x1(115).._._0x1(116).._._0x1(101).._._0x1(230).._._0x1(149).._._0x1(136).._._0x1(230).._._0x1(158).._._0x1(156),
         Default = false,
         Callback = function(Value)
-            if game.ReplicatedStorage.FloorReplicated.ClientRemote:FindFirstChild("Haste") then
-                local HasteChanged = game.ReplicatedStorage.FloorReplicated.ClientRemote.Haste.Ambience:GetPropertyChangedSignal("Playing"):Connect(function()
+            if game.ReplicatedStorage.FloorReplicated.ClientRemote:FindFirstChild(_._0x1(72).._._0x1(97).._._0x1(115).._._0x1(116).._._0x1(101)) then
+                local HasteChanged = game.ReplicatedStorage.FloorReplicated.ClientRemote.Haste.Ambience:GetPropertyChangedSignal(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(105).._._0x1(110).._._0x1(103)):Connect(function()
                     if Value then
                         game.ReplicatedStorage.FloorReplicated.ClientRemote.Haste.Ambience.Playing = false
                     end
@@ -3701,7 +3704,7 @@ B:Dropdown({
             end
 
             for _, v in workspace.CurrentCamera:GetChildren() do
-                if v.Name == "LiveSanity" and workspace:FindFirstChild("EntityModel") then
+                if v.Name == _._0x1(76).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(83).._._0x1(97).._._0x1(110).._._0x1(105).._._0x1(116).._._0x1(121) and workspace:FindFirstChild(_._0x1(69).._._0x1(110).._._0x1(116).._._0x1(105).._._0x1(116).._._0x1(121).._._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) then
                     v.Enabled = not Value
                 end
             end
@@ -3709,10 +3712,10 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避Firedamp",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(70).._._0x1(105).._._0x1(114).._._0x1(101).._._0x1(100).._._0x1(97).._._0x1(109).._._0x1(112),
         Default = false,
         Callback = function(Value)
-            local camera = workspace:WaitForChild("Camera")
+            local camera = workspace:WaitForChild(_._0x1(67).._._0x1(97).._._0x1(109).._._0x1(101).._._0x1(114).._._0x1(97))
             local targets = {
                 LiveSantity = true,
                 LiveFiredamp = true,
@@ -3742,17 +3745,17 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避矿井氛围",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(231).._._0x1(159).._._0x1(191).._._0x1(228).._._0x1(186).._._0x1(149).._._0x1(230).._._0x1(176).._._0x1(155).._._0x1(229).._._0x1(155).._._0x1(180),
         Default = false,
         Callback = function(Value)
-            local Lighting = game:GetService("Lighting")
+            local Lighting = game:GetService(_._0x1(76).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(105).._._0x1(110).._._0x1(103))
             if Value then
-                local caveAtmosphere = Lighting:FindFirstChild("CaveAtmosphere")
+                local caveAtmosphere = Lighting:FindFirstChild(_._0x1(67).._._0x1(97).._._0x1(118).._._0x1(101).._._0x1(65).._._0x1(116).._._0x1(109).._._0x1(111).._._0x1(115).._._0x1(112).._._0x1(104).._._0x1(101).._._0x1(114).._._0x1(101))
                 if caveAtmosphere then
                     caveAtmosphere:Destroy()
                 end
 
-                local caves = Lighting:FindFirstChild("Caves")
+                local caves = Lighting:FindFirstChild(_._0x1(67).._._0x1(97).._._0x1(118).._._0x1(101).._._0x1(115))
                 if caves then
                     caves:Destroy()
                 end
@@ -3761,22 +3764,22 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "规避氧气/理智效果",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(230).._._0x1(176).._._0x1(167).._._0x1(230).._._0x1(176).._._0x1(148).._._0x1(47).._._0x1(231).._._0x1(144).._._0x1(134).._._0x1(230).._._0x1(153).._._0x1(186).._._0x1(230).._._0x1(149).._._0x1(136).._._0x1(230).._._0x1(158).._._0x1(156),
         Default = false,
         Callback = function(Value)
-            local Lighting = game:GetService("Lighting")
+            local Lighting = game:GetService(_._0x1(76).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(105).._._0x1(110).._._0x1(103))
             if Value then
-                local sanity = Lighting:FindFirstChild("Sanity")
+                local sanity = Lighting:FindFirstChild(_._0x1(83).._._0x1(97).._._0x1(110).._._0x1(105).._._0x1(116).._._0x1(121))
                 if sanity then
                     sanity:Destroy()
                 end
 
-                local oxygenCC = Lighting:FindFirstChild("OxygenCC")
+                local oxygenCC = Lighting:FindFirstChild(_._0x1(79).._._0x1(120).._._0x1(121).._._0x1(103).._._0x1(101).._._0x1(110).._._0x1(67).._._0x1(67))
                 if oxygenCC then
                     oxygenCC:Destroy()
                 end
 
-                local oxygenBlur = Lighting:FindFirstChild("OxygenBlur")
+                local oxygenBlur = Lighting:FindFirstChild(_._0x1(79).._._0x1(120).._._0x1(121).._._0x1(103).._._0x1(101).._._0x1(110).._._0x1(66).._._0x1(108).._._0x1(117).._._0x1(114))
                 if oxygenBlur then
                     oxygenBlur:Destroy()
                 end
@@ -3785,20 +3788,20 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "无雾效果",
+        Title = _._0x1(230).._._0x1(151).._._0x1(160).._._0x1(233).._._0x1(155).._._0x1(190).._._0x1(230).._._0x1(149).._._0x1(136).._._0x1(230).._._0x1(158).._._0x1(156),
         Default = false,
         Callback = function(Value)
-            local lighting = game:GetService("Lighting")
-            local cave = lighting:FindFirstChild("CaveAtmosphere")
+            local lighting = game:GetService(_._0x1(76).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(105).._._0x1(110).._._0x1(103))
+            local cave = lighting:FindFirstChild(_._0x1(67).._._0x1(97).._._0x1(118).._._0x1(101).._._0x1(65).._._0x1(116).._._0x1(109).._._0x1(111).._._0x1(115).._._0x1(112).._._0x1(104).._._0x1(101).._._0x1(114).._._0x1(101))
 
             if Value then
-                if cave and cave:IsA("Atmosphere") then
+                if cave and cave:IsA(_._0x1(65).._._0x1(116).._._0x1(109).._._0x1(111).._._0x1(115).._._0x1(112).._._0x1(104).._._0x1(101).._._0x1(114).._._0x1(101)) then
                     cave.Density = 0
                 else
                     lighting.FogStart = 1000000
                     lighting.FogEnd = 1000000
                 end
-            elseif cave and cave:IsA("Atmosphere") then
+            elseif cave and cave:IsA(_._0x1(65).._._0x1(116).._._0x1(109).._._0x1(111).._._0x1(115).._._0x1(112).._._0x1(104).._._0x1(101).._._0x1(114).._._0x1(101)) then
                 cave.Density = 0.15
             else
                 lighting.FogStart = 150
@@ -3808,15 +3811,15 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "无相机抖动",
+        Title = _._0x1(230).._._0x1(151).._._0x1(160).._._0x1(231).._._0x1(155).._._0x1(184).._._0x1(230).._._0x1(156).._._0x1(186).._._0x1(230).._._0x1(138).._._0x1(150).._._0x1(229).._._0x1(138).._._0x1(168),
         Default = false,
         Callback = function(Value)
-            local RequiredMainGame = require(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("MainUI"):WaitForChild("Initiator"):WaitForChild("Main_Game"))
+            local RequiredMainGame = require(game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115)).LocalPlayer:WaitForChild(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(71).._._0x1(117).._._0x1(105)):WaitForChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(85).._._0x1(73)):WaitForChild(_._0x1(73).._._0x1(110).._._0x1(105).._._0x1(116).._._0x1(105).._._0x1(97).._._0x1(116).._._0x1(111).._._0x1(114)):WaitForChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(95).._._0x1(71).._._0x1(97).._._0x1(109).._._0x1(101)))
             
             task.spawn(function()
                 while Value and RequiredMainGame do
                     task.wait()
-                    if typeof(RequiredMainGame.csgo) == "CFrame" then
+                    if typeof(RequiredMainGame.csgo) == _._0x1(67).._._0x1(70).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(101) then
                         RequiredMainGame.csgo = CFrame.new()
                     end
                 end
@@ -3825,17 +3828,17 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "无头部晃动",
+        Title = _._0x1(230).._._0x1(151).._._0x1(160).._._0x1(229).._._0x1(164).._._0x1(180).._._0x1(233).._._0x1(131).._._0x1(168).._._0x1(230).._._0x1(153).._._0x1(131).._._0x1(229).._._0x1(138).._._0x1(168),
         Default = false,
         Callback = function(Value)
-            local RunService = game:GetService("RunService")
-            local RequiredMainGame = require(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("MainUI"):WaitForChild("Initiator"):WaitForChild("Main_Game"))
+            local RunService = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
+            local RequiredMainGame = require(game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115)).LocalPlayer:WaitForChild(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(71).._._0x1(117).._._0x1(105)):WaitForChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(85).._._0x1(73)):WaitForChild(_._0x1(73).._._0x1(110).._._0x1(105).._._0x1(116).._._0x1(105).._._0x1(97).._._0x1(116).._._0x1(111).._._0x1(114)):WaitForChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(95).._._0x1(71).._._0x1(97).._._0x1(109).._._0x1(101)))
 
             if Value then
                 if not getgenv().HeadBobDisabler then
                     getgenv().HeadBobDisabler = RunService.RenderStepped:Connect(function()
                         if RequiredMainGame and RequiredMainGame.spring then
-                            if typeof(RequiredMainGame.spring.Target) == "Vector3" then
+                            if typeof(RequiredMainGame.spring.Target) == _._0x1(86).._._0x1(101).._._0x1(99).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(51) then
                                 RequiredMainGame.spring.Target = Vector3.zero
                                 RequiredMainGame.spring.Position = Vector3.zero
                             end
@@ -3849,57 +3852,57 @@ B:Dropdown({
         end
     })
     A:Toggle({
-        Title = "无过场动画",
+        Title = _._0x1(230).._._0x1(151).._._0x1(160).._._0x1(232).._._0x1(191).._._0x1(135).._._0x1(229).._._0x1(156).._._0x1(186).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(231).._._0x1(148).._._0x1(187),
         Default = false,
         Callback = function(Value)
-            local player = game:GetService("Players").LocalPlayer
-            local RemoteListener = player.PlayerGui.MainUI.Initiator.Main_Game:WaitForChild("RemoteListener")
-            local CutScenes = RemoteListener:FindFirstChild("Cutscenes") or RemoteListener:FindFirstChild("_Cutscenes")
+            local player = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115)).LocalPlayer
+            local RemoteListener = player.PlayerGui.MainUI.Initiator.Main_Game:WaitForChild(_._0x1(82).._._0x1(101).._._0x1(109).._._0x1(111).._._0x1(116).._._0x1(101).._._0x1(76).._._0x1(105).._._0x1(115).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(101).._._0x1(114))
+            local CutScenes = RemoteListener:FindFirstChild(_._0x1(67).._._0x1(117).._._0x1(116).._._0x1(115).._._0x1(99).._._0x1(101).._._0x1(110).._._0x1(101).._._0x1(115)) or RemoteListener:FindFirstChild(_._0x1(95).._._0x1(67).._._0x1(117).._._0x1(116).._._0x1(115).._._0x1(99).._._0x1(101).._._0x1(110).._._0x1(101).._._0x1(115))
 
             if not CutScenes then
-                CutScenes = RemoteListener:WaitForChild("Cutscenes", 3) or RemoteListener:WaitForChild("_Cutscenes", 3)
+                CutScenes = RemoteListener:WaitForChild(_._0x1(67).._._0x1(117).._._0x1(116).._._0x1(115).._._0x1(99).._._0x1(101).._._0x1(110).._._0x1(101).._._0x1(115), 3) or RemoteListener:WaitForChild(_._0x1(95).._._0x1(67).._._0x1(117).._._0x1(116).._._0x1(115).._._0x1(99).._._0x1(101).._._0x1(110).._._0x1(101).._._0x1(115), 3)
             end
 
             if CutScenes then
-                CutScenes.Name = Value and "_Cutscenes" or "Cutscenes"
+                CutScenes.Name = Value and _._0x1(95).._._0x1(67).._._0x1(117).._._0x1(116).._._0x1(115).._._0x1(99).._._0x1(101).._._0x1(110).._._0x1(101).._._0x1(115) or _._0x1(67).._._0x1(117).._._0x1(116).._._0x1(115).._._0x1(99).._._0x1(101).._._0x1(110).._._0x1(101).._._0x1(115)
             end
         end
     })
 
     A:Toggle({
-        Title = "规避隐藏边缘",
+        Title = _._0x1(232).._._0x1(167).._._0x1(132).._._0x1(233).._._0x1(129).._._0x1(191).._._0x1(233).._._0x1(154).._._0x1(144).._._0x1(232).._._0x1(151).._._0x1(143).._._0x1(232).._._0x1(190).._._0x1(185).._._0x1(231).._._0x1(188).._._0x1(152),
         Default = false,
-        Tooltip = "移除隐藏时的黑暗边缘",
+        Tooltip = _._0x1(231).._._0x1(167).._._0x1(187).._._0x1(233).._._0x1(153).._._0x1(164).._._0x1(233).._._0x1(154).._._0x1(144).._._0x1(232).._._0x1(151).._._0x1(143).._._0x1(230).._._0x1(151).._._0x1(182).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(233).._._0x1(187).._._0x1(145).._._0x1(230).._._0x1(154).._._0x1(151).._._0x1(232).._._0x1(190).._._0x1(185).._._0x1(231).._._0x1(188).._._0x1(152),
         Callback = function(Value)
             local LocalPlayer = game.Players.LocalPlayer
-            LocalPlayer.PlayerGui.MainUI.MainFrame.HideVignette.Image = Value and "rbxassetid://0" or "rbxassetid://6100076320"
+            LocalPlayer.PlayerGui.MainUI.MainFrame.HideVignette.Image = Value and _._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(48) or _._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(54).._._0x1(49).._._0x1(48).._._0x1(48).._._0x1(48).._._0x1(55).._._0x1(54).._._0x1(51).._._0x1(50).._._0x1(48)
         end
     })
 
    A:Toggle({
-        Title = "防卡顿",
+        Title = _._0x1(233).._._0x1(152).._._0x1(178).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(233).._._0x1(161).._._0x1(191),
         Default = false,
         Callback = function(Value)
-            local Modifiers = workspace:FindFirstChild("Modifiers")
-            if Modifiers and not Modifiers:FindFirstChild("Jammin") then
+            local Modifiers = workspace:FindFirstChild(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(105).._._0x1(102).._._0x1(105).._._0x1(101).._._0x1(114).._._0x1(115))
+            if Modifiers and not Modifiers:FindFirstChild(_._0x1(74).._._0x1(97).._._0x1(109).._._0x1(109).._._0x1(105).._._0x1(110)) then
                 return
             end
 
-            local mainTrack = game["SoundService"]:FindFirstChild("Main")
+            local mainTrack = game[_._0x1(83).._._0x1(111).._._0x1(117).._._0x1(110).._._0x1(100).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101)]:FindFirstChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110))
             if mainTrack then
-                local jamming = mainTrack:FindFirstChild("Jamming")
+                local jamming = mainTrack:FindFirstChild(_._0x1(74).._._0x1(97).._._0x1(109).._._0x1(109).._._0x1(105).._._0x1(110).._._0x1(103))
                 if jamming then
                     jamming.Enabled = not Value
                 end
             end
 
-            local mainUI = LocalPlayer:FindFirstChild("PlayerGui") and LocalPlayer.PlayerGui:FindFirstChild("MainUI")
+            local mainUI = LocalPlayer:FindFirstChild(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(71).._._0x1(117).._._0x1(105)) and LocalPlayer.PlayerGui:FindFirstChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(85).._._0x1(73))
             if mainUI then
-                local healthGui = mainUI:FindFirstChild("Initiator") and 
-                                 mainUI.Initiator:FindFirstChild("Main_Game") and 
-                                 mainUI.Initiator.Main_Game:FindFirstChild("Health")
+                local healthGui = mainUI:FindFirstChild(_._0x1(73).._._0x1(110).._._0x1(105).._._0x1(116).._._0x1(105).._._0x1(97).._._0x1(116).._._0x1(111).._._0x1(114)) and 
+                                 mainUI.Initiator:FindFirstChild(_._0x1(77).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(95).._._0x1(71).._._0x1(97).._._0x1(109).._._0x1(101)) and 
+                                 mainUI.Initiator.Main_Game:FindFirstChild(_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(108).._._0x1(116).._._0x1(104))
                 if healthGui then
-                    local jamSound = healthGui:FindFirstChild("Jam")
+                    local jamSound = healthGui:FindFirstChild(_._0x1(74).._._0x1(97).._._0x1(109))
                     if jamSound then
                         jamSound.Playing = not Value
                     end
@@ -3908,10 +3911,10 @@ B:Dropdown({
         end
     })
     A:Toggle({
-        Title = "防香蕉皮",
+        Title = _._0x1(233).._._0x1(152).._._0x1(178).._._0x1(233).._._0x1(166).._._0x1(153).._._0x1(232).._._0x1(149).._._0x1(137).._._0x1(231).._._0x1(154).._._0x1(174),
         Default = false,
         Callback = function(Value)
-            local currentRooms = workspace:WaitForChild("CurrentRooms")
+            local currentRooms = workspace:WaitForChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
             
             if getgenv().antiBananaConn then
                 getgenv().antiBananaConn:Disconnect()
@@ -3919,14 +3922,14 @@ B:Dropdown({
             end
 
             for _, v in pairs(currentRooms:GetDescendants()) do
-                if v.Name == "BananaPeel" and v:IsA("BasePart") then
+                if v.Name == _._0x1(66).._._0x1(97).._._0x1(110).._._0x1(97).._._0x1(110).._._0x1(97).._._0x1(80).._._0x1(101).._._0x1(101).._._0x1(108) and v:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                     v.CanTouch = not Value
                 end
             end
 
             if Value then
                 getgenv().antiBananaConn = currentRooms.DescendantAdded:Connect(function(v)
-                    if v.Name == "BananaPeel" and v:IsA("BasePart") then
+                    if v.Name == _._0x1(66).._._0x1(97).._._0x1(110).._._0x1(97).._._0x1(110).._._0x1(97).._._0x1(80).._._0x1(101).._._0x1(101).._._0x1(108) and v:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                         v.CanTouch = false
                     end
                 end)
@@ -3935,10 +3938,10 @@ B:Dropdown({
     })
 
     A:Toggle({
-        Title = "防Jeff杀手",
+        Title = _._0x1(233).._._0x1(152).._._0x1(178).._._0x1(74).._._0x1(101).._._0x1(102).._._0x1(102).._._0x1(230).._._0x1(157).._._0x1(128).._._0x1(230).._._0x1(137).._._0x1(139),
         Default = false,
         Callback = function(Value)
-            local currentRooms = workspace:WaitForChild("CurrentRooms")
+            local currentRooms = workspace:WaitForChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
             
             if getgenv().antiJeffConn then
                 getgenv().antiJeffConn:Disconnect()
@@ -3946,9 +3949,9 @@ B:Dropdown({
             end
 
             for _, model in pairs(currentRooms:GetDescendants()) do
-                if model.Name == "JeffTheKiller" and model:IsA("Model") then
+                if model.Name == _._0x1(74).._._0x1(101).._._0x1(102).._._0x1(102).._._0x1(84).._._0x1(104).._._0x1(101).._._0x1(75).._._0x1(105).._._0x1(108).._._0x1(108).._._0x1(101).._._0x1(114) and model:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) then
                     for _, part in ipairs(model:GetChildren()) do
-                        if part:IsA("BasePart") then
+                        if part:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                             part.CanTouch = not Value
                         end
                     end
@@ -3957,9 +3960,9 @@ B:Dropdown({
 
             if Value then
                 getgenv().antiJeffConn = currentRooms.DescendantAdded:Connect(function(v)
-                    if v.Name == "JeffTheKiller" and v:IsA("Model") then
+                    if v.Name == _._0x1(74).._._0x1(101).._._0x1(102).._._0x1(102).._._0x1(84).._._0x1(104).._._0x1(101).._._0x1(75).._._0x1(105).._._0x1(108).._._0x1(108).._._0x1(101).._._0x1(114) and v:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) then
                         for _, part in ipairs(v:GetChildren()) do
-                            if part:IsA("BasePart") then
+                            if part:IsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) then
                                 part.CanTouch = false
                             end
                         end
@@ -3968,25 +3971,25 @@ B:Dropdown({
             end
         end
     })
-    local ESPTab = Window:Tab({Title = "透视功能", Icon = "eye"})
-local ESPLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/mstudio45/MSESP/refs/heads/main/source.luau"))()
+    local ESPTab = Window:Tab({Title = _._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189), Icon = _._0x1(101).._._0x1(121).._._0x1(101)})
+local ESPLibrary = loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(109).._._0x1(115).._._0x1(116).._._0x1(117).._._0x1(100).._._0x1(105).._._0x1(111).._._0x1(52).._._0x1(53).._._0x1(47).._._0x1(77).._._0x1(83).._._0x1(69).._._0x1(83).._._0x1(80).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(102).._._0x1(115).._._0x1(47).._._0x1(104).._._0x1(101).._._0x1(97).._._0x1(100).._._0x1(115).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(115).._._0x1(111).._._0x1(117).._._0x1(114).._._0x1(99).._._0x1(101).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97).._._0x1(117)))()
 ESPLibrary.GlobalConfig.Distance = false
 local ColorConfig = {
-    ["红色"] = Color3.fromRGB(255, 0, 0),
-    ["绿色"] = Color3.fromRGB(0, 255, 0),
-    ["蓝色"] = Color3.fromRGB(0, 0, 255),
-    ["黄色"] = Color3.fromRGB(255, 255, 0),
-    ["紫色"] = Color3.fromRGB(255, 0, 255),
-    ["青色"] = Color3.fromRGB(0, 255, 255),
-    ["粉色"] = Color3.fromRGB(255, 182, 193),
-    ["橙色"] = Color3.fromRGB(255, 165, 0),
-    ["白色"] = Color3.fromRGB(255, 255, 255),
-    ["彩虹动态"] = Color3.fromRGB(255, 0, 0)
+    [_._0x1(231).._._0x1(186).._._0x1(162).._._0x1(232).._._0x1(137).._._0x1(178)] = Color3.fromRGB(255, 0, 0),
+    [_._0x1(231).._._0x1(187).._._0x1(191).._._0x1(232).._._0x1(137).._._0x1(178)] = Color3.fromRGB(0, 255, 0),
+    [_._0x1(232).._._0x1(147).._._0x1(157).._._0x1(232).._._0x1(137).._._0x1(178)] = Color3.fromRGB(0, 0, 255),
+    [_._0x1(233).._._0x1(187).._._0x1(132).._._0x1(232).._._0x1(137).._._0x1(178)] = Color3.fromRGB(255, 255, 0),
+    [_._0x1(231).._._0x1(180).._._0x1(171).._._0x1(232).._._0x1(137).._._0x1(178)] = Color3.fromRGB(255, 0, 255),
+    [_._0x1(233).._._0x1(157).._._0x1(146).._._0x1(232).._._0x1(137).._._0x1(178)] = Color3.fromRGB(0, 255, 255),
+    [_._0x1(231).._._0x1(178).._._0x1(137).._._0x1(232).._._0x1(137).._._0x1(178)] = Color3.fromRGB(255, 182, 193),
+    [_._0x1(230).._._0x1(169).._._0x1(153).._._0x1(232).._._0x1(137).._._0x1(178)] = Color3.fromRGB(255, 165, 0),
+    [_._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178)] = Color3.fromRGB(255, 255, 255),
+    [_._0x1(229).._._0x1(189).._._0x1(169).._._0x1(232).._._0x1(153).._._0x1(185).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(128).._._0x1(129)] = Color3.fromRGB(255, 0, 0)
 }
-local ESPGroup = ESPTab:Section({Title = "ESP设置[展开]", Side = "Left"})
+local ESPGroup = ESPTab:Section({Title = _._0x1(69).._._0x1(83).._._0x1(80).._._0x1(232).._._0x1(174).._._0x1(190).._._0x1(231).._._0x1(189).._._0x1(174).._._0x1(91).._._0x1(229).._._0x1(177).._._0x1(149).._._0x1(229).._._0x1(188).._._0x1(128).._._0x1(93), Side = _._0x1(76).._._0x1(101).._._0x1(102).._._0x1(116)})
 
 ESPGroup:Toggle({
-    Title = "启用追踪线",
+    Title = _._0x1(229).._._0x1(144).._._0x1(175).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(232).._._0x1(191).._._0x1(189).._._0x1(232).._._0x1(184).._._0x1(170).._._0x1(231).._._0x1(186).._._0x1(191),
     Default = false,
     Callback = function(Value)
         _G.EnableTracers = Value
@@ -3995,7 +3998,7 @@ ESPGroup:Toggle({
 })
 
 ESPGroup:Toggle({
-    Title = "启用方向箭头", 
+    Title = _._0x1(229).._._0x1(144).._._0x1(175).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(230).._._0x1(150).._._0x1(185).._._0x1(229).._._0x1(144).._._0x1(145).._._0x1(231).._._0x1(174).._._0x1(173).._._0x1(229).._._0x1(164).._._0x1(180), 
     Default = false,
     Callback = function(Value)
         _G.EnableArrows = Value
@@ -4004,170 +4007,170 @@ ESPGroup:Toggle({
 })
 
 ESPGroup:Dropdown({
-    Title = "ESP类型",
-    Values = {"高亮", "文字", "选择框"},
-    Default = "高亮",
+    Title = _._0x1(69).._._0x1(83).._._0x1(80).._._0x1(231).._._0x1(177).._._0x1(187).._._0x1(229).._._0x1(158).._._0x1(139),
+    Values = {_._0x1(233).._._0x1(171).._._0x1(152).._._0x1(228).._._0x1(186).._._0x1(174), _._0x1(230).._._0x1(150).._._0x1(135).._._0x1(229).._._0x1(173).._._0x1(151), _._0x1(233).._._0x1(128).._._0x1(137).._._0x1(230).._._0x1(139).._._0x1(169).._._0x1(230).._._0x1(161).._._0x1(134)},
+    Default = _._0x1(233).._._0x1(171).._._0x1(152).._._0x1(228).._._0x1(186).._._0x1(174),
     Callback = function(Value)
         local espTypes = {
-            ["高亮"] = "Highlight",
-            ["文字"] = "Text", 
-            ["选择框"] = "SelectionBox"
+            [_._0x1(233).._._0x1(171).._._0x1(152).._._0x1(228).._._0x1(186).._._0x1(174)] = _._0x1(72).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(108).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
+            [_._0x1(230).._._0x1(150).._._0x1(135).._._0x1(229).._._0x1(173).._._0x1(151)] = _._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116), 
+            [_._0x1(233).._._0x1(128).._._0x1(137).._._0x1(230).._._0x1(139).._._0x1(169).._._0x1(230).._._0x1(161).._._0x1(134)] = _._0x1(83).._._0x1(101).._._0x1(108).._._0x1(101).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(111).._._0x1(110).._._0x1(66).._._0x1(111).._._0x1(120)
         }
         _G.ESPType = espTypes[Value]
         UpdateAllESP()
     end
 })
 
-local ObjectESPGroup = ESPTab:Section({Title = "物体透视[展开]", Side = "Left"})
+local ObjectESPGroup = ESPTab:Section({Title = _._0x1(231).._._0x1(137).._._0x1(169).._._0x1(228).._._0x1(189).._._0x1(147).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134).._._0x1(91).._._0x1(229).._._0x1(177).._._0x1(149).._._0x1(229).._._0x1(188).._._0x1(128).._._0x1(93), Side = _._0x1(76).._._0x1(101).._._0x1(102).._._0x1(116)})
 
 local ObjectESPConfig = {
     {
-        Name = "DoorESP",
-        Title = "门透视",
-        DefaultColor = "白色",
-        Models = {"Door"},
-        DisplayName = "门"
+        Name = _._0x1(68).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(233).._._0x1(151).._._0x1(168).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(68).._._0x1(111).._._0x1(111).._._0x1(114)},
+        DisplayName = _._0x1(233).._._0x1(151).._._0x1(168)
     },
     {
-        Name = "ObjectiveESP", 
-        Title = "目标物品透视",
-        DefaultColor = "黄色",
-        Models = {"KeyObtain", "FuseObtain", "LiveBreakerPolePickup"},
-        DisplayName = "目标物品"
+        Name = _._0x1(79).._._0x1(98).._._0x1(106).._._0x1(101).._._0x1(99).._._0x1(116).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(69).._._0x1(83).._._0x1(80), 
+        Title = _._0x1(231).._._0x1(155).._._0x1(174).._._0x1(230).._._0x1(160).._._0x1(135).._._0x1(231).._._0x1(137).._._0x1(169).._._0x1(229).._._0x1(147).._._0x1(129).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(233).._._0x1(187).._._0x1(132).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(75).._._0x1(101).._._0x1(121).._._0x1(79).._._0x1(98).._._0x1(116).._._0x1(97).._._0x1(105).._._0x1(110), _._0x1(70).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(79).._._0x1(98).._._0x1(116).._._0x1(97).._._0x1(105).._._0x1(110), _._0x1(76).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(66).._._0x1(114).._._0x1(101).._._0x1(97).._._0x1(107).._._0x1(101).._._0x1(114).._._0x1(80).._._0x1(111).._._0x1(108).._._0x1(101).._._0x1(80).._._0x1(105).._._0x1(99).._._0x1(107).._._0x1(117).._._0x1(112)},
+        DisplayName = _._0x1(231).._._0x1(155).._._0x1(174).._._0x1(230).._._0x1(160).._._0x1(135).._._0x1(231).._._0x1(137).._._0x1(169).._._0x1(229).._._0x1(147).._._0x1(129)
     },
     {
-        Name = "CoinESP",
-        Title = "金币透视",
-        DefaultColor = "白色", 
-        Models = {"GoldPile"},
-        DisplayName = "金币"
+        Name = _._0x1(67).._._0x1(111).._._0x1(105).._._0x1(110).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(233).._._0x1(135).._._0x1(145).._._0x1(229).._._0x1(184).._._0x1(129).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178), 
+        Models = {_._0x1(71).._._0x1(111).._._0x1(108).._._0x1(100).._._0x1(80).._._0x1(105).._._0x1(108).._._0x1(101)},
+        DisplayName = _._0x1(233).._._0x1(135).._._0x1(145).._._0x1(229).._._0x1(184).._._0x1(129)
     },
     {
-        Name = "MinesGeneratorESP",
-        Title = "矿洞发电机透视",
-        DefaultColor = "青色",
-        Models = {"MinesGenerator"},
-        DisplayName = "发电机"
+        Name = _._0x1(77).._._0x1(105).._._0x1(110).._._0x1(101).._._0x1(115).._._0x1(71).._._0x1(101).._._0x1(110).._._0x1(101).._._0x1(114).._._0x1(97).._._0x1(116).._._0x1(111).._._0x1(114).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(231).._._0x1(159).._._0x1(191).._._0x1(230).._._0x1(180).._._0x1(158).._._0x1(229).._._0x1(143).._._0x1(145).._._0x1(231).._._0x1(148).._._0x1(181).._._0x1(230).._._0x1(156).._._0x1(186).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(233).._._0x1(157).._._0x1(146).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(77).._._0x1(105).._._0x1(110).._._0x1(101).._._0x1(115).._._0x1(71).._._0x1(101).._._0x1(110).._._0x1(101).._._0x1(114).._._0x1(97).._._0x1(116).._._0x1(111).._._0x1(114)},
+        DisplayName = _._0x1(229).._._0x1(143).._._0x1(145).._._0x1(231).._._0x1(148).._._0x1(181).._._0x1(230).._._0x1(156).._._0x1(186)
     },
     {
-        Name = "LeverESP",
-        Title = "杠杆透视",
-        DefaultColor = "橙色",
-        Models = {"LeverForGate"},
-        DisplayName = "杠杆"
+        Name = _._0x1(76).._._0x1(101).._._0x1(118).._._0x1(101).._._0x1(114).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(230).._._0x1(157).._._0x1(160).._._0x1(230).._._0x1(157).._._0x1(134).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(230).._._0x1(169).._._0x1(153).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(76).._._0x1(101).._._0x1(118).._._0x1(101).._._0x1(114).._._0x1(70).._._0x1(111).._._0x1(114).._._0x1(71).._._0x1(97).._._0x1(116).._._0x1(101)},
+        DisplayName = _._0x1(230).._._0x1(157).._._0x1(160).._._0x1(230).._._0x1(157).._._0x1(134)
     },
     {
-        Name = "ItemESP",
-        Title = "所有物品透视", 
-        DefaultColor = "黄色",
+        Name = _._0x1(73).._._0x1(116).._._0x1(101).._._0x1(109).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(230).._._0x1(137).._._0x1(128).._._0x1(230).._._0x1(156).._._0x1(137).._._0x1(231).._._0x1(137).._._0x1(169).._._0x1(229).._._0x1(147).._._0x1(129).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134), 
+        DefaultColor = _._0x1(233).._._0x1(187).._._0x1(132).._._0x1(232).._._0x1(137).._._0x1(178),
         Models = {
-            "AlarmClock", "Aloe", "BandagePack", "Battery", "BatteryPack", "Candle",
-            "Compass", "Crucifix", "Flashlight", "Glowstick", "HolyHandGrenade",
-            "Lantern", "LaserPointer", "Lighter", "Lockpick", "LotusFlower", 
-            "Multitool", "NVCS3000", "Shears", "SkeletonKey", "Smoothie", "Vitamins"
+            _._0x1(65).._._0x1(108).._._0x1(97).._._0x1(114).._._0x1(109).._._0x1(67).._._0x1(108).._._0x1(111).._._0x1(99).._._0x1(107), _._0x1(65).._._0x1(108).._._0x1(111).._._0x1(101), _._0x1(66).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(97).._._0x1(103).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(99).._._0x1(107), _._0x1(66).._._0x1(97).._._0x1(116).._._0x1(116).._._0x1(101).._._0x1(114).._._0x1(121), _._0x1(66).._._0x1(97).._._0x1(116).._._0x1(116).._._0x1(101).._._0x1(114).._._0x1(121).._._0x1(80).._._0x1(97).._._0x1(99).._._0x1(107), _._0x1(67).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(108).._._0x1(101),
+            _._0x1(67).._._0x1(111).._._0x1(109).._._0x1(112).._._0x1(97).._._0x1(115).._._0x1(115), _._0x1(67).._._0x1(114).._._0x1(117).._._0x1(99).._._0x1(105).._._0x1(102).._._0x1(105).._._0x1(120), _._0x1(70).._._0x1(108).._._0x1(97).._._0x1(115).._._0x1(104).._._0x1(108).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116), _._0x1(71).._._0x1(108).._._0x1(111).._._0x1(119).._._0x1(115).._._0x1(116).._._0x1(105).._._0x1(99).._._0x1(107), _._0x1(72).._._0x1(111).._._0x1(108).._._0x1(121).._._0x1(72).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(71).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(97).._._0x1(100).._._0x1(101),
+            _._0x1(76).._._0x1(97).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(114).._._0x1(110), _._0x1(76).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(80).._._0x1(111).._._0x1(105).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(114), _._0x1(76).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(101).._._0x1(114), _._0x1(76).._._0x1(111).._._0x1(99).._._0x1(107).._._0x1(112).._._0x1(105).._._0x1(99).._._0x1(107), _._0x1(76).._._0x1(111).._._0x1(116).._._0x1(117).._._0x1(115).._._0x1(70).._._0x1(108).._._0x1(111).._._0x1(119).._._0x1(101).._._0x1(114), 
+            _._0x1(77).._._0x1(117).._._0x1(108).._._0x1(116).._._0x1(105).._._0x1(116).._._0x1(111).._._0x1(111).._._0x1(108), _._0x1(78).._._0x1(86).._._0x1(67).._._0x1(83).._._0x1(51).._._0x1(48).._._0x1(48).._._0x1(48), _._0x1(83).._._0x1(104).._._0x1(101).._._0x1(97).._._0x1(114).._._0x1(115), _._0x1(83).._._0x1(107).._._0x1(101).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(111).._._0x1(110).._._0x1(75).._._0x1(101).._._0x1(121), _._0x1(83).._._0x1(109).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(104).._._0x1(105).._._0x1(101), _._0x1(86).._._0x1(105).._._0x1(116).._._0x1(97).._._0x1(109).._._0x1(105).._._0x1(110).._._0x1(115)
         },
-        DisplayName = "物品"
+        DisplayName = _._0x1(231).._._0x1(137).._._0x1(169).._._0x1(229).._._0x1(147).._._0x1(129)
     },
     {
-        Name = "ClosetESP",
-        Title = "柜子透视",
-        DefaultColor = "粉色",
-        Models = {"Wardrobe", "Toolshed", "Locker_Large", "Backdoor_Wardrobe"},
-        DisplayName = "柜子"
+        Name = _._0x1(67).._._0x1(108).._._0x1(111).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(230).._._0x1(159).._._0x1(156).._._0x1(229).._._0x1(173).._._0x1(144).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(178).._._0x1(137).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(87).._._0x1(97).._._0x1(114).._._0x1(100).._._0x1(114).._._0x1(111).._._0x1(98).._._0x1(101), _._0x1(84).._._0x1(111).._._0x1(111).._._0x1(108).._._0x1(115).._._0x1(104).._._0x1(101).._._0x1(100), _._0x1(76).._._0x1(111).._._0x1(99).._._0x1(107).._._0x1(101).._._0x1(114).._._0x1(95).._._0x1(76).._._0x1(97).._._0x1(114).._._0x1(103).._._0x1(101), _._0x1(66).._._0x1(97).._._0x1(99).._._0x1(107).._._0x1(100).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(95).._._0x1(87).._._0x1(97).._._0x1(114).._._0x1(100).._._0x1(114).._._0x1(111).._._0x1(98).._._0x1(101)},
+        DisplayName = _._0x1(230).._._0x1(159).._._0x1(156).._._0x1(229).._._0x1(173).._._0x1(144)
     },
     {
-        Name = "AnchorESP",
-        Title = "锚点透视",
-        DefaultColor = "粉色",
-        Models = {"MinesAnchor"},
-        DisplayName = "锚点"
+        Name = _._0x1(65).._._0x1(110).._._0x1(99).._._0x1(104).._._0x1(111).._._0x1(114).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(233).._._0x1(148).._._0x1(154).._._0x1(231).._._0x1(130).._._0x1(185).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(178).._._0x1(137).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(77).._._0x1(105).._._0x1(110).._._0x1(101).._._0x1(115).._._0x1(65).._._0x1(110).._._0x1(99).._._0x1(104).._._0x1(111).._._0x1(114)},
+        DisplayName = _._0x1(233).._._0x1(148).._._0x1(154).._._0x1(231).._._0x1(130).._._0x1(185)
     },
     {
-        Name = "LibraryBookESP",
-        Title = "图书馆书籍透视",
-        DefaultColor = "青色", 
-        Models = {"LiveHintBook"},
-        DisplayName = "书籍"
+        Name = _._0x1(76).._._0x1(105).._._0x1(98).._._0x1(114).._._0x1(97).._._0x1(114).._._0x1(121).._._0x1(66).._._0x1(111).._._0x1(111).._._0x1(107).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(229).._._0x1(155).._._0x1(190).._._0x1(228).._._0x1(185).._._0x1(166).._._0x1(233).._._0x1(166).._._0x1(134).._._0x1(228).._._0x1(185).._._0x1(166).._._0x1(231).._._0x1(177).._._0x1(141).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(233).._._0x1(157).._._0x1(146).._._0x1(232).._._0x1(137).._._0x1(178), 
+        Models = {_._0x1(76).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(72).._._0x1(105).._._0x1(110).._._0x1(116).._._0x1(66).._._0x1(111).._._0x1(111).._._0x1(107)},
+        DisplayName = _._0x1(228).._._0x1(185).._._0x1(166).._._0x1(231).._._0x1(177).._._0x1(141)
     },
     {
-        Name = "ChestESP",
-        Title = "宝箱透视",
-        DefaultColor = "绿色",
-        Models = {"ChestBox", "ChestBoxLocked"},
-        DisplayName = "宝箱"
+        Name = _._0x1(67).._._0x1(104).._._0x1(101).._._0x1(115).._._0x1(116).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(229).._._0x1(174).._._0x1(157).._._0x1(231).._._0x1(174).._._0x1(177).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(187).._._0x1(191).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(67).._._0x1(104).._._0x1(101).._._0x1(115).._._0x1(116).._._0x1(66).._._0x1(111).._._0x1(120), _._0x1(67).._._0x1(104).._._0x1(101).._._0x1(115).._._0x1(116).._._0x1(66).._._0x1(111).._._0x1(120).._._0x1(76).._._0x1(111).._._0x1(99).._._0x1(107).._._0x1(101).._._0x1(100)},
+        DisplayName = _._0x1(229).._._0x1(174).._._0x1(157).._._0x1(231).._._0x1(174).._._0x1(177)
     }
 }
 
 local EntityESPConfig = {
     {
-        Name = "SeekESP",
-        Title = "追逐者透视", 
-        DefaultColor = "红色",
-        Models = {"SeekMoving"},
-        DisplayName = "追逐者"
+        Name = _._0x1(83).._._0x1(101).._._0x1(101).._._0x1(107).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(232).._._0x1(191).._._0x1(189).._._0x1(233).._._0x1(128).._._0x1(144).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134), 
+        DefaultColor = _._0x1(231).._._0x1(186).._._0x1(162).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(83).._._0x1(101).._._0x1(101).._._0x1(107).._._0x1(77).._._0x1(111).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(103)},
+        DisplayName = _._0x1(232).._._0x1(191).._._0x1(189).._._0x1(233).._._0x1(128).._._0x1(144).._._0x1(232).._._0x1(128).._._0x1(133)
     },
     {
-        Name = "FigureESP",
-        Title = "雕像透视",
-        DefaultColor = "白色",
-        Models = {"FigureRig"},
-        DisplayName = "雕像"
+        Name = _._0x1(70).._._0x1(105).._._0x1(103).._._0x1(117).._._0x1(114).._._0x1(101).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(233).._._0x1(155).._._0x1(149).._._0x1(229).._._0x1(131).._._0x1(143).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(70).._._0x1(105).._._0x1(103).._._0x1(117).._._0x1(114).._._0x1(101).._._0x1(82).._._0x1(105).._._0x1(103)},
+        DisplayName = _._0x1(233).._._0x1(155).._._0x1(149).._._0x1(229).._._0x1(131).._._0x1(143)
     },
     {
-        Name = "AmbushESP",
-        Title = "伏击透视",
-        DefaultColor = "白色",
-        Models = {"AmbushMoving"},
-        DisplayName = "伏击"
+        Name = _._0x1(65).._._0x1(109).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(104).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(228).._._0x1(188).._._0x1(143).._._0x1(229).._._0x1(135).._._0x1(187).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(65).._._0x1(109).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(104).._._0x1(77).._._0x1(111).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(103)},
+        DisplayName = _._0x1(228).._._0x1(188).._._0x1(143).._._0x1(229).._._0x1(135).._._0x1(187)
     },
     {
-        Name = "RushESP", 
-        Title = "冲刺透视",
-        DefaultColor = "白色",
-        Models = {"RushMoving"},
-        DisplayName = "冲刺"
+        Name = _._0x1(82).._._0x1(117).._._0x1(115).._._0x1(104).._._0x1(69).._._0x1(83).._._0x1(80), 
+        Title = _._0x1(229).._._0x1(134).._._0x1(178).._._0x1(229).._._0x1(136).._._0x1(186).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(82).._._0x1(117).._._0x1(115).._._0x1(104).._._0x1(77).._._0x1(111).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(103)},
+        DisplayName = _._0x1(229).._._0x1(134).._._0x1(178).._._0x1(229).._._0x1(136).._._0x1(186)
     },
     {
-        Name = "SnareESP",
-        Title = "陷阱透视",
-        DefaultColor = "白色",
-        Models = {"Snare"},
-        DisplayName = "陷阱"
+        Name = _._0x1(83).._._0x1(110).._._0x1(97).._._0x1(114).._._0x1(101).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(233).._._0x1(153).._._0x1(183).._._0x1(233).._._0x1(152).._._0x1(177).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(83).._._0x1(110).._._0x1(97).._._0x1(114).._._0x1(101)},
+        DisplayName = _._0x1(233).._._0x1(153).._._0x1(183).._._0x1(233).._._0x1(152).._._0x1(177)
     },
     {
-        Name = "GiggleESP",
-        Title = "傻笑透视",
-        DefaultColor = "白色",
-        Models = {"GiggleCeiling"},
-        DisplayName = "傻笑"
+        Name = _._0x1(71).._._0x1(105).._._0x1(103).._._0x1(103).._._0x1(108).._._0x1(101).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(229).._._0x1(130).._._0x1(187).._._0x1(231).._._0x1(172).._._0x1(145).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(71).._._0x1(105).._._0x1(103).._._0x1(103).._._0x1(108).._._0x1(101).._._0x1(67).._._0x1(101).._._0x1(105).._._0x1(108).._._0x1(105).._._0x1(110).._._0x1(103)},
+        DisplayName = _._0x1(229).._._0x1(130).._._0x1(187).._._0x1(231).._._0x1(172).._._0x1(145)
     },
     {
-        Name = "EyestalkESP",
-        Title = "眼柄透视",
-        DefaultColor = "白色", 
-        Models = {"EyestalkMoving"},
-        DisplayName = "眼柄"
+        Name = _._0x1(69).._._0x1(121).._._0x1(101).._._0x1(115).._._0x1(116).._._0x1(97).._._0x1(108).._._0x1(107).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(231).._._0x1(156).._._0x1(188).._._0x1(230).._._0x1(159).._._0x1(132).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178), 
+        Models = {_._0x1(69).._._0x1(121).._._0x1(101).._._0x1(115).._._0x1(116).._._0x1(97).._._0x1(108).._._0x1(107).._._0x1(77).._._0x1(111).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(103)},
+        DisplayName = _._0x1(231).._._0x1(156).._._0x1(188).._._0x1(230).._._0x1(159).._._0x1(132)
     },
     {
-        Name = "MandrakeESP",
-        Title = "曼德拉草透视",
-        DefaultColor = "白色",
-        Models = {"Mandrake"},
-        DisplayName = "曼德拉草"
+        Name = _._0x1(77).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(114).._._0x1(97).._._0x1(107).._._0x1(101).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(230).._._0x1(155).._._0x1(188).._._0x1(229).._._0x1(190).._._0x1(183).._._0x1(230).._._0x1(139).._._0x1(137).._._0x1(232).._._0x1(141).._._0x1(137).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(77).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(114).._._0x1(97).._._0x1(107).._._0x1(101)},
+        DisplayName = _._0x1(230).._._0x1(155).._._0x1(188).._._0x1(229).._._0x1(190).._._0x1(183).._._0x1(230).._._0x1(139).._._0x1(137).._._0x1(232).._._0x1(141).._._0x1(137)
     },
     {
-        Name = "GroundskeeperESP",
-        Title = "园丁透视",
-        DefaultColor = "白色",
-        Models = {"Groundskeeper"},
-        DisplayName = "园丁"
+        Name = _._0x1(71).._._0x1(114).._._0x1(111).._._0x1(117).._._0x1(110).._._0x1(100).._._0x1(115).._._0x1(107).._._0x1(101).._._0x1(101).._._0x1(112).._._0x1(101).._._0x1(114).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(229).._._0x1(155).._._0x1(173).._._0x1(228).._._0x1(184).._._0x1(129).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(71).._._0x1(114).._._0x1(111).._._0x1(117).._._0x1(110).._._0x1(100).._._0x1(115).._._0x1(107).._._0x1(101).._._0x1(101).._._0x1(112).._._0x1(101).._._0x1(114)},
+        DisplayName = _._0x1(229).._._0x1(155).._._0x1(173).._._0x1(228).._._0x1(184).._._0x1(129)
     },
     {
-        Name = "BlitzESP",
-        Title = "闪电透视",
-        DefaultColor = "白色",
-        Models = {"BackdoorRush"},
-        DisplayName = "闪电"
+        Name = _._0x1(66).._._0x1(108).._._0x1(105).._._0x1(116).._._0x1(122).._._0x1(69).._._0x1(83).._._0x1(80),
+        Title = _._0x1(233).._._0x1(151).._._0x1(170).._._0x1(231).._._0x1(148).._._0x1(181).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134),
+        DefaultColor = _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178),
+        Models = {_._0x1(66).._._0x1(97).._._0x1(99).._._0x1(107).._._0x1(100).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(82).._._0x1(117).._._0x1(115).._._0x1(104)},
+        DisplayName = _._0x1(233).._._0x1(151).._._0x1(170).._._0x1(231).._._0x1(148).._._0x1(181)
     }
 }
 
@@ -4176,40 +4179,40 @@ for _, config in ipairs(ObjectESPConfig) do
         Title = config.Title,
         Default = false,
         Callback = function(Value)
-            CreateESP(config.Name, Value, config.Models, config.DisplayName, _G[config.Name .. "_Color"])
+            CreateESP(config.Name, Value, config.Models, config.DisplayName, _G[config.Name .. _._0x1(95).._._0x1(67).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114)])
         end
     })
     
     ObjectESPGroup:Dropdown({
-        Title = config.Title .. "颜色",
-        Values = {"红色", "绿色", "蓝色", "黄色", "紫色", "青色", "粉色", "橙色", "白色", "彩虹动态"},
+        Title = config.Title .. _._0x1(233).._._0x1(162).._._0x1(156).._._0x1(232).._._0x1(137).._._0x1(178),
+        Values = {_._0x1(231).._._0x1(186).._._0x1(162).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(231).._._0x1(187).._._0x1(191).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(232).._._0x1(147).._._0x1(157).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(233).._._0x1(187).._._0x1(132).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(231).._._0x1(180).._._0x1(171).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(233).._._0x1(157).._._0x1(146).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(231).._._0x1(178).._._0x1(137).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(230).._._0x1(169).._._0x1(153).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(229).._._0x1(189).._._0x1(169).._._0x1(232).._._0x1(153).._._0x1(185).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(128).._._0x1(129)},
         Default = config.DefaultColor,
         Callback = function(Value)
-            _G[config.Name .. "_Color"] = ColorConfig[Value]
-            if _G[config.Name .. "_Enabled"] then
-                CreateESP(config.Name, true, config.Models, config.DisplayName, _G[config.Name .. "_Color"])
+            _G[config.Name .. _._0x1(95).._._0x1(67).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114)] = ColorConfig[Value]
+            if _G[config.Name .. _._0x1(95).._._0x1(69).._._0x1(110).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(100)] then
+                CreateESP(config.Name, true, config.Models, config.DisplayName, _G[config.Name .. _._0x1(95).._._0x1(67).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114)])
             end
         end
     })
 end
-local EntityESPGroup = ESPTab:Section({Title = "实体透视[展开]", Side = "Right"})
+local EntityESPGroup = ESPTab:Section({Title = _._0x1(229).._._0x1(174).._._0x1(158).._._0x1(228).._._0x1(189).._._0x1(147).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134).._._0x1(91).._._0x1(229).._._0x1(177).._._0x1(149).._._0x1(229).._._0x1(188).._._0x1(128).._._0x1(93), Side = _._0x1(82).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116)})
 for _, config in ipairs(EntityESPConfig) do
     EntityESPGroup:Toggle({
         Title = config.Title,
         Default = false,
         Callback = function(Value)
-            CreateESP(config.Name, Value, config.Models, config.DisplayName, _G[config.Name .. "_Color"])
+            CreateESP(config.Name, Value, config.Models, config.DisplayName, _G[config.Name .. _._0x1(95).._._0x1(67).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114)])
         end
     })
     
     EntityESPGroup:Dropdown({
-        Title = config.Title .. "颜色",
-        Values = {"红色", "绿色", "蓝色", "黄色", "紫色", "青色", "粉色", "橙色", "白色", "彩虹动态"},
+        Title = config.Title .. _._0x1(233).._._0x1(162).._._0x1(156).._._0x1(232).._._0x1(137).._._0x1(178),
+        Values = {_._0x1(231).._._0x1(186).._._0x1(162).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(231).._._0x1(187).._._0x1(191).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(232).._._0x1(147).._._0x1(157).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(233).._._0x1(187).._._0x1(132).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(231).._._0x1(180).._._0x1(171).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(233).._._0x1(157).._._0x1(146).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(231).._._0x1(178).._._0x1(137).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(230).._._0x1(169).._._0x1(153).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(231).._._0x1(153).._._0x1(189).._._0x1(232).._._0x1(137).._._0x1(178), _._0x1(229).._._0x1(189).._._0x1(169).._._0x1(232).._._0x1(153).._._0x1(185).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(128).._._0x1(129)},
         Default = config.DefaultColor,
         Callback = function(Value)
-            _G[config.Name .. "_Color"] = ColorConfig[Value]
-            if _G[config.Name .. "_Enabled"] then
-                CreateESP(config.Name, true, config.Models, config.DisplayName, _G[config.Name .. "_Color"])
+            _G[config.Name .. _._0x1(95).._._0x1(67).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114)] = ColorConfig[Value]
+            if _G[config.Name .. _._0x1(95).._._0x1(69).._._0x1(110).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(100)] then
+                CreateESP(config.Name, true, config.Models, config.DisplayName, _G[config.Name .. _._0x1(95).._._0x1(67).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114)])
             end
         end
     })
@@ -4234,12 +4237,12 @@ function CreateESP(espName, enabled, targetModels, displayName, color)
             
             ESPData[espName] = nil
         end
-        _G[espName .. "_Enabled"] = false
+        _G[espName .. _._0x1(95).._._0x1(69).._._0x1(110).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(100)] = false
         return
     end
     
   
-    _G[espName .. "_Enabled"] = true
+    _G[espName .. _._0x1(95).._._0x1(69).._._0x1(110).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(100)] = true
     
     if not ESPData[espName] then
         ESPData[espName] = {
@@ -4262,7 +4265,7 @@ function CreateESP(espName, enabled, targetModels, displayName, color)
     ESPData[espName].Color = color or ESPData[espName].Color
     
     local function AddESPToObject(obj)
-        if not obj:IsA("Model") then return end
+        if not obj:IsA(_._0x1(77).._._0x1(111).._._0x1(100).._._0x1(101).._._0x1(108)) then return end
         
         local isValid = false
         for _, modelName in ipairs(targetModels) do
@@ -4274,7 +4277,7 @@ function CreateESP(espName, enabled, targetModels, displayName, color)
         
         if not isValid then return end
         
-        local targetPart = obj.PrimaryPart or obj:FindFirstChildWhichIsA("BasePart")
+        local targetPart = obj.PrimaryPart or obj:FindFirstChildWhichIsA(_._0x1(66).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116))
         if not targetPart then return end
         
      
@@ -4290,7 +4293,7 @@ function CreateESP(espName, enabled, targetModels, displayName, color)
             Color = ESPData[espName].Color,
             MaxDistance = 1000,
             TextSize = 14,
-            ESPType = _G.ESPType or "Highlight",
+            ESPType = _G.ESPType or _._0x1(72).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(108).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
             FillColor = ESPData[espName].Color,
             OutlineColor = ESPData[espName].Color,
             FillTransparency = 0.7,
@@ -4298,7 +4301,7 @@ function CreateESP(espName, enabled, targetModels, displayName, color)
             Tracer = {
                 Enabled = _G.EnableTracers or false,
                 Color = ESPData[espName].Color,
-                From = "Bottom",
+                From = _._0x1(66).._._0x1(111).._._0x1(116).._._0x1(116).._._0x1(111).._._0x1(109),
             },
             Arrow = {
                 Enabled = _G.EnableArrows or false,
@@ -4322,12 +4325,12 @@ function CreateESP(espName, enabled, targetModels, displayName, color)
     
    
     local addedConn = workspace.DescendantAdded:Connect(function(obj)
-        if _G[espName .. "_Enabled"] then
+        if _G[espName .. _._0x1(95).._._0x1(69).._._0x1(110).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(100)] then
             AddESPToObject(obj)
         end
     end)
     local removingConn = workspace.DescendantRemoving:Connect(function(obj)
-        if not _G[espName .. "_Enabled"] then return end
+        if not _G[espName .. _._0x1(95).._._0x1(69).._._0x1(110).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(100)] then return end
         
         for i, elementData in ipairs(ESPData[espName].Elements) do
             if elementData.Object == obj then
@@ -4341,21 +4344,21 @@ function CreateESP(espName, enabled, targetModels, displayName, color)
     end)
     
  
-    local updateConn = game:GetService("RunService").Heartbeat:Connect(function()
-        if not _G[espName .. "_Enabled"] then
+    local updateConn = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101)).Heartbeat:Connect(function()
+        if not _G[espName .. _._0x1(95).._._0x1(69).._._0x1(110).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(100)] then
             updateConn:Disconnect()
             return
         end
         
         local player = game.Players.LocalPlayer
         local character = player and player.Character
-        local rootPart = character and character:FindFirstChild("HumanoidRootPart")
+        local rootPart = character and character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116))
         
         if not rootPart then return end
         
       
         local currentColor = ESPData[espName].Color
-        if ESPData[espName].Color == ColorConfig["彩虹动态"] then
+        if ESPData[espName].Color == ColorConfig[_._0x1(229).._._0x1(189).._._0x1(169).._._0x1(232).._._0x1(153).._._0x1(185).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(128).._._0x1(129)] then
             local time = tick()
             local r = math.sin(time * 2) * 0.5 + 0.5
             local g = math.sin(time * 2 + 2) * 0.5 + 0.5  
@@ -4367,7 +4370,7 @@ function CreateESP(espName, enabled, targetModels, displayName, color)
             if elementData.Object and elementData.Object.Parent and elementData.Part and elementData.Part.Parent then
                 if elementData.Element then
                     local distance = (rootPart.Position - elementData.Part.Position).Magnitude
-                    elementData.Element.CurrentSettings.Name = string.format("%s\n%d单位", displayName, math.floor(distance))
+                    elementData.Element.CurrentSettings.Name = string.format(_._0x1(37).._._0x1(115).._._0x1(92).._._0x1(110).._._0x1(37).._._0x1(100).._._0x1(229).._._0x1(141).._._0x1(149).._._0x1(228).._._0x1(189).._._0x1(141), displayName, math.floor(distance))
                     
                  
                     elementData.Element.CurrentSettings.Color = currentColor
@@ -4379,7 +4382,7 @@ function CreateESP(espName, enabled, targetModels, displayName, color)
                  
                     elementData.Element.CurrentSettings.Tracer.Enabled = _G.EnableTracers or false
                     elementData.Element.CurrentSettings.Arrow.Enabled = _G.EnableArrows or false
-                    elementData.Element.CurrentSettings.ESPType = _G.ESPType or "Highlight"
+                    elementData.Element.CurrentSettings.ESPType = _G.ESPType or _._0x1(72).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(108).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116)
                 end
             else
               
@@ -4397,31 +4400,31 @@ function CreateESP(espName, enabled, targetModels, displayName, color)
 end
 function UpdateAllESP()
     for espName, data in pairs(ESPData) do
-        if _G[espName .. "_Enabled"] then
+        if _G[espName .. _._0x1(95).._._0x1(69).._._0x1(110).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(100)] then
             CreateESP(espName, true, data.Models, data.DisplayName, data.Color)
         end
     end
 end
 for _, config in ipairs(ObjectESPConfig) do
-    _G[config.Name .. "_Color"] = ColorConfig[config.DefaultColor]
+    _G[config.Name .. _._0x1(95).._._0x1(67).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114)] = ColorConfig[config.DefaultColor]
 end
 
 for _, config in ipairs(EntityESPConfig) do
-    _G[config.Name .. "_Color"] = ColorConfig[config.DefaultColor]
+    _G[config.Name .. _._0x1(95).._._0x1(67).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114)] = ColorConfig[config.DefaultColor]
 end
 local function StartRainbowEffect()
     if RainbowConnection then RainbowConnection:Disconnect() end
     
-    RainbowConnection = game:GetService("RunService").Heartbeat:Connect(function()
+    RainbowConnection = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101)).Heartbeat:Connect(function()
         local time = tick()
         local r = math.sin(time * 2) * 0.5 + 0.5
         local g = math.sin(time * 2 + 2) * 0.5 + 0.5
         local b = math.sin(time * 2 + 4) * 0.5 + 0.5
         
-        ColorConfig["彩虹动态"] = Color3.new(r, g, b)
+        ColorConfig[_._0x1(229).._._0x1(189).._._0x1(169).._._0x1(232).._._0x1(153).._._0x1(185).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(128).._._0x1(129)] = Color3.new(r, g, b)
         for espName, data in pairs(ESPData) do
-            if data.Color == ColorConfig["彩虹动态"] and _G[espName .. "_Enabled"] then
-                data.Color = ColorConfig["彩虹动态"]
+            if data.Color == ColorConfig[_._0x1(229).._._0x1(189).._._0x1(169).._._0x1(232).._._0x1(153).._._0x1(185).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(128).._._0x1(129)] and _G[espName .. _._0x1(95).._._0x1(69).._._0x1(110).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(100)] then
+                data.Color = ColorConfig[_._0x1(229).._._0x1(189).._._0x1(169).._._0x1(232).._._0x1(153).._._0x1(185).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(230).._._0x1(128).._._0x1(129)]
             end
         end
     end)
@@ -4446,118 +4449,118 @@ local function CleanupESP()
         RainbowConnection = nil
     end
 end
-game:GetService("Players").LocalPlayer.AncestryChanged:Connect(function(_, parent)
+game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115)).LocalPlayer.AncestryChanged:Connect(function(_, parent)
     if not parent then
         CleanupESP()
     end
 end)
 StartRainbowEffect()
-_G.ESPType = "Highlight"
+_G.ESPType = _._0x1(72).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(108).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116)
 _G.EnableTracers = false
 _G.EnableArrows = false
-    local NotificationTab = Window:Tab({Title = "提示", Icon = "bell"})
+    local NotificationTab = Window:Tab({Title = _._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186), Icon = _._0x1(98).._._0x1(101).._._0x1(108).._._0x1(108)})
 
-local EntityNotifyGroup = NotificationTab:Section({Title = "实体刷新提示[展开]", Side = "Left"})
+local EntityNotifyGroup = NotificationTab:Section({Title = _._0x1(229).._._0x1(174).._._0x1(158).._._0x1(228).._._0x1(189).._._0x1(147).._._0x1(229).._._0x1(136).._._0x1(183).._._0x1(230).._._0x1(150).._._0x1(176).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186).._._0x1(91).._._0x1(229).._._0x1(177).._._0x1(149).._._0x1(229).._._0x1(188).._._0x1(128).._._0x1(93), Side = _._0x1(76).._._0x1(101).._._0x1(102).._._0x1(116)})
 
 local EntityNotifications = {
     Screech = {
-        Description = "尖啸者已生成",
+        Description = _._0x1(229).._._0x1(176).._._0x1(150).._._0x1(229).._._0x1(149).._._0x1(184).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(148).._._0x1(159).._._0x1(230).._._0x1(136).._._0x1(144),
         Color = Color3.fromRGB(255, 255, 0)
     },
     Halt = {
-        Description = "暂停实体已出现", 
+        Description = _._0x1(230).._._0x1(154).._._0x1(130).._._0x1(229).._._0x1(129).._._0x1(156).._._0x1(229).._._0x1(174).._._0x1(158).._._0x1(228).._._0x1(189).._._0x1(147).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(229).._._0x1(135).._._0x1(186).._._0x1(231).._._0x1(142).._._0x1(176), 
         Color = Color3.fromRGB(0, 255, 255)
     },
     FigureRig = {
-        Description = "检测到雕像",
+        Description = _._0x1(230).._._0x1(163).._._0x1(128).._._0x1(230).._._0x1(181).._._0x1(139).._._0x1(229).._._0x1(136).._._0x1(176).._._0x1(233).._._0x1(155).._._0x1(149).._._0x1(229).._._0x1(131).._._0x1(143),
         Color = Color3.fromRGB(255, 0, 0)
     },
     Eyes = {
-        Description = "眼睛实体已生成",
+        Description = _._0x1(231).._._0x1(156).._._0x1(188).._._0x1(231).._._0x1(157).._._0x1(155).._._0x1(229).._._0x1(174).._._0x1(158).._._0x1(228).._._0x1(189).._._0x1(147).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(148).._._0x1(159).._._0x1(230).._._0x1(136).._._0x1(144),
         Color = Color3.fromRGB(127, 30, 220)
     },
     SeekMoving = {
-        Description = "追逐者已生成",
+        Description = _._0x1(232).._._0x1(191).._._0x1(189).._._0x1(233).._._0x1(128).._._0x1(144).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(148).._._0x1(159).._._0x1(230).._._0x1(136).._._0x1(144),
         Color = Color3.fromRGB(255, 100, 100)
     },
     RushMoving = {
-        Description = "冲刺正在接近",
+        Description = _._0x1(229).._._0x1(134).._._0x1(178).._._0x1(229).._._0x1(136).._._0x1(186).._._0x1(230).._._0x1(173).._._0x1(163).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(230).._._0x1(142).._._0x1(165).._._0x1(232).._._0x1(191).._._0x1(145),
         Color = Color3.fromRGB(0, 255, 0)
     },
     AmbushMoving = {
-        Description = "伏击正在接近", 
+        Description = _._0x1(228).._._0x1(188).._._0x1(143).._._0x1(229).._._0x1(135).._._0x1(187).._._0x1(230).._._0x1(173).._._0x1(163).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(230).._._0x1(142).._._0x1(165).._._0x1(232).._._0x1(191).._._0x1(145), 
         Color = Color3.fromRGB(80, 255, 110)
     },
     A60 = {
-        Description = "A-60 正在冲刺",
+        Description = _._0x1(65).._._0x1(45).._._0x1(54).._._0x1(48).._._0x1(32).._._0x1(230).._._0x1(173).._._0x1(163).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(229).._._0x1(134).._._0x1(178).._._0x1(229).._._0x1(136).._._0x1(186),
         Color = Color3.fromRGB(200, 50, 50)
     },
     A120 = {
-        Description = "A-120 在附近",
+        Description = _._0x1(65).._._0x1(45).._._0x1(49).._._0x1(50).._._0x1(48).._._0x1(32).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(233).._._0x1(153).._._0x1(132).._._0x1(232).._._0x1(191).._._0x1(145),
         Color = Color3.fromRGB(55, 55, 55)
     },
     GiggleCeiling = {
-        Description = "傻笑在天花板上",
+        Description = _._0x1(229).._._0x1(130).._._0x1(187).._._0x1(231).._._0x1(172).._._0x1(145).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(229).._._0x1(164).._._0x1(169).._._0x1(232).._._0x1(138).._._0x1(177).._._0x1(230).._._0x1(157).._._0x1(191).._._0x1(228).._._0x1(184).._._0x1(138),
         Color = Color3.fromRGB(200, 200, 200)
     },
     GrumbleRig = {
-        Description = "咕噜在巡逻",
+        Description = _._0x1(229).._._0x1(146).._._0x1(149).._._0x1(229).._._0x1(153).._._0x1(156).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(229).._._0x1(183).._._0x1(161).._._0x1(233).._._0x1(128).._._0x1(187),
         Color = Color3.fromRGB(150, 150, 150)
     },
     GloombatSwarm = {
-        Description = "暗影蝙蝠群来袭",
+        Description = _._0x1(230).._._0x1(154).._._0x1(151).._._0x1(229).._._0x1(189).._._0x1(177).._._0x1(232).._._0x1(157).._._0x1(153).._._0x1(232).._._0x1(157).._._0x1(160).._._0x1(231).._._0x1(190).._._0x1(164).._._0x1(230).._._0x1(157).._._0x1(165).._._0x1(232).._._0x1(162).._._0x1(173),
         Color = Color3.fromRGB(100, 100, 100)
     },
     Dread = {
-        Description = "恐惧实体已激活",
+        Description = _._0x1(230).._._0x1(129).._._0x1(144).._._0x1(230).._._0x1(131).._._0x1(167).._._0x1(229).._._0x1(174).._._0x1(158).._._0x1(228).._._0x1(189).._._0x1(147).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(230).._._0x1(191).._._0x1(128).._._0x1(230).._._0x1(180).._._0x1(187),
         Color = Color3.fromRGB(80, 80, 80)
     },
     BackdoorLookman = {
-        Description = "观察者在注视",
+        Description = _._0x1(232).._._0x1(167).._._0x1(130).._._0x1(229).._._0x1(175).._._0x1(159).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(230).._._0x1(179).._._0x1(168).._._0x1(232).._._0x1(167).._._0x1(134),
         Color = Color3.fromRGB(110, 15, 15)
     },
     Snare = {
-        Description = "陷阱已生成",
+        Description = _._0x1(233).._._0x1(153).._._0x1(183).._._0x1(233).._._0x1(152).._._0x1(177).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(231).._._0x1(148).._._0x1(159).._._0x1(230).._._0x1(136).._._0x1(144),
         Color = Color3.fromRGB(100, 100, 100)
     },
     WorldLotus = {
-        Description = "检测到世界莲花",
+        Description = _._0x1(230).._._0x1(163).._._0x1(128).._._0x1(230).._._0x1(181).._._0x1(139).._._0x1(229).._._0x1(136).._._0x1(176).._._0x1(228).._._0x1(184).._._0x1(150).._._0x1(231).._._0x1(149).._._0x1(140).._._0x1(232).._._0x1(142).._._0x1(178).._._0x1(232).._._0x1(138).._._0x1(177),
         Color = Color3.fromRGB(200, 230, 50)
     },
     Bramble = {
-        Description = "荆棘在生长",
+        Description = _._0x1(232).._._0x1(141).._._0x1(134).._._0x1(230).._._0x1(163).._._0x1(152).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(231).._._0x1(148).._._0x1(159).._._0x1(233).._._0x1(149).._._0x1(191),
         Color = Color3.fromRGB(50, 150, 30)
     },
     Caws = {
-        Description = "乌鸦在飞行",
+        Description = _._0x1(228).._._0x1(185).._._0x1(140).._._0x1(233).._._0x1(184).._._0x1(166).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140),
         Color = Color3.fromRGB(30, 30, 30)
     },
     Eyestalk = {
-        Description = "眼柄将要追逐",
+        Description = _._0x1(231).._._0x1(156).._._0x1(188).._._0x1(230).._._0x1(159).._._0x1(132).._._0x1(229).._._0x1(176).._._0x1(134).._._0x1(232).._._0x1(166).._._0x1(129).._._0x1(232).._._0x1(191).._._0x1(189).._._0x1(233).._._0x1(128).._._0x1(144),
         Color = Color3.fromRGB(150, 80, 200)
     },
     Grampy = {
-        Description = "爷爷已出现",
+        Description = _._0x1(231).._._0x1(136).._._0x1(183).._._0x1(231).._._0x1(136).._._0x1(183).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(229).._._0x1(135).._._0x1(186).._._0x1(231).._._0x1(142).._._0x1(176),
         Color = Color3.fromRGB(180, 180, 180)
     },
     Groundskeeper = {
-        Description = "园丁在附近",
+        Description = _._0x1(229).._._0x1(155).._._0x1(173).._._0x1(228).._._0x1(184).._._0x1(129).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(233).._._0x1(153).._._0x1(132).._._0x1(232).._._0x1(191).._._0x1(145),
         Color = Color3.fromRGB(100, 150, 50)
     },
     Mandrake = {
-        Description = "曼德拉草在尖叫",
+        Description = _._0x1(230).._._0x1(155).._._0x1(188).._._0x1(229).._._0x1(190).._._0x1(183).._._0x1(230).._._0x1(139).._._0x1(137).._._0x1(232).._._0x1(141).._._0x1(137).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(229).._._0x1(176).._._0x1(150).._._0x1(229).._._0x1(143).._._0x1(171),
         Color = Color3.fromRGB(130, 80, 30)
     },
     Monument = {
-        Description = "纪念碑已激活",
+        Description = _._0x1(231).._._0x1(186).._._0x1(170).._._0x1(229).._._0x1(191).._._0x1(181).._._0x1(231).._._0x1(162).._._0x1(145).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(230).._._0x1(191).._._0x1(128).._._0x1(230).._._0x1(180).._._0x1(187),
         Color = Color3.fromRGB(150, 150, 150)
     },
     Surge = {
-        Description = "浪涌在充能",
+        Description = _._0x1(230).._._0x1(181).._._0x1(170).._._0x1(230).._._0x1(182).._._0x1(140).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(229).._._0x1(133).._._0x1(133).._._0x1(232).._._0x1(131).._._0x1(189),
         Color = Color3.fromRGB(230, 130, 30)
     },
     BackdoorRush = {
-        Description = "闪电即将到来",
+        Description = _._0x1(233).._._0x1(151).._._0x1(170).._._0x1(231).._._0x1(148).._._0x1(181).._._0x1(229).._._0x1(141).._._0x1(179).._._0x1(229).._._0x1(176).._._0x1(134).._._0x1(229).._._0x1(136).._._0x1(176).._._0x1(230).._._0x1(157).._._0x1(165),
         Color = Color3.fromRGB(230, 130, 30)
     }
 }
@@ -4565,202 +4568,202 @@ local EntityNotifications = {
 local NotifyConnections = {}
 
 EntityNotifyGroup:Toggle({
-    Title = "尖啸者提示",
+    Title = _._0x1(229).._._0x1(176).._._0x1(150).._._0x1(229).._._0x1(149).._._0x1(184).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Screech", Value)
+        SetupEntityNotification(_._0x1(83).._._0x1(99).._._0x1(114).._._0x1(101).._._0x1(101).._._0x1(99).._._0x1(104), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "暂停实体提示", 
+    Title = _._0x1(230).._._0x1(154).._._0x1(130).._._0x1(229).._._0x1(129).._._0x1(156).._._0x1(229).._._0x1(174).._._0x1(158).._._0x1(228).._._0x1(189).._._0x1(147).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186), 
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Halt", Value)
+        SetupEntityNotification(_._0x1(72).._._0x1(97).._._0x1(108).._._0x1(116), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "雕像提示",
+    Title = _._0x1(233).._._0x1(155).._._0x1(149).._._0x1(229).._._0x1(131).._._0x1(143).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("FigureRig", Value)
+        SetupEntityNotification(_._0x1(70).._._0x1(105).._._0x1(103).._._0x1(117).._._0x1(114).._._0x1(101).._._0x1(82).._._0x1(105).._._0x1(103), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "眼睛提示",
+    Title = _._0x1(231).._._0x1(156).._._0x1(188).._._0x1(231).._._0x1(157).._._0x1(155).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Eyes", Value)
+        SetupEntityNotification(_._0x1(69).._._0x1(121).._._0x1(101).._._0x1(115), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "追逐者提示",
+    Title = _._0x1(232).._._0x1(191).._._0x1(189).._._0x1(233).._._0x1(128).._._0x1(144).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("SeekMoving", Value)
+        SetupEntityNotification(_._0x1(83).._._0x1(101).._._0x1(101).._._0x1(107).._._0x1(77).._._0x1(111).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(103), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "冲刺提示",
+    Title = _._0x1(229).._._0x1(134).._._0x1(178).._._0x1(229).._._0x1(136).._._0x1(186).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("RushMoving", Value)
+        SetupEntityNotification(_._0x1(82).._._0x1(117).._._0x1(115).._._0x1(104).._._0x1(77).._._0x1(111).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(103), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "伏击提示",
+    Title = _._0x1(228).._._0x1(188).._._0x1(143).._._0x1(229).._._0x1(135).._._0x1(187).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("AmbushMoving", Value)
+        SetupEntityNotification(_._0x1(65).._._0x1(109).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(104).._._0x1(77).._._0x1(111).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(103), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "A-60提示",
+    Title = _._0x1(65).._._0x1(45).._._0x1(54).._._0x1(48).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("A60", Value)
+        SetupEntityNotification(_._0x1(65).._._0x1(54).._._0x1(48), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "A-120提示",
+    Title = _._0x1(65).._._0x1(45).._._0x1(49).._._0x1(50).._._0x1(48).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("A120", Value)
+        SetupEntityNotification(_._0x1(65).._._0x1(49).._._0x1(50).._._0x1(48), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "傻笑提示",
+    Title = _._0x1(229).._._0x1(130).._._0x1(187).._._0x1(231).._._0x1(172).._._0x1(145).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("GiggleCeiling", Value)
+        SetupEntityNotification(_._0x1(71).._._0x1(105).._._0x1(103).._._0x1(103).._._0x1(108).._._0x1(101).._._0x1(67).._._0x1(101).._._0x1(105).._._0x1(108).._._0x1(105).._._0x1(110).._._0x1(103), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "咕噜提示",
+    Title = _._0x1(229).._._0x1(146).._._0x1(149).._._0x1(229).._._0x1(153).._._0x1(156).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("GrumbleRig", Value)
+        SetupEntityNotification(_._0x1(71).._._0x1(114).._._0x1(117).._._0x1(109).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(82).._._0x1(105).._._0x1(103), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "暗影蝙蝠提示",
+    Title = _._0x1(230).._._0x1(154).._._0x1(151).._._0x1(229).._._0x1(189).._._0x1(177).._._0x1(232).._._0x1(157).._._0x1(153).._._0x1(232).._._0x1(157).._._0x1(160).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("GloombatSwarm", Value)
+        SetupEntityNotification(_._0x1(71).._._0x1(108).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(98).._._0x1(97).._._0x1(116).._._0x1(83).._._0x1(119).._._0x1(97).._._0x1(114).._._0x1(109), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "恐惧提示",
+    Title = _._0x1(230).._._0x1(129).._._0x1(144).._._0x1(230).._._0x1(131).._._0x1(167).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Dread", Value)
+        SetupEntityNotification(_._0x1(68).._._0x1(114).._._0x1(101).._._0x1(97).._._0x1(100), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "观察者提示",
+    Title = _._0x1(232).._._0x1(167).._._0x1(130).._._0x1(229).._._0x1(175).._._0x1(159).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("BackdoorLookman", Value)
+        SetupEntityNotification(_._0x1(66).._._0x1(97).._._0x1(99).._._0x1(107).._._0x1(100).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(76).._._0x1(111).._._0x1(111).._._0x1(107).._._0x1(109).._._0x1(97).._._0x1(110), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "陷阱提示",
+    Title = _._0x1(233).._._0x1(153).._._0x1(183).._._0x1(233).._._0x1(152).._._0x1(177).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Snare", Value)
+        SetupEntityNotification(_._0x1(83).._._0x1(110).._._0x1(97).._._0x1(114).._._0x1(101), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "世界莲花提示",
+    Title = _._0x1(228).._._0x1(184).._._0x1(150).._._0x1(231).._._0x1(149).._._0x1(140).._._0x1(232).._._0x1(142).._._0x1(178).._._0x1(232).._._0x1(138).._._0x1(177).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("WorldLotus", Value)
+        SetupEntityNotification(_._0x1(87).._._0x1(111).._._0x1(114).._._0x1(108).._._0x1(100).._._0x1(76).._._0x1(111).._._0x1(116).._._0x1(117).._._0x1(115), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "荆棘提示",
+    Title = _._0x1(232).._._0x1(141).._._0x1(134).._._0x1(230).._._0x1(163).._._0x1(152).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Bramble", Value)
+        SetupEntityNotification(_._0x1(66).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(98).._._0x1(108).._._0x1(101), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "乌鸦提示",
+    Title = _._0x1(228).._._0x1(185).._._0x1(140).._._0x1(233).._._0x1(184).._._0x1(166).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Caws", Value)
+        SetupEntityNotification(_._0x1(67).._._0x1(97).._._0x1(119).._._0x1(115), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "眼柄提示",
+    Title = _._0x1(231).._._0x1(156).._._0x1(188).._._0x1(230).._._0x1(159).._._0x1(132).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Eyestalk", Value)
+        SetupEntityNotification(_._0x1(69).._._0x1(121).._._0x1(101).._._0x1(115).._._0x1(116).._._0x1(97).._._0x1(108).._._0x1(107), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "爷爷提示",
+    Title = _._0x1(231).._._0x1(136).._._0x1(183).._._0x1(231).._._0x1(136).._._0x1(183).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Grampy", Value)
+        SetupEntityNotification(_._0x1(71).._._0x1(114).._._0x1(97).._._0x1(109).._._0x1(112).._._0x1(121), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "园丁提示",
+    Title = _._0x1(229).._._0x1(155).._._0x1(173).._._0x1(228).._._0x1(184).._._0x1(129).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Groundskeeper", Value)
+        SetupEntityNotification(_._0x1(71).._._0x1(114).._._0x1(111).._._0x1(117).._._0x1(110).._._0x1(100).._._0x1(115).._._0x1(107).._._0x1(101).._._0x1(101).._._0x1(112).._._0x1(101).._._0x1(114), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "曼德拉草提示",
+    Title = _._0x1(230).._._0x1(155).._._0x1(188).._._0x1(229).._._0x1(190).._._0x1(183).._._0x1(230).._._0x1(139).._._0x1(137).._._0x1(232).._._0x1(141).._._0x1(137).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Mandrake", Value)
+        SetupEntityNotification(_._0x1(77).._._0x1(97).._._0x1(110).._._0x1(100).._._0x1(114).._._0x1(97).._._0x1(107).._._0x1(101), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "纪念碑提示",
+    Title = _._0x1(231).._._0x1(186).._._0x1(170).._._0x1(229).._._0x1(191).._._0x1(181).._._0x1(231).._._0x1(162).._._0x1(145).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Monument", Value)
+        SetupEntityNotification(_._0x1(77).._._0x1(111).._._0x1(110).._._0x1(117).._._0x1(109).._._0x1(101).._._0x1(110).._._0x1(116), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "浪涌提示",
+    Title = _._0x1(230).._._0x1(181).._._0x1(170).._._0x1(230).._._0x1(182).._._0x1(140).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("Surge", Value)
+        SetupEntityNotification(_._0x1(83).._._0x1(117).._._0x1(114).._._0x1(103).._._0x1(101), Value)
     end
 })
 
 EntityNotifyGroup:Toggle({
-    Title = "闪电提示",
+    Title = _._0x1(233).._._0x1(151).._._0x1(170).._._0x1(231).._._0x1(148).._._0x1(181).._._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
     Default = false,
     Callback = function(Value)
-        SetupEntityNotification("BackdoorRush", Value)
+        SetupEntityNotification(_._0x1(66).._._0x1(97).._._0x1(99).._._0x1(107).._._0x1(100).._._0x1(111).._._0x1(111).._._0x1(114).._._0x1(82).._._0x1(117).._._0x1(115).._._0x1(104), Value)
     end
 })
 
@@ -4777,20 +4780,20 @@ function SetupEntityNotification(entityName, enabled)
 
     local function onEntityAdded(obj)
         if obj.Name == entityName then
-            WindUI:Notify("实体刷新", entityData.Description, 5)
+            WindUI:Notify(_._0x1(229).._._0x1(174).._._0x1(158).._._0x1(228).._._0x1(189).._._0x1(147).._._0x1(229).._._0x1(136).._._0x1(183).._._0x1(230).._._0x1(150).._._0x1(176), entityData.Description, 5)
         end
     end
 
     NotifyConnections[entityName] = workspace.ChildAdded:Connect(onEntityAdded)
 
-    local rooms = workspace:FindFirstChild("CurrentRooms")
+    local rooms = workspace:FindFirstChild(_._0x1(67).._._0x1(117).._._0x1(114).._._0x1(114).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115))
     if rooms then
         local roomConn = rooms.DescendantAdded:Connect(function(obj)
             if obj.Name == entityName then
-                WindUI:Notify("实体刷新", entityData.Description, 5)
+                WindUI:Notify(_._0x1(229).._._0x1(174).._._0x1(158).._._0x1(228).._._0x1(189).._._0x1(147).._._0x1(229).._._0x1(136).._._0x1(183).._._0x1(230).._._0x1(150).._._0x1(176), entityData.Description, 5)
             end
         end)
-        NotifyConnections[entityName .. "_Rooms"] = roomConn
+        NotifyConnections[entityName .. _._0x1(95).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(109).._._0x1(115)] = roomConn
     end
 end
 
@@ -4798,34 +4801,34 @@ end
       end
 })
 Section:Button({
-    Title = "XY脚本-模仿者",
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(45).._._0x1(230).._._0x1(168).._._0x1(161).._._0x1(228).._._0x1(187).._._0x1(191).._._0x1(232).._._0x1(128).._._0x1(133),
     Callback = function()
     
-local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+local WindUI = loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(70).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(97).._._0x1(103).._._0x1(101).._._0x1(115).._._0x1(117).._._0x1(115).._._0x1(47).._._0x1(87).._._0x1(105).._._0x1(110).._._0x1(100).._._0x1(85).._._0x1(73).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(108).._._0x1(101).._._0x1(97).._._0x1(115).._._0x1(101).._._0x1(115).._._0x1(47).._._0x1(108).._._0x1(97).._._0x1(116).._._0x1(101).._._0x1(115).._._0x1(116).._._0x1(47).._._0x1(100).._._0x1(111).._._0x1(119).._._0x1(110).._._0x1(108).._._0x1(111).._._0x1(97).._._0x1(100).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97)))()
 local Window = WindUI:CreateWindow({
-        Title = "XY脚本<font color='#00FF00'>模仿者</font>",
-        Icon = "rbxassetid://81944629903864",
+        Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(60).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(32).._._0x1(99).._._0x1(111).._._0x1(108).._._0x1(111).._._0x1(114).._._0x1(61).._._0x1(39).._._0x1(35).._._0x1(48).._._0x1(48).._._0x1(70).._._0x1(70).._._0x1(48).._._0x1(48).._._0x1(39).._._0x1(62).._._0x1(230).._._0x1(168).._._0x1(161).._._0x1(228).._._0x1(187).._._0x1(191).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(60).._._0x1(47).._._0x1(102).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(62),
+        Icon = _._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(56).._._0x1(49).._._0x1(57).._._0x1(52).._._0x1(52).._._0x1(54).._._0x1(50).._._0x1(57).._._0x1(57).._._0x1(48).._._0x1(51).._._0x1(56).._._0x1(54).._._0x1(52),
         IconTransparency = 0.5,
         IconThemed = true,
-        Author = "作者:小夜",
-        Folder = "CloudHub",
+        Author = _._0x1(228).._._0x1(189).._._0x1(156).._._0x1(232).._._0x1(128).._._0x1(133).._._0x1(58).._._0x1(229).._._0x1(176).._._0x1(143).._._0x1(229).._._0x1(164).._._0x1(156),
+        Folder = _._0x1(67).._._0x1(108).._._0x1(111).._._0x1(117).._._0x1(100).._._0x1(72).._._0x1(117).._._0x1(98),
         Size = UDim2.fromOffset(400, 300),
         Transparent = true,
-        Theme = "Light",
+        Theme = _._0x1(76).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116),
         User = {
             Enabled = true,
-            Callback = function() print("clicked") end,
+            Callback = function() _G[_._0x1(112).._._0x1(114).._._0x1(105).._._0x1(110).._._0x1(116)](_._0x1(99).._._0x1(108).._._0x1(105).._._0x1(99).._._0x1(107).._._0x1(101).._._0x1(100)) end,
             Anonymous = false
         },
         SideBarWidth = 200,
         ScrollBarEnabled = true,
-        Background = "rbxassetid://4155801252"
+        Background = _._0x1(114).._._0x1(98).._._0x1(120).._._0x1(97).._._0x1(115).._._0x1(115).._._0x1(101).._._0x1(116).._._0x1(105).._._0x1(100).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(52).._._0x1(49).._._0x1(53).._._0x1(53).._._0x1(56).._._0x1(48).._._0x1(49).._._0x1(50).._._0x1(53).._._0x1(50)
     })
     
 
 Window:EditOpenButton({
-    Title = "XY脚本-模仿者",
-    Icon = "monitor",
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(45).._._0x1(230).._._0x1(168).._._0x1(161).._._0x1(228).._._0x1(187).._._0x1(191).._._0x1(232).._._0x1(128).._._0x1(133),
+    Icon = _._0x1(109).._._0x1(111).._._0x1(110).._._0x1(105).._._0x1(116).._._0x1(111).._._0x1(114),
     CornerRadius = UDim.new(0, 16),
     StrokeThickness = 2,
     Color = openButtonColor,
@@ -4833,174 +4836,174 @@ Window:EditOpenButton({
 })
 
 Window:Tag({
-    Title = "XY脚本",
-    Color = Color3.fromHex("#30ff6a")
+    Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
+    Color = Color3.fromHex(_._0x1(35).._._0x1(51).._._0x1(48).._._0x1(102).._._0x1(102).._._0x1(54).._._0x1(97))
 })
 
 Window:Tag({
-        Title = "XY脚本", -- 标签汉化
-        Color = Color3.fromHex("#315dff")
+        Title = _._0x1(88).._._0x1(89).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172), -- 标签汉化
+        Color = Color3.fromHex(_._0x1(35).._._0x1(51).._._0x1(49).._._0x1(53).._._0x1(100).._._0x1(102).._._0x1(102))
     })
     local TimeTag = Window:Tag({
-        Title = "模仿者",
-        Color = Color3.fromHex("#000000")
+        Title = _._0x1(230).._._0x1(168).._._0x1(161).._._0x1(228).._._0x1(187).._._0x1(191).._._0x1(232).._._0x1(128).._._0x1(133),
+        Color = Color3.fromHex(_._0x1(35).._._0x1(48).._._0x1(48).._._0x1(48).._._0x1(48).._._0x1(48).._._0x1(48))
     })
 
 local Tabs = {
-    Main = Window:Section({ Title = "所有关卡", Opened = true }),
-    gn = Window:Section({ Title = "功能", Opened = true }),    
+    Main = Window:Section({ Title = _._0x1(230).._._0x1(137).._._0x1(128).._._0x1(230).._._0x1(156).._._0x1(137).._._0x1(229).._._0x1(133).._._0x1(179).._._0x1(229).._._0x1(141).._._0x1(161), Opened = true }),
+    gn = Window:Section({ Title = _._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189), Opened = true }),    
 }
 
 local TabHandles = {
-    Q = Tabs.Main:Tab({ Title = "传送嫉妒1", Icon = "layout-grid" }),
-    W = Tabs.Main:Tab({ Title = "透视功能", Icon = "layout-grid" }),
-    E = Tabs.Main:Tab({ Title = "", Icon = "layout-grid" }),
-    R = Tabs.Main:Tab({ Title = "", Icon = "layout-grid" }),
-    T = Tabs.Main:Tab({ Title = "", Icon = "layout-grid" }),
-    Y = Tabs.Main:Tab({ Title = "", Icon = "layout-grid" }),
-    U = Tabs.Main:Tab({ Title = "", Icon = "layout-grid" }),    
+    Q = Tabs.Main:Tab({ Title = _._0x1(228).._._0x1(188).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(129).._._0x1(229).._._0x1(171).._._0x1(137).._._0x1(229).._._0x1(166).._._0x1(146).._._0x1(49), Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100) }),
+    W = Tabs.Main:Tab({ Title = _._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189), Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100) }),
+    E = Tabs.Main:Tab({ Title = _._0x1(), Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100) }),
+    R = Tabs.Main:Tab({ Title = _._0x1(), Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100) }),
+    T = Tabs.Main:Tab({ Title = _._0x1(), Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100) }),
+    Y = Tabs.Main:Tab({ Title = _._0x1(), Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100) }),
+    U = Tabs.Main:Tab({ Title = _._0x1(), Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100) }),    
 }
 -----------------------------------屋子里------------------------------------------------
 
 local Button = TabHandles.Q:Button({
-    Title = "提示",
-    Desc = "第一关卡在日本屋子里",
-    Image = "palette",
+    Title = _._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
+    Desc = _._0x1(231).._._0x1(172).._._0x1(172).._._0x1(228).._._0x1(184).._._0x1(128).._._0x1(229).._._0x1(133).._._0x1(179).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(230).._._0x1(151).._._0x1(165).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(229).._._0x1(177).._._0x1(139).._._0x1(229).._._0x1(173).._._0x1(144).._._0x1(233).._._0x1(135).._._0x1(140),
+    Image = _._0x1(112).._._0x1(97).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(116).._._0x1(101),
     ImageSize = 20,
-    Color = "White"
+    Color = _._0x1(87).._._0x1(104).._._0x1(105).._._0x1(116).._._0x1(101)
 })
 
 Button = TabHandles.Q:Button({
-    Title = "隐身怪物看不见",
-    Desc = "有些关卡，一卡一卡的",
+    Title = _._0x1(233).._._0x1(154).._._0x1(144).._._0x1(232).._._0x1(186).._._0x1(171).._._0x1(230).._._0x1(128).._._0x1(170).._._0x1(231).._._0x1(137).._._0x1(169).._._0x1(231).._._0x1(156).._._0x1(139).._._0x1(228).._._0x1(184).._._0x1(141).._._0x1(232).._._0x1(167).._._0x1(129),
+    Desc = _._0x1(230).._._0x1(156).._._0x1(137).._._0x1(228).._._0x1(186).._._0x1(155).._._0x1(229).._._0x1(133).._._0x1(179).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(228).._._0x1(184).._._0x1(128).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(228).._._0x1(184).._._0x1(128).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(231).._._0x1(154).._._0x1(132),
     Locked = false,
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Yungengxin/roblox/main/yinshen"))()
+        loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(89).._._0x1(117).._._0x1(110).._._0x1(103).._._0x1(101).._._0x1(110).._._0x1(103).._._0x1(120).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(114).._._0x1(111).._._0x1(98).._._0x1(108).._._0x1(111).._._0x1(120).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(121).._._0x1(105).._._0x1(110).._._0x1(115).._._0x1(104).._._0x1(101).._._0x1(110)))()
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "动画房间",
-    Desc = "",
+    Title = _._0x1(229).._._0x1(138).._._0x1(168).._._0x1(231).._._0x1(148).._._0x1(187).._._0x1(230).._._0x1(136).._._0x1(191).._._0x1(233).._._0x1(151).._._0x1(180),
+    Desc = _._0x1(),
     Locked = false,
     Callback = function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( -1675.27, -23.32, -3411.01)
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "放毒老鼠地方",
-    Desc = "",
+    Title = _._0x1(230).._._0x1(148).._._0x1(190).._._0x1(230).._._0x1(175).._._0x1(146).._._0x1(232).._._0x1(128).._._0x1(129).._._0x1(233).._._0x1(188).._._0x1(160).._._0x1(229).._._0x1(156).._._0x1(176).._._0x1(230).._._0x1(150).._._0x1(185),
+    Desc = _._0x1(),
     Locked = false,
     Callback = function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( -1562.39,  -29.25,  -3403.67)
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "老鼠1",
-    Desc = "",
+    Title = _._0x1(232).._._0x1(128).._._0x1(129).._._0x1(233).._._0x1(188).._._0x1(160).._._0x1(49),
+    Desc = _._0x1(),
     Locked = false,
     Callback = function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( -1524.21,  -29.25,  -3580.63)
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "老鼠2",
-    Desc = "",
+    Title = _._0x1(232).._._0x1(128).._._0x1(129).._._0x1(233).._._0x1(188).._._0x1(160).._._0x1(50),
+    Desc = _._0x1(),
     Locked = false,
     Callback = function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1642.97,  -23.44,  -3434.15)
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "老鼠3",
-    Desc = "",
+    Title = _._0x1(232).._._0x1(128).._._0x1(129).._._0x1(233).._._0x1(188).._._0x1(160).._._0x1(51),
+    Desc = _._0x1(),
     Locked = false,
     Callback = function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( -1680.65,  -23.47,  -3391.97)
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "老鼠4",
-    Desc = "",
+    Title = _._0x1(232).._._0x1(128).._._0x1(129).._._0x1(233).._._0x1(188).._._0x1(160).._._0x1(52),
+    Desc = _._0x1(),
     Locked = false,
     Callback = function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( -1620.64,  -23.44,  -3397.37)
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "毒老鼠老井",
-    Desc = "老鼠毒放在老鼠身上的",
+    Title = _._0x1(230).._._0x1(175).._._0x1(146).._._0x1(232).._._0x1(128).._._0x1(129).._._0x1(233).._._0x1(188).._._0x1(160).._._0x1(232).._._0x1(128).._._0x1(129).._._0x1(228).._._0x1(186).._._0x1(149),
+    Desc = _._0x1(232).._._0x1(128).._._0x1(129).._._0x1(233).._._0x1(188).._._0x1(160).._._0x1(230).._._0x1(175).._._0x1(146).._._0x1(230).._._0x1(148).._._0x1(190).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(232).._._0x1(128).._._0x1(129).._._0x1(233).._._0x1(188).._._0x1(160).._._0x1(232).._._0x1(186).._._0x1(171).._._0x1(228).._._0x1(184).._._0x1(138).._._0x1(231).._._0x1(154).._._0x1(132),
     Locked = false,
     Callback = function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( -1531.34, -30.17,  -3541.97)
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
@@ -5008,43 +5011,43 @@ WindUI:Notify({
 -----------------------------------山坡上巨蛇------------------------------------------------
 
 local Button = TabHandles.Q:Button({
-    Title = "提示",
-    Desc = "第二关卡山坡上的巨蛇",
-    Image = "palette",
+    Title = _._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
+    Desc = _._0x1(231).._._0x1(172).._._0x1(172).._._0x1(228).._._0x1(186).._._0x1(140).._._0x1(229).._._0x1(133).._._0x1(179).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(177).._._0x1(177).._._0x1(229).._._0x1(157).._._0x1(161).._._0x1(228).._._0x1(184).._._0x1(138).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(229).._._0x1(183).._._0x1(168).._._0x1(232).._._0x1(155).._._0x1(135),
+    Image = _._0x1(112).._._0x1(97).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(116).._._0x1(101),
     ImageSize = 20,
-    Color = "White"
+    Color = _._0x1(87).._._0x1(104).._._0x1(105).._._0x1(116).._._0x1(101)
 })
 
 
 Button = TabHandles.Q:Button({
-    Title = "巨大蛇怪山坡秒过",
-    Desc = "",
+    Title = _._0x1(229).._._0x1(183).._._0x1(168).._._0x1(229).._._0x1(164).._._0x1(167).._._0x1(232).._._0x1(155).._._0x1(135).._._0x1(230).._._0x1(128).._._0x1(170).._._0x1(229).._._0x1(177).._._0x1(177).._._0x1(229).._._0x1(157).._._0x1(161).._._0x1(231).._._0x1(167).._._0x1(146).._._0x1(232).._._0x1(191).._._0x1(135),
+    Desc = _._0x1(),
     Locked = false,
     Callback = function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( 578.31,  567.98,  -380.59)
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "洞穴秒过",
-    Desc = "",
+    Title = _._0x1(230).._._0x1(180).._._0x1(158).._._0x1(231).._._0x1(169).._._0x1(180).._._0x1(231).._._0x1(167).._._0x1(146).._._0x1(232).._._0x1(191).._._0x1(135),
+    Desc = _._0x1(),
     Locked = false,
     Callback = function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( 3837.46,  137.13,  12.84)
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 3, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
@@ -5052,43 +5055,43 @@ WindUI:Notify({
 -----------------------------------村庄------------------------------------------------
 
 local Button = TabHandles.Q:Button({
-    Title = "提示",
-    Desc = "第三关卡你在村庄里",
-    Image = "palette",
+    Title = _._0x1(230).._._0x1(143).._._0x1(144).._._0x1(231).._._0x1(164).._._0x1(186),
+    Desc = _._0x1(231).._._0x1(172).._._0x1(172).._._0x1(228).._._0x1(184).._._0x1(137).._._0x1(229).._._0x1(133).._._0x1(179).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(228).._._0x1(189).._._0x1(160).._._0x1(229).._._0x1(156).._._0x1(168).._._0x1(230).._._0x1(157).._._0x1(145).._._0x1(229).._._0x1(186).._._0x1(132).._._0x1(233).._._0x1(135).._._0x1(140),
+    Image = _._0x1(112).._._0x1(97).._._0x1(108).._._0x1(101).._._0x1(116).._._0x1(116).._._0x1(101),
     ImageSize = 20,
-    Color = "White"
+    Color = _._0x1(87).._._0x1(104).._._0x1(105).._._0x1(116).._._0x1(101)
 })
 
 
 Button = TabHandles.Q:Button({
-    Title = "传送谈话村民",
-    Desc = "",
+    Title = _._0x1(228).._._0x1(188).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(129).._._0x1(232).._._0x1(176).._._0x1(136).._._0x1(232).._._0x1(175).._._0x1(157).._._0x1(230).._._0x1(157).._._0x1(145).._._0x1(230).._._0x1(176).._._0x1(145),
+    Desc = _._0x1(),
     Locked = false,
     Callback = function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new()
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
 })
 
 Button = TabHandles.Q:Button({
-    Title = "传送洞穴里",
-    Desc = "",
+    Title = _._0x1(228).._._0x1(188).._._0x1(160).._._0x1(233).._._0x1(128).._._0x1(129).._._0x1(230).._._0x1(180).._._0x1(158).._._0x1(231).._._0x1(169).._._0x1(180).._._0x1(233).._._0x1(135).._._0x1(140),
+    Desc = _._0x1(),
     Locked = false,
     Callback = function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new( 343.48,  20.66,  3608.81)
             
 WindUI:Notify({
-    Title = "通知",
-    Content = "加载成功",
+    Title = _._0x1(233).._._0x1(128).._._0x1(154).._._0x1(231).._._0x1(159).._._0x1(165),
+    Content = _._0x1(229).._._0x1(138).._._0x1(160).._._0x1(232).._._0x1(189).._._0x1(189).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159),
     Duration = 1, -- 3 seconds
-    Icon = "layout-grid",
+    Icon = _._0x1(108).._._0x1(97).._._0x1(121).._._0x1(111).._._0x1(117).._._0x1(116).._._0x1(45).._._0x1(103).._._0x1(114).._._0x1(105).._._0x1(100),
 })                        
             
  end
@@ -5129,8 +5132,8 @@ getgenv().SkeletonThickness = 2
 getgenv().FOVRadius = 100
 getgenv().ArrowSize = 15
 
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
+local Players = game:GetService(_._0x1(80).._._0x1(108).._._0x1(97).._._0x1(121).._._0x1(101).._._0x1(114).._._0x1(115))
+local RunService = game:GetService(_._0x1(82).._._0x1(117).._._0x1(110).._._0x1(83).._._0x1(101).._._0x1(114).._._0x1(118).._._0x1(105).._._0x1(99).._._0x1(101))
 local Camera = workspace.CurrentCamera
 local LocalPlayer = Players.LocalPlayer
 
@@ -5141,7 +5144,7 @@ local function getGradientColor(time)
     return Color3.new(r, g, b)
 end
 
-local playerCountText = Drawing.new("Text")
+local playerCountText = Drawing.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116))
 playerCountText.Visible = false
 playerCountText.Color = Color3.new(1, 1, 1)
 playerCountText.Size = 20
@@ -5150,7 +5153,7 @@ playerCountText.Outline = true
 playerCountText.OutlineColor = Color3.new(0, 0, 0)
 playerCountText.Position = Vector2.new(Camera.ViewportSize.X / 2, 10)
 
-local fovCircle = Drawing.new("Circle")
+local fovCircle = Drawing.new(_._0x1(67).._._0x1(105).._._0x1(114).._._0x1(99).._._0x1(108).._._0x1(101))
 fovCircle.Visible = false
 fovCircle.Color = getgenv().FOVColor
 fovCircle.Thickness = 1
@@ -5160,7 +5163,7 @@ fovCircle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.
 
 local function updatePlayerCount()
     local playerCount = #Players:GetPlayers()
-    playerCountText.Text = "在线玩家: " .. playerCount
+    playerCountText.Text = _._0x1(229).._._0x1(156).._._0x1(168).._._0x1(231).._._0x1(186).._._0x1(191).._._0x1(231).._._0x1(142).._._0x1(169).._._0x1(229).._._0x1(174).._._0x1(182).._._0x1(58).._._0x1(32) .. playerCount
     playerCountText.Visible = getgenv().ESPEnabled and getgenv().ShowPlayerCount
 
     local time = tick()
@@ -5177,32 +5180,32 @@ end
 local ESPComponents = {}
 
 local function createESP(player)
-    local box = Drawing.new("Square")
+    local box = Drawing.new(_._0x1(83).._._0x1(113).._._0x1(117).._._0x1(97).._._0x1(114).._._0x1(101))
     box.Visible = false
     box.Color = getgenv().BoxColor
     box.Thickness = getgenv().BoxThickness
     box.Filled = false
 
-    local healthBar = Drawing.new("Square")
+    local healthBar = Drawing.new(_._0x1(83).._._0x1(113).._._0x1(117).._._0x1(97).._._0x1(114).._._0x1(101))
     healthBar.Visible = false
     healthBar.Color = getgenv().HealthBarColor
     healthBar.Thickness = 1
     healthBar.Filled = true
 
-    local healthBarBackground = Drawing.new("Square")
+    local healthBarBackground = Drawing.new(_._0x1(83).._._0x1(113).._._0x1(117).._._0x1(97).._._0x1(114).._._0x1(101))
     healthBarBackground.Visible = false
     healthBarBackground.Color = Color3.new(0, 0, 0)
     healthBarBackground.Transparency = 0.5
     healthBarBackground.Thickness = 1
     healthBarBackground.Filled = true
 
-    local healthBarBorder = Drawing.new("Square")
+    local healthBarBorder = Drawing.new(_._0x1(83).._._0x1(113).._._0x1(117).._._0x1(97).._._0x1(114).._._0x1(101))
     healthBarBorder.Visible = false
     healthBarBorder.Color = Color3.new(1, 1, 1)
     healthBarBorder.Thickness = 1
     healthBarBorder.Filled = false
 
-    local healthText = Drawing.new("Text")
+    local healthText = Drawing.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116))
     healthText.Visible = false
     healthText.Color = getgenv().HealthTextColor
     healthText.Size = 14
@@ -5210,7 +5213,7 @@ local function createESP(player)
     healthText.Outline = true
     healthText.OutlineColor = Color3.new(0, 0, 0)
 
-    local nameText = Drawing.new("Text")
+    local nameText = Drawing.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116))
     nameText.Visible = false
     nameText.Color = getgenv().NameColor
     nameText.Size = 16
@@ -5218,7 +5221,7 @@ local function createESP(player)
     nameText.Outline = true
     nameText.OutlineColor = Color3.new(0, 0, 0)
 
-    local distanceText = Drawing.new("Text")
+    local distanceText = Drawing.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116))
     distanceText.Visible = false
     distanceText.Color = getgenv().DistanceColor
     distanceText.Size = 14
@@ -5226,7 +5229,7 @@ local function createESP(player)
     distanceText.Outline = true
     distanceText.OutlineColor = Color3.new(0, 0, 0)
 
-    local weaponText = Drawing.new("Text")
+    local weaponText = Drawing.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116))
     weaponText.Visible = false
     weaponText.Color = getgenv().WeaponColor
     weaponText.Size = 14
@@ -5234,12 +5237,12 @@ local function createESP(player)
     weaponText.Outline = true
     weaponText.OutlineColor = Color3.new(0, 0, 0)
 
-    local tracer = Drawing.new("Line")
+    local tracer = Drawing.new(_._0x1(76).._._0x1(105).._._0x1(110).._._0x1(101))
     tracer.Visible = false
     tracer.Color = getgenv().TracerColor
     tracer.Thickness = getgenv().TracerThickness
 
-    local arrow = Drawing.new("Triangle")
+    local arrow = Drawing.new(_._0x1(84).._._0x1(114).._._0x1(105).._._0x1(97).._._0x1(110).._._0x1(103).._._0x1(108).._._0x1(101))
     arrow.Visible = false
     arrow.Color = getgenv().ArrowColor
     arrow.Filled = true
@@ -5250,18 +5253,18 @@ local function createESP(player)
 
     local function createSkeleton()
         for i = 1, 15 do
-            skeletonLines[i] = Drawing.new("Line")
+            skeletonLines[i] = Drawing.new(_._0x1(76).._._0x1(105).._._0x1(110).._._0x1(101))
             skeletonLines[i].Visible = false
             skeletonLines[i].Color = getgenv().SkeletonColor
             skeletonLines[i].Thickness = getgenv().SkeletonThickness
         end
 
-        skeletonPoints["Head"] = Drawing.new("Circle")
-        skeletonPoints["Head"].Visible = false
-        skeletonPoints["Head"].Color = Color3.new(1, 0.5, 0)
-        skeletonPoints["Head"].Thickness = 2
-        skeletonPoints["Head"].Filled = true
-        skeletonPoints["Head"].Radius = 4
+        skeletonPoints[_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(100)] = Drawing.new(_._0x1(67).._._0x1(105).._._0x1(114).._._0x1(99).._._0x1(108).._._0x1(101))
+        skeletonPoints[_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(100)].Visible = false
+        skeletonPoints[_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(100)].Color = Color3.new(1, 0.5, 0)
+        skeletonPoints[_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(100)].Thickness = 2
+        skeletonPoints[_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(100)].Filled = true
+        skeletonPoints[_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(100)].Radius = 4
     end
 
     createSkeleton()
@@ -5286,7 +5289,7 @@ local function createESP(player)
     }
 
     RunService.RenderStepped:Connect(function()
-        if not getgenv().ESPEnabled or not player.Character or not player.Character:FindFirstChild("HumanoidRootPart") or not player.Character:FindFirstChild("Humanoid") or player == LocalPlayer then
+        if not getgenv().ESPEnabled or not player.Character or not player.Character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) or not player.Character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100)) or player == LocalPlayer then
             box.Visible = false
             healthBar.Visible = false
             healthBarBackground.Visible = false
@@ -5327,17 +5330,17 @@ local function createESP(player)
         end
 
         local character = player.Character
-        local rootPart = character:FindFirstChild("HumanoidRootPart")
-        local humanoid = character:FindFirstChild("Humanoid")
+        local rootPart = character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116))
+        local humanoid = character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100))
 
         if rootPart and humanoid and humanoid.Health > 0 then
             local rootPos, onScreen = Camera:WorldToViewportPoint(rootPart.Position)
             local headPos, _ = Camera:WorldToViewportPoint(rootPart.Position + Vector3.new(0, 3, 0))
             local legPos, _ = Camera:WorldToViewportPoint(rootPart.Position - Vector3.new(0, 3, 0))
 
-            local weaponName = "无武器"
+            local weaponName = _._0x1(230).._._0x1(151).._._0x1(160).._._0x1(230).._._0x1(173).._._0x1(166).._._0x1(229).._._0x1(153).._._0x1(168)
             for _, tool in ipairs(character:GetChildren()) do
-                if tool:IsA("Tool") then
+                if tool:IsA(_._0x1(84).._._0x1(111).._._0x1(111).._._0x1(108)) then
                     weaponName = tool.Name
                     break
                 end
@@ -5396,7 +5399,7 @@ local function createESP(player)
                 end
 
                 healthText.Position = Vector2.new(barX + barWidth + 5, barY - 5)
-                healthText.Text = math.floor(humanoid.Health) .. "/" .. math.floor(humanoid.MaxHealth)
+                healthText.Text = math.floor(humanoid.Health) .. _._0x1(47) .. math.floor(humanoid.MaxHealth)
                 healthText.Visible = true
             else
                 healthBar.Visible = false
@@ -5413,7 +5416,7 @@ local function createESP(player)
                 if getgenv().ShowDistance then
                     local distance = (LocalPlayer.Character.HumanoidRootPart.Position - rootPart.Position).Magnitude
                     distanceText.Position = Vector2.new(headPos.X, headPos.Y + 10)
-                    distanceText.Text = math.floor(distance) .. "m"
+                    distanceText.Text = math.floor(distance) .. _._0x1(109)
                     distanceText.Visible = true
                 else
                     distanceText.Visible = false
@@ -5433,7 +5436,7 @@ local function createESP(player)
             end
 
             if getgenv().ShowTracer then
-                local head = character:FindFirstChild("Head")
+                local head = character:FindFirstChild(_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(100))
                 if head then
                     local headPos, onScreen = Camera:WorldToViewportPoint(head.Position)
                     if onScreen then
@@ -5495,12 +5498,12 @@ local function createESP(player)
             end
 
             if getgenv().ShowSkeleton and onScreen then
-                local head = character:FindFirstChild("Head")
-                local torso = character:FindFirstChild("Torso") or character:FindFirstChild("UpperTorso")
-                local leftArm = character:FindFirstChild("Left Arm") or character:FindFirstChild("LeftUpperArm")
-                local rightArm = character:FindFirstChild("Right Arm") or character:FindFirstChild("RightUpperArm")
-                local leftLeg = character:FindFirstChild("Left Leg") or character:FindFirstChild("LeftUpperLeg")
-                local rightLeg = character:FindFirstChild("Right Leg") or character:FindFirstChild("RightUpperLeg")
+                local head = character:FindFirstChild(_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(100))
+                local torso = character:FindFirstChild(_._0x1(84).._._0x1(111).._._0x1(114).._._0x1(115).._._0x1(111)) or character:FindFirstChild(_._0x1(85).._._0x1(112).._._0x1(112).._._0x1(101).._._0x1(114).._._0x1(84).._._0x1(111).._._0x1(114).._._0x1(115).._._0x1(111))
+                local leftArm = character:FindFirstChild(_._0x1(76).._._0x1(101).._._0x1(102).._._0x1(116).._._0x1(32).._._0x1(65).._._0x1(114).._._0x1(109)) or character:FindFirstChild(_._0x1(76).._._0x1(101).._._0x1(102).._._0x1(116).._._0x1(85).._._0x1(112).._._0x1(112).._._0x1(101).._._0x1(114).._._0x1(65).._._0x1(114).._._0x1(109))
+                local rightArm = character:FindFirstChild(_._0x1(82).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(32).._._0x1(65).._._0x1(114).._._0x1(109)) or character:FindFirstChild(_._0x1(82).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(85).._._0x1(112).._._0x1(112).._._0x1(101).._._0x1(114).._._0x1(65).._._0x1(114).._._0x1(109))
+                local leftLeg = character:FindFirstChild(_._0x1(76).._._0x1(101).._._0x1(102).._._0x1(116).._._0x1(32).._._0x1(76).._._0x1(101).._._0x1(103)) or character:FindFirstChild(_._0x1(76).._._0x1(101).._._0x1(102).._._0x1(116).._._0x1(85).._._0x1(112).._._0x1(112).._._0x1(101).._._0x1(114).._._0x1(76).._._0x1(101).._._0x1(103))
+                local rightLeg = character:FindFirstChild(_._0x1(82).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(32).._._0x1(76).._._0x1(101).._._0x1(103)) or character:FindFirstChild(_._0x1(82).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(85).._._0x1(112).._._0x1(112).._._0x1(101).._._0x1(114).._._0x1(76).._._0x1(101).._._0x1(103))
                 
                 if head and torso and leftArm and rightArm and leftLeg and rightLeg then
                     local headPos = Camera:WorldToViewportPoint(head.Position)
@@ -5510,8 +5513,8 @@ local function createESP(player)
                     local leftLegPos = Camera:WorldToViewportPoint(leftLeg.Position)
                     local rightLegPos = Camera:WorldToViewportPoint(rightLeg.Position)
 
-                    skeletonPoints["Head"].Position = Vector2.new(headPos.X, headPos.Y)
-                    skeletonPoints["Head"].Visible = true
+                    skeletonPoints[_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(100)].Position = Vector2.new(headPos.X, headPos.Y)
+                    skeletonPoints[_._0x1(72).._._0x1(101).._._0x1(97).._._0x1(100)].Visible = true
 
                     skeletonLines[1].From = Vector2.new(headPos.X, headPos.Y)
                     skeletonLines[1].To = Vector2.new(torsoPos.X, torsoPos.Y) 
@@ -5533,21 +5536,21 @@ local function createESP(player)
                     skeletonLines[5].To = Vector2.new(rightLegPos.X, rightLegPos.Y)
                     skeletonLines[5].Visible = true
                     
-                    if character:FindFirstChild("LeftLowerArm") then
+                    if character:FindFirstChild(_._0x1(76).._._0x1(101).._._0x1(102).._._0x1(116).._._0x1(76).._._0x1(111).._._0x1(119).._._0x1(101).._._0x1(114).._._0x1(65).._._0x1(114).._._0x1(109)) then
                         local leftLowerArmPos = Camera:WorldToViewportPoint(character.LeftLowerArm.Position)
                         skeletonLines[6].From = Vector2.new(leftArmPos.X, leftArmPos.Y)
                         skeletonLines[6].To = Vector2.new(leftLowerArmPos.X, leftLowerArmPos.Y)
                         skeletonLines[6].Visible = true
                     end
 
-                    if character:FindFirstChild("LeftLowerLeg") then
+                    if character:FindFirstChild(_._0x1(76).._._0x1(101).._._0x1(102).._._0x1(116).._._0x1(76).._._0x1(111).._._0x1(119).._._0x1(101).._._0x1(114).._._0x1(76).._._0x1(101).._._0x1(103)) then
                         local leftLowerLegPos = Camera:WorldToViewportPoint(character.LeftLowerLeg.Position)
                         skeletonLines[8].From = Vector2.new(leftLegPos.X, leftLegPos.Y)
                         skeletonLines[8].To = Vector2.new(leftLowerLegPos.X, leftLowerLegPos.Y)
                         skeletonLines[8].Visible = true
                     end
 
-                    if character:FindFirstChild("RightLowerLeg") then
+                    if character:FindFirstChild(_._0x1(82).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(76).._._0x1(111).._._0x1(119).._._0x1(101).._._0x1(114).._._0x1(76).._._0x1(101).._._0x1(103)) then
                         local rightLowerLegPos = Camera:WorldToViewportPoint(character.RightLowerLeg.Position)
                         skeletonLines[9].From = Vector2.new(rightLegPos.X, rightLegPos.Y)
                         skeletonLines[9].To = Vector2.new(rightLowerLegPos.X, rightLowerLegPos.Y)
@@ -5590,7 +5593,7 @@ local function createESP(player)
     end)
 end
 
-local radar = Drawing.new("Circle")
+local radar = Drawing.new(_._0x1(67).._._0x1(105).._._0x1(114).._._0x1(99).._._0x1(108).._._0x1(101))
 radar.Visible = false
 radar.Color = Color3.new(1, 1, 1)
 radar.Thickness = 2
@@ -5598,7 +5601,7 @@ radar.Filled = false
 radar.Radius = 100
 radar.Position = Vector2.new(Camera.ViewportSize.X - 120, 120)
 
-local radarCenter = Drawing.new("Circle")
+local radarCenter = Drawing.new(_._0x1(67).._._0x1(105).._._0x1(114).._._0x1(99).._._0x1(108).._._0x1(101))
 radarCenter.Visible = false
 radarCenter.Color = Color3.new(1, 1, 1)
 radarCenter.Thickness = 2
@@ -5606,27 +5609,27 @@ radarCenter.Filled = true
 radarCenter.Radius = 3
 radarCenter.Position = radar.Position
 
-local radarDirection = Drawing.new("Line")
+local radarDirection = Drawing.new(_._0x1(76).._._0x1(105).._._0x1(110).._._0x1(101))
 radarDirection.Visible = false
 radarDirection.Color = Color3.new(1, 1, 1)
 radarDirection.Thickness = 2
 
 local radarGridLines = {}
 for i = 1, 4 do
-    radarGridLines[i] = Drawing.new("Line")
+    radarGridLines[i] = Drawing.new(_._0x1(76).._._0x1(105).._._0x1(110).._._0x1(101))
     radarGridLines[i].Visible = false
     radarGridLines[i].Color = Color3.new(0.5, 0.5, 0.5)
     radarGridLines[i].Thickness = 1
 end
 
-local radarRangeText = Drawing.new("Text")
+local radarRangeText = Drawing.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116))
 radarRangeText.Visible = false
 radarRangeText.Color = Color3.new(1, 1, 1)
 radarRangeText.Size = 14
 radarRangeText.Font = Drawing.Fonts.Monospace
 radarRangeText.Outline = true
 radarRangeText.OutlineColor = Color3.new(0, 0, 0)
-radarRangeText.Text = "100m"
+radarRangeText.Text = _._0x1(49).._._0x1(48).._._0x1(48).._._0x1(109)
 
 local radarPlayers = {}
 
@@ -5670,7 +5673,7 @@ local function updateRadar()
     radarDirection.To = Vector2.new(radar.Position.X, radar.Position.Y - radar.Radius)
 
     for _, player in pairs(Players:GetPlayers()) do
-        if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and player ~= LocalPlayer then
+        if player.Character and player.Character:FindFirstChild(_._0x1(72).._._0x1(117).._._0x1(109).._._0x1(97).._._0x1(110).._._0x1(111).._._0x1(105).._._0x1(100).._._0x1(82).._._0x1(111).._._0x1(111).._._0x1(116).._._0x1(80).._._0x1(97).._._0x1(114).._._0x1(116)) and player ~= LocalPlayer then
             local rootPart = player.Character.HumanoidRootPart
             local relativePosition = rootPart.Position - LocalPlayer.Character.HumanoidRootPart.Position
             
@@ -5687,9 +5690,9 @@ local function updateRadar()
             
             if not radarPlayers[player] then
                 radarPlayers[player] = {
-                    dot = Drawing.new("Circle"),
-                    direction = Drawing.new("Line"),
-                    name = Drawing.new("Text")
+                    dot = Drawing.new(_._0x1(67).._._0x1(105).._._0x1(114).._._0x1(99).._._0x1(108).._._0x1(101)),
+                    direction = Drawing.new(_._0x1(76).._._0x1(105).._._0x1(110).._._0x1(101)),
+                    name = Drawing.new(_._0x1(84).._._0x1(101).._._0x1(120).._._0x1(116))
                 }
                 
                 radarPlayers[player].dot.Thickness = 1
@@ -5765,7 +5768,7 @@ end)
 Players.PlayerRemoving:Connect(function(player)
     if ESPComponents[player] then
         for _, component in pairs(ESPComponents[player]) do
-            if typeof(component) == "table" then
+            if typeof(component) == _._0x1(116).._._0x1(97).._._0x1(98).._._0x1(108).._._0x1(101) then
                 for _, drawing in pairs(component) do
                     drawing:Remove()
                 end
@@ -5778,7 +5781,7 @@ Players.PlayerRemoving:Connect(function(player)
 end)
 ---------------------------------------------------------------------------------------------透视功能
 Toggle = TabHandles.W:Toggle({
-    Title = "透视开启", 
+    Title = _._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134).._._0x1(229).._._0x1(188).._._0x1(128).._._0x1(229).._._0x1(144).._._0x1(175), 
     Value = false, 
     Callback = function(Value)
         getgenv().ESPEnabled = Value
@@ -5786,7 +5789,7 @@ Toggle = TabHandles.W:Toggle({
 })
 
 Toggle = TabHandles.W:Toggle({
-    Title = "模型透视", 
+    Title = _._0x1(230).._._0x1(168).._._0x1(161).._._0x1(229).._._0x1(158).._._0x1(139).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134), 
     Value = false, 
     Callback = function(Value)
         getgenv().ShowSkeleton = Value
@@ -5794,7 +5797,7 @@ Toggle = TabHandles.W:Toggle({
 })
 
 Toggle = TabHandles.W:Toggle({
-    Title = "方框透视", 
+    Title = _._0x1(230).._._0x1(150).._._0x1(185).._._0x1(230).._._0x1(161).._._0x1(134).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134), 
     Value = false, 
     Callback = function(Value)
         getgenv().ShowBox = Value
@@ -5804,7 +5807,7 @@ Toggle = TabHandles.W:Toggle({
 
 
 Toggle = TabHandles.W:Toggle({
-    Title = "射线透视", 
+    Title = _._0x1(229).._._0x1(176).._._0x1(132).._._0x1(231).._._0x1(186).._._0x1(191).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134), 
     Value = false, 
     Callback = function(Value)
         getgenv().ShowTracer = Value
@@ -5815,7 +5818,7 @@ local bulletTrackingEnabled = true
 local oldHook = nil
 
 Toggle = TabHandles.W:Toggle({
-    Title = "名字透视", 
+    Title = _._0x1(229).._._0x1(144).._._0x1(141).._._0x1(229).._._0x1(173).._._0x1(151).._._0x1(233).._._0x1(128).._._0x1(143).._._0x1(232).._._0x1(167).._._0x1(134), 
     Value = false, 
     Callback = function(Value)
         getgenv().ShowName = Value
@@ -5824,21 +5827,21 @@ Toggle = TabHandles.W:Toggle({
       end
 })
 local Section = Tab:Section({
-    Title = "其他",
+    Title = _._0x1(229).._._0x1(133).._._0x1(182).._._0x1(228).._._0x1(187).._._0x1(150),
     Opened = true
 })
 Section:Button({
-    Title = "叶脚本",
+    Title = _._0x1(229).._._0x1(143).._._0x1(182).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172),
     Callback = function()
     
-loadstring(game:HttpGet("https://raw.githubusercontent.com/roblox-ye/QQ515966991/refs/heads/main/ROBLOX-CNVIP-XIAOYE.lua"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(46).._._0x1(103).._._0x1(105).._._0x1(116).._._0x1(104).._._0x1(117).._._0x1(98).._._0x1(117).._._0x1(115).._._0x1(101).._._0x1(114).._._0x1(99).._._0x1(111).._._0x1(110).._._0x1(116).._._0x1(101).._._0x1(110).._._0x1(116).._._0x1(46).._._0x1(99).._._0x1(111).._._0x1(109).._._0x1(47).._._0x1(114).._._0x1(111).._._0x1(98).._._0x1(108).._._0x1(111).._._0x1(120).._._0x1(45).._._0x1(121).._._0x1(101).._._0x1(47).._._0x1(81).._._0x1(81).._._0x1(53).._._0x1(49).._._0x1(53).._._0x1(57).._._0x1(54).._._0x1(54).._._0x1(57).._._0x1(57).._._0x1(49).._._0x1(47).._._0x1(114).._._0x1(101).._._0x1(102).._._0x1(115).._._0x1(47).._._0x1(104).._._0x1(101).._._0x1(97).._._0x1(100).._._0x1(115).._._0x1(47).._._0x1(109).._._0x1(97).._._0x1(105).._._0x1(110).._._0x1(47).._._0x1(82).._._0x1(79).._._0x1(66).._._0x1(76).._._0x1(79).._._0x1(88).._._0x1(45).._._0x1(67).._._0x1(78).._._0x1(86).._._0x1(73).._._0x1(80).._._0x1(45).._._0x1(88).._._0x1(73).._._0x1(65).._._0x1(79).._._0x1(89).._._0x1(69).._._0x1(46).._._0x1(108).._._0x1(117).._._0x1(97)))()
       end
 })
 Section:Button({
-    Title = "无敌少侠飞行",
+    Title = _._0x1(230).._._0x1(151).._._0x1(160).._._0x1(230).._._0x1(149).._._0x1(140).._._0x1(229).._._0x1(176).._._0x1(145).._._0x1(228).._._0x1(190).._._0x1(160).._._0x1(233).._._0x1(163).._._0x1(158).._._0x1(232).._._0x1(161).._._0x1(140),
     Callback = function()
     
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Invinicible-Flight-R15-45414"))()
+loadstring(game:HttpGet(_._0x1(104).._._0x1(116).._._0x1(116).._._0x1(112).._._0x1(115).._._0x1(58).._._0x1(47).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(115).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(115).._._0x1(46).._._0x1(110).._._0x1(101).._._0x1(116).._._0x1(47).._._0x1(114).._._0x1(97).._._0x1(119).._._0x1(47).._._0x1(85).._._0x1(110).._._0x1(105).._._0x1(118).._._0x1(101).._._0x1(114).._._0x1(115).._._0x1(97).._._0x1(108).._._0x1(45).._._0x1(83).._._0x1(99).._._0x1(114).._._0x1(105).._._0x1(112).._._0x1(116).._._0x1(45).._._0x1(73).._._0x1(110).._._0x1(118).._._0x1(105).._._0x1(110).._._0x1(105).._._0x1(99).._._0x1(105).._._0x1(98).._._0x1(108).._._0x1(101).._._0x1(45).._._0x1(70).._._0x1(108).._._0x1(105).._._0x1(103).._._0x1(104).._._0x1(116).._._0x1(45).._._0x1(82).._._0x1(49).._._0x1(53).._._0x1(45).._._0x1(52).._._0x1(53).._._0x1(52).._._0x1(49).._._0x1(52)))()
       end
 })
     -- ════════════════════════════════════════════════════════════
@@ -5872,15 +5875,15 @@ local function onSuccess()
     if verificationComplete then return end
     verificationComplete = true
     
-    subtitle.Text = "✅ 验证成功！即将启动..."
+    subtitle.Text = _._0x1(226).._._0x1(156).._._0x1(133).._._0x1(32).._._0x1(233).._._0x1(170).._._0x1(140).._._0x1(232).._._0x1(175).._._0x1(129).._._0x1(230).._._0x1(136).._._0x1(144).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(239).._._0x1(188).._._0x1(129).._._0x1(229).._._0x1(141).._._0x1(179).._._0x1(229).._._0x1(176).._._0x1(134).._._0x1(229).._._0x1(144).._._0x1(175).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(46).._._0x1(46).._._0x1(46)
     subtitle.TextColor3 = Color3.fromRGB(100, 255, 150)
-    submitBtn.Text = "✅ 已激活"
+    submitBtn.Text = _._0x1(226).._._0x1(156).._._0x1(133).._._0x1(32).._._0x1(229).._._0x1(183).._._0x1(178).._._0x1(230).._._0x1(191).._._0x1(128).._._0x1(230).._._0x1(180).._._0x1(187)
     submitBtn.BackgroundColor3 = Color3.fromRGB(50, 200, 100)
     submitBtn.Active = false
     inputBox.Active = false
     closeBtn.Visible = false
     
-    print("[卡密验证] ✅ 验证通过！1.5秒后执行主脚本...")
+    _G[_._0x1(112).._._0x1(114).._._0x1(105).._._0x1(110).._._0x1(116)](_._0x1(91).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(233).._._0x1(170).._._0x1(140).._._0x1(232).._._0x1(175).._._0x1(129).._._0x1(93).._._0x1(32).._._0x1(226).._._0x1(156).._._0x1(133).._._0x1(32).._._0x1(233).._._0x1(170).._._0x1(140).._._0x1(232).._._0x1(175).._._0x1(129).._._0x1(233).._._0x1(128).._._0x1(154).._._0x1(232).._._0x1(191).._._0x1(135).._._0x1(239).._._0x1(188).._._0x1(129).._._0x1(49).._._0x1(46).._._0x1(53).._._0x1(231).._._0x1(167).._._0x1(146).._._0x1(229).._._0x1(144).._._0x1(142).._._0x1(230).._._0x1(137).._._0x1(167).._._0x1(232).._._0x1(161).._._0x1(140).._._0x1(228).._._0x1(184).._._0x1(187).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(46).._._0x1(46).._._0x1(46))
     task.wait(1.5)
     closeGUI()
     executeMainScript()
@@ -5889,29 +5892,29 @@ end
 -- 验证失败
 local function onError()
     if verificationComplete then return end
-    inputBox.Text = ""
-    inputBox.PlaceholderText = "❌ 卡密错误，请重试"
+    inputBox.Text = _._0x1()
+    inputBox.PlaceholderText = _._0x1(226).._._0x1(157).._._0x1(140).._._0x1(32).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(233).._._0x1(148).._._0x1(153).._._0x1(232).._._0x1(175).._._0x1(175).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(232).._._0x1(175).._._0x1(183).._._0x1(233).._._0x1(135).._._0x1(141).._._0x1(232).._._0x1(175).._._0x1(149)
     inputBox.PlaceholderColor3 = Color3.fromRGB(255, 150, 150)
-    subtitle.Text = "❌ 卡密无效，请重新输入"
+    subtitle.Text = _._0x1(226).._._0x1(157).._._0x1(140).._._0x1(32).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(230).._._0x1(151).._._0x1(160).._._0x1(230).._._0x1(149).._._0x1(136).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(232).._._0x1(175).._._0x1(183).._._0x1(233).._._0x1(135).._._0x1(141).._._0x1(230).._._0x1(150).._._0x1(176).._._0x1(232).._._0x1(190).._._0x1(147).._._0x1(229).._._0x1(133).._._0x1(165)
     subtitle.TextColor3 = Color3.fromRGB(255, 150, 150)
-    submitBtn.Text = "🚀 重新尝试"
+    submitBtn.Text = _._0x1(240).._._0x1(159).._._0x1(154).._._0x1(128).._._0x1(32).._._0x1(233).._._0x1(135).._._0x1(141).._._0x1(230).._._0x1(150).._._0x1(176).._._0x1(229).._._0x1(176).._._0x1(157).._._0x1(232).._._0x1(175).._._0x1(149)
     
     task.wait(1.5)
-    inputBox.PlaceholderText = "在此输入卡密..."
+    inputBox.PlaceholderText = _._0x1(229).._._0x1(156).._._0x1(168).._._0x1(230).._._0x1(173).._._0x1(164).._._0x1(232).._._0x1(190).._._0x1(147).._._0x1(229).._._0x1(133).._._0x1(165).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(46).._._0x1(46).._._0x1(46)
     inputBox.PlaceholderColor3 = Color3.fromRGB(180, 180, 200)
-    subtitle.Text = "请输入您的卡密以解锁功能"
+    subtitle.Text = _._0x1(232).._._0x1(175).._._0x1(183).._._0x1(232).._._0x1(190).._._0x1(147).._._0x1(229).._._0x1(133).._._0x1(165).._._0x1(230).._._0x1(130).._._0x1(168).._._0x1(231).._._0x1(154).._._0x1(132).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(228).._._0x1(187).._._0x1(165).._._0x1(232).._._0x1(167).._._0x1(163).._._0x1(233).._._0x1(148).._._0x1(129).._._0x1(229).._._0x1(138).._._0x1(159).._._0x1(232).._._0x1(131).._._0x1(189)
     subtitle.TextColor3 = Color3.fromRGB(220, 220, 255)
-    submitBtn.Text = "🚀 立即激活"
+    submitBtn.Text = _._0x1(240).._._0x1(159).._._0x1(154).._._0x1(128).._._0x1(32).._._0x1(231).._._0x1(171).._._0x1(139).._._0x1(229).._._0x1(141).._._0x1(179).._._0x1(230).._._0x1(191).._._0x1(128).._._0x1(230).._._0x1(180).._._0x1(187)
 end
 
 -- 验证流程
 local function startValidation()
     if verificationComplete then return end
     local inputKey = inputBox.Text
-    if inputKey == "" then
-        inputBox.PlaceholderText = "⚠️ 请输入卡密"
+    if inputKey == _._0x1() then
+        inputBox.PlaceholderText = _._0x1(226).._._0x1(154).._._0x1(160).._._0x1(239).._._0x1(184).._._0x1(143).._._0x1(32).._._0x1(232).._._0x1(175).._._0x1(183).._._0x1(232).._._0x1(190).._._0x1(147).._._0x1(229).._._0x1(133).._._0x1(165).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134)
         task.wait(1)
-        inputBox.PlaceholderText = "在此输入卡密..."
+        inputBox.PlaceholderText = _._0x1(229).._._0x1(156).._._0x1(168).._._0x1(230).._._0x1(173).._._0x1(164).._._0x1(232).._._0x1(190).._._0x1(147).._._0x1(229).._._0x1(133).._._0x1(165).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(46).._._0x1(46).._._0x1(46)
         return
     end
 
@@ -5933,7 +5936,7 @@ closeBtn.MouseButton1Click:Connect(function()
     if verificationComplete then return end
     verificationComplete = true
     closeGUI()
-    print("[卡密验证] ⚠️ 用户手动关闭了验证弹窗，脚本终止")
+    _G[_._0x1(112).._._0x1(114).._._0x1(105).._._0x1(110).._._0x1(116)](_._0x1(91).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(233).._._0x1(170).._._0x1(140).._._0x1(232).._._0x1(175).._._0x1(129).._._0x1(93).._._0x1(32).._._0x1(226).._._0x1(154).._._0x1(160).._._0x1(239).._._0x1(184).._._0x1(143).._._0x1(32).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(230).._._0x1(136).._._0x1(183).._._0x1(230).._._0x1(137).._._0x1(139).._._0x1(229).._._0x1(138).._._0x1(168).._._0x1(229).._._0x1(133).._._0x1(179).._._0x1(233).._._0x1(151).._._0x1(173).._._0x1(228).._._0x1(186).._._0x1(134).._._0x1(233).._._0x1(170).._._0x1(140).._._0x1(232).._._0x1(175).._._0x1(129).._._0x1(229).._._0x1(188).._._0x1(185).._._0x1(231).._._0x1(170).._._0x1(151).._._0x1(239).._._0x1(188).._._0x1(140).._._0x1(232).._._0x1(132).._._0x1(154).._._0x1(230).._._0x1(156).._._0x1(172).._._0x1(231).._._0x1(187).._._0x1(136).._._0x1(230).._._0x1(173).._._0x1(162))
 end)
 
 overlay.MouseButton1Click:Connect(function()
@@ -5942,4 +5945,4 @@ overlay.MouseButton1Click:Connect(function()
     end
 end)
 
-print("[卡密验证] 等待用户输入卡密...")
+_G[_._0x1(112).._._0x1(114).._._0x1(105).._._0x1(110).._._0x1(116)](_._0x1(91).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(233).._._0x1(170).._._0x1(140).._._0x1(232).._._0x1(175).._._0x1(129).._._0x1(93).._._0x1(32).._._0x1(231).._._0x1(173).._._0x1(137).._._0x1(229).._._0x1(190).._._0x1(133).._._0x1(231).._._0x1(148).._._0x1(168).._._0x1(230).._._0x1(136).._._0x1(183).._._0x1(232).._._0x1(190).._._0x1(147).._._0x1(229).._._0x1(133).._._0x1(165).._._0x1(229).._._0x1(141).._._0x1(161).._._0x1(229).._._0x1(175).._._0x1(134).._._0x1(46).._._0x1(46).._._0x1(46))
