@@ -8,7 +8,6 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/WuMing
 -- ★★★ 在这里添加所有有效卡密，用逗号分隔 ★★★
 local VALID_KEYS = {
     "XY-内部成员专属",
-    "XY-SoraAdmin-exclusivecard-password",
     -- 继续添加更多卡密...
 }
 
@@ -757,7 +756,7 @@ local Tab = Window:Tab({
     Locked = false,
 })
 local Section = Tab:Section({
-    Title = "通用功能",
+    Title = "通用功能《如果执行不了 请换加速器》",
     Opened = true
 })
 Section:Button({
@@ -765,6 +764,35 @@ Section:Button({
     Callback = function()
     
 loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()    
+      end
+})
+Section:Button({
+    Title = "无敌",
+    Callback = function()
+    
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()    
+      end
+})
+Section:Button({
+    Title = "VR视角",
+    Callback = function()
+    
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()    
+      end
+})
+Section:Button({
+    Title = "无限罗宝😱",
+    Callback = function()
+    
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()    
+      end
+})
+Section:Button({
+    Title = "增加FPS",
+    Callback = function()
+    
+loadstring(game:HttpGet("https://pastefy.app/IYUAoy7a/raw"))()
+   
       end
 })
 Section:Button({
@@ -818,6 +846,13 @@ local Section = Tab:Section({
     Opened = true
 })
 Section:Button({
+    Title = "音乐脚本",
+    Callback = function()
+    
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fningna51-stack/-/main/AF%20%E9%9F%B3%E4%B9%90%E8%84%9A%E6%9C%AC"))()
+      end
+})
+Section:Button({
     Title = "XK Hub",
     Callback = function()
     
@@ -853,7 +888,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqvi1/homelander
       end
 })
 Section:Button({
-    Title = "我朋友的脚本[卡密 Zhi牛逼]",
+    Title = "该脚本以错误❌无法执行",
     Callback = function()
     
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aaaaa-arch/effective-computing-machine/main/%E5%AF%86%E9%92%A5"))()
