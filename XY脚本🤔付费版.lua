@@ -1,64 +1,170 @@
 local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/WuMing-YYDS/Script-UI/refs/heads/main/Wind%20UI.LUA"))()
 
 -- ================================================================
---  ★★★ 云端卡密验证模块（修复卡验证中问题） ★★★
+--  ★★★ 内嵌卡密验证模块（支持多卡密） ★★★
 -- ================================================================
 
-local API_URL = "http://xykey.cc.cd/verify_key.php"
+-- ==================== 配置区 ====================
+-- ★★★ 在这里添加所有有效卡密，用逗号分隔 ★★★
+local VALID_KEYS = {
+    "XY-内部成员专属",
+    -- 继续添加更多卡密...
+}
 
-print("[卡密验证] 脚本加载中...")
-
+-- ==================== 验证 UI ====================
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 local TweenService = game:GetService("TweenService")
-local HttpService = game:GetService("HttpService")
 
-local CACHE_KEY = "StellarKeyCache"
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "KeyValidation"
+screenGui.ResetOnSpawn = false
+screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = PlayerGui
 
-local function getCache()
-    if getgenv and getgenv()[CACHE_KEY] then
-        return getgenv()[CACHE_KEY]
-    end
-    return nil
-end
+local overlay = Instance.new("Frame")
+overlay.Size = UDim2.new(1, 0, 1, 0)
+overlay.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+overlay.BackgroundTransparency = 0.5
+overlay.BorderSizePixel = 0
+overlay.Parent = screenGui
 
-local function setCache(data)
-    if getgenv then
-        getgenv()[CACHE_KEY] = data
-        print("[卡密验证] 缓存已保存")
-    end
-end
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 420, 0, 260)
+frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+frame.AnchorPoint = Vector2.new(0.5, 0.5)
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frame.BackgroundTransparency = 0.12
+frame.BorderSizePixel = 0
+frame.ClipsDescendants = true
+frame.Parent = screenGui
 
-local function clearCache()
-    if getgenv then
-        getgenv()[CACHE_KEY] = nil
-        print("[卡密验证] 缓存已清除")
-    end
-end
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 20)
+corner.Parent = frame
 
-local function checkCache()
-    local cache = getCache()
-    if not cache then
-        print("[卡密验证] 无缓存")
-        return false
-    end
-    local now = os.time()
-    if cache.expires_at and now < cache.expires_at then
-        print("[卡密验证] ✅ 缓存有效，直接放行！")
-        return true
-    else
-        print("[卡密验证] ❌ 缓存已过期，清除中...")
-        clearCache()
-        return false
-    end
-end
+local stroke = Instance.new("UIStroke")
+stroke.Thickness = 1.5
+stroke.Color = Color3.fromRGB(255, 255, 255)
+stroke.Transparency = 0.6
+stroke.Parent = frame
 
--- ★★★ 主脚本执行函数 ★★★
+local blur = Instance.new("BlurEffect")
+blur.Size = 18
+blur.Parent = frame
+
+local glow = Instance.new("Frame")
+glow.Size = UDim2.new(0, 180, 0, 180)
+glow.Position = UDim2.new(0, -50, 0, -50)
+glow.BackgroundColor3 = Color3.fromRGB(150, 200, 255)
+glow.BackgroundTransparency = 0.6
+glow.BorderSizePixel = 0
+glow.Parent = frame
+local glowCorner = Instance.new("UICorner")
+glowCorner.CornerRadius = UDim.new(1, 0)
+glowCorner.Parent = glow
+
+local closeBtn = Instance.new("TextButton")
+closeBtn.Size = UDim2.new(0, 36, 0, 36)
+closeBtn.Position = UDim2.new(1, -46, 0, 12)
+closeBtn.BackgroundTransparency = 1
+closeBtn.Text = "✕"
+closeBtn.TextColor3 = Color3.fromRGB(220, 220, 255)
+closeBtn.Font = Enum.Font.GothamBold
+closeBtn.TextSize = 22
+closeBtn.Parent = frame
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 60)
+title.Position = UDim2.new(0, 0, 0, 12)
+title.BackgroundTransparency = 1
+title.Text = "✨ 卡密验证"
+title.Font = Enum.Font.GothamBold
+title.TextSize = 26
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextXAlignment = Enum.TextXAlignment.Center
+title.Parent = frame
+
+local subtitle = Instance.new("TextLabel")
+subtitle.Size = UDim2.new(1, -40, 0, 30)
+subtitle.Position = UDim2.new(0, 20, 0, 72)
+subtitle.BackgroundTransparency = 1
+subtitle.Text = "请输入您的卡密以解锁功能"
+subtitle.Font = Enum.Font.Gotham
+subtitle.TextSize = 15
+subtitle.TextColor3 = Color3.fromRGB(220, 220, 255)
+subtitle.TextXAlignment = Enum.TextXAlignment.Center
+subtitle.TextWrapped = true
+subtitle.Parent = frame
+
+local inputBox = Instance.new("TextBox")
+inputBox.Size = UDim2.new(0.8, 0, 0, 48)
+inputBox.Position = UDim2.new(0.1, 0, 0, 112)
+inputBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+inputBox.BackgroundTransparency = 0.15
+inputBox.BorderSizePixel = 0
+inputBox.PlaceholderText = "在此输入卡密..."
+inputBox.PlaceholderColor3 = Color3.fromRGB(180, 180, 200)
+inputBox.Text = ""
+inputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+inputBox.Font = Enum.Font.Gotham
+inputBox.TextSize = 18
+inputBox.ClearTextOnFocus = false
+inputBox.Parent = frame
+local inputCorner = Instance.new("UICorner")
+inputCorner.CornerRadius = UDim.new(0, 12)
+inputCorner.Parent = inputBox
+local inputStroke = Instance.new("UIStroke")
+inputStroke.Thickness = 1
+inputStroke.Color = Color3.fromRGB(255, 255, 255)
+inputStroke.Transparency = 0.3
+inputStroke.Parent = inputBox
+
+local submitBtn = Instance.new("TextButton")
+submitBtn.Size = UDim2.new(0.8, 0, 0, 52)
+submitBtn.Position = UDim2.new(0.1, 0, 0, 180)
+submitBtn.BackgroundColor3 = Color3.fromRGB(100, 180, 255)
+submitBtn.BackgroundTransparency = 0.2
+submitBtn.BorderSizePixel = 0
+submitBtn.Text = "🚀 立即激活"
+submitBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+submitBtn.Font = Enum.Font.GothamBold
+submitBtn.TextSize = 19
+submitBtn.Parent = frame
+local btnCorner = Instance.new("UICorner")
+btnCorner.CornerRadius = UDim.new(0, 12)
+btnCorner.Parent = submitBtn
+local btnStroke = Instance.new("UIStroke")
+btnStroke.Thickness = 1.5
+btnStroke.Color = Color3.fromRGB(255, 255, 255)
+btnStroke.Transparency = 0.4
+btnStroke.Parent = submitBtn
+
+-- ==================== 入场动画 ====================
+frame.BackgroundTransparency = 1
+frame.Size = UDim2.new(0, 0, 0, 0)
+task.wait(0.05)
+local tweenInfo = TweenInfo.new(0.4, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
+local sizeTween = TweenService:Create(frame, tweenInfo, { Size = UDim2.new(0, 420, 0, 260) })
+local fadeTween = TweenService:Create(frame, TweenInfo.new(0.3), { BackgroundTransparency = 0.12 })
+sizeTween:Play()
+fadeTween:Play()
+
+-- ==================== 核心逻辑 ====================
+local verificationComplete = false
+
+-- ================================================================
+--  ★★★ 主脚本执行函数（验证成功后自动调用） ★★★
+--  ★★★ 把你的主脚本代码放在这里 ★★★
+-- ================================================================
 local function executeMainScript()
-    print("[卡密验证] 开始执行主脚本！")
+    print("[卡密验证] ✅ 验证成功，开始执行主脚本！")
+    
     -- ════════════════════════════════════════════════════════════
-    --  ★★★ 把你的主脚本源代码放在下面 ★★★
+    --  ★★★ 把你的主脚本代码放在下面 ★★★
+    --  ★★★ 验证通过后会自动执行 ★★★
     -- ════════════════════════════════════════════════════════════
 
 do
@@ -9158,226 +9264,13 @@ loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Invinicible
       end
 })
     -- ════════════════════════════════════════════════════════════
+    --  ★★★ 主脚本代码结束 ★★★
+    -- ════════════════════════════════════════════════════════════
 end
 
--- ================================================================
---  ★★★ 修复后的验证函数 ★★★
--- ================================================================
-
--- 降级验证方案
-local function fallbackVerify(inputKey)
-    print("[卡密验证] 使用 HttpGet 验证")
-    local url = API_URL .. "?key=" .. HttpService:URLEncode(inputKey) .. "&player=" .. HttpService:URLEncode(LocalPlayer.Name)
-    print("[卡密验证] 请求URL: " .. url)
-    
-    local success, response = pcall(function()
-        return game:HttpGet(url)
-    end)
-    
-    if not success then
-        print("[卡密验证] HttpGet 失败: " .. tostring(response))
-        return false, "网络连接失败，请检查网络后重试"
-    end
-    
-    print("[卡密验证] HttpGet 响应: " .. tostring(response))
-    local decoded = HttpService:JSONDecode(response)
-    return decoded and decoded.success == true, decoded and decoded.message or "未知错误"
-end
-
--- 主验证函数
-local function verifyKeyOnCloud(inputKey)
-    print("[卡密验证] 开始验证卡密: " .. inputKey)
-    
-    local requestData = {
-        key = inputKey,
-        player = LocalPlayer.Name
-    }
-    local jsonBody = HttpService:JSONEncode(requestData)
-    
-    if syn and syn.request then
-        print("[卡密验证] 使用 syn.request 发送请求")
-        local success, response = pcall(function()
-            return syn.request({
-                Url = API_URL,
-                Method = "POST",
-                Headers = {
-                    ["Content-Type"] = "application/json"
-                },
-                Body = jsonBody,
-                Timeout = 10
-            })
-        end)
-        
-        if success and response then
-            print("[卡密验证] 收到响应, 状态码: " .. tostring(response.StatusCode))
-            if response.StatusCode == 200 then
-                local decoded = HttpService:JSONDecode(response.Body)
-                print("[卡密验证] 解析结果: success=" .. tostring(decoded.success))
-                return decoded.success == true, decoded.message
-            else
-                return false, "服务器错误: " .. tostring(response.StatusCode)
-            end
-        else
-            print("[卡密验证] syn.request 失败，降级到 HttpGet")
-            return fallbackVerify(inputKey)
-        end
-    else
-        return fallbackVerify(inputKey)
-    end
-end
-
--- ================================================================
---  检查缓存
--- ================================================================
-if checkCache() then
-    print("[卡密验证] 缓存有效，跳过验证，执行主脚本！")
-    executeMainScript()
-    return
-end
-
-print("[卡密验证] 无有效缓存，显示验证窗口")
-
--- ================================================================
---  UI 部分（保持原有精美UI）
--- ================================================================
-local screenGui = Instance.new("ScreenGui")
-screenGui.Name = "CloudKeySystem"
-screenGui.ResetOnSpawn = false
-screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = PlayerGui
-
-local overlay = Instance.new("Frame")
-overlay.Size = UDim2.new(1, 0, 1, 0)
-overlay.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-overlay.BackgroundTransparency = 0.6
-overlay.BorderSizePixel = 0
-overlay.Parent = screenGui
-
-local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 420, 0, 300)
-frame.Position = UDim2.new(0.5, 0, 0.5, 0)
-frame.AnchorPoint = Vector2.new(0.5, 0.5)
-frame.BackgroundColor3 = Color3.fromRGB(20, 18, 35)
-frame.BackgroundTransparency = 0.15
-frame.BorderSizePixel = 0
-frame.ClipsDescendants = true
-frame.Parent = screenGui
-
-local corner = Instance.new("UICorner")
-corner.CornerRadius = UDim.new(0, 28)
-corner.Parent = frame
-
-local stroke = Instance.new("UIStroke")
-stroke.Thickness = 1.5
-stroke.Color = Color3.fromRGB(200, 180, 255)
-stroke.Transparency = 0.4
-stroke.Parent = frame
-
-local blur = Instance.new("BlurEffect")
-blur.Size = 20
-blur.Parent = frame
-
-local closeBtn = Instance.new("TextButton")
-closeBtn.Size = UDim2.new(0, 34, 0, 34)
-closeBtn.Position = UDim2.new(1, -46, 0, 12)
-closeBtn.BackgroundTransparency = 1
-closeBtn.Text = "X"
-closeBtn.TextColor3 = Color3.fromRGB(200, 190, 240)
-closeBtn.Font = Enum.Font.GothamBold
-closeBtn.TextSize = 20
-closeBtn.Parent = frame
-
-local title = Instance.new("TextLabel")
-title.Size = UDim2.new(1, 0, 0, 55)
-title.Position = UDim2.new(0, 0, 0, 18)
-title.BackgroundTransparency = 1
-title.Text = "星辉 · 卡密验证"
-title.Font = Enum.Font.GothamBold
-title.TextSize = 26
-title.TextColor3 = Color3.fromRGB(255, 255, 255)
-title.TextXAlignment = Enum.TextXAlignment.Center
-title.Parent = frame
-
-local subtitle = Instance.new("TextLabel")
-subtitle.Size = UDim2.new(1, -40, 0, 28)
-subtitle.Position = UDim2.new(0, 20, 0, 76)
-subtitle.BackgroundTransparency = 1
-subtitle.Text = "请输入您的卡密以解锁全部功能"
-subtitle.Font = Enum.Font.Gotham
-subtitle.TextSize = 14
-subtitle.TextColor3 = Color3.fromRGB(180, 175, 210)
-subtitle.TextXAlignment = Enum.TextXAlignment.Center
-subtitle.TextWrapped = true
-subtitle.Parent = frame
-
-local inputBox = Instance.new("TextBox")
-inputBox.Size = UDim2.new(0.8, 0, 0, 48)
-inputBox.Position = UDim2.new(0.1, 0, 0, 118)
-inputBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-inputBox.BackgroundTransparency = 0.06
-inputBox.BorderSizePixel = 0
-inputBox.PlaceholderText = "在此输入卡密..."
-inputBox.PlaceholderColor3 = Color3.fromRGB(150, 145, 190)
-inputBox.Text = ""
-inputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-inputBox.Font = Enum.Font.Gotham
-inputBox.TextSize = 18
-inputBox.ClearTextOnFocus = false
-inputBox.Parent = frame
-local inputCorner = Instance.new("UICorner")
-inputCorner.CornerRadius = UDim.new(0, 12)
-inputCorner.Parent = inputBox
-local inputStroke = Instance.new("UIStroke")
-inputStroke.Thickness = 1.5
-inputStroke.Color = Color3.fromRGB(200, 180, 255)
-inputStroke.Transparency = 0.4
-inputStroke.Parent = inputBox
-
-local submitBtn = Instance.new("TextButton")
-submitBtn.Size = UDim2.new(0.8, 0, 0, 50)
-submitBtn.Position = UDim2.new(0.1, 0, 0, 188)
-submitBtn.BackgroundColor3 = Color3.fromRGB(120, 80, 255)
-submitBtn.BackgroundTransparency = 0.15
-submitBtn.BorderSizePixel = 0
-submitBtn.Text = "立即激活"
-submitBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-submitBtn.Font = Enum.Font.GothamBold
-submitBtn.TextSize = 18
-submitBtn.Parent = frame
-local btnCorner = Instance.new("UICorner")
-btnCorner.CornerRadius = UDim.new(0, 12)
-btnCorner.Parent = submitBtn
-local btnStroke = Instance.new("UIStroke")
-btnStroke.Thickness = 1.5
-btnStroke.Color = Color3.fromRGB(200, 180, 255)
-btnStroke.Transparency = 0.5
-btnStroke.Parent = submitBtn
-
--- ==================== 入场动画 ====================
-frame.BackgroundTransparency = 1
-frame.Size = UDim2.new(0, 0, 0, 0)
-task.wait(0.05)
-
-local introTween = TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
-local sizeTween = TweenService:Create(frame, introTween, {
-    Size = UDim2.new(0, 420, 0, 300)
-})
-local fadeTween = TweenService:Create(frame, TweenInfo.new(0.4), {
-    BackgroundTransparency = 0.15
-})
-sizeTween:Play()
-fadeTween:Play()
-
-print("[卡密验证] UI 已显示")
-
--- ================================================================
---  UI 逻辑
--- ================================================================
-local verificationComplete = false
-
+-- 关闭弹窗
 local function closeGUI()
-    local closeTween = TweenService:Create(frame, TweenInfo.new(0.3), {
+    local closeTween = TweenService:Create(frame, TweenInfo.new(0.25), {
         BackgroundTransparency = 1,
         Size = UDim2.new(0, 0, 0, 0)
     })
@@ -9386,68 +9279,72 @@ local function closeGUI()
     screenGui:Destroy()
 end
 
+-- ★★★ 检查卡密是否在列表中 ★★★
+local function checkKey(inputKey)
+    for _, key in ipairs(VALID_KEYS) do
+        if inputKey == key then
+            return true
+        end
+    end
+    return false
+end
+
+-- ★★★ 验证成功 ★★★
+local function onSuccess()
+    if verificationComplete then return end
+    verificationComplete = true
+    
+    subtitle.Text = "✅ 验证成功！即将启动..."
+    subtitle.TextColor3 = Color3.fromRGB(100, 255, 150)
+    submitBtn.Text = "✅ 已激活"
+    submitBtn.BackgroundColor3 = Color3.fromRGB(50, 200, 100)
+    submitBtn.Active = false
+    inputBox.Active = false
+    closeBtn.Visible = false
+    
+    print("[卡密验证] ✅ 验证通过！1.5秒后执行主脚本...")
+    task.wait(1.5)
+    closeGUI()
+    executeMainScript()
+end
+
+-- 验证失败
+local function onError()
+    if verificationComplete then return end
+    inputBox.Text = ""
+    inputBox.PlaceholderText = "❌ 卡密错误，请重试"
+    inputBox.PlaceholderColor3 = Color3.fromRGB(255, 150, 150)
+    subtitle.Text = "❌ 卡密无效，请重新输入"
+    subtitle.TextColor3 = Color3.fromRGB(255, 150, 150)
+    submitBtn.Text = "🚀 重新尝试"
+    
+    task.wait(1.5)
+    inputBox.PlaceholderText = "在此输入卡密..."
+    inputBox.PlaceholderColor3 = Color3.fromRGB(180, 180, 200)
+    subtitle.Text = "请输入您的卡密以解锁功能"
+    subtitle.TextColor3 = Color3.fromRGB(220, 220, 255)
+    submitBtn.Text = "🚀 立即激活"
+end
+
+-- 验证流程
 local function startValidation()
     if verificationComplete then return end
-
     local inputKey = inputBox.Text
     if inputKey == "" then
-        inputBox.PlaceholderText = "请输入卡密"
+        inputBox.PlaceholderText = "⚠️ 请输入卡密"
         task.wait(1)
         inputBox.PlaceholderText = "在此输入卡密..."
         return
     end
 
-    print("[卡密验证] 用户输入卡密: " .. inputKey)
-
-    submitBtn.Text = "验证中..."
-    submitBtn.BackgroundColor3 = Color3.fromRGB(255, 200, 0)
-    submitBtn.Active = false
-
-    task.spawn(function()
-        print("[卡密验证] 开始调用验证函数...")
-        local isValid, message = verifyKeyOnCloud(inputKey)
-        print("[卡密验证] 验证结果: " .. tostring(isValid) .. ", 消息: " .. tostring(message))
-
-        submitBtn.Text = "立即激活"
-        submitBtn.BackgroundColor3 = Color3.fromRGB(120, 80, 255)
-        submitBtn.Active = true
-
-        if isValid then
-            local cacheData = {
-                key = inputKey,
-                expires_at = os.time() + (24 * 60 * 60)
-            }
-            setCache(cacheData)
-
-            verificationComplete = true
-            subtitle.Text = "验证成功！即将启动..."
-            subtitle.TextColor3 = Color3.fromRGB(100, 255, 180)
-            submitBtn.Text = "已激活"
-            submitBtn.BackgroundColor3 = Color3.fromRGB(50, 200, 100)
-            submitBtn.Active = false
-            inputBox.Active = false
-            closeBtn.Visible = false
-
-            print("[卡密验证] 验证通过！已缓存卡密")
-            task.wait(1.5)
-            closeGUI()
-            executeMainScript()
-        else
-            inputBox.Text = ""
-            inputBox.PlaceholderText = "卡密错误，请重试"
-            inputBox.PlaceholderColor3 = Color3.fromRGB(255, 150, 150)
-            subtitle.Text = message or "卡密无效，请重新输入"
-            subtitle.TextColor3 = Color3.fromRGB(255, 150, 150)
-
-            task.wait(1.5)
-            inputBox.PlaceholderText = "在此输入卡密..."
-            inputBox.PlaceholderColor3 = Color3.fromRGB(150, 145, 190)
-            subtitle.Text = "请输入您的卡密以解锁全部功能"
-            subtitle.TextColor3 = Color3.fromRGB(180, 175, 210)
-        end
-    end)
+    if checkKey(inputKey) then
+        onSuccess()
+    else
+        onError()
+    end
 end
 
+-- ==================== 事件绑定 ====================
 submitBtn.MouseButton1Click:Connect(startValidation)
 
 inputBox.FocusLost:Connect(function(enterPressed)
@@ -9458,16 +9355,13 @@ closeBtn.MouseButton1Click:Connect(function()
     if verificationComplete then return end
     verificationComplete = true
     closeGUI()
-    print("[卡密验证] 用户手动关闭了验证弹窗")
+    print("[卡密验证] ⚠️ 用户手动关闭了验证弹窗，脚本终止")
 end)
 
-overlay.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 then
-        if not verificationComplete then
-            closeBtn.MouseButton1Click:Fire()
-        end
+overlay.MouseButton1Click:Connect(function()
+    if not verificationComplete then
+        closeBtn.MouseButton1Click:Fire()
     end
 end)
 
 print("[卡密验证] 等待用户输入卡密...")
-print("[卡密验证] API 地址: " .. API_URL)
