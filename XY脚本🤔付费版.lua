@@ -1,8 +1,8 @@
 local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/WuMing-YYDS/Script-UI/refs/heads/main/Wind%20UI.LUA"))()
 
 -- ================================================================
---  ★★★ 云端卡密验证模块（内嵌版） ★★★
---  验证通过后自动放行，执行后面的主脚本
+--  ★★★ 云端卡密验证模块（带缓存） ★★★
+--  验证通过后缓存卡密，下次启动自动检查
 -- ================================================================
 
 -- ==================== 配置区 ====================
@@ -10,12 +10,80 @@ local API_URL = "http://xykey.cc.cd/verify_key.php"  -- 你的验证接口地址
 
 print("[卡密验证] 脚本加载中...")
 
--- ==================== 创建 GUI ====================
+-- ==================== 缓存管理 ====================
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
+
+-- ★★★ 缓存存储（使用 getgenv 全局存储，跨脚本共享） ★★★
+local CACHE_KEY = "StellarKeyCache"
+
+-- 读取缓存
+local function getCache()
+    if getgenv and getgenv()[CACHE_KEY] then
+        return getgenv()[CACHE_KEY]
+    end
+    return nil
+end
+
+-- 写入缓存
+local function setCache(data)
+    if getgenv then
+        getgenv()[CACHE_KEY] = data
+        print("[卡密验证] 缓存已保存")
+    end
+end
+
+-- 清除缓存
+local function clearCache()
+    if getgenv then
+        getgenv()[CACHE_KEY] = nil
+        print("[卡密验证] 缓存已清除")
+    end
+end
+
+-- ★★★ 检查缓存是否有效 ★★★
+local function checkCache()
+    local cache = getCache()
+    if not cache then
+        print("[卡密验证] 无缓存")
+        return false
+    end
+
+    -- 检查是否过期
+    local now = os.time()
+    if cache.expires_at and now < cache.expires_at then
+        print("[卡密验证] ✅ 缓存有效，直接放行！")
+        print("[卡密验证] 卡密: " .. cache.key)
+        return true
+    else
+        print("[卡密验证] ❌ 缓存已过期，清除中...")
+        clearCache()
+        return false
+    end
+end
+
+-- ==================== 如果有缓存，直接放行 ====================
+if checkCache() then
+    -- 直接执行主脚本，不显示验证窗口
+    print("[卡密验证] 缓存有效，跳过验证，执行主脚本！")
+    
+    -- ★★★ 直接执行主脚本 ★★★
+    -- ════════════════════════════════════════════════════════════
+    --  ★★★ 把你的主脚本代码放在这里 ★★★
+    --  ★★★ 有缓存时会直接执行，跳过验证 ★★★
+    -- ════════════════════════════════════════════════════════════
+    print("主脚本已启动！（来自缓存）")
+    -- loadstring(game:HttpGet("你的脚本地址"))()
+    -- ════════════════════════════════════════════════════════════
+    
+    return -- 直接结束，不再显示验证窗口
+end
+
+-- ==================== 没有缓存或缓存已过期 → 显示验证 UI ====================
+print("[卡密验证] 无有效缓存，显示验证窗口")
 
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "CloudKeySystem"
@@ -85,7 +153,7 @@ title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextXAlignment = Enum.TextXAlignment.Center
 title.Parent = frame
 
--- 副标题
+-- 副标题（显示缓存状态）
 local subtitle = Instance.new("TextLabel")
 subtitle.Size = UDim2.new(1, -40, 0, 28)
 subtitle.Position = UDim2.new(0, 20, 0, 76)
@@ -9281,6 +9349,20 @@ local function closeGUI()
     screenGui:Destroy()
 end
 
+    -- ════════════════════════════════════════════════════════════
+end
+
+-- 关闭弹窗
+local function closeGUI()
+    local closeTween = TweenService:Create(frame, TweenInfo.new(0.3), {
+        BackgroundTransparency = 1,
+        Size = UDim2.new(0, 0, 0, 0)
+    })
+    closeTween:Play()
+    closeTween.Completed:Wait()
+    screenGui:Destroy()
+end
+
 -- ================================================================
 --  ★★★ 云端验证函数（调用你的 API） ★★★
 -- ================================================================
@@ -9291,7 +9373,6 @@ local function verifyKeyOnCloud(inputKey)
     }
     local jsonBody = HttpService:JSONEncode(requestData)
 
-    -- 优先使用 syn.request（支持 POST）
     if syn and syn.request then
         local response = syn.request({
             Url = API_URL,
@@ -9307,7 +9388,6 @@ local function verifyKeyOnCloud(inputKey)
         end
         return false, "网络请求失败"
     else
-        -- 降级方案：用 HttpGet（部分注入器不支持 POST，改用 GET）
         local url = API_URL .. "?key=" .. HttpService:URLEncode(inputKey) .. "&player=" .. HttpService:URLEncode(LocalPlayer.Name)
         local success, response = pcall(function()
             return game:HttpGet(url)
@@ -9334,7 +9414,6 @@ local function startValidation()
         return
     end
 
-    -- 禁用按钮，防止重复点击
     submitBtn.Text = "验证中..."
     submitBtn.BackgroundColor3 = Color3.fromRGB(255, 200, 0)
     submitBtn.Active = false
@@ -9342,13 +9421,18 @@ local function startValidation()
     task.spawn(function()
         local isValid, message = verifyKeyOnCloud(inputKey)
 
-        -- 恢复按钮
         submitBtn.Text = "立即激活"
         submitBtn.BackgroundColor3 = Color3.fromRGB(120, 80, 255)
         submitBtn.Active = true
 
         if isValid then
-            -- 验证成功
+            -- ★★★ 验证成功 → 写入缓存 ★★★
+            local cacheData = {
+                key = inputKey,
+                expires_at = os.time() + (24 * 60 * 60)  -- 24小时后过期
+            }
+            setCache(cacheData)
+
             verificationComplete = true
             subtitle.Text = "验证成功！即将启动..."
             subtitle.TextColor3 = Color3.fromRGB(100, 255, 180)
@@ -9358,12 +9442,11 @@ local function startValidation()
             inputBox.Active = false
             closeBtn.Visible = false
 
-            print("[卡密验证] 验证通过！1.5秒后执行主脚本...")
+            print("[卡密验证] 验证通过！已缓存卡密")
             task.wait(1.5)
             closeGUI()
             executeMainScript()
         else
-            -- 验证失败
             inputBox.Text = ""
             inputBox.PlaceholderText = "卡密错误，请重试"
             inputBox.PlaceholderColor3 = Color3.fromRGB(255, 150, 150)
@@ -9390,7 +9473,7 @@ closeBtn.MouseButton1Click:Connect(function()
     if verificationComplete then return end
     verificationComplete = true
     closeGUI()
-    print("[卡密验证] 用户手动关闭了验证弹窗，脚本终止")
+    print("[卡密验证] 用户手动关闭了验证弹窗")
 end)
 
 overlay.InputBegan:Connect(function(input)
