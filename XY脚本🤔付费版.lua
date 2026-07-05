@@ -1,16 +1,13 @@
 local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/WuMing-YYDS/Script-UI/refs/heads/main/Wind%20UI.LUA"))()
 
 -- ================================================================
---  ★★★ 云端卡密验证模块（内嵌式 | 带缓存） ★★★
---  验证通过后直接执行下方的主脚本代码
+--  ★★★ 云端卡密验证模块（修复卡验证中问题） ★★★
 -- ================================================================
 
--- ==================== 配置区 ====================
-local API_URL = "http://xykey.cc.cd/verify_key.php"  -- 你的验证接口地址
+local API_URL = "http://xykey.cc.cd/verify_key.php"
 
 print("[卡密验证] 脚本加载中...")
 
--- ==================== 缓存管理 ====================
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
@@ -57,17 +54,11 @@ local function checkCache()
     end
 end
 
--- ================================================================
---  ★★★ 唯一的主脚本执行函数 ★★★
---  ★★★ 把你的主脚本源代码直接放在下面 ★★★
---  ★★★ 缓存有效或验证成功后都会执行这里 ★★★
--- ================================================================
+-- ★★★ 主脚本执行函数 ★★★
 local function executeMainScript()
     print("[卡密验证] 开始执行主脚本！")
-    
     -- ════════════════════════════════════════════════════════════
     --  ★★★ 把你的主脚本源代码放在下面 ★★★
-    --  ★★★ 这就是你的付费脚本全部代码 ★★★
     -- ════════════════════════════════════════════════════════════
 
 do
@@ -9167,12 +9158,76 @@ loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Invinicible
       end
 })
     -- ════════════════════════════════════════════════════════════
-    --  ★★★ 主脚本代码结束 ★★★
-    -- ════════════════════════════════════════════════════════════
 end
 
 -- ================================================================
---  检查缓存：如果有且未过期 → 直接执行主脚本，跳过验证
+--  ★★★ 修复后的验证函数 ★★★
+-- ================================================================
+
+-- 降级验证方案
+local function fallbackVerify(inputKey)
+    print("[卡密验证] 使用 HttpGet 验证")
+    local url = API_URL .. "?key=" .. HttpService:URLEncode(inputKey) .. "&player=" .. HttpService:URLEncode(LocalPlayer.Name)
+    print("[卡密验证] 请求URL: " .. url)
+    
+    local success, response = pcall(function()
+        return game:HttpGet(url)
+    end)
+    
+    if not success then
+        print("[卡密验证] HttpGet 失败: " .. tostring(response))
+        return false, "网络连接失败，请检查网络后重试"
+    end
+    
+    print("[卡密验证] HttpGet 响应: " .. tostring(response))
+    local decoded = HttpService:JSONDecode(response)
+    return decoded and decoded.success == true, decoded and decoded.message or "未知错误"
+end
+
+-- 主验证函数
+local function verifyKeyOnCloud(inputKey)
+    print("[卡密验证] 开始验证卡密: " .. inputKey)
+    
+    local requestData = {
+        key = inputKey,
+        player = LocalPlayer.Name
+    }
+    local jsonBody = HttpService:JSONEncode(requestData)
+    
+    if syn and syn.request then
+        print("[卡密验证] 使用 syn.request 发送请求")
+        local success, response = pcall(function()
+            return syn.request({
+                Url = API_URL,
+                Method = "POST",
+                Headers = {
+                    ["Content-Type"] = "application/json"
+                },
+                Body = jsonBody,
+                Timeout = 10
+            })
+        end)
+        
+        if success and response then
+            print("[卡密验证] 收到响应, 状态码: " .. tostring(response.StatusCode))
+            if response.StatusCode == 200 then
+                local decoded = HttpService:JSONDecode(response.Body)
+                print("[卡密验证] 解析结果: success=" .. tostring(decoded.success))
+                return decoded.success == true, decoded.message
+            else
+                return false, "服务器错误: " .. tostring(response.StatusCode)
+            end
+        else
+            print("[卡密验证] syn.request 失败，降级到 HttpGet")
+            return fallbackVerify(inputKey)
+        end
+    else
+        return fallbackVerify(inputKey)
+    end
+end
+
+-- ================================================================
+--  检查缓存
 -- ================================================================
 if checkCache() then
     print("[卡密验证] 缓存有效，跳过验证，执行主脚本！")
@@ -9180,11 +9235,11 @@ if checkCache() then
     return
 end
 
--- ================================================================
---  没有缓存或已过期 → 显示验证窗口
--- ================================================================
 print("[卡密验证] 无有效缓存，显示验证窗口")
 
+-- ================================================================
+--  UI 部分（保持原有精美UI）
+-- ================================================================
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "CloudKeySystem"
 screenGui.ResetOnSpawn = false
@@ -9192,7 +9247,6 @@ screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
 screenGui.IgnoreGuiInset = true
 screenGui.Parent = PlayerGui
 
--- ==================== UI ====================
 local overlay = Instance.new("Frame")
 overlay.Size = UDim2.new(1, 0, 1, 0)
 overlay.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -9317,7 +9371,9 @@ fadeTween:Play()
 
 print("[卡密验证] UI 已显示")
 
--- ==================== 核心逻辑 ====================
+-- ================================================================
+--  UI 逻辑
+-- ================================================================
 local verificationComplete = false
 
 local function closeGUI()
@@ -9330,46 +9386,6 @@ local function closeGUI()
     screenGui:Destroy()
 end
 
--- ================================================================
---  ★★★ 云端验证函数 ★★★
--- ================================================================
-local function verifyKeyOnCloud(inputKey)
-    local requestData = {
-        key = inputKey,
-        player = LocalPlayer.Name
-    }
-    local jsonBody = HttpService:JSONEncode(requestData)
-
-    if syn and syn.request then
-        local response = syn.request({
-            Url = API_URL,
-            Method = "POST",
-            Headers = {
-                ["Content-Type"] = "application/json"
-            },
-            Body = jsonBody
-        })
-        if response and response.StatusCode == 200 then
-            local decoded = HttpService:JSONDecode(response.Body)
-            return decoded.success == true, decoded.message
-        end
-        return false, "网络请求失败"
-    else
-        local url = API_URL .. "?key=" .. HttpService:URLEncode(inputKey) .. "&player=" .. HttpService:URLEncode(LocalPlayer.Name)
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-        if not success then
-            return false, "网络请求失败"
-        end
-        local decoded = HttpService:JSONDecode(response)
-        return decoded.success == true, decoded.message
-    end
-end
-
--- ================================================================
---  验证流程
--- ================================================================
 local function startValidation()
     if verificationComplete then return end
 
@@ -9381,19 +9397,22 @@ local function startValidation()
         return
     end
 
+    print("[卡密验证] 用户输入卡密: " .. inputKey)
+
     submitBtn.Text = "验证中..."
     submitBtn.BackgroundColor3 = Color3.fromRGB(255, 200, 0)
     submitBtn.Active = false
 
     task.spawn(function()
+        print("[卡密验证] 开始调用验证函数...")
         local isValid, message = verifyKeyOnCloud(inputKey)
+        print("[卡密验证] 验证结果: " .. tostring(isValid) .. ", 消息: " .. tostring(message))
 
         submitBtn.Text = "立即激活"
         submitBtn.BackgroundColor3 = Color3.fromRGB(120, 80, 255)
         submitBtn.Active = true
 
         if isValid then
-            -- ★★★ 验证成功 → 写入缓存 ★★★
             local cacheData = {
                 key = inputKey,
                 expires_at = os.time() + (24 * 60 * 60)
@@ -9412,7 +9431,7 @@ local function startValidation()
             print("[卡密验证] 验证通过！已缓存卡密")
             task.wait(1.5)
             closeGUI()
-            executeMainScript()  -- ★★★ 执行你的主脚本 ★★★
+            executeMainScript()
         else
             inputBox.Text = ""
             inputBox.PlaceholderText = "卡密错误，请重试"
@@ -9429,7 +9448,6 @@ local function startValidation()
     end)
 end
 
--- ==================== 事件绑定 ====================
 submitBtn.MouseButton1Click:Connect(startValidation)
 
 inputBox.FocusLost:Connect(function(enterPressed)
