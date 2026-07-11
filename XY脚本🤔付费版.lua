@@ -7,7 +7,7 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/WuMing
 -- ==================== 配置区 ====================
 -- ★★★ 在这里添加所有有效卡密，用逗号分隔 ★★★
 local VALID_KEYS = {
-    "XY-内部成员专属",
+    "XY-rogXYChromeangel",
     -- 继续添加更多卡密...
 }
 
@@ -80,7 +80,7 @@ local title = Instance.new("TextLabel")
 title.Size = UDim2.new(1, 0, 0, 60)
 title.Position = UDim2.new(0, 0, 0, 12)
 title.BackgroundTransparency = 1
-title.Text = "✨ 卡密验证"
+title.Text = "密钥🔒验证"
 title.Font = Enum.Font.GothamBold
 title.TextSize = 26
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -511,7 +511,7 @@ WindUI:Popup({
 })
 
 WindUI:Notify({
-    Title = "紧急通知：XY脚本可能会停更",
+    Title = "紧急通知：XY脚本正在升级",
     Content = "Notification Content example!",
     Duration = 3, -- 3 seconds
     Icon = "bird",
@@ -585,7 +585,7 @@ local player = Players.LocalPlayer
 local mouse = player:GetMouse()
 
 local Main = WindUI:CreateWindow({
-    Title = "<font color='#ff007f'>XY脚本</font>-<font color='#00ffff'>通用</font>",
+    Title = "<font color='#ff007f'>XY脚本</font>-<font color='#00ffff'>付费</font>",
     Author = "<font color='#00ffff'>by</font> <font color='#ff007f'>小夜</font>",
     Folder = "CloudHub",
     Size = UDim2.fromOffset(300, 400),
@@ -631,7 +631,7 @@ local TimeTag = Main:Tag({
 })
 
 Main:Tag({
-    Title = "脚本创建的9天",
+    Title = "脚本创建的11天",
     Color = Color3.fromHex("#ff007f")
 })
 
@@ -770,21 +770,29 @@ Section:Button({
     Title = "无敌",
     Callback = function()
     
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()    
+loadstring(game:HttpGet('https://pastebin.com/raw/H3RLCWWZ'))()
+end)    
       end
 })
 Section:Button({
     Title = "VR视角",
     Callback = function()
     
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()    
+loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqvi1/homelander-by-GioBolqv1/refs/heads/main/homelander.lua"))()    
+      end
+})
+Section:Button({
+    Title = "透视",
+    Callback = function()
+    
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/tt/main/%E6%97%8B%E8%BD%AC.lua"))()    
       end
 })
 Section:Button({
     Title = "无限罗宝😱",
     Callback = function()
     
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"))()    
+loadstring(game:HttpGet("https://raw.githubusercontent.com/giobolqvi1/homelander-by-GioBolqv1/refs/heads/main/homelander.lua"))()    
       end
 })
 Section:Button({
@@ -1458,7 +1466,7 @@ TitleText.Parent = TitleBar
 TitleText.AnchorPoint = Vector2.new(0, 0)
 TitleText.Position = UDim2.new(0, 100, 0, 25)
 TitleText.Font = font
-TitleText.Text = "             旋转甩飞脚本【汉化作者：大司马】"..version
+TitleText.Text = "             旋转甩飞脚本【汉化作者：小夜】"..version
 TitleText.TextColor3 = SelectedTheme[8]
 TitleText.TextSize = 28
 TitleText.ZIndex = 300
